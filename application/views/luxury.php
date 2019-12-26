@@ -389,14 +389,14 @@
                 <div class="col-md-10">
                     <div class="luxury-card dadamanga-special-card card mb-3">
                         <div class="row no-gutters">
-                            <div class="col-lg-6 my-auto px-2 col-md-12">
+                            <div class="col-lg-6 col-md-12">
                                 <img src="./assets/img/luxury/miavana.jpg" style="border-radius:0;" class="img-fluid card-img active wow animated fadeInLeft" alt="...">
                                 <img src="./assets/img/luxury/gidro.jpg" style="border-radius:0;" class="img-fluid card-img d-none" alt="...">
                                 <img src="./assets/img/luxury/baobab.jpg" style="border-radius:0;" class="img-fluid card-img d-none" alt="...">
                                 <img src="./assets/img/luxury/miavana.jpg" style="border-radius:0;" class="img-fluid card-img d-none" alt="...">
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <div class="card-body wow animated fadeInRight">
+                                <div class="card-body py-0 wow animated fadeInRight">
                                     <div class="row title_text">
                                         <div class="dadamanga-special-card-brown-title col-md-12">
                                             <p class="pb-2 active">MIAVANA</p>
@@ -419,8 +419,8 @@
                                         <p class="text_secondaire d-none">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
                                         <p class="text_secondaire d-none">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
                                     </div>
-                                    <button onclick="prevCard(true)" type="button" class="noShadow btn-marron btn btn-sm"><i class="fas fa-angle-left"></i></button>
-                                    <button onclick="nextCard(true)" type="button" class="noShadow btn-marron btn btn-sm"><i class="fas fa-angle-right"></i></button>
+                                    <button onclick="prevCard(true)" style="bottom: 0;" class="position-absolute noShadow btn-marron btn btn-sm"><i class="fas fa-angle-left"></i></button>
+                                    <button onclick="nextCard(true)" style="bottom: 0; left:90px" class="position-absolute noShadow btn-marron btn btn-sm"><i class="fas fa-angle-right"></i></button>
                                 </div>
                                 <div class="d-none" class="card-body">
                                     <div class="row title_text ">

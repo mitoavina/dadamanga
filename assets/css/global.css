@@ -684,3 +684,9 @@ sidenav:blur {
 .galleria-theme-reis .galleria-thumbnails .galleria-image {
     border: 1px solid #f7f4f0!important
 }
+
+.followus-background {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
