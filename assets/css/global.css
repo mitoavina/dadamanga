@@ -1,0 +1,686 @@
+@font-face {
+    font-family: Montserrat-bold;
+    src: url(../font/montserrat/Montserrat-SemiBold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque Light';
+    src: url(../font/brandon-grotesque/Brandon_light.woff) format('woff')
+}
+
+@font-face {
+    font-family: Geometria-Light;
+    src: url(../font/geometria/Geometria-Light.woff) format('woff')
+}
+
+@font-face {
+    font-family: Geometria;
+    src: url(../font/geometria/Geometria.woff) format('woff')
+}
+
+@font-face {
+    font-family: Geometria-Bold;
+    src: url(../font/geometria/Geometria-Bold.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque Black';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Brandon Grotesque Black'), url(../font/brandon-grotesque/brandon-grotesque-black-58a8a3e824392.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque Regular Italic';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Brandon Grotesque Regular Italic'), url(../font/brandon-grotesque/brandon-grotesque-regular-italic-58a8a456c4724.woff) format('woff')
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%
+}
+
+body,
+footer {
+    font-family: Montserrat!important
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: #333;
+    font-size: 1.1em!important;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 20px!important
+}
+
+body {
+    position: relative
+}
+
+.navbar {
+    width: 100%;
+    box-shadow: none;
+    font-family: Montserrat;
+    font-style: normal!important;
+    font-weight: 500!important;
+    font-size: 15px!important;
+    line-height: 20px!important;
+    z-index: 999;
+    box-shadow: none!important
+}
+
+@media (max-width:576px) {
+    .socialIcon {
+        width: 50px;
+        height: 50px
+    }
+    .socialMessage {
+        font-size: 20px
+    }
+}
+
+@media screen and (max-width:767px) {
+    .navbar {
+        padding: 0
+    }
+}
+
+@media screen and (max-width:1082px) and (min-width:992px) {
+    .long {
+        width: 100%
+    }
+}
+
+.navbar.fixed-top {
+    transition: background-color .2s linear
+}
+
+.navbar.fixed-top.scrolled {
+    background-color: #222!important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    transition: background-color box-shadow 2s linear
+}
+
+.jumbotron {
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    background-repeat: no repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0!important;
+    margin-bottom: 0;
+    box-shadow: none!important
+}
+
+.jumbotron .home-text h1 {
+    font-style: normal;
+    font-size: 4.5em;
+    line-height: 75px
+}
+
+.home-text {
+    text-align: center
+}
+
+.jumbotron .text h1 {
+    padding-top: 60vh;
+    font-style: normal;
+    font-size: 5vw;
+    line-height: 88px
+}
+
+.montserrat-bold {
+    font-family: Montserrat-bold
+}
+
+@media screen and (max-width:768px) {
+    .home-text {
+        font-size: .5em;
+        text-align: center
+    }
+}
+
+.content_index {
+    background-color: #f7f4f0;
+    color: #151515;
+    font-family: 'Brandon Grotesque Light';
+    padding: 0
+}
+
+.content_index .text1 {
+    font-size: 20px;
+    line-height: 29px;
+    padding-bottom: 30px
+}
+
+.content_index .big-text {
+    font-size: 19px;
+    line-height: 23px
+}
+
+#madagascar_destination_specialist {
+    color: #b7986d;
+    font-size: 32px;
+    line-height: 39px
+}
+
+.content_index .cards h4 {
+    font-size: 20px;
+    line-height: 24px
+}
+
+.content_index .cards div {
+    font-weight: 500;
+    font-size: 14px;
+    font-family: Montserrat-bold
+}
+
+.follow {
+    color: #fff!important;
+    font-size: 24px;
+    line-height: 29px
+}
+
+#followUs,
+.followUs:after {
+    background-color: rgba(183, 152, 109, .44)
+}
+
+@media (max-width:991px) {
+    .container {
+        width: 100%!important;
+        max-width: none
+    }
+    .navbar {
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030
+    }
+}
+
+.second-navbar>.row>.link {
+    color: #b7986d;
+    padding: 0 5px;
+    font-size: 15px
+}
+
+.second-navbar>.row>.link:first-child::before {
+    content: ""
+}
+
+.second-navbar>.row>.link::before {
+    content: ' | ';
+    position: relative;
+    bottom: 2px
+}
+
+.second-navbar .link>a {
+    color: inherit
+}
+
+body .body-index {
+    z-index: 1031;
+    position: relative;
+    font-family: 'Brandon Grotesque Light';
+    color: #151515
+}
+
+#animated-nav {
+    font-family: Montserrat;
+    color: #b7986d;
+    background-color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-size: 15px;
+    z-index: 1032
+}
+
+#animated-nav a img {
+    height: 50px
+}
+
+@media screen and (min-width:768px) {
+    #animated-nav .navbar-toggler {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        padding: 10px 10px;
+        color: #b7986d
+    }
+    #animated-nav .navbar-brand {
+        position: absolute;
+        top: -5px;
+        left: 5px
+    }
+    #animated-nav {
+        display: block;
+        text-align: center
+    }
+    #animated-nav p {
+        margin-bottom: 0;
+        padding-top: 7px;
+        padding-bottom: 7px
+    }
+}
+
+@media screen and (max-width:1124px) {
+    #animated-nav p {
+        display: none
+    }
+    #animated-nav {
+        padding: 0!important;
+        min-height: 50px;
+        padding-left: 12px!important;
+        color: #fff;
+        background-color: #b7986d
+    }
+    #animated-nav button {
+        display: block!important;
+        color: #fff!important
+    }
+}
+
+.white-link {
+    color: #fff!important
+}
+
+.white-link:hover {
+    color: #dee2e6!important;
+    transition: all .1s ease-in
+}
+
+.content-template {
+    background-color: #f7f4f0;
+    color: #151515
+}
+
+.text_header {
+    font-family: Montserrat;
+    font-size: 1.3em
+}
+
+.text_secondaire {
+    font-size: 120%;
+    line-height: 30px
+}
+
+@media screen and (max-width:767px) {
+    .text_secondaire {
+        font-size: 20px;
+        line-height: 35px;
+        text-align: left;
+        margin: unset;
+        margin: 0
+    }
+}
+
+.title_text {
+    margin-top: 6%;
+    color: #b7986d;
+    font-family: Montserrat;
+    font-size: 20px;
+    line-height: 30px
+}
+
+.brown-color {
+    background-color: #b7986d!important
+}
+
+.itineraries-details {
+    justify-content: center
+}
+
+@media screen and (max-width:768px) {
+    .itineraries-details {
+        justify-content: initial
+    }
+}
+
+.itinerary-menu {
+    font-family: Geometria-Light
+}
+
+.itinerary-menu h5 {
+    font-size: 1em
+}
+
+.itinerary-menu-mobile {
+    display: none
+}
+
+@media screen and (max-width:480px) {
+    .itinerary-menu-mobile {
+        display: block;
+        padding-top: 20%;
+        padding-bottom: 10%
+    }
+    .itinerary-menu-mobile h5 {
+        font-size: 80%
+    }
+    .itinerary-menu-mobile ul {
+        padding-left: 0
+    }
+    .itinerary-menu-mobile ul>li {
+        font-size: 1em;
+        display: inline;
+        color: #b7986d;
+        padding: 0;
+        text-decoration: none
+    }
+    .itinerary-menu-mobile ul>li>a {
+        text-decoration: none;
+        color: #b7986d
+    }
+    .itinerary-menu-mobile ul>li:first-child::before {
+        content: ""
+    }
+    .itinerary-menu-mobile ul>li::before {
+        content: ' | '
+    }
+    .itinerary-menu {
+        display: none
+    }
+}
+
+.itinerary-menu>ul {
+    list-style: none;
+    font-size: 1.6em;
+    padding-top: 2%
+}
+
+.itinerary-menu h5 {
+    font-size: 1.1vw
+}
+
+.list-group .list-group-item {
+    padding: 3% 0 5% 0;
+    border: 1px solid #b7986d;
+    border-right: none;
+    border-left: none;
+    font-weight: 600
+}
+
+.btn-marron {
+    background-color: #b7986d;
+    color: #fff!important
+}
+
+.dadamanga-special-card {
+    box-shadow: none!important;
+    border-radius: 0!important
+}
+
+.side-menu-style {
+    font-family: Geometria;
+    font-size: 1.3vw;
+    line-height: 25px;
+    color: #c4c4c4;
+    line-height: 30px;
+    transition: font-size .1s linear
+}
+
+.side-menu-style-active {
+    font-size: 1.6vw;
+    color: #b7986d;
+    transition: font-size .1s linear
+}
+
+.side-menu-style {
+    font-family: Geometria;
+    font-size: 1.3vw;
+    line-height: 25px;
+    color: #c4c4c4;
+    line-height: 30px
+}
+
+.side-menu-style-active {
+    color: #b7986d
+}
+
+@media screen and (min-width:1440px) {
+    .side-menu-style {
+        font-size: 1.4vw
+    }
+}
+
+.pic-title {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: Montserrat;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.learn-more-destinations .title {
+    font-size: 1.4em;
+    padding-top: 5%
+}
+
+.place {
+    padding: 0 2.5px 5px 2.5px
+}
+
+@media screen and (max-width:768px) {
+    .pic-title {
+        font-size: .8em
+    }
+    .place .pic-title {
+        white-space: normal;
+        font-size: .8em
+    }
+}
+
+.dadamanga-special-card-title {
+    font-family: Geometria;
+    font-size: 20px;
+    line-height: 25px;
+    color: #b7986d
+}
+
+.font-brandon-grotesque-light {
+    font-family: 'Brandon Grotesque Light'
+}
+
+.font-geometria-light {
+    font-family: Geometria-Light
+}
+
+.font-color-brown {
+    color: #b7986d
+}
+
+.click-below {
+    font-weight: 700;
+    font-size: 1.1em
+}
+
+.for-more-info {
+    font-size: 1.1em
+}
+
+.formatting-box {
+    box-shadow: none!important;
+    margin: 0;
+    border-radius: 0
+}
+
+.card .card-footer {
+    border: none
+}
+
+.geometria-title {
+    font-size: 25px;
+    font-family: Geometria-Light;
+    margin-bottom: 3vh
+}
+
+#taylor-images {
+    display: flex;
+    justify-content: center
+}
+
+#taylor-images>div>div>div {
+    height: 300px;
+    background-size: cover
+}
+
+#taylor-images>div>div>div:nth-child(1) {
+    background-image: url(../img/list_destination_page/cover-about.jpg)
+}
+
+#taylor-images>div>div>div:nth-child(2) {
+    background-image: url(../img/list_destination_page/adventure.jpg)
+}
+
+#taylor-images>div>div>div:nth-child(3) {
+    background-image: url(../img/list_destination_page/lac.jpg)
+}
+
+#taylor-images .taylor-image {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#taylor-images {
+    margin-bottom: 13vh
+}
+
+.on-background-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600
+}
+
+.sidenav {
+    font-family: Geometria;
+    font-size: 30px;
+    height: 100%;
+    position: fixed;
+    width: 320px;
+    right: 0;
+    margin-right: -320px;
+    background-color: #b7986d;
+    overflow-x: hidden;
+    transition: .5s;
+    z-index: 1040
+}
+
+sidenav:blur {
+    width: 0
+}
+
+.sidenav a {
+    text-align: center;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f7f4f0;
+    display: block;
+    transition: .3s
+}
+
+.sidenav a:hover {
+    color: #000
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px
+}
+
+@media screen and (max-height:450px) {
+    .sidenav {
+        padding-top: 15px
+    }
+}
+
+#filtre-trans {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background: 0 0
+}
+
+.contrast {
+    filter: contrast(160%)
+}
+
+.description {
+    font-family: 'Brandon Grotesque Regular Italic';
+    font-size: 20px
+}
+
+.noHover:hover {
+    color: #b7986d
+}
+
+.noShadow {
+    box-shadow: none!important
+}
+
+.noShadow:hover {
+    box-shadow: none!important
+}
+
+.overlay-marron {
+    background: rgba(183, 152, 109, .9);
+    padding: 0 15%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.overlay-marron-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.overlay-with-padding {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 10px
+}
+
+.follow-us {
+    width: 100%;
+    max-height: 590px
+}
+
+.galleria-theme-reis .galleria-thumbnails .galleria-image {
+    border: 1px solid #f7f4f0!important
+}

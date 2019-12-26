@@ -1,0 +1,86 @@
+    .jumbotron.jumbotron-contact {
+        background-image: url(../../img/contact/jumbotron-contact.jpg) !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .jumbotron .text h1 {
+        font-weight: 500 !important;
+        padding: unset;
+    }
+    
+    .contact-body {
+        background-color: #F7F4F0;
+    }
+    
+    .page-centrale {
+        font-size: 15px;
+        line-height: 18px;
+        font-family: 'Montserrat';
+        color: #151515;
+        z-index: 999;
+        background-color: white;
+        /* height: 700px; */
+    }
+    
+    @media screen and (min-width:768px) {
+        .page-centrale {
+            margin-top: -17vh;
+            margin-bottom: 10vh;
+            padding: 50px 70px 50px 70px !important;
+        }
+    }
+    
+    .contact-label {
+        font-family: 'Geometria';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #B7986D;
+    }
+    
+    .part1 {
+        margin-bottom: 9vh;
+    }
+    
+    .custom-bg-input {
+        background-color: #F7F4F0 !important;
+        color: #151515;
+        border-radius: 0;
+        border: 0;
+        /* width: 80%; */
+        font-size: 13px;
+    }
+    
+    .custom-bg-textarea {
+        background-color: #F7F4F0 !important;
+        color: #151515;
+        border-radius: 0;
+        border: 0;
+        /* width: 80%; */
+        font-size: 13px;
+    }
+    
+    @media screen and (min-width:768px) {
+        .custom-bg-input {
+            width: 80%;
+        }
+    }
+    
+    .cc {
+        box-shadow: none !important;
+        font-size: 14px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    @media screen and (max-width:767px) {
+        .cc {
+            width: 100%;
+        }
+    }
+    
+    textarea {
+        width: 400px;
+    }

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> -->
+    <link href="<?= base_url() ?>assets/font/montserrat/montserrat.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="<?= base_url() ?>assets/css/global.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/page/home.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/flexslider.css" rel="stylesheet">
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.flexslider.js"></script>
+    <title>Dadamanga | Home</title>
+</head>
+<?php include("navbar.php"); ?>
+<?php include("sidenav.php"); ?>
+
+<body>
+    <div id="jumbotron" class="m-0 flexslider jumbotron homeJumbotron flex-column flex-center">
+        <ul class="slides">
+            <li style="background-image:url( <?= base_url($image[0]->path) ?>)" class=" jumbotron home-text">
+                <h1 class="text-white"> <?= $text[0]->value ?></h1>
+                <svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
+                </svg>
+                <div>
+                    <span id="find_out" class="white-text"><a class="white-link" href="<?= base_url("destinations") ?>">find out more</a></span>
+                </div>
+            </li>
+            <li class="home-text jumbotron" style="background-image:url( <?= base_url() ?>assets/img/home/adventure-jumbotron.jpg)">
+                <h1 class="  text-white">CREATE A BESPOKE<br> EXPERIENCE</h1>
+                <svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
+                </svg>
+                <div>
+                    <span id="find_out" class="white-text"><a class="white-link" href="<?= base_url("adventure") ?>">find out more</a></span>
+                </div>
+            </li>
+            <li class="home-text jumbotron" style="background-image:url( <?= base_url() ?>assets/img/home/knowledge.jpg)">
+                <h1 class=" text-white">KNOWLEDGE OF THE PLACE CONTENT HERE</h1>
+                <svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
+                </svg>
+                <div>
+                    <span id="find_out" class="white-text"><a class="white-link" href="<?= base_url("knowledges") ?>">find out more</a></span>
+                </div>
+            </li>
+        </ul>
+        <div id="homeButtons" class="d-none d-md-flex w-100 row position-absolute justify-content-center">
+            <a href="<?= base_url() . "destinations" ?>" id="destinationButton" class="col-md-3 btn mr-1 btn black-marron-btn">
+                Destinations
+            </a>
+            <a href="<?= base_url() . "adventure" ?>" id="adventureButton" class="col-md-3 btn mr-1 btn black-marron-btn">
+                Create an Adventure
+            </a>
+            <a href="<?= base_url() . "knowledge" ?>" id="placeButton" class="col-md-3 btn mr-1 btn black-marron-btn">
+                Knowledge of the Place
+            </a>
+        </div>
+    </div>
+
+    <!-- //BUTTONS -->
+    <nav id="animated-nav" class=" text-center navbar">
+        <p>ABOUT | THE TEAM | SOCIAL RESPONSABILITY | REVIEWS</p>
+        <a class="navbar-brand bleu" href="<?= base_url() . "home" ?>">
+            <img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
+        </a>
+        <button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+    </nav>
+    <div class="container-fluid">
+        <div class="row we_organise justify-content-center">
+            <div class="col-lg-11">
+                <div class="row">
+                    <div class="col-lg-5 px-5">
+                        <p class="pb-2">We organise your
+                            <span class="montserrat-bold">trip</span>
+                        </p>
+                        <p id="intro">
+                            Lorem ipsum dolor sit amet, cum at atqui partiendo, omnium scripserit vim an. Virtute nonumes vel ei, quis mundi sit te. Odio quot putent qui ei, labitur mediocrem in nec, sed cu wisi sensibus eleifend
+                        </p>
+                        <svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="#B7986D" />
+                        </svg>
+                        <p id="intro-btn" class="montserrat-bold"><a href="<?= base_url() . "destinations" ?>">FIND A DESTINATION</a></p>
+                    </div>
+                    <div id="intro_icons" class="col-lg-7 text-center">
+                        <div class="row ">
+                            <div class="col-6 col-lg-3 icc ">
+                                <img src="<?= base_url() ?>assets/img/home/creative.png">
+                                <p class=" mt-3">UNIQUELY<br> TAILORED</p>
+                            </div>
+                            <div class="col-6 col-lg-3 icc">
+                                <img src="<?= base_url() ?>assets/img/home/route.png">
+                                <p class=" mt-3">YOU CHOOSE THE ROUTE & SCHEDULE</p>
+                            </div>
+                            <div class="col-6 col-lg-3 icc">
+                                <img src="<?= base_url() ?>assets/img/home/airplane.png">
+                                <p class=" mt-3">USE ANY MEANS <br>OF TRANSPORT</p>
+                            </div>
+                            <div class="col-6 col-lg-3 icc">
+                                <img src="<?= base_url() ?>assets/img/home/mada.png">
+                                <p class=" mt-3">TRAVEL ANYWHERE<br> IN MADAGASCAR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-template container-fluid text-center ">
+        <div class="pt-5 pb-2 row justify-content-center">
+            <div class="col-md-8 pt-5 text1 px-5">
+                <p class="px-1 pb-3">Tailor made tours to Madagascar, inspired by you, created by us...</p>
+
+                <p class="pb-3 px-lg-5">We specialise in working with English-speaking clients to design perfect Madagascar holidays. No holiday is too simple, no time too short... we will work with you,
+                    within your budget, to create the holiday that you want.</p>
+
+                <p class="pb-1 px-lg-5">Dadamanga Travel Services is owned by an Australian, resident in Madagascar for 20 years. We know the language, we know the people, we know the places. We know how to
+                    make your holiday in Madagascar perfect.</p>
+            </div>
+        </div>
+        <div class="big-text row justify-content-center">
+            <div class="col-md-11 pb-lg-5">
+                <p>EXPLORE THE WORLD'S MOST FASCINATING CONTINENT ON EARTH WITH REMARKABLE EXPERIENCES AND ADVENTURE.</p>
+                <br>
+                <p>VIEW OUR SAMPLE ITINERARIES AND PLAN YOUR WANDERLUST JOURNEY TODAY.</p>
+            </div>
+        </div>
+        <style>
+       
+        </style>
+        <div>
+            <div id="multi-item-carousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="destination-item">
+                            <img src="<?= img_destinations_url('Antananarivo') ?>" alt="First slide">
+                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
+                                <div><i class="far fa-compass fa-3x"></i></div>
+                                <a class="text-white white-link" href="<?= destination_url("Antananarivo") ?>">
+                                    <h1 class="text-uppercase">Antananarivo</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="destination-item">
+                            <img src="<?= img_destinations_url('ToamasinaEast') ?>" alt="Second slide">
+                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
+                                <div><i class="far fa-compass fa-3x"></i></div>
+                                <a class="text-white white-link" href="<?= destination_url("Toamasina") ?>">
+                                    <h1 class="text-uppercase">Toamasina</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="destination-item">
+                            <img src="<?= img_destinations_url('ToliaraSouthWest') ?>" alt="Third slide">
+                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
+                                <div><i class="far fa-compass fa-3x"></i></div>
+                                <a class="text-white white-link" href="<?= destination_url("Toliara") ?>">
+                                    <h1 class="text-uppercase">Toliara</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="destination-item">
+                            <img src="<?= img_destinations_url('DiegoNorth') ?>" alt="Fourth slide">
+                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
+                                <div><i class="far fa-compass fa-3x"></i></div>
+                                <a class="text-white white-link" href="<?= destination_url("Diego") ?>">
+                                    <h1 class="text-uppercase">Diego</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="destination-item">
+                            <img src="<?= img_destinations_url('FortDauphin') ?>" alt="Fourth slide">
+                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
+                                <div><i class="far fa-compass fa-3x"></i></div>
+                                <a class="text-white white-link" href="<?= destination_url("FortDauphin") ?>">
+                                    <h1 class="text-uppercase">Fort<br> Dauphin</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="destination-item">
+                            <img src="<?= img_destinations_url('Morondava') ?>" alt="Fourth slide">
+                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
+                                <div><i class="far fa-compass fa-3x"></i></div>
+                                <a class="text-white white-link" href="<?= destination_url("Morondava") ?>">
+                                    <h1 class="text-uppercase">Morondava</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="prevContainer" class="d-flex justify-content-center">
+                    <a href="#multi-item-carousel" data-slide="prev" id="prevButton"></a>
+                </div>
+                <div id="nextContainer" class="d-flex justify-content-center">
+                    <div id="nextButton" data-slide="next" href="#multi-item-carousel"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pb-5 mt-5 pt-5">
+            <p class="pb-5" id="madagascar_destination_specialist">MADAGASCAR <span class="montserrat-bold">Destination Specialist</span></p>
+            <div class="big-text mx-1">
+                <p>
+                    WHY US? FIND OUT WHAT MAKES US DIFFERENT AND SPECIALISTS IN OUR FIELD.<br>
+                    OUR TAILOR MADE JOURNEYS ARE TO ESCAPE ON A WILDLIFE SAFARI AND THE ULTIMATE LUXURY ADVENTURE.</p>
+                <br>
+                <p>CONTACT US AND START PLANNING YOUR AFRICAN WILDERNESS JOURNEY TODAY.</p>
+            </div>
+        </div>
+        <div class=" new_class container-fluid pt-5">
+            <div class="row cards justify-content-center">
+                <div class="col-lg-9">
+                    <!-- Card deck -->
+                    <div class="card-deck focus-card-containers">
+                        <!-- Card -->
+                        <!-- ONE CARD -->
+                        <div class="noShadow card mb-4 p-3">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!--Title-->
+                                <h4 class=" montserrat-bold card-title text-left">Tana City Walk<br>& Manjakamiadana</h4>
+                                <!--Text-->
+                                <div class="row">
+                                    <div class="col-md-12 mb-sm-3 text-left">
+                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
+                                    </div>
+                                    <div class="col-md-12 text-left">
+                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END ONE CARD -->
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="noShadow card mb-4 p-3">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/andasibe.png" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!--Title-->
+                                <h4 class=" montserrat-bold card-title text-left">Andasibe Day Trip</h4>
+                                <!--Text-->
+                                <div class="row">
+                                    <div class="col-md-12 mb-sm-3 text-left">
+                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
+                                    </div>
+                                    <div class="col-md-12 text-left">
+                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <!-- Card -->
+                        <div class="noShadow card mb-4 p-3">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/ambohimanga.png" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!--Title-->
+                                <h4 class="montserrat-bold card-title text-left">Ambohimanga Palace</h4>
+                                <div class="row">
+                                    <div class="col-md-12 mb-sm-3 text-left">
+                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
+                                    </div>
+                                    <div class="col-md-12 text-left">
+                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
+                                    </div>
+                                </div>
+                                <!--Text-->
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+
+                    </div>
+                    <!-- Card deck -->
+                </div>
+            </div>
+        </div>
+
+        <div style="padding-top:100px;padding-bottom:40px;">
+            <p>CLICK ON <a href="<?= base_url("contact") ?>">THIS LINK</a> TO CONTACT US AND EXPLORE YOUR NEXT AFRICAN ADVENTURE.</p>
+            <p>CALL: +61 459308888</p>
+        </div>
+    </div>
+    <?php include("followus.php") ?>
+    <?php include("footer.php"); ?>
+</body>
+<script>
+    $(window).on('load', function() {
+        $('.flexslider').flexslider({
+            directionNav: false,
+            manualControls: "#homeButtons > a",
+            slideshow: false
+        });
+    });
+
+    $(document).ready(() => {
+        $("#multi-item-carousel").carousel({
+            pause: true,
+            interval: true
+        });
+
+        $(".carousel-item").each(function() {
+            var width = window.outerWidth * 25 / 100;
+
+            var first = $(this).find(".destination-item:nth-child(1)");
+            $(first).prepend('<div class="transparent-layer" data-slide="prev" href="#multi-item-carousel"></div>');
+            var h1TextFirst = $(first).find(".text-white").children().first().clone();
+            (h1TextFirst).addClass("white-text");
+            var wrapperFirst = jQuery('<div/>', {
+                style: `width: ${width}px;height:100%;position:absolute;right:0`,
+                class: `flex-center wrapper flex-column`
+            });
+            wrapperFirst.append(h1TextFirst);
+            first.prepend(wrapperFirst);
+            $(first).find(".carousel-caption").remove();
+
+
+            var last = $(this).find(".destination-item:nth-child(3)");
+            $(last).prepend('<div class="transparent-layer" data-slide="next" href="#multi-item-carousel"></div>');
+            var h1Text = $(last).find(".text-white").children().first();
+            (h1Text).addClass("white-text");
+            var wrapper = jQuery('<div/>', {
+                style: `width: ${width}px;height:100%;position:absolute;`,
+                class: `flex-center wrapper flex-column`
+            });
+            wrapper.append(h1Text);
+            last.prepend(wrapper);
+            $(last).find(".carousel-caption").remove();
+        });
+    });
+
+
+    $(".black-marron-btn").hover((e) => {
+        $(e.currentTarget).siblings().removeClass("black-marron-btn-hover");
+        $(e.currentTarget).addClass("black-marron-btn-hover");
+        $(e.currentTarget).removeClass("black-marron-btn");
+        $(e.currentTarget).click();
+    }, (e) => {
+        $(e.currentTarget).addClass("black-marron-btn");
+    })
+
+    $('#multi-item-carousel .carousel-item').each(function() {
+        var next = $(this).next();
+        if (!next.length) next = $(this).siblings(':first');
+        next.children(':first-child').clone().appendTo($(this));
+    });
+
+    $('#multi-item-carousel .carousel-item').each(function() {
+        var prev = $(this).prev();
+        if (!prev.length) prev = $(this).siblings(':last');
+        prev.children(':nth-last-child(2)').clone().prependTo($(this));
+    });
+    var distance = $('#animated-nav').offset().top,
+        $window = $(window);
+</script>
+<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+
+</html>

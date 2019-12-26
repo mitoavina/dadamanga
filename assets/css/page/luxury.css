@@ -1,0 +1,135 @@
+.jumbotron.jumbotron-luxury {
+    background-image: url(../../img/luxury/luxury-header.jpg) !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.jumbotron.jumbotron-luxury .text {
+    color: white;
+}
+
+.jumbotron .text h1 {
+    font-weight: 500 !important;
+    padding: unset;
+}
+
+.luxury-card {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.luxury-card-title {
+    font-family: 'Geometria';
+    font-size: 20px;
+    line-height: 25px;
+    color: #B7986D;
+}
+
+.card-body button {
+    box-shadow: none;
+    color: white;
+}
+
+.card-body button:hover {
+    color: white;
+}
+
+.plane-text {
+    margin-top: 40vh;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+}
+
+.plane-mother {
+    height: 50vh;
+}
+
+.plane {
+    background-image: url(../../img/luxury/helico.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.helico {
+    background-image: url(../../img/luxury/helico.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#jj {
+    position: sticky;
+    top: 0;
+}
+
+
+/* MODAL */
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-content {
+    background-color: white;
+}
+
+.modal-body {
+    padding-top: 0;
+}
+
+.modal-title {
+    color: #B7986D;
+    text-align: center;
+    font-family: Geometria;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.modal-label {
+    font-family: Geometria;
+    font-size: 16px;
+    line-height: 20px;
+    color: #B7986D;
+    text-transform: uppercase;
+}
+
+.custom-bg-input {
+    background-color: #F7F4F0 !important;
+    color: #151515;
+    border-radius: 0;
+    border: 0;
+    /* width: 80%; */
+    font-size: 13px;
+}
+
+.custom-bg-textarea {
+    background-color: #F7F4F0 !important;
+    color: #151515;
+    border-radius: 0;
+    border: 0;
+    /* width: 80%; */
+    font-size: 13px;
+}
+
+.myMargin {
+    margin-top: 2em;
+}
+
+.cc {
+    box-shadow: none !important;
+    font-size: 14px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* MODAL */
+
+.itininary-menu {
+    font-size: 18px;
+}
