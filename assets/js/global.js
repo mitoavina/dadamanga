@@ -225,7 +225,7 @@ function closeNav() {
     $("#filtre-trans").css('background', 'transparent');
 }
 var original_length = $(".jumbotron").outerHeight();
-var nav_length = document.getElementById("animated-nav").offsetHeight;
+var nav_length = $("animated-nav").outerHeight();
 // $("jumbotron").css('minHeight', (original_length - nav_length) + "px");
 
 // FOR SCROLLING 
