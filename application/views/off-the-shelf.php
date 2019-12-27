@@ -9,7 +9,7 @@
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<?= base_url() ?>assets/css/global.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/global.css?v=1" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/page/off-the-shelf.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
@@ -48,7 +48,37 @@
                     </p>
                 </div>
             </div>
+            <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409" async></script>
+
+            <div class="bokunWidget" data-src="https://widgets.bokun.io/online-sales/8439ce9c-a587-4955-91f8-b7423b94a409/product-list/19178"></div>
+            <noscript>Please enable javascript in your browser to book</noscript>
+
             <div class="row cards justify-content-center">
+                <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409" async></script>
+                <style>
+                    #bokun_cb6e0229_305e_41d2_9848_ac6d0460d594 {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background: #408C3D;
+                        border-radius: 5px;
+                        box-shadow: none;
+                        font-weight: 600;
+                        font-size: 16px;
+                        text-decoration: none;
+                        text-align: center;
+                        color: #FFFFFF;
+                        font-family: sans-serif;
+                        cursor: pointer;
+                    }
+
+                    #bokun_cb6e0229_305e_41d2_9848_ac6d0460d594:hover {
+                        background: #285726;
+                    }
+
+                    #bokun_cb6e0229_305e_41d2_9848_ac6d0460d594:active {
+                        background: #30682e;
+                    }
+                </style> <button class="bokunButton" disabled id=bokun_cb6e0229_305e_41d2_9848_ac6d0460d594 data-src="https://widgets.bokun.io/online-sales/8439ce9c-a587-4955-91f8-b7423b94a409/experience/276996?partialView=1"> Book now </button>
                 <div class="col-lg-7">
                     <!-- Card deck -->
                     <div class=" row ">
