@@ -40,6 +40,7 @@
             </a>
             <button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
         </nav>
+
         <div class="container-fluid content-template">
             <div class="row">
                 <div class="offset-md-2 col-md-8 pt-5 pb-5 text_header">
@@ -49,33 +50,33 @@
                 </div>
             </div>
 
-            <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=3cc73682-bcaa-47be-b91e-44e4bc463d9c" async></script>
+            <!-- <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=3cc73682-bcaa-47be-b91e-44e4bc463d9c" async></script>
             <div class="bokunWidget" data-src="https://widgets.bokun.io/online-sales/3cc73682-bcaa-47be-b91e-44e4bc463d9c/product-list/18981"></div>
+            <noscript>Please enable javascript in your browser to book</noscript> -->
+
+            
+            <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409" async></script>
+            <div class="bokunWidget" data-src="https://widgets.bokun.io/online-sales/8439ce9c-a587-4955-91f8-b7423b94a409/product-list/19173"></div>
             <noscript>Please enable javascript in your browser to book</noscript>
 
-            <div class="row cards justify-content-center">
+
+
+            <!-- <div class="row cards justify-content-center">
                 <div class="col-lg-7">
-                    <!-- Card deck -->
                     <div class=" row ">
-                        <!-- Card -->
-                        <!-- ONE CARD -->
                         <div class="col-12 col-sm-6  p-3">
                             <div class="card  montserrat-bold h-100 formatting-box p-3">
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img class=" formatting-box card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/andasibe.png" alt="Card image cap">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
                                 <div class="card-body ">
-                                    <!--Title-->
                                     <h4 class=" card-title text-center">Andasibe Day Trip</h4>
 
                                 </div>
                                 <div class="card-footer bg-white">
-                                    <!--Text-->
                                     <div class="row">
                                         <div class="col-md-12 mb-3 text-left">
                                             <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
@@ -89,21 +90,17 @@
                         </div>
                         <div class="col-12 col-sm-6  p-3 position-relative">
                             <div class="card  montserrat-bold h-100 formatting-box p-3 ">
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img class=" formatting-box card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
                                 <div class="card-body ">
-                                    <!--Title-->
                                     <h4 class=" card-title text-center">Andasibe 2 Night Safari</h4>
 
                                 </div>
                                 <div class="card-footer bg-white">
-                                    <!--Text-->
                                     <div class="row mb-1">
                                         <div class="col-md-12 mb-3 text-left">
                                             <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 2 days
@@ -118,21 +115,17 @@
                         </div>
                         <div class="col-12 col-sm-6  p-3">
                             <div class="card  montserrat-bold h-100 formatting-box p-3">
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img class=" formatting-box card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
                                 <div class="card-body ">
-                                    <!--Title-->
                                     <h4 class=" card-title text-center">Tana City Walk & Manjakamiadana</h4>
 
                                 </div>
                                 <div class="card-footer bg-white">
-                                    <!--Text-->
                                     <div class="row">
                                         <div class="col-md-12 mb-3 text-left">
                                             <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
@@ -146,21 +139,20 @@
                         </div>
                         <div class="col-12 col-sm-6  p-3">
                             <div class="card  montserrat-bold h-100 formatting-box p-3">
-                                <!--Card image-->
                                 <div class="view overlay">
                                     <img class=" formatting-box card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
+                                
                                 <div class="card-body ">
-                                    <!--Title-->
+                                    
                                     <h4 class=" card-title text-center">Ambohimanga Palace</h4>
 
                                 </div>
                                 <div class="card-footer bg-white">
-                                    <!--Text-->
+                                    
                                     <div class="row">
                                         <div class="col-md-12 mb-3 text-left">
                                             <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
@@ -174,21 +166,21 @@
                         </div>
                         <div class="col-12 col-sm-6  p-3">
                             <div class="card  montserrat-bold h-100 formatting-box p-3">
-                                <!--Card image-->
+                                
                                 <div class="view overlay">
                                     <img class=" formatting-box card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
+                                
                                 <div class="card-body ">
-                                    <!--Title-->
+                                    
                                     <h4 class=" card-title text-center">Tana Analavory Geysers</h4>
 
                                 </div>
                                 <div class="card-footer bg-white">
-                                    <!--Text-->
+                                    
                                     <div class="row">
                                         <div class="col-md-12 mb-3 text-left">
                                             <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 2 days
@@ -202,21 +194,21 @@
                         </div>
                         <div class="col-12 col-sm-6  p-3">
                             <div class="card  montserrat-bold h-100 formatting-box p-3">
-                                <!--Card image-->
+                                
                                 <div class="view overlay">
                                     <img class=" formatting-box card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
+                                
                                 <div class="card-body ">
-                                    <!--Title-->
+                                    
                                     <h4 class=" card-title text-center">Nosy Be 6 Nights</h4>
 
                                 </div>
                                 <div class="card-footer bg-white">
-                                    <!--Text-->
+                                    
                                     <div class="row">
                                         <div class="col-md-12 mb-3 text-left">
                                             <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 7 days
@@ -230,21 +222,21 @@
                         </div>
                         <div class="col-12 col-sm-6  p-3">
                             <div class="card  montserrat-bold h-100 formatting-box p-3">
-                                <!--Card image-->
+                                
                                 <div class="view overlay">
                                     <img class=" formatting-box card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
+                                
                                 <div class="card-body ">
-                                    <!--Title-->
+                                    
                                     <h4 class=" card-title text-center">Nosy Be & North</h4>
 
                                 </div>
                                 <div class="card-footer bg-white">
-                                    <!--Text-->
+                                    
                                     <div class="row">
                                         <div class="col-md-12 mb-3 text-left">
                                             <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 7 days
@@ -258,21 +250,21 @@
                         </div>
                         <div class="col-12 col-sm-6  p-3">
                             <div class="card  montserrat-bold h-100 formatting-box p-3">
-                                <!--Card image-->
+                                
                                 <div class="view overlay">
                                     <img class=" formatting-box card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/andasibe.png" alt="Card image cap">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
-                                <!--Card content-->
+                                
                                 <div class="card-body ">
-                                    <!--Title-->
+                                    
                                     <h4 class=" card-title text-center">Fort- Dauphin Surfing</h4>
 
                                 </div>
                                 <div class="card-footer bg-white">
-                                    <!--Text-->
+                                    
                                     <div class="row">
                                         <div class="col-md-12 mb-3 text-left">
                                             <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 5 day
@@ -285,9 +277,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Card deck -->
                 </div>
-            </div>
+            </div> -->
             <div class="row div1 taylor-title text-center ">
                 <div class="col-md-12">
                     <h1 class="geometria-title">TAYLOR YOUR OWN UNIQUE EXPERIENCE</h1>
@@ -319,6 +310,10 @@
                 </div>
             </div>
         </div>
+        <?php
+        foreach ($_COOKIE as $key => $val) {
+            echo $key . ' is ' . $val . "<br>\n";
+        } ?>
         <?php include("followus.php") ?>
         <?php include("footer.php"); ?>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
