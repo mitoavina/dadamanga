@@ -5,9 +5,9 @@
         </div>
         <div class="row mb-5 d-flex justify-content-center">
             <div style="white-space:nowrap" class="col-md-2 p-0 text-center"><a href="<?= base_url() . "about" ?>">About</a></div>
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-left"><a href="<?= base_url() . "destinations" ?>">Destinations</a></div>
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-left"><a href="<?= base_url() . "shelf" ?>">Off the Shelf</a></div>
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-left"><a href="<?= base_url() . "adventure" ?>">Create an Adventure</a></div>
+            <div style="white-space:nowrap" class="col-md-2 p-0 text-center text-md-left"><a href="<?= base_url() . "destinations" ?>">Destinations</a></div>
+            <div style="white-space:nowrap" class="col-md-2 p-0 text-center text-md-left"><a href="<?= base_url() . "shelf" ?>">Off the Shelf</a></div>
+            <div style="white-space:nowrap" class="col-md-2 p-0 text-center text-md-left"><a href="<?= base_url() . "adventure" ?>">Create an Adventure</a></div>
             <div style="white-space:nowrap" class="col-md-2 p-0 text-center"><a href="<?= base_url() . "luxury" ?>">Explore Luxury</a></div>
             <div style="white-space:nowrap" class="col-md-2 p-0 text-center"><a href="<?= base_url() . "knowledge" ?>">Knowledge of the Place</a></div>
         </div>
@@ -48,8 +48,8 @@
 
         <div class="row d-flex justify-content-center text-center">
             <div class="mr-4"><small class="">&copy; Dadamanga 2019</small></div>
-            <div class="mr-4"><small>Terms & Conditions</small></div>
-            <div class=""><small>Privacy Policy</small></div>
+            <!-- <div class="mr-4"><small>Terms & Conditions</small></div>
+            <div class=""><small>Privacy Policy</small></div> -->
         </div>
     </div>
 </footer>
