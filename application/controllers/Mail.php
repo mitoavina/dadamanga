@@ -28,7 +28,7 @@ class Mail extends CI_Controller{
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('abrahamrobbi@gmail.c­om');
+		$mail->addAddress('maryano.r@outlook.com');
 
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -149,7 +149,7 @@ class Mail extends CI_Controller{
 		
 		// Add a recipient
 		//a changer
-		$mail->addAddress('abrahamrobbi@gmail.c­om');
+		$mail->addAddress('maryano.r@outlook.com');
         $mail->addStringAttachment($pdf, $data['email'].'.pdf');
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -246,7 +246,7 @@ class Mail extends CI_Controller{
 		
 		// Add a recipient
 		//a changer
-		$mail->addAddress('abrahamrobbi@gmail.c­om');
+		$mail->addAddress('maryano.r@outlook.com');
         $mail->addStringAttachment($pdf, $data['email'].'.pdf');
 		
 		
