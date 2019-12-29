@@ -2,19 +2,25 @@ new WOW().init();
 
 $(document).ready(function() {
     $(".list-group-item > a").on('click', function(e) {
-        sideMenu(e);
+		e.preventDefault();
+		sideMenu(e.target.parentElement);
+		$(".list-group-item").each(function(){
+			if(!$(e.target.parentElement).is($(this))){
+				if($(e.target.parentElement).attr('data-index') == $(this).attr('data-index')){
+					$(this).addClass("side-menu-style-active");
+					var others = $(this).siblings();
+					$(others).each(function() {
+						$(this).removeClass("side-menu-style-active");
+					});
+				}
+			}
+		});
     });
-
-    $(".list-inline-item > a").on('click', function(e) {
-        sideMenu(e);
-    });
-
 });
 
-function sideMenu(e) {
-    e.preventDefault();
-    $(e.target.parentElement).addClass("side-menu-style-active");
-    var dataIndex = $(e.target.parentElement).data("index");
+function sideMenu(element) {
+    $(element).addClass("side-menu-style-active");
+    var dataIndex = $(element).data("index");
 
     var activeContent = $(`.dadamanga-special-card-container > .active`);
     $(activeContent).removeClass("active");
@@ -25,7 +31,7 @@ function sideMenu(e) {
     $(contentToShow).css({ "opacity": "0" }).show().animate({ opacity: 1 }, 1500);
     contentToShow.addClass("active");
 
-    var parent = e.target.parentElement;
+    var parent = element;
     var others = $(parent).siblings();
     $(others).each(function() {
         $(this).removeClass("side-menu-style-active");
