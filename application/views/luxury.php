@@ -12,11 +12,13 @@
     <!-- Custom CSS -->
     <link href="<?= base_url() ?>assets/css/global.css?v=1" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/galleria-themes/galleria.reis.css" rel="stylesheet">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" rel="stylesheet">
 
     <link href="<?= base_url() ?>assets/css/page/luxury.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
     <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
@@ -268,10 +270,10 @@
                                             <label class="modal-label" for="email">APPROXIMATE DATES OF TRAVEL</label>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <input name="begin" type="date" class="form-control  custom-bg-input">
+                                                    <input placeholder="Beginning" id="begin" name="begin" type="text" class="form-control custom-bg-input">
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <input name="end" type="date" class="form-control  custom-bg-input"">
+                                                    <input placeholder="End" id="end" name="end" type="text" class="form-control  custom-bg-input">
                                                 </div>
                                             </div>
                                         </div>
@@ -279,34 +281,34 @@
                                 </div>
                             </div>
                             <div class=" myMargin form-row justify-content-center">
-                                                    <div class="col-lg-10">
-                                                        <div class="row">
-                                                            <div class="form-group col-lg-6">
-                                                                <label class="modal-label" for="email">ANY DISABILITY / ACCESSIBILITY REQUIREMENT?</label>
-                                                                <input name="disability" type="text" class="form-control custom-bg-input" id="disability" placeholder="YES/NO/COMMENT">
+                                <div class="col-lg-10">
+                                    <div class="row">
+                                        <div class="form-group col-lg-6">
+                                            <label class="modal-label" for="email">ANY DISABILITY / ACCESSIBILITY REQUIREMENT?</label>
+                                            <input name="disability" type="text" class="form-control custom-bg-input" id="disability" placeholder="YES/NO/COMMENT">
 
-                                                            </div>
-                                                            <div class="form-group col-lg-6">
-                                                                <label class="modal-label" for="email">ANY SPECIAL FOOD REQUIREMENTS</label>
-                                                                <input name="food" type="text" class="form-control custom-bg-input" placeholder="Write">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="myMargin form-row justify-content-center">
-                                                    <div class="col-lg-11">
-                                                        <div class="form-group">
-                                                            <label class="modal-label" for="email">ANYTHING ELSE YOU WANT TO TELL US?</label>
-                                                            <textarea name="else" name="message" class="custom-bg-textarea form-control " id="message" rows="5" placeholder="Your Message"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="submit" class="cc btn btn-sm text-white brown-color">SEND</button>
+                                        <div class="form-group col-lg-6">
+                                            <label class="modal-label" for="email">ANY SPECIAL FOOD REQUIREMENTS</label>
+                                            <input name="food" type="text" class="form-control custom-bg-input" placeholder="Write">
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="myMargin form-row justify-content-center">
+                                <div class="col-lg-11">
+                                    <div class="form-group">
+                                        <label class="modal-label" for="email">ANYTHING ELSE YOU WANT TO TELL US?</label>
+                                        <textarea name="else" name="message" class="custom-bg-textarea form-control " id="message" rows="5" placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="cc btn btn-sm text-white brown-color">SEND</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
@@ -495,8 +497,7 @@
                 <h5>WHAT INTERESTS YOU?</h5>
                 <ul class="list-inline">
                     <li class="list-inline-item side-menu-style-active" data-index="0"><a>Miavana</a></li>
-                    <li class="list-inline-item" data-index="1"><a>Tsarabanjina</li</a> </li> 
-                    <li class="list-inline-item" data-index="2"><a>Anjajavy Le Lodge</a></li>
+                    <li class="list-inline-item" data-index="1"><a>Tsarabanjina</li</a> </li> <li class="list-inline-item" data-index="2"><a>Anjajavy Le Lodge</a></li>
                     <li class="list-inline-item" data-index="3"><a>Madagascar Classic Collection</a></li>
                 </ul>
             </div>
@@ -616,11 +617,29 @@
             <div class=" container pb-5">
                 <div class="row text-white text-center">
                     <div class="col-md-1"></div>
-                    <div class="mr-md-3 col-md-5 plane-mother plane mt-2">
-                        <p class="plane-text">PRIVATE PLANE</p>
+                    <div class="mr-md-3 col-md-5 plane-mother plane mt-2 overlay-marron-container">
+                        <p class="to-hide plane-text">PRIVATE PLANE</p>
+                        <div class="overlay-with-padding">
+                            <div class="overlay-marron">
+                                <div>"Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+                                    tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+                                    minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut
+                                    enim ad minim"
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class=" ml-md-3 col-md-5 plane-mother helico mt-2">
-                        <p class="plane-text">HELICOPTER TRAVE</p>
+                    <div class=" ml-md-3 col-md-5 plane-mother helico mt-2 overlay-marron-container">
+                        <p class="to-hide plane-text">HELICOPTER TRAVEL</p>
+                        <div class="overlay-with-padding">
+                            <div class="overlay-marron">
+                                <div>"Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+                                    tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+                                    minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut
+                                    enim ad minim"
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-1"></div>
                 </div>
@@ -634,6 +653,17 @@
     </script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/page/luxury.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB"></script>
+    <script>
+
+        grecaptcha.ready(function(){
+            grecaptcha.execute('6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB', {
+                action: 'homepage'
+            }).then(function(token){
+
+            });
+        });
+    </script>
 </body>
 
 

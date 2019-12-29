@@ -28,7 +28,7 @@ class Mail extends CI_Controller{
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('maryano.r@outlook.com');
+		$mail->addAddress('michael.randrianarisona@outlook.com');
 
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -85,6 +85,7 @@ class Mail extends CI_Controller{
 			$message['error'] = 'message could not be sent';
 			echo json_encode($message);
 		}
+		// echo json_encode(count($_POST));
 	}
     private function luxury_admin(){
 		// DATAS
@@ -149,7 +150,7 @@ class Mail extends CI_Controller{
 		
 		// Add a recipient
 		//a changer
-		$mail->addAddress('maryano.r@outlook.com');
+		$mail->addAddress('michael.randrianarisona@outlook.com');
         $mail->addStringAttachment($pdf, $data['email'].'.pdf');
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -246,7 +247,7 @@ class Mail extends CI_Controller{
 		
 		// Add a recipient
 		//a changer
-		$mail->addAddress('maryano.r@outlook.com');
+		$mail->addAddress('michael.randrianarisona@outlook.com');
         $mail->addStringAttachment($pdf, $data['email'].'.pdf');
 		
 		
@@ -317,6 +318,10 @@ class Mail extends CI_Controller{
 	function Mail_adventure_admin($data){
         return $this->load->view('Mail_adventure_admin',$data,TRUE);
 	}	
+
+	function Postman() {
+		echo json_encode(count($_POST));
+	}
 }
 
 

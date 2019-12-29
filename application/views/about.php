@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
@@ -22,7 +22,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Dadamanga  |  About</title>
+    <title>Dadamanga | About</title>
 </head>
 <?php include("navbar.php"); ?>
 <?php include("sidenav.php"); ?>
@@ -36,9 +36,9 @@
     </div>
     <div class="body-index">
         <nav id="animated-nav" class=" text-center navbar">
-            <p><a class="lien1">ABOUT</a>  |  <a class="lien2" >THE TEAM</a>  |  <a class="lien3" >SOCIAL RESPONSABILITY</a>  |  <a class="lien4" >REVIEWS</a></p>
-            <a class="navbar-brand" href="<?= base_url()."home" ?>">
-                <img style="height:50px; "src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
+            <p><a class="lien1">ABOUT</a> | <a class="lien2">THE TEAM</a> | <a class="lien3">SOCIAL RESPONSABILITY</a> | <a class="lien4">REVIEWS</a></p>
+            <a class="navbar-brand" href="<?= base_url() . "home" ?>">
+                <img style="height:50px; " src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
             </a>
             <button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
         </nav>
@@ -136,7 +136,10 @@
                     </div>
                 </div>
             </div>
-            <div class=" div4 row">
+            <div class=" div4 row sr">
+                <div class="col-md-12 mb-5 pt-5">
+                    <p class="text-center">OUR REVIEWS ON TRIPADVISOR</p>
+                </div>
                 <div class="col-md-12" style="overflow:hidden;">
                     <div class="elfsight-app-719f865f-1ded-4062-b5e7-f423b8127562"></div>
                 </div>

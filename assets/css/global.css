@@ -714,3 +714,7 @@ sidenav:blur {
     font-family: 'Montserrat';
     font-size: 0.8em;
 }
+
+button {
+    outline: none !important;
+}
