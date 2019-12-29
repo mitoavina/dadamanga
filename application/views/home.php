@@ -185,7 +185,7 @@
                             <img src="<?= img_destinations_url('DiegoNorth') ?>" alt="Fourth slide">
                             <div class="justify-content-center carousel-caption d-none d-md-block">
                                 <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
-                                <div class="destination-text-container" >
+                                <div class="destination-text-container">
                                     <div class="destination-text"><a class="white-link" href="<?= destination_url("Diego") ?>">Diego</a></div>
                                 </div>
                             </div>
@@ -222,7 +222,7 @@
                 </div>
             </div>
         </div>
-        <div class="pb-5 mt-5 pt-5">
+        <div class="mt-5 pt-5 mb-5 pb-5">
             <p class="pb-5" id="madagascar_destination_specialist">MADAGASCAR <span class="montserrat-bold">Destination Specialist</span></p>
             <div class="big-text mx-1">
                 <p>
@@ -232,97 +232,15 @@
                 <p>CONTACT US AND START PLANNING YOUR AFRICAN WILDERNESS JOURNEY TODAY.</p>
             </div>
         </div>
-        <div class="new_class container-fluid pt-5">
-            <div class="row cards justify-content-center">
-                <div class="col-lg-9">
-                    <!-- Card deck -->
-                    <div class="card-deck focus-card-containers">
-                        <!-- Card -->
-                        <!-- ONE CARD -->
-                        <div class="noShadow card mb-4 p-3">
-                            <!--Card image-->
-                            <div class="view overlay">
-                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
-                                <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                            <!--Card content-->
-                            <div class="card-body">
-                                <!--Title-->
-                                <h4 class=" montserrat-bold card-title text-left">Tana City Walk<br>& Manjakamiadana</h4>
-                                <!--Text-->
-                                <div class="row">
-                                    <div class="col-md-12 mb-sm-3 text-left">
-                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
-                                    </div>
-                                    <div class="col-md-12 text-left">
-                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END ONE CARD -->
-                        <!-- Card -->
-                        <!-- Card -->
-                        <div class="noShadow card mb-4 p-3">
-                            <!--Card image-->
-                            <div class="view overlay">
-                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/andasibe.png" alt="Card image cap">
-                                <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                            <!--Card content-->
-                            <div class="card-body">
-                                <!--Title-->
-                                <h4 class=" montserrat-bold card-title text-left">Andasibe Day Trip</h4>
-                                <!--Text-->
-                                <div class="row">
-                                    <div class="col-md-12 mb-sm-3 text-left">
-                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
-                                    </div>
-                                    <div class="col-md-12 text-left">
-                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card -->
-                        <!-- Card -->
-                        <div class="noShadow card mb-4 p-3">
-                            <!--Card image-->
-                            <div class="view overlay">
-                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/ambohimanga.png" alt="Card image cap">
-                                <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                            <!--Card content-->
-                            <div class="card-body">
-                                <!--Title-->
-                                <h4 class="montserrat-bold card-title text-left">Ambohimanga Palace</h4>
-                                <div class="row">
-                                    <div class="col-md-12 mb-sm-3 text-left">
-                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
-                                    </div>
-                                    <div class="col-md-12 text-left">
-                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
-                                    </div>
-                                </div>
-                                <!--Text-->
-                            </div>
 
-                        </div>
-                        <!-- Card -->
 
-                    </div>
-                    <!-- Card deck -->
-                </div>
-            </div>
-        </div>
+        <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409" async></script>
+        <div class="bokunWidget" data-src="https://widgets.bokun.io/online-sales/8439ce9c-a587-4955-91f8-b7423b94a409/product-list/19310"></div>
+        <noscript>Please enable javascript in your browser to book</noscript>
 
-        <div style="padding-top:100px;padding-bottom:40px;">
+
+
+        <div style="padding-bottom:40px;">
             <p>CLICK ON <a href="<?= base_url("contact") ?>">THIS LINK</a> TO CONTACT US AND EXPLORE YOUR NEXT AFRICAN ADVENTURE.</p>
             <p>CALL: +61 459308888</p>
         </div>
@@ -372,7 +290,6 @@
             $(last).find(".carousel-caption").remove();
         });
     });
-
 
     $(".black-marron-btn").hover((e) => {
         $(e.currentTarget).siblings().removeClass("black-marron-btn-hover");
