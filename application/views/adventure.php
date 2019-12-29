@@ -530,7 +530,7 @@
                         </div>
 						<div class="to-hide pic-title">VIEW OUR CURRENT ADVENTURE</div>
 						<div class="overlay-with-padding text-center">
-							<a href="<?= base_url('adventure') ?>" class="d-none overlay-marron white-text">
+							<a href="<?= base_url('shelf') ?>" class="d-none overlay-marron white-text">
 								<div>
 									<div class="mb-3">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</div>
 									<div>FIND OUT MORE <i class="fas fa-long-arrow-alt-right"></i></div>
