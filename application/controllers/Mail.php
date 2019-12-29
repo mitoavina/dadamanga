@@ -316,10 +316,7 @@ class Mail extends CI_Controller{
 	//MAILS FORMS FOR adv admin
 	function Mail_adventure_admin($data){
         return $this->load->view('Mail_adventure_admin',$data,TRUE);
-	}
-	
-
-	
+	}	
 }
 
 
