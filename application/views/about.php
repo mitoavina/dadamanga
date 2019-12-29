@@ -69,7 +69,6 @@
                         <a target="_blank" href="https://www.facebook.com/Dadamanga/"><img class=" contrast socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/facebook-black.png"></a>
                         <a target="_blank" href="https://www.instagram.com/dadamangamadagascar/"><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/instagram-black.png"></a>
                         <a target="_blank" href="https://twitter.com/dadamanga"><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/twitter-black.png"></a>
-                        <a target="_blank" href=""><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/whatsapp-black.png"></a>
                         <a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g293809-d13188459-Reviews-Dadamanga_Travel_Service-Antananarivo_Antananarivo_Province.html"><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/tripadvisor-black.png"></a>
                     </div>
                 </div>
