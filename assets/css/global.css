@@ -709,3 +709,8 @@ sidenav:blur {
 	font-size: 1.4em;
 	font-family: Montserrat
 }
+
+.downloads {
+    font-family: 'Montserrat';
+    font-size: 0.8em;
+}
