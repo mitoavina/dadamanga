@@ -41,7 +41,7 @@
     </div>
     <div class="body-index">
         <nav id="animated-nav" class=" text-center navbar">
-            <p><a class="lien1">OVERVIEW</a> | <a class="lien2">GALLERY</a> | <a class="lien3">WHEN TO TRAVEL</a> | <a class="lien4">REGIONS</a> | <a class="lien5">TRAVEL TALES</a></p>
+            <p><a class="lien1">OVERVIEW</a> | <a class="lien2">GALLERY</a> | <a class="lien3">WHEN TO TRAVEL</a> | <a class="lien4">REGIONS</a></p>
             <a class="navbar-brand" href="<?= base_url() . "home" ?>">
                 <img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
             </a>
