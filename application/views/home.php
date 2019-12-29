@@ -34,7 +34,7 @@
     <div id="jumbotron" class="m-0 flexslider jumbotron homeJumbotron flex-column flex-center">
         <ul class="slides">
             <li style="background-image:url( <?= base_url($image[0]->path) ?>)" class=" jumbotron home-text">
-                <h1 class="text-white"> <?= $text[0]->value ?></h1>
+                <h1 class="white-text"> <?= $text[0]->value ?></h1>
                 <svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
                 </svg>
@@ -43,7 +43,7 @@
                 </div>
             </li>
             <li class="home-text jumbotron" style="background-image:url( <?= base_url() ?>assets/img/home/adventure-jumbotron.jpg)">
-                <h1 class="  text-white">CREATE A BESPOKE<br> EXPERIENCE</h1>
+                <h1 class="  white-text">CREATE A BESPOKE<br> EXPERIENCE</h1>
                 <svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
                 </svg>
@@ -52,7 +52,7 @@
                 </div>
             </li>
             <li class="home-text jumbotron" style="background-image:url( <?= base_url() ?>assets/img/home/knowledge.jpg)">
-                <h1 class=" text-white">KNOWLEDGE OF THE PLACE CONTENT HERE</h1>
+                <h1 class=" white-text">KNOWLEDGE OF THE PLACE CONTENT HERE</h1>
                 <svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
                 </svg>
@@ -142,7 +142,7 @@
             </div>
         </div>
         <style>
-       
+
         </style>
         <div>
             <div id="multi-item-carousel" class="carousel slide">
@@ -150,66 +150,66 @@
                     <div class="carousel-item active">
                         <div class="destination-item">
                             <img src="<?= img_destinations_url('Antananarivo') ?>" alt="First slide">
-                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
-                                <div><i class="far fa-compass fa-3x"></i></div>
-                                <a class="text-white white-link" href="<?= destination_url("Antananarivo") ?>">
-                                    <h1 class="text-uppercase">Antananarivo</h1>
-                                </a>
+                            <div class="justify-content-center carousel-caption d-none d-md-block">
+                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
+                                <div class="destination-text-container">
+                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Antananarivo") ?>">Antananarivo</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="destination-item">
                             <img src="<?= img_destinations_url('ToamasinaEast') ?>" alt="Second slide">
-                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
-                                <div><i class="far fa-compass fa-3x"></i></div>
-                                <a class="text-white white-link" href="<?= destination_url("Toamasina") ?>">
-                                    <h1 class="text-uppercase">Toamasina</h1>
-                                </a>
+                            <div class="justify-content-center carousel-caption d-none d-md-block">
+                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
+                                <div class="destination-text-container">
+                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Toamasina") ?>">Toamasina</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="destination-item">
                             <img src="<?= img_destinations_url('ToliaraSouthWest') ?>" alt="Third slide">
-                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
-                                <div><i class="far fa-compass fa-3x"></i></div>
-                                <a class="text-white white-link" href="<?= destination_url("Toliara") ?>">
-                                    <h1 class="text-uppercase">Toliara</h1>
-                                </a>
+                            <div class="justify-content-center carousel-caption d-none d-md-block">
+                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
+                                <div class="destination-text-container">
+                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Toliara") ?>">Toliara</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="destination-item">
                             <img src="<?= img_destinations_url('DiegoNorth') ?>" alt="Fourth slide">
-                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
-                                <div><i class="far fa-compass fa-3x"></i></div>
-                                <a class="text-white white-link" href="<?= destination_url("Diego") ?>">
-                                    <h1 class="text-uppercase">Diego</h1>
-                                </a>
+                            <div class="justify-content-center carousel-caption d-none d-md-block">
+                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
+                                <div class="destination-text-container">
+                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Diego") ?>">Diego</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="destination-item">
                             <img src="<?= img_destinations_url('FortDauphin') ?>" alt="Fourth slide">
-                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
-                                <div><i class="far fa-compass fa-3x"></i></div>
-                                <a class="text-white white-link" href="<?= destination_url("FortDauphin") ?>">
-                                    <h1 class="text-uppercase">Fort<br> Dauphin</h1>
-                                </a>
+                            <div class="justify-content-center carousel-caption d-none d-md-block">
+                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
+                                <div class="destination-text-container">
+                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("FortDauphin") ?>">Fort-Dauphin</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="destination-item">
                             <img src="<?= img_destinations_url('Morondava') ?>" alt="Fourth slide">
-                            <div class="flex-column flex-center carousel-caption d-none d-md-flex">
-                                <div><i class="far fa-compass fa-3x"></i></div>
-                                <a class="text-white white-link" href="<?= destination_url("Morondava") ?>">
-                                    <h1 class="text-uppercase">Morondava</h1>
-                                </a>
+                            <div class="justify-content-center carousel-caption d-none d-md-block">
+                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
+                                <div class="destination-text-container">
+                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Morondava") ?>">Morondava</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@
                 </div>
             </div>
         </div>
-        <div class="pb-5 mt-5 pt-5">
+        <div class="mt-5 pt-5 mb-5 pb-5">
             <p class="pb-5" id="madagascar_destination_specialist">MADAGASCAR <span class="montserrat-bold">Destination Specialist</span></p>
             <div class="big-text mx-1">
                 <p>
@@ -232,97 +232,15 @@
                 <p>CONTACT US AND START PLANNING YOUR AFRICAN WILDERNESS JOURNEY TODAY.</p>
             </div>
         </div>
-        <div class=" new_class container-fluid pt-5">
-            <div class="row cards justify-content-center">
-                <div class="col-lg-9">
-                    <!-- Card deck -->
-                    <div class="card-deck focus-card-containers">
-                        <!-- Card -->
-                        <!-- ONE CARD -->
-                        <div class="noShadow card mb-4 p-3">
-                            <!--Card image-->
-                            <div class="view overlay">
-                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/manjakamiadana.png" alt="Card image cap">
-                                <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                            <!--Card content-->
-                            <div class="card-body">
-                                <!--Title-->
-                                <h4 class=" montserrat-bold card-title text-left">Tana City Walk<br>& Manjakamiadana</h4>
-                                <!--Text-->
-                                <div class="row">
-                                    <div class="col-md-12 mb-sm-3 text-left">
-                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
-                                    </div>
-                                    <div class="col-md-12 text-left">
-                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END ONE CARD -->
-                        <!-- Card -->
-                        <!-- Card -->
-                        <div class="noShadow card mb-4 p-3">
-                            <!--Card image-->
-                            <div class="view overlay">
-                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/andasibe.png" alt="Card image cap">
-                                <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                            <!--Card content-->
-                            <div class="card-body">
-                                <!--Title-->
-                                <h4 class=" montserrat-bold card-title text-left">Andasibe Day Trip</h4>
-                                <!--Text-->
-                                <div class="row">
-                                    <div class="col-md-12 mb-sm-3 text-left">
-                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
-                                    </div>
-                                    <div class="col-md-12 text-left">
-                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card -->
-                        <!-- Card -->
-                        <div class="noShadow card mb-4 p-3">
-                            <!--Card image-->
-                            <div class="view overlay">
-                                <img class="card-img-top" src="<?= base_url() ?>assets/img/off_the_shelf/ambohimanga.png" alt="Card image cap">
-                                <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                            <!--Card content-->
-                            <div class="card-body">
-                                <!--Title-->
-                                <h4 class="montserrat-bold card-title text-left">Ambohimanga Palace</h4>
-                                <div class="row">
-                                    <div class="col-md-12 mb-sm-3 text-left">
-                                        <img src="<?= base_url() ?>assets/img/calendar.png" alt=""> 1 day
-                                    </div>
-                                    <div class="col-md-12 text-left">
-                                        <img src="<?= base_url() ?>assets/img/coin.png" alt=""> from USD 30 per person
-                                    </div>
-                                </div>
-                                <!--Text-->
-                            </div>
 
-                        </div>
-                        <!-- Card -->
 
-                    </div>
-                    <!-- Card deck -->
-                </div>
-            </div>
-        </div>
+        <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409" async></script>
+        <div class="bokunWidget" data-src="https://widgets.bokun.io/online-sales/8439ce9c-a587-4955-91f8-b7423b94a409/product-list/19310"></div>
+        <noscript>Please enable javascript in your browser to book</noscript>
 
-        <div style="padding-top:100px;padding-bottom:40px;">
+
+
+        <div style="padding-bottom:40px;">
             <p>CLICK ON <a href="<?= base_url("contact") ?>">THIS LINK</a> TO CONTACT US AND EXPLORE YOUR NEXT AFRICAN ADVENTURE.</p>
             <p>CALL: +61 459308888</p>
         </div>
@@ -346,15 +264,14 @@
         });
 
         $(".carousel-item").each(function() {
-            var width = window.outerWidth * 25 / 100;
+            var width = 50;
 
             var first = $(this).find(".destination-item:nth-child(1)");
             $(first).prepend('<div class="transparent-layer" data-slide="prev" href="#multi-item-carousel"></div>');
-            var h1TextFirst = $(first).find(".text-white").children().first().clone();
-            (h1TextFirst).addClass("white-text");
+            var h1TextFirst = $(first).find(".destination-text-container").clone();
             var wrapperFirst = jQuery('<div/>', {
-                style: `width: ${width}px;height:100%;position:absolute;right:0`,
-                class: `flex-center wrapper flex-column`
+                style: `width: ${width}%;height:100%;position:absolute;right:0`,
+                class: ``
             });
             wrapperFirst.append(h1TextFirst);
             first.prepend(wrapperFirst);
@@ -363,18 +280,16 @@
 
             var last = $(this).find(".destination-item:nth-child(3)");
             $(last).prepend('<div class="transparent-layer" data-slide="next" href="#multi-item-carousel"></div>');
-            var h1Text = $(last).find(".text-white").children().first();
-            (h1Text).addClass("white-text");
+            var h1Text = $(last).find(".destination-text-container").clone();
             var wrapper = jQuery('<div/>', {
-                style: `width: ${width}px;height:100%;position:absolute;`,
-                class: `flex-center wrapper flex-column`
+                style: `width: ${width}%;height:100%;position:absolute;`,
+                class: ``
             });
             wrapper.append(h1Text);
             last.prepend(wrapper);
             $(last).find(".carousel-caption").remove();
         });
     });
-
 
     $(".black-marron-btn").hover((e) => {
         $(e.currentTarget).siblings().removeClass("black-marron-btn-hover");

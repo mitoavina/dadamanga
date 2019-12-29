@@ -413,14 +413,14 @@
             </div>
         </div>
         <div class="div2 advnenture-container">
-            <div class="adventure-itineraries container-fluid">
+            <div class="adventure-itineraries container-fluid ">
                 <div class="itinerary-menu-mobile text-center">
                     <h5>WHAT INTERESTS YOU?</h5>
-                    <ul class="list-inline">
-                        <li class="list-inline-item side-menu-style-active" data-index="0"><a>Destinations</a></li>
-                        <li class="list-inline-item" data-index="1"><a>Parks</a></li>
-                        <li class="list-inline-item" data-index="2"><a>Experiences</a></li>
-                        <li class="list-inline-item" data-index="3"><a>Wildlife</a></li>
+                    <ul class="list-group flex-row justify-content-center">
+                        <li class="list-group-item side-menu-style-active" data-index="0"><a>Destinations</a></li>
+                        <li class="list-group-item" data-index="1"><a>Parks</a></li>
+                        <li class="list-group-item" data-index="2"><a>Experiences</a></li>
+                        <li class="list-group-item" data-index="3"><a>Wildlife</a></li>
                     </ul>
                 </div>
                 <div class="show-adventure-container d-flex justify-content-center">
@@ -530,7 +530,7 @@
                         </div>
 						<div class="to-hide pic-title">VIEW OUR CURRENT ADVENTURE</div>
 						<div class="overlay-with-padding text-center">
-							<a href="<?= base_url('adventure') ?>" class="d-none overlay-marron white-text">
+							<a href="<?= base_url('shelf') ?>" class="d-none overlay-marron white-text">
 								<div>
 									<div class="mb-3">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</div>
 									<div>FIND OUT MORE <i class="fas fa-long-arrow-alt-right"></i></div>

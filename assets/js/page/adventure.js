@@ -1,1 +1,271 @@
-var listAdventure={destination:[],park:[],experience:[],wildlife:[]},keys=Object.keys(listAdventure),adventuresId=["IDDESTINATION","IDPARK","IDEXPERIENCE","IDWILDLIFE"],adventures=[destinations,parks,experiences,wildlifes],i=0,j=0;function init(){for(i in adventuresId)for(j in adventures[i])void 0!==adventures[i][j][adventuresId[i]]&&(adventures[i][j].id=adventures[i][j][adventuresId[i]],delete adventures[i][j][adventuresId[i]]);if(null!=$.cookie("adventure")&&null!=$.cookie("adventure")&&""!=$.cookie("adventure")){var e=JSON.parse($.cookie("adventure"));for(i in keys)listAdventure[keys[i]]=e[keys[i]];for(i in keys){for(j in listAdventure[keys[i]])$("#adventure-"+keys[i]).append($(yourAdventure(listAdventure[keys[i]][j].id,listAdventure[keys[i]][j].TITLE,keys[i]))),$("#adventure-modal-"+keys[i]).append($(yourAdventureModal(listAdventure[keys[i]][j].id,listAdventure[keys[i]][j].TITLE,keys[i]))),changeToAddedButton(keys[i]+listAdventure[keys[i]][j].id);0!=listAdventure[keys[i]].length&&numberOfAdventure(keys[i],listAdventure[keys[i]].length)}removeAdventure()}}function numberOfAdventure(e,t){$(".itinerary-menu-"+e+"> span").text("("+t+")")}function removeAdventure(){$(".remove-itinerary-btn").each(function(){null==$._data($(this)[0],"events")&&$(this).on("click",function(){var e,t=0;for(t in keys)for(j in listAdventure[keys[t]])(e=keys[t]+listAdventure[keys[t]][j].id)==$(this).val()&&($(`.your-adventure-content > div[data-index="${$(this).val()}"]`).fadeOut("normal",function(){$(this).remove()}),listAdventure[keys[t]].splice(j,1),numberOfAdventure(keys[t],listAdventure[keys[t]].length),createCookie(),changeToAddButton(e))})})}function changeToAddButton(e){$(".add-itinerary-btn").each(function(){$(this).val()==e&&($(this).html("ADD TO ITINERARY <span>+</span>"),$(this).prop("disabled",!1),$(this).css({background:"#444443"}))})}function changeToAddedButton(e){$(".add-itinerary-btn").each(function(){$(this).val()==e&&($(this).html("ADDED TO ITINERARY <span>+</span>"),$(this).prop("disabled",!0),$(this).css({background:"#827E7B"}))})}function yourAdventure(e,t,n){return'<div data-index="'+n+e+'" class="row your-adventure-list">\n\t\t\t\t\t\t<span class="col-lg-8 col-8">'+capitalize_Words(t)+'</span>\n\t\t\t\t\t\t<div class="col-lg-4 col-4 text-right">\n\t\t\t\t\t\t\t<button class="remove-itinerary-btn" value="'+n+e+'" ><i class="fas fa-times"></i></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>'}function yourAdventureModal(e,t,n){return'<div data-index="'+n+e+'" class="row your-adventure-list">\n\t\t\t\t\t\t<span class="col-lg-8 col-8"><input type="checkbox" name="'+n+'[]" value="'+capitalize_Words(t)+'" checked hidden>'+capitalize_Words(t)+"</span>\n\t\t\t\t\t</div>"}function createCookie(){null==$.cookie("adventure")&&null==$.cookie("adventure")&&""==$.cookie("adventure")||$.removeCookie("adventure");var e=new Date;hour=1,e.setTime(e.getTime()+3600*hour*1e3),$.cookie("adventure",JSON.stringify(listAdventure),{expires:e})}function capitalize_Words(e){return e.replace(/\w\S*/g,function(e){return e.charAt(0).toUpperCase()+e.substr(1).toLowerCase()})}init(),$(document).ready(function(){for(i in $(".add-itinerary-btn").each(function(){$(this).on("click",function(){for(i in $(this).html("ADDED TO ITINERARY <span>+</span>"),$(this).prop("disabled",!0),$("#adventure-collapse").is(":hidden")&&$("#adventure-collapse").collapse("toggle"),$(this).css({background:"#827E7B"}),adventures)for(j in adventures[i])if(keys[i]+adventures[i][j].id==$(this).val()){for(var e in listAdventure[keys[i]])if(adventures[i][j].id==listAdventure[keys[i]][e].id)return;return $("#adventure-"+keys[i]).append($(yourAdventure(adventures[i][j].id,adventures[i][j].TITLE,keys[i]))),$("#adventure-modal-"+keys[i]).append($(yourAdventureModal(adventures[i][j].id,adventures[i][j].TITLE,keys[i]))),removeAdventure(),listAdventure[keys[i]].push(adventures[i][j]),createCookie(),numberOfAdventure(keys[i],listAdventure[keys[i]].length),void $(".show-adventure-container .show-adventure-btn").fadeOut("normal",function(){$(this).remove()})}})}),$(".show-adventure-container .show-adventure-btn").on("click",function(){$(".show-adventure-container .show-adventure-btn").fadeOut("normal",function(){$(this).remove()})}),$("#adventure-collapse").on("shown.bs.collapse",function(){$(".add-itinerary-btn[data-toggle=collapse]").each(function(){$(this).attr("data-toggle","")})}),keys)$(".adventure-"+keys[i]+"-search").keypress(function(e){if(13==e.which)return!1}),$(".adventure-"+keys[i]+"-search").on("search",function(){var e=$(".side-menu-style-active").attr("data-index");$(".itinerary-"+keys[e]).each(function(){$(this).fadeIn("normal",function(){$(this).css({display:"flex"})})})}),$(".adventure-"+keys[i]+"-search").on("keyup",function(){var e=$(".side-menu-style-active").attr("data-index");""!=$(this).val()?$(".itinerary-"+keys[e]).each(function(){$(this).attr("data-text").toLowerCase().includes($(".adventure-"+keys[e]+"-search").val().toLowerCase())?$(this).fadeIn("normal",function(){$(this).css({display:"flex"})}):$(this).fadeOut("normal",function(){$(this).css({display:"none"})})}):$(".itinerary-"+keys[e]).each(function(){$(this).fadeIn("normal",function(){$(this).css({display:"flex"})})})});$("#adventure-btn-send").on("click",function(e){e.preventDefault(),$("#adventure-modal").modal("hide"),slide(1);var t=$("#adventure-form");$.ajax({type:"POST",url:baseUrl+"adventure/mail",data:t.serialize(),success:function(e){console.log(e)},error:function(e){console.log(e)}})})});var slideIndex=1,title=["THE ADVENTURE BEGINS..","THE ADVENTURE CONTINUES..","ALMOST DONE","YOUR ADVENTURE"];function slideTo(e){slide(slideIndex+=e)}function currentSlide(e){slide(slideIndex=e)}function slide(e){var t=$(".adventure-form > .form-row"),n=$(".dot-content > .dot");e>t.length&&(slideIndex=1),e<1&&(slideIndex=t.length),$(".adventure-btn-previous").css({display:"flex"}),$(".adventure-btn-next").css({display:"flex"}),$("#adventure-modal-title").text(title[slideIndex-1]),$("#adventure-modal-title").removeClass("advenutre-modal-header-title"),$(".dot-content").css({display:"block"}),$(".adventure-modal-body-header").css({display:"flex"}),$(".adventure-btn-next").text("Next"),$(".adventure-btn-change").css({display:"none"}),$(".adventure-btn-send").css({display:"none"}),1==slideIndex&&$(".adventure-btn-previous").css({display:"none"}),slideIndex==t.length&&($(".adventure-btn-change").css({display:"flex"}),$(".adventure-btn-send").css({display:"flex"}),$(".adventure-btn-next").css({display:"none"}),$(".dot-content").css({display:"none"}),$(".adventure-modal-body-header").css({display:"none"}),$("#adventure-modal-title").addClass("advenutre-modal-header-title")),slideIndex==t.length-1&&$(".modal-footer .adventure-btn-next").text("Finish"),t.each(function(){$(this).css({display:"none"})}),n.each(function(){$(this).removeClass("activeDot")}),t.eq(slideIndex-1).css({display:"flex"}),n.eq(slideIndex-1).addClass("activeDot")}slide(slideIndex);
+var listAdventure = {'destination':[], 'park':[], 'experience':[], 'wildlife':[]};
+var keys = Object.keys(listAdventure);
+var adventuresId = ['IDDESTINATION', 'IDPARK', 'IDEXPERIENCE', 'IDWILDLIFE'];
+var adventures = [destinations, parks, experiences, wildlifes];
+
+var i = 0, j = 0;
+var id;
+
+init();
+function init(){
+	for(i in adventuresId){
+		for(j in adventures[i]){
+			if(adventures[i][j][adventuresId[i]] !== undefined){
+				adventures[i][j].id = adventures[i][j][adventuresId[i]];
+				delete adventures[i][j][adventuresId[i]];
+			}
+		}
+	}
+	
+	if($.cookie("adventure") != undefined && $.cookie("adventure") != null && $.cookie("adventure") != ""){
+		var cookie = JSON.parse($.cookie("adventure"));
+		for(i in keys)
+			listAdventure[keys[i]] = cookie[keys[i]];
+		
+		for(i in keys){
+			for(j in listAdventure[keys[i]]){
+				$("#adventure-" + keys[i]).append($(yourAdventure(listAdventure[keys[i]][j].id, listAdventure[keys[i]][j].TITLE, keys[i])));
+				$("#adventure-modal-" + keys[i]).append($(yourAdventureModal(listAdventure[keys[i]][j].id, listAdventure[keys[i]][j].TITLE, keys[i])));
+				changeToAddedButton(keys[i] + listAdventure[keys[i]][j].id);
+			}
+			if(listAdventure[keys[i]].length != 0)
+				numberOfAdventure(keys[i], listAdventure[keys[i]].length);
+		}
+		removeAdventure();
+	}
+}
+
+
+/***/
+$(document).ready(function () {
+	var show = true;
+	$(`.add-itinerary-btn`).each(function(){
+		$(this).on('click', function(){
+			$(this).html("ADDED TO ITINERARY <span>+</span>");
+			$(this).prop('disabled', true);
+			if($( "#adventure-collapse" ).is( ":hidden" )){
+				$("#adventure-collapse").collapse('toggle');
+			}
+			$(this).css({'background':'#827E7B'});
+			var tmp;
+			for(i in adventures){
+				for(j in adventures[i]){
+					tmp = keys[i] + adventures[i][j].id;
+					if(tmp == $(this).val()){
+						for(var k in listAdventure[keys[i]]){
+							if(adventures[i][j].id == listAdventure[keys[i]][k].id)
+								return;
+						}
+						$("#adventure-" + keys[i]).append($(yourAdventure(adventures[i][j].id, adventures[i][j].TITLE, keys[i])));
+						$("#adventure-modal-" + keys[i]).append($(yourAdventureModal(adventures[i][j].id, adventures[i][j].TITLE, keys[i])));
+						removeAdventure();
+						listAdventure[keys[i]].push(adventures[i][j]);
+						createCookie();
+						numberOfAdventure(keys[i], listAdventure[keys[i]].length);
+						if(show)
+							$(`.show-adventure-container .show-adventure-btn`).fadeOut("normal",function(){$(this).remove();});
+						return;
+					}
+				}
+			}
+		});
+	});
+
+	$(`.show-adventure-container .show-adventure-btn`).on('click', function(){
+		$(`.show-adventure-container .show-adventure-btn`).fadeOut("normal",function(){
+			$(this).remove();
+		});
+	});
+	$(`#adventure-collapse`).on('shown.bs.collapse', function(){
+		$('.add-itinerary-btn[data-toggle=collapse]').each(function(){
+			$(this).attr("data-toggle","");
+		});
+	});
+
+	for(i in keys){
+		$(`.adventure-` + keys[i] + `-search`).keypress(function(e) {
+			if (e.which == 13) {
+				return false;
+			}
+		});
+		
+		$(`.adventure-` + keys[i] + `-search`).on("search", function(){
+			id = $('.side-menu-style-active').attr('data-index');
+			$(`.itinerary-` + keys[id]).each(function(){
+				$(this).fadeIn("normal",function(){$(this).css({"display":"flex"});});
+			});
+		});
+		
+		$(`.adventure-` + keys[i] + `-search`).on("keyup", function(){
+			id = $('.side-menu-style-active').attr('data-index');	
+			if($(this).val() != ""){
+				$(`.itinerary-` + keys[id]).each(function(){
+					if(!$(this).attr("data-text").toLowerCase().includes($(`.adventure-` + keys[id] + `-search`).val().toLowerCase())){
+						
+						$(this).fadeOut("normal",function(){$(this).css({"display":"none"});});
+					}else{
+						$(this).fadeIn("normal",function(){$(this).css({"display":"flex"});});
+					}
+				});
+			}else{
+				$(`.itinerary-` + keys[id]).each(function(){
+					$(this).fadeIn("normal",function(){$(this).css({"display":"flex"});});
+				});
+			}
+		});
+	}
+	$("#adventure-btn-send").on("click", function(e) {
+		e.preventDefault();
+		var form = $("#adventure-form");
+		$.ajax({
+			type: "POST",
+			url: baseUrl + 'adventure/mail',
+			data: form.serialize(),
+			success: function(data){
+				console.log(data);
+			}
+		});
+	});
+});
+
+function numberOfAdventure(key, nb){
+	$('.itinerary-menu-' + key + '> span').text('(' + nb + ')');
+}
+
+function removeAdventure(){
+	$('.remove-itinerary-btn').each(function(){
+		var events = $._data($(this)[0], "events");
+		if(events == null){
+			$(this).on("click", function(){
+				var i=0;
+				var tmp;
+				for(i in keys){
+					for(j in listAdventure[keys[i]]){
+						tmp = keys[i] + listAdventure[keys[i]][j].id;
+						if(tmp == $(this).val()){
+							$(`.your-adventure-content > div[data-index="${$(this).val()}"]`).fadeOut("normal",function(){$(this).remove();});
+							listAdventure[keys[i]].splice(j, 1);
+							numberOfAdventure(keys[i], listAdventure[keys[i]].length);
+							createCookie();
+							changeToAddButton(tmp);
+						}
+					}
+				}
+			});
+		}
+	});
+}
+
+function changeToAddButton(removed){
+	$('.add-itinerary-btn').each(function(){
+		if($(this).val() == removed){
+			$(this).html("ADD TO ITINERARY <span>+</span>");
+			$(this).prop('disabled', false);
+			$(this).css({'background':'#444443'});
+		}
+	});
+}
+
+function changeToAddedButton(added){
+	$('.add-itinerary-btn').each(function(){
+		if($(this).val() == added){
+			$(this).html("ADDED TO ITINERARY <span>+</span>");
+			$(this).prop('disabled', true);
+			$(this).css({'background':'#827E7B'});
+		}
+	});
+}
+
+function yourAdventure(id, title, pattern){
+	var adventure = `<div data-index="` + pattern + id + `" class="row your-adventure-list">
+						<span class="col-lg-8 col-8">`+ capitalize_Words(title) +`</span>
+						<div class="col-lg-4 col-4 text-right">
+							<button class="remove-itinerary-btn" value="` + pattern + id + `" ><i class="fas fa-times"></i></button>
+						</div>
+					</div>`;
+	return adventure;
+}
+
+function yourAdventureModal(id, title, pattern){
+	var adventure = `<div data-index="` + pattern + id + `" class="row your-adventure-list">
+						<span class="col-lg-8 col-8"><input type="checkbox" name="` + pattern + `[]" value="`+ capitalize_Words(title) +`" checked hidden>`+ capitalize_Words(title) +`</span>
+					</div>`;
+	return adventure;
+}
+
+function createCookie(){
+	if($.cookie("adventure") != undefined || $.cookie("adventure") != null || $.cookie("adventure") != "")
+		$.removeCookie("adventure");
+	var date = new Date();
+	hour = 1;
+	date.setTime(date.getTime() + (hour * 3600 * 1000));
+	$.cookie("adventure", JSON.stringify(listAdventure),{expires: date});
+}
+
+function capitalize_Words(str){
+	return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
+
+/* */
+var slideIndex = 1;
+var title = [
+	'THE ADVENTURE BEGINS..',
+	'THE ADVENTURE CONTINUES..',
+	'ALMOST DONE',
+	'YOUR ADVENTURE'
+];
+
+slide(slideIndex);
+
+function slideTo(n){
+	slide(slideIndex += n);
+}
+
+function currentSlide(n){
+	slide(slideIndex = n);
+}
+
+function slide(n){
+	var slides = $(`.adventure-form > .form-row`);
+	var dot = $(`.dot-content > .dot`);
+	if (n > slides.length) {slideIndex = 1}    
+  	if (n < 1) {slideIndex = slides.length}
+	$(`.adventure-btn-previous`).css({'display':'flex'});
+	$(`.adventure-btn-next`).css({'display':'flex'});
+	$(`#adventure-modal-title`).text(title[slideIndex - 1]);
+	
+	
+	$(`#adventure-modal-title`).removeClass("advenutre-modal-header-title");
+	$(`.dot-content`).css({'display':'block'});
+	$(`.adventure-modal-body-header`).css({'display':'flex'});
+	$(`.adventure-btn-next`).text("Next");
+	$(`.adventure-btn-change`).css({'display':'none'});
+	$(`.adventure-btn-send`).css({'display':'none'});
+
+
+	if(slideIndex == 1)
+		$(`.adventure-btn-previous`).css({'display':'none'});
+
+	if(slideIndex == slides.length){
+		$(`.adventure-btn-change`).css({'display':'flex'});
+		$(`.adventure-btn-send`).css({'display':'flex'});
+
+
+		$(`.adventure-btn-next`).css({'display':'none'});
+		$(`.dot-content`).css({'display':'none'});
+		$(`.adventure-modal-body-header`).css({'display':'none'});
+		$(`#adventure-modal-title`).addClass("advenutre-modal-header-title");
+	}
+
+	if(slideIndex == slides.length-1)
+		$(`.modal-footer .adventure-btn-next`).text("Finish");
+
+	slides.each(function(){
+		$(this).css({"display":"none"});
+	});
+	dot.each(function(){
+		$(this).removeClass("activeDot");
+	});
+	slides.eq(slideIndex - 1).css({"display":"flex"});
+	dot.eq(slideIndex - 1).addClass("activeDot");
+}

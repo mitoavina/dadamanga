@@ -1,1 +1,366 @@
-#adventureJumbotron{background-image:url(../../img/Adventure/adventure.png)}.advnenture-container{background-color:#fff;padding-bottom:5%}.show-adventure-container{padding-bottom:5%}.show-adventure-btn{background-color:#444443;font:Geometria;font-size:70%;color:#b7986d;height:35px;width:250px;border:none}.show-adventure-btn span{font-size:1.3em}.itinerary{padding-bottom:2%}.itinerary .card{height:100%;border-radius:0;box-shadow:none}.itinerary .card .card-footer{border:none;background-color:#fff;padding-left:0}.card-body{padding-top:6%;padding-left:0;padding-bottom:0}.itinerary-title{font-family:Montserrat;font-size:1.3em;font-weight:500;color:#b7986d;text-transform:uppercase}@media screen and (max-width:480px){.itinerary-title{font-size:.8em}}.add-itinerary-btn{margin-top:5%;background-color:#444443;font:Geometria;font-size:70%;color:#b7986d;height:35px;width:150px;border:none}.add-itinerary-btn span{font-size:1.3em}.adventure-bottom{background-color:#f7f4f0}.adventure-bottom-content{padding-top:5%;padding-bottom:5%}.adventure-bottom-content .title{font-size:1.4em;font-weight:500;line-height:28px;padding-bottom:20px}.adventure-current{padding:0}.adventure-current-container{overflow:hidden}.view-adventure-current{height:100%}@media screen and (max-width:768px){.adventure-bottom-content{padding-top:15%;padding-bottom:15%}.adventure-bottom-content .title{font-size:1em}}.your-adventure{background-color:#efeee9;padding-top:50px}.your-adventure-title{margin-bottom:20px;font-family:brandon-grotesque,sans-serif;font-size:20px;letter-spacing:.1em;font-weight:400;line-height:40px;color:#444443;border-bottom:1px solid #b7986d;padding-bottom:10px}.your-adventure-content{padding-bottom:10px}.your-adventure-sub-title{color:#b7986d;font-family:Geometria-Light;font-size:20px}.remove-itinerary-btn{border:none;color:#c49a6c;background-color:rgba(0,0,0,0)}.create-adventure-container{padding-top:1%}.itinerary-menu .create-adventure-container{margin-top:10%}.modal-header{border:none;text-align:center;display:block;font-family:Geometria;font-style:normal;font-weight:400;font-size:24px;line-height:30px;color:#b7986d;margin-top:20px;margin-bottom:20px}.advenutre-modal-header-title{border-bottom:1px solid #b7986d;padding-bottom:10px;font-size:20px;display:inline-block;color:#444443}.modal-body{padding-left:25px;padding-right:25px}.modal-body form{margin-top:5%}.dot{cursor:pointer;height:15px;width:15px;margin:0 2px;background-color:#bbb;border-radius:50%;display:inline-block;transition:#bbb .6s ease}.activeDot,.dot:hover{background-color:#717171}.adventure-modal-body-header{font-family:Montserrat;font-style:normal;font-weight:400;font-size:15px;line-height:18px}.adventure-form>.form-row{display:none}.adventure-form>.form-row>.form-group{margin-bottom:50px}.adventure-form>.form-row>.form-group>label{font-family:Geometria;font-style:normal;font-weight:400;font-size:16px;line-height:20px;color:#b7986d}.form-input{border:none;border-radius:0;font-family:Montserrat;font-style:normal;font-weight:300;font-size:13px;line-height:16px;color:#151515;background-color:#f7f4f0}.form-input:focus{border:none;box-shadow:unset;background-color:#f7f4f0}.modal-footer{border:none;justify-content:unset}.modal-footer .btn{box-shadow:unset;color:#fff;text-transform:unset;font-size:13px;font-weight:300;padding:10px 30px 10px 30px}.modal-footer .btn:focus,.modal-footer .btn:hover{border:none;box-shadow:none}.modal-footer .adventure-btn-previous{color:#b7986d}.modal-footer .adventure-btn-next,.modal-footer .adventure-btn-send{background-color:#b7986d}.adventure-form .fade{-webkit-animation-name:fade;-webkit-animation-duration:1.5s;-webkit-animation-fill-mode:both;animation-name:fade;animation-duration:1.5s;animation-fill-mode:both}.dot-content{text-align:center}@-webkit-keyframes fade{from{opacity:.4}to{opacity:1}}@keyframes fade{from{opacity:.4}to{opacity:1}}.modal-footer .adventure-btn-change{background-color:#8a8a8c}.adventure-btn-left,.adventure-btn-right{display:flex}.adventure-btn-left{justify-content:flex-start}.adventure-btn-right{justify-content:flex-end}.overlay-with-padding{padding:15px 30px}.adventure-search{border:none;font-size:1.2em;border-radius:0;border-bottom:1px solid #b7986d}.adventure-search:focus{border-bottom:1px solid #b7986d;box-shadow:none}.adventure-search-label{font-size:1.4em;color:#b7986d}.text h1{font-size:4vw!important;padding-top:20vh!important}
+#adventureJumbotron {
+    background-image: url(../../img/Adventure/adventure.png);
+}
+
+.advnenture-container {
+    background-color: white;
+    padding-bottom: 5%;
+}
+
+.show-adventure-container {
+    padding-bottom: 5%;
+}
+
+.show-adventure-btn {
+    background-color: #444443;
+    font: Geometria;
+    font-size: 70%;
+    color: #B7986D;
+    height: 35px;
+    width: 250px;
+    border: none;
+}
+
+.show-adventure-btn span {
+    font-size: 1.3em;
+}
+
+
+/*--------------------------------------------------------------*/
+
+.itinerary {
+    padding-bottom: 2%;
+}
+
+.itinerary .card {
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.itinerary .card .card-footer {
+    border: none;
+    background-color: white;
+    padding-left: 0;
+}
+
+
+/*--------------------------------------------------------------*/
+
+.card-body {
+    padding-top: 6%;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.itinerary-title {
+    font-family: 'Montserrat';
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #B7986D;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 480px) {
+    .itinerary-title {
+        font-size: .8em;
+	}
+}
+
+.add-itinerary-btn {
+    margin-top: 5%;
+    background-color: #444443;
+    font: Geometria;
+    font-size: 70%;
+    color: #B7986D;
+    height: 35px;
+    width: 150px;
+    border: none;
+}
+@media screen and (max-width: 480px) {
+	.add-itinerary-btn{
+		width: 120px;
+	}
+}
+
+.add-itinerary-btn span {
+    font-size: 1.3em;
+}
+
+.adventure-bottom {
+    background-color: #F7F4F0;
+}
+
+.adventure-bottom-content {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.adventure-bottom-content .title {
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 28px;
+    padding-bottom: 20px;
+}
+
+
+/**/
+
+.adventure-current {
+    padding: 0;
+}
+
+.adventure-current-container {
+    overflow: hidden;
+}
+
+.view-adventure-current {
+    height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .adventure-bottom-content {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+    .adventure-bottom-content .title {
+        font-size: 1em;
+    }
+}
+
+.your-adventure {
+    background-color: #EFEEE9;
+    padding-top: 50px;
+}
+
+.your-adventure-title {
+    margin-bottom: 20px;
+    font-family: "brandon-grotesque", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    line-height: 40px;
+    color: #444443;
+    border-bottom: 1px solid #B7986D;
+    padding-bottom: 10px;
+}
+
+.your-adventure-content {
+    padding-bottom: 10px;
+}
+
+.your-adventure-sub-title {
+    color: #b7986d;
+    font-family: 'Geometria-Light';
+    font-size: 20px;
+}
+
+.remove-itinerary-btn {
+    border: none;
+    color: #C49A6C;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.create-adventure-container {
+    padding-top: 1%;
+}
+
+.itinerary-menu .create-adventure-container {
+    margin-top: 10%;
+}
+
+
+/*-----		MODAL		-----*/
+
+.modal-header {
+    border: none;
+    text-align: center;
+    display: block;
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    color: #B7986D;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.advenutre-modal-header-title {
+    border-bottom: 1px solid #B7986D;
+    padding-bottom: 10px;
+    font-size: 20px;
+    display: inline-block;
+    color: #444443;
+}
+
+.modal-body {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.modal-body form {
+    margin-top: 5%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: #bbb 0.6s ease;
+}
+
+.activeDot,
+.dot:hover {
+    background-color: #717171;
+}
+
+.adventure-modal-body-header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.adventure-form>.form-row {
+    display: none;
+}
+
+.adventure-form>.form-row>.form-group {
+    margin-bottom: 50px;
+}
+
+.adventure-form>.form-row>.form-group>label {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #B7986D;
+}
+
+.form-input {
+    border: none;
+    border-radius: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #151515;
+    background-color: #F7F4F0;
+}
+
+.form-input:focus {
+    border: none;
+    box-shadow: unset;
+    background-color: #F7F4F0;
+}
+
+.modal-footer {
+    border: none;
+    justify-content: unset;
+}
+
+.modal-footer .btn {
+    box-shadow: unset;
+    color: #fff;
+    text-transform: unset;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 10px 30px 10px 30px;
+}
+
+.modal-footer .btn:hover,
+.modal-footer .btn:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.modal-footer .adventure-btn-previous {
+    color: #b7986d;
+}
+
+.modal-footer .adventure-btn-next,
+.modal-footer .adventure-btn-send {
+    background-color: #b7986d;
+}
+
+.adventure-form .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+.dot-content {
+    text-align: center;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.modal-footer .adventure-btn-change {
+    background-color: #8A8A8C;
+}
+
+.adventure-btn-left,
+.adventure-btn-right {
+    display: flex;
+}
+
+.adventure-btn-left {
+    justify-content: flex-start;
+}
+
+.adventure-btn-right {
+    justify-content: flex-end;
+}
+
+.overlay-with-padding {
+    padding: 15px 30px;
+}
+
+.adventure-search {
+    border: none;
+    font-size: 1.2em;
+    border-radius: 0;
+    border-bottom: 1px solid #b7986d;
+}
+
+.adventure-search:focus {
+    border-bottom: 1px solid #b7986d;
+    box-shadow: none;
+}
+
+.adventure-search-label {
+    font-size: 1.4em;
+    color: #b7986d;
+}
+
+.text h1 {
+    font-size: 4vw !important;
+    padding-top: 20vh !important;
+}
