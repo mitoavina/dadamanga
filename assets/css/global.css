@@ -670,7 +670,8 @@ sidenav:blur {
     width: 100%;
     height: 100%;
     position: absolute;
-    padding: 10px
+    padding: 10px;
+    text-align: center;
 }
 
 .follow-us {
@@ -688,6 +689,23 @@ sidenav:blur {
     background-position: center center !important;
 }
 
-/* .bokunWidget > iframe {
-    height: 440px !important;
-} */
+#select-below {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#select-below-images-container>div {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2px
+}
+
+#select-below-images-container>div>div {
+	height: 300px;
+	background-size: cover;
+	color: #fff;
+	font-size: 1.4em;
+	font-family: Montserrat
+}

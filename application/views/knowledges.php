@@ -130,9 +130,7 @@
 					</div>
 				</div>
             </div>
-            <div class="row">
-                <?php include("about_destinations.php") ?>
-            </div>
+            <?php include("about_destinations.php") ?>
         </div>
         <div class=" div3 up-footer text-white text-center container-fluid">
             <h2>DOWNLOADS</h2>

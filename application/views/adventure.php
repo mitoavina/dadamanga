@@ -522,7 +522,7 @@
         </div>
         <div class="adventure-bottom container-fluid">
             <div class="row adventure-bottom-content">
-                <div class="adventure-current col-lg-10 col-10 offset-lg-1 offset-1">
+                <div style="margin-bottom: 100px;" class="adventure-current col-lg-10 col-10 offset-lg-1 offset-1">
                     <div class="title text-center">OUR CURRENT ADVENTURES</div>
                     <div class="adventure-current-container overlay-marron-container">
 						<div class="view-adventure-current col-lg-12">
@@ -539,7 +539,7 @@
 						</div>
                     </div>
                 </div>
-                <div class="div3">
+                <div class="div3 w-100">
                     <?php include("about_destinations.php") ?>
                 </div>
             </div>
