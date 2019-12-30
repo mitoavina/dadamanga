@@ -59,7 +59,8 @@
 }
 
 .up-footer {
-	background-image: url(../../img/followus/cacao.jpg) !important;
+    background-image: url(../../img/followus/cacao.jpg) !important;
+    filter: rgba(183, 152, 109, .44);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

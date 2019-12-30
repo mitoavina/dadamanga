@@ -63,8 +63,8 @@
         </table>
     </p>
     
-        arrive : <?= $arrive ?><br>
-        depart : <?= $depart ?>
+        Beginning : <?= $arrive ?><br>
+        End : <?= $depart ?>
                             <br>
     <section>We would like in an attempt to manage expectations to let you know that at present, after receiving your form, it may take us up to 72 hours (three working days - so not including weekends) to respond, or a little longer in times of peak demand, so
         the sooner you register with us, the sooner we will be able to respond.

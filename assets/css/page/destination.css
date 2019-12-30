@@ -1,1 +1,3 @@
-#select-below{font-size:1.2em}#select-below-images-container>div{height:100%;display:flex;justify-content:center;align-items:center;padding:2px}#select-below-images-container>div>div{height:300px;background-size:cover;color:#fff;font-size:1.4em;font-family:Montserrat}#conteneur-marron{padding-bottom:200px}
+#conteneur-marron {
+	padding-bottom: 200px
+}

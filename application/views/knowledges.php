@@ -130,35 +130,9 @@
 					</div>
 				</div>
             </div>
-            <div class="row">
-                <?php include("about_destinations.php") ?>
-            </div>
+            <?php include("about_destinations.php") ?>
         </div>
-        <div class=" div3 up-footer text-white text-center container-fluid">
-            <h2>DOWNLOADS</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-2">
-                    <img src="<?= base_url() ?>assets/img/followus/ring.png">
-                    <div><h2>Tipping & Food</h2></div>
-                </div>
-                <div class="col-lg-2">
-                    <img src="<?= base_url() ?>assets/img/followus/starfish.png">
-                    <div><h2>Animal Welfare</h2></div>
-                </div>
-                <div class="col-lg-2">
-                    <img src="<?= base_url() ?>assets/img/followus/file.png">
-                    <div><h2>Terms & Conditions</h2></div>
-                </div>
-                <div class="col-lg-2">
-                    <img src="<?= base_url() ?>assets/img/followus/smartphone.png">
-                    <div><h2>Mobile Phone Setup</h2></div>
-                </div>
-                <div class="col-lg-2">
-                    <img src="<?= base_url() ?>assets/img/followus/backpack.png">
-                    <div><h2>Preparation</h2></div>
-                </div>
-            </div>
-        </div>
+		<?php include("downloads.php"); ?>
         <?php include("footer.php"); ?>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
     </div>

@@ -63,8 +63,8 @@
         </table>
     </p>
     
-        arrive : <?= $arrive ?><br>
-        depart : <?= $depart ?>
+        Beginning : <?= $arrive ?><br>
+        End : <?= $depart ?>
 
     <section>
         find more information on the attached document

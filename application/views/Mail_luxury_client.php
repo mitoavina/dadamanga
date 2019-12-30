@@ -12,9 +12,9 @@
     <p>you reserved for : <?= $type ?></p>
 
     <p>
-        arrive : <?= $begin ?>
+        Beginning : <?= $begin ?>
         <br>
-        depart : <?= $end ?>
+        End : <?= $end ?>
     </p>
 
     <section>We would like in an attempt to manage expectations to let you know that at present, after receiving your form, it may take us up to 72 hours (three working days - so not including weekends) to respond, or a little longer in times of peak demand, so

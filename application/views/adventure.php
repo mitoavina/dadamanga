@@ -12,9 +12,11 @@
     <!-- Custom CSS -->
     <link href="<?= base_url() ?>assets/css/global.css?v=1" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/page/adventure.css" rel="stylesheet">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.min.js"></script>
@@ -293,10 +295,10 @@
                                     <label>APPROXIMATE DATES OF TRAVEL</label>
                                     <div class="form-row">
                                         <div class="col-lg-6">
-                                            <input type="text" class="form-control form-input" name="arrive" placeholder="Arrive" onfocus="(this.type='date')" onblur="(this.type='text')">
+                                            <input type="text" class="form-control form-input" id="arrive" name="arrive" placeholder="Arrive">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="text" class="form-control form-input" name="depart" placeholder="Depart" onfocus="(this.type='date')" onblur="(this.type='text')">
+                                            <input type="text" class="form-control form-input" id="depart" name="depart" placeholder="Depart">
                                         </div>
                                     </div>
                                 </div>
@@ -349,13 +351,16 @@
                     </div>
                     <div class="modal-footer">
 						<div class="adventure-btn-left col">
-							<button type="button" class="btn adventure-btn-change" data-dismiss="modal">Change my adventure</button>
+							<button class="btn adventure-btn-change" data-dismiss="modal">Change my adventure</button>
 						</div>
 						<div class="adventure-btn-right col">
-							<button type="button" class="btn adventure-btn-previous" onclick="slideTo(-1)">Previous</button>
-							<button type="button" class="btn adventure-btn-next" onclick="slideTo(1)">Next</button>
-							<button id="adventure-btn-send" type="button" class="btn adventure-btn-send">Send</button>
-						</div>
+							<button class="btn adventure-btn-previous" onclick="slideTo(-1)">Previous</button>
+							<button class="btn adventure-btn-next" onclick="slideTo(1)">Next</button>
+							<button type="submit" form="adventure-form" id="adventure-btn-send" class="btn adventure-btn-send">Send</button>
+                        </div>
+                        <div id="mailSpinner" class="d-none spinner-border text-light spinner-border-sm" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -522,7 +527,7 @@
         </div>
         <div class="adventure-bottom container-fluid">
             <div class="row adventure-bottom-content">
-                <div class="adventure-current col-lg-10 col-10 offset-lg-1 offset-1">
+                <div style="margin-bottom: 100px;" class="adventure-current col-lg-10 col-10 offset-lg-1 offset-1">
                     <div class="title text-center">OUR CURRENT ADVENTURES</div>
                     <div class="adventure-current-container overlay-marron-container">
 						<div class="view-adventure-current col-lg-12">
@@ -539,7 +544,7 @@
 						</div>
                     </div>
                 </div>
-                <div class="div3">
+                <div class="div3 w-100">
                     <?php include("about_destinations.php") ?>
                 </div>
             </div>
@@ -553,6 +558,7 @@
 			var wildlifes = JSON.parse('<?= json_encode($wildlifeModel); ?>');
 			var baseUrl = '<?= base_url() ?>';
         </script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LcR38oUAAAAAAJxLlnNnVxoYq-LLliRuAvRnnIx"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/page/adventure.js"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
     </div>
