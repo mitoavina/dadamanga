@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-define("RECAPTCHA_V3_SECRET_KEY", '6LcR38oUAAAAAEtBjRPa4OXUp74w7SfR_Q7Lr-EK');
+define("RECAPTCHA_V3_SECRET_KEY", '6LcS0soUAAAAAPv-mQ4xdN4sBw9HT9n9lZnQ09pk');
 
 use Mpdf\Mpdf;
 

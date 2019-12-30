@@ -10,7 +10,7 @@ $(document).ready(function () {
         var formData = $(this);  
         
         grecaptcha.ready(function() {
-            grecaptcha.execute('6LcR38oUAAAAAAJxLlnNnVxoYq-LLliRuAvRnnIx', {action: 'send_luxury_mail'}).then(function(token) {
+            grecaptcha.execute('6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB', {action: 'send_luxury_mail'}).then(function(token) {
                 $('#luxury-form').prepend('<input type="hidden" name="token" value="' + token + '">');
                 $('#luxury-form').prepend('<input type="hidden" name="action" value="send_luxury_mail">');
 				$("#mailSpinner").removeClass("d-none");
