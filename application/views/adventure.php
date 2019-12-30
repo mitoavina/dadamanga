@@ -558,7 +558,7 @@
 			var wildlifes = JSON.parse('<?= json_encode($wildlifeModel); ?>');
 			var baseUrl = '<?= base_url() ?>';
         </script>
-        <script src="https://www.google.com/recaptcha/api.js?render=6LcR38oUAAAAAAJxLlnNnVxoYq-LLliRuAvRnnIx"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/page/adventure.js"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
     </div>
