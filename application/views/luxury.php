@@ -307,6 +307,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="cc btn btn-sm text-white brown-color">SEND</button>
+                        <div id="mailSpinner" class="d-none spinner-border text-light spinner-border-sm" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                     </div>
                 </div>
             </form>

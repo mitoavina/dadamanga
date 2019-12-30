@@ -61,6 +61,17 @@ class Mail extends CI_Controller
 	}
 	function adventure_service_mail()
 	{
+		header('Content-Type: application/json');
+		if (!$this->checkCaptcha($_POST['action'])) {
+			echo json_encode(
+				array(
+					'error' => 'Sorry spamming is not allowed.',
+					'success' => false
+				)
+			);
+			exit;
+		}
+
 		$data = array(); //izay anaovan'la anaran'ty variable ty
 		foreach ($_POST as $key => $value) {
 			$data[$key] = $this->input->post($key);
@@ -70,11 +81,14 @@ class Mail extends CI_Controller
 		$admin = $admin_mail->send();
 		$client = $client_mail->send();
 		if ($client && $admin) {
-			$message['success'] = 'sent!';
-			echo json_encode($message);
+			echo json_encode(array('success' => true));
 		} else {
-			$message['error'] = 'message could not be sent';
-			echo json_encode($message);
+			echo json_encode(
+				array(
+					'error' => 'Message could not be sent.',
+					'success' => false
+				)
+			);
 		}
 	}
 	public function luxury_service_mail()
