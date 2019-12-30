@@ -52,11 +52,11 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-lg-4">
-                                    <label class="modal-label" for="last-name">FULL NAME*</label>
+                                    <label class="modal-label" for="name">FULL NAME*</label>
                                     <input required="required" type="text" class="form-control custom-bg-input" name="name" id="name" placeholder="full Name">
                                 </div>
                                 <div class="form-group col-lg-4">
-                                    <label class="modal-label" for="first-name">Phone*</label>
+                                    <label class="modal-label" for="phone">Phone*</label>
                                     <input required="required" name="phone" type="number" class="form-control custom-bg-input" id="phone" placeholder="Phone">
                                 </div>
                                 <div class="form-group col-lg-4">
@@ -68,7 +68,7 @@
                                 <div class="col-lg-10">
                                     <div class="row">
                                         <div class="form-group col-lg-6">
-                                            <label class="modal-label" for="email">NATIONALITY /CONTRY OF RESIDENCE</label>
+                                            <label class="modal-label" for="nationality">NATIONALITY /CONTRY OF RESIDENCE</label>
                                             <!-- <input type="text" class="form-control custom-bg-input" id="email" placeholder="Exemple@exemple.com"> -->
                                             <select required="required" class=" custom-bg-input browser-default custom-select" name="nationality">
                                                 <option value="" disabled selected>Select your nationality</option>
@@ -284,12 +284,12 @@
                                 <div class="col-lg-10">
                                     <div class="row">
                                         <div class="form-group col-lg-6">
-                                            <label class="modal-label" for="email">ANY DISABILITY / ACCESSIBILITY REQUIREMENT?</label>
+                                            <label class="modal-label" for="disability">ANY DISABILITY / ACCESSIBILITY REQUIREMENT?</label>
                                             <input name="disability" type="text" class="form-control custom-bg-input" id="disability" placeholder="YES/NO/COMMENT">
 
                                         </div>
                                         <div class="form-group col-lg-6">
-                                            <label class="modal-label" for="email">ANY SPECIAL FOOD REQUIREMENTS</label>
+                                            <label class="modal-label" for="food">ANY SPECIAL FOOD REQUIREMENTS</label>
                                             <input name="food" type="text" class="form-control custom-bg-input" placeholder="Write">
                                         </div>
                                     </div>
@@ -298,8 +298,8 @@
                             <div class="myMargin form-row justify-content-center">
                                 <div class="col-lg-11">
                                     <div class="form-group">
-                                        <label class="modal-label" for="email">ANYTHING ELSE YOU WANT TO TELL US?</label>
-                                        <textarea name="else" name="message" class="custom-bg-textarea form-control " id="message" rows="5" placeholder="Your Message"></textarea>
+                                        <label class="modal-label" for="else">ANYTHING ELSE YOU WANT TO TELL US?</label>
+                                        <textarea name="else" class="custom-bg-textarea form-control " id="else" rows="5" placeholder="Your Message"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -651,19 +651,9 @@
     <script type="text/javascript">
         var baseUrl = '<?= base_url() ?>';
     </script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcR38oUAAAAAAJxLlnNnVxoYq-LLliRuAvRnnIx"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/page/luxury.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB"></script>
-    <script>
-
-        grecaptcha.ready(function(){
-            grecaptcha.execute('6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB', {
-                action: 'homepage'
-            }).then(function(token){
-
-            });
-        });
-    </script>
 </body>
 
 
