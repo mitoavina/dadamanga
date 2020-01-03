@@ -204,7 +204,8 @@ polyline {
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
-	flex-direction: column
+	flex-direction: column;
+	background-position: center center;
 }
 
 .flexslider {
