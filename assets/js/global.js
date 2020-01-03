@@ -537,15 +537,7 @@ jQuery(document).ready(function($) {
                 if ($flag) {
                     Galleria.get(0).$('thumbnails-container').attr('data-tracked_sec_index', tracked_sec_index);
                 }
-
-
-
             });
-
-
-
         });
-
     }
-
 });
