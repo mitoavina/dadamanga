@@ -33,6 +33,11 @@
 <body>
     <div id="jumbotron" class="m-0 flexslider jumbotron homeJumbotron flex-column flex-center">
         <ul class="slides">
+            <li>
+                <video style="position: absolute;width:100%;z-index:1" autoplay muted loop>
+                    <source src="<?= base_url("assets/img/home/home.mp4") ?>" type="video/mp4">
+                </video>
+            </li>
             <li style="background-image:url( <?= base_url($image[0]->path) ?>)" class=" jumbotron home-text">
                 <h1 class="white-text"> <?= $text[0]->value ?></h1>
                 <svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,6 +67,7 @@
             </li>
         </ul>
         <div id="homeButtons" class="d-none d-md-flex w-100 row position-absolute justify-content-center">
+            <a href=""></a>
             <a href="<?= base_url() . "destinations" ?>" id="destinationButton" class="col-md-3 btn mr-1 btn black-marron-btn">
                 Destinations
             </a>
@@ -82,7 +88,7 @@
         </a>
         <button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
     </nav>
-    <div class="container-fluid">
+    <div class="position-relative container-fluid" style="z-index: 50">
         <div class="row we_organise justify-content-center">
             <div class="col-lg-11">
                 <div class="row">
