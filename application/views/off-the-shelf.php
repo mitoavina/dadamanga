@@ -27,7 +27,7 @@
 <?php include("sidenav.php"); ?>
 
 <body>
-    <div style="background-image:url( <?= base_url() . 'assets/img/off_the_shelf/off_the_shelf.png' ?>)" id="jumbotron" class="jumbotron-off text-white jumbotron flex-column flex-center">
+    <div style="background-image:url( <?= base_url() . 'assets/img/off_the_shelf/off_the_shelf.jpg' ?>)" id="jumbotron" class="jumbotron-off text-white jumbotron flex-column flex-center">
         <div class="text">
             <h1 class="text-center"><span>OFF THE SHELF<span></h1>
         </div>

@@ -361,7 +361,6 @@
                         <img src="<?= img_destinations_url("DiegoNorth") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
                         <img src="<?= img_destinations_url("Morondava") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
                         <img src="<?= img_destinations_url("ToliaraSouthWest") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
-                        <img src="<?= img_destinations_url("MorondavaWest") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
                     </div>
                 </div>
             </div>
@@ -623,7 +622,7 @@
                     <div class="mr-md-3 col-md-5 plane-mother plane mt-2 overlay-marron-container">
                         <p class="to-hide plane-text">PRIVATE PLANE</p>
                         <div class="overlay-with-padding">
-                            <div class="overlay-marron">
+                            <div class="overlay-marron d-none">
                                 <div>"Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
                                     tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
                                     minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut
@@ -635,7 +634,7 @@
                     <div class=" ml-md-3 col-md-5 plane-mother helico mt-2 overlay-marron-container">
                         <p class="to-hide plane-text">HELICOPTER TRAVEL</p>
                         <div class="overlay-with-padding">
-                            <div class="overlay-marron">
+                            <div class="overlay-marron d-none">
                                 <div>"Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
                                     tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
                                     minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut

@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: Montserrat-light;
+    src: url(../font/montserrat/Montserrat-Light.ttf) format('truetype')
+}
+
+@font-face {
     font-family: 'Brandon Grotesque Light';
     src: url(../font/brandon-grotesque/Brandon_light.woff) format('woff')
 }
@@ -138,7 +143,11 @@ body {
 }
 
 .montserrat-bold {
-    font-family: Montserrat-bold
+    font-family: Montserrat-bold;
+}
+
+.montserrat-light {
+    font-family: Montserrat-light;
 }
 
 @media screen and (max-width:768px) {
@@ -717,4 +726,8 @@ sidenav:blur {
 
 button {
     outline: none !important;
+}
+
+.jumbotron {
+    font-family: Montserrat-light;
 }

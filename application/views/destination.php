@@ -75,7 +75,6 @@
                 <img src="<?= img_destinations_url("DiegoNorth") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
                 <img src="<?= img_destinations_url("Morondava") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
                 <img src="<?= img_destinations_url("ToliaraSouthWest") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
-                <img src="<?= img_destinations_url("MorondavaWest") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
             </div>
 
 
