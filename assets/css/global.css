@@ -731,3 +731,16 @@ button {
 .jumbotron {
     font-family: Montserrat-light;
 }
+
+.marron-title {
+    font-size: 1.7em;
+    color: #b7986d;
+}
+
+.img-placeholder {
+    background-color: #C4C4C4;
+}
+
+.img-placeholder.rectangle-large {
+    height: 300px ;
+}
