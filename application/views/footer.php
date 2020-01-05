@@ -4,25 +4,25 @@
             <img class="col-xs-2" src="<?= base_url() ?>assets/img/footer/footer_dm_logo.png">
         </div>
         <div class="row mb-5 d-flex justify-content-center">
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-center"><a href="<?= base_url() . "about" ?>">About</a></div>
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-center text-md-left"><a href="<?= base_url() . "destinations" ?>">Destinations</a></div>
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-center text-md-left"><a href="<?= base_url() . "shelf" ?>">Off the Shelf</a></div>
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-center text-md-left"><a href="<?= base_url() . "adventure" ?>">Create an Adventure</a></div>
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-center"><a href="<?= base_url() . "luxury" ?>">Explore Luxury</a></div>
-            <div style="white-space:nowrap" class="col-md-2 p-0 text-center"><a href="<?= base_url() . "knowledge" ?>">Knowledge of the Place</a></div>
+            <div class="footer-link col-md-2 p-0 text-center"><a href="<?= base_url() . "about" ?>">About</a></div>
+            <div class="footer-link col-md-2 p-0 text-center text-lg-left"><a href="<?= base_url() . "destinations" ?>">Destinations</a></div>
+            <div class="footer-link col-md-2 p-0 text-center text-lg-left"><a href="<?= base_url() . "shelf" ?>">Off the Shelf</a></div>
+            <div class="footer-link col-md-2 p-0 text-center text-lg-left"><a href="<?= base_url() . "adventure" ?>">Create an Adventure</a></div>
+            <div class="footer-link col-md-2 p-0 text-center"><a href="<?= base_url() . "luxury" ?>">Explore Luxury</a></div>
+            <div class="footer-link col-md-2 p-0 text-center"><a href="<?= base_url() . "knowledge" ?>">Knowledge of the Place</a></div>
         </div>
         <div class="row">
-            <div class="col-md-4 text-md-left text-center mb-2 mb-md-4">+261 34 20 258 62</div>
+            <div class="col-lg-4 text-lg-left text-center mb-2 mb-md-4">+261 34 20 258 62</div>
         </div>
         <div class="row">
-            <div class="col-lg-3 text-md-left text-center mb-4">dadamanga@me.com</div>
-            <div class="offset-lg-1 col-lg-7 text-md-left text-center mb-4">
+            <div class="col-lg-3 text-lg-left text-center mb-4">dadamanga@me.com</div>
+            <div class="offset-lg-1 col-lg-7 text-lg-left text-center mb-4">
                 Dadamanga is a licensed Tour Operator N°<br />
                 068-MINTOUR/SG/DGDT/DAIT/SAT-EDBM.17
             </div>
         </div>
         <div class="row mb-3 mb-md-5">
-            <div class="col-md-4 text text-md-left text-center">
+            <div class="col-lg-4 text text-lg-left text-center">
                 Le Port Hotel, Avenue du Marechal Foch<br>
                 Isoraka Tolagnaro 614(BP 319)
             </div>

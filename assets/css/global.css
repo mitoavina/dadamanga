@@ -745,3 +745,13 @@ button {
 .img-placeholder.rectangle-large {
     height: 300px ;
 }
+
+.footer-link {
+    white-space: wrap;
+}
+
+@media screen and(min-width: 992px) {
+    .footer-link {
+        white-space: nowrap;
+    }
+}
