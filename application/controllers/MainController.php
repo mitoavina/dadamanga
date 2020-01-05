@@ -26,6 +26,11 @@ class MainController extends CI_Controller
 		$data['image'] = $pageModel->addInformation(1)->image;
 		$data['text'] = $pageModel->addInformation(1)->text;
 		$data['footerImg'] = "omby.jpg";
+
+		$this->load->model('DestinationModel', 'DestinationModel');
+		$destinationModel = new DestinationModel();
+		$data['destinations'] = $destinationModel->select();
+		
 		$this->load->helper('url');
 		$this->load->helper('assets');
 		$this->load->view('home', $data);
@@ -240,7 +245,7 @@ class MainController extends CI_Controller
 		if (isset($_GET['insert'])) {
 			$this->load->model('UtilsModel', 'UtilsModel');
 			$utilsModel = new UtilsModel();
-			$path = $utilsModel->upload('home');
+			$path = $utilsModel->upload('adventure/park');
 			$parkModel->insert($path, $_POST['text']);
 			redirect('/dash_park', 'refresh');
 		}
@@ -263,7 +268,7 @@ class MainController extends CI_Controller
 		if (isset($_GET['insert'])) {
 			$this->load->model('UtilsModel', 'UtilsModel');
 			$utilsModel = new UtilsModel();
-			$path = $utilsModel->upload('home');
+			$path = $utilsModel->upload('adventure/experiences');
 			$experienceModel->insert($path, $_POST['text']);
 			redirect('/dash_experience', 'refresh');
 		}
@@ -286,7 +291,7 @@ class MainController extends CI_Controller
 		if (isset($_GET['insert'])) {
 			$this->load->model('UtilsModel', 'UtilsModel');
 			$utilsModel = new UtilsModel();
-			$path = $utilsModel->upload('home');
+			$path = $utilsModel->upload('adventure/wildlife');
 			$wildlifeModel->insert($path, $_POST['text']);
 			redirect('/dash_wildlife', 'refresh');
 		}
