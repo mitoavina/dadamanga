@@ -12,13 +12,12 @@
     <!-- Custom CSS -->
     <link href="<?= base_url() ?>assets/css/global.css?v=1" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/galleria-themes/galleria.reis.css" rel="stylesheet">
-    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" rel="stylesheet">
-
+    <link href="<?= base_url() ?>assets/css/jquery-ui.css" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/page/luxury.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
     <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-ui.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
