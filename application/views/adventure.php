@@ -437,10 +437,10 @@
                     <div class="itinerary-menu col-lg-3 col-sm-4 pr-5">
                         <h5>WHAT INTERESTS YOU?</h5>
                         <ul class="list-group">
-                            <li class="list-group-item side-menu-style side-menu-style-active" data-index="0"><a class="itinerary-menu-destination">Destinations <span></span></a></li>
-                            <li class="list-group-item side-menu-style" data-index="1"><a class="itinerary-menu-park">Parks <span></span></a></li>
-                            <li class="list-group-item side-menu-style" data-index="2"><a class="itinerary-menu-experience">Experiences <span></span></a></li>
-                            <li class="list-group-item side-menu-style" data-index="3"><a class="itinerary-menu-wildlife">Wildlifes <span></span></a></li>
+                            <li class="list-group-item side-menu-style side-menu-style-active" data-index="0"><a class="itinerary-menu-destination">Destinations<span></span></a></li>
+                            <li class="list-group-item side-menu-style" data-index="1"><a class="itinerary-menu-park">Parks<span></span></a></li>
+                            <li class="list-group-item side-menu-style" data-index="2"><a class="itinerary-menu-experience">Experiences<span></span></a></li>
+                            <li class="list-group-item side-menu-style" data-index="3"><a class="itinerary-menu-wildlife">Wildlife<span></span></a></li>
 						</ul>
 						<div class="create-adventure-container d-flex justify-content-center">
 							<button type="button" class="show-adventure-btn" data-toggle="modal" data-target="#adventure-modal">CREATE MY ADVENTURE <span>></span></button>
