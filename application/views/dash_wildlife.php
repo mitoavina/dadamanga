@@ -144,7 +144,7 @@
                                                     <th scope="row"><?= $item->IDWILDLIFE ?></th>
                                                     <td><img src="<?= base_url($item->IMAGE) ?>" style="width:auto;height:100px;"></td>
                                                     <td><?= $item->TITLE ?></td>
-                                                    <td><a type="submit" href="<?= base_url('dash_park?delete=' . $item->IDWILDLIFE) ?>" class="btn btn-danger btn-fill ">Delete</a></td>
+                                                    <td><a type="submit" href="<?= base_url('dash_wildlife?delete=' . $item->IDWILDLIFE) ?>" class="btn btn-danger btn-fill ">Delete</a></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
