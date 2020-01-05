@@ -63,16 +63,17 @@ class Mail extends CI_Controller
 	{
 		header('Content-Type: application/json');
 		if (!$this->checkCaptcha($_POST['action'])) {
-			echo json_encode(
-				array(
-					'error' => 'Sorry spamming is not allowed.',
+				echo json_encode(
+						array(
+								'error' => 'Sorry spamming is not allowed.',
 					'success' => false
 				)
 			);
 			exit;
 		}
-
+		
 		$data = array(); //izay anaovan'la anaran'ty variable ty
+		$data['current'] = date("Y/m/d");
 		foreach ($_POST as $key => $value) {
 			$data[$key] = $this->input->post($key);
 		}
@@ -252,19 +253,20 @@ class Mail extends CI_Controller
 	}
 	public function adventure_admin($data)
 	{
+		$this->load->helper('url');
+		$this->load->library('phpmailer_lib');
 		//must get infos
 		$mpdf = new \Mpdf\Mpdf();
 		$html = $this->load->view('adventure_doc', $data, TRUE);
-		$mpdf->WriteHTML($html);
 		// $mpdf->Output(); // opens in browser
+		$mpdf->WriteHTML($html);
 
 		//must write infos on the pdf
 		$pdf = $mpdf->Output($data['email'] . '.pdf', 'S');
 		// $pdf = $mpdf->Output();
 
 		// /mail
-		$this->load->helper('url');
-		$this->load->library('phpmailer_lib');
+		
 
 		// PHPMailer object
 		$mail = $this->phpmailer_lib->load();
