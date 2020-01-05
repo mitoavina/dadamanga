@@ -42,7 +42,7 @@
 
         @media screen and (min-width:992px) {
             video {
-                width:100%;
+                width: 100%;
                 height: auto;
             }
         }
@@ -177,72 +177,19 @@
         <div>
             <div id="multi-item-carousel" class="carousel slide">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="destination-item">
-                            <img src="<?= img_destinations_url('Antananarivo') ?>" alt="First slide">
-                            <div class="justify-content-center carousel-caption d-none d-md-block">
-                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
-                                <div class="destination-text-container">
-                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Antananarivo") ?>">Antananarivo</a></div>
+                    <?php for ($i = 0; $i < count($destinations); $i++) { ?>
+                        <div class='carousel-item <?= $i == 0 ? "active" : "" ?>'>
+                            <div class="destination-item">
+                                <img src="<?= img_destinations_url($destinations[$i]->NAME) ?>" alt="First slide">
+                                <div class="justify-content-center carousel-caption d-none d-md-block">
+                                    <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
+                                    <div class="destination-text-container">
+                                        <div class="destination-text"><a class="white-link" href="<?= destination_url($destinations[$i]->NAME) ?>"><?= $destinations[$i]->TITLE ?></a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="destination-item">
-                            <img src="<?= img_destinations_url('ToamasinaEast') ?>" alt="Second slide">
-                            <div class="justify-content-center carousel-caption d-none d-md-block">
-                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
-                                <div class="destination-text-container">
-                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Toamasina") ?>">Toamasina</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="destination-item">
-                            <img src="<?= img_destinations_url('ToliaraSouthWest') ?>" alt="Third slide">
-                            <div class="justify-content-center carousel-caption d-none d-md-block">
-                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
-                                <div class="destination-text-container">
-                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Toliara") ?>">Toliara</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="destination-item">
-                            <img src="<?= img_destinations_url('DiegoNorth') ?>" alt="Fourth slide">
-                            <div class="justify-content-center carousel-caption d-none d-md-block">
-                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
-                                <div class="destination-text-container">
-                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Diego") ?>">Diego</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="destination-item">
-                            <img src="<?= img_destinations_url('FortDauphin') ?>" alt="Fourth slide">
-                            <div class="justify-content-center carousel-caption d-none d-md-block">
-                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
-                                <div class="destination-text-container">
-                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("FortDauphin") ?>">Fort-Dauphin</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="destination-item">
-                            <img src="<?= img_destinations_url('Morondava') ?>" alt="Fourth slide">
-                            <div class="justify-content-center carousel-caption d-none d-md-block">
-                                <div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
-                                <div class="destination-text-container">
-                                    <div class="destination-text"><a class="white-link" href="<?= destination_url("Morondava") ?>">Morondava</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
                 <div id="prevContainer" class="d-flex justify-content-center">
                     <a href="#multi-item-carousel" data-slide="prev" id="prevButton"></a>
