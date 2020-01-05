@@ -115,12 +115,12 @@ $(document).ready(function () {
 		});
 	}
 
-	$("#adventure-form").submit(function(event){
+	$("#adventure-form").submit(function (event) {
 		event.preventDefault();
 		var formData = $(this);
 		grecaptcha.ready(function () {
-				grecaptcha.execute('6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB', { action: 'send_adventure_mail' }).then(function (token) {
-					$('#adventure-form').prepend('<input type="hidden" name="token" value="' + token + '">');
+			grecaptcha.execute('6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB', { action: 'send_adventure_mail' }).then(function (token) {
+				$('#adventure-form').prepend('<input type="hidden" name="token" value="' + token + '">');
 				$('#adventure-form').prepend('<input type="hidden" name="action" value="send_adventure_mail">');
 				$("#mailSpinner").removeClass("d-none");
 				$.post(baseUrl + "adventure/mail", formData.serialize(), function (result) {
@@ -283,14 +283,14 @@ function slide(n) {
 // Date picker code
 var dateToday = new Date();
 var dates = $("#arrive, #depart").datepicker({
-    defaultDate: "+1w",
-    changeMonth: true,
-    numberOfMonths: 3,
-    minDate: dateToday,
-    onSelect: function(selectedDate) {
-        var option = this.id == "arrive" ? "minDate" : "maxDate",
-            instance = $(this).data("datepicker"),
-            date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
-        dates.not(this).datepicker("option", option, date);
-    }
+	defaultDate: "+1w",
+	changeMonth: true,
+	numberOfMonths: 3,
+	minDate: dateToday,
+	onSelect: function (selectedDate) {
+		var option = this.id == "arrive" ? "minDate" : "maxDate",
+			instance = $(this).data("datepicker"),
+			date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
+		dates.not(this).datepicker("option", option, date);
+	}
 });

@@ -244,6 +244,7 @@ body .body-index {
 }
 
 #animated-nav {
+    min-height: 50px;
     font-family: Montserrat;
     color: #b7986d;
     background-color: #fff;
@@ -743,4 +744,14 @@ button {
 
 .img-placeholder.rectangle-large {
     height: 300px ;
+}
+
+.footer-link {
+    white-space: wrap;
+}
+
+@media screen and(min-width: 992px) {
+    .footer-link {
+        white-space: nowrap;
+    }
 }

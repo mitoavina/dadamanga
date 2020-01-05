@@ -25,6 +25,28 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.flexslider.js"></script>
+    <style>
+        #video-container {
+            position: absolute;
+            z-index: 1;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            height: 100%;
+            position: absolute;
+            left: 0;
+        }
+
+        @media screen and (min-width:992px) {
+            video {
+                width:100%;
+                height: auto;
+            }
+        }
+    </style>
     <title>Dadamanga | Home</title>
 </head>
 <?php include("navbar.php"); ?>
@@ -34,9 +56,11 @@
     <div id="jumbotron" class="m-0 flexslider jumbotron homeJumbotron flex-column flex-center">
         <ul class="slides">
             <li>
-                <video style="position: absolute;width:100%;z-index:1" autoplay muted loop>
-                    <source src="<?= base_url("assets/img/home/home.mp4") ?>" type="video/mp4">
-                </video>
+                <div id="video-container">
+                    <video autoplay muted loop>
+                        <source src="<?= base_url("assets/img/home/home.mp4") ?>" type="video/mp4">
+                    </video>
+                </div>
             </li>
             <li style="background-image:url( <?= base_url($image[0]->path) ?>)" class=" jumbotron home-text">
                 <h1 class="white-text"> <?= $text[0]->value ?></h1>
@@ -88,7 +112,7 @@
         </a>
         <button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
     </nav>
-    <div class="position-relative container-fluid" style="z-index: 50">
+    <div class="position-relative container-fluid" style="z-index: 10">
         <div class="row we_organise justify-content-center">
             <div class="col-lg-11">
                 <div class="row">
@@ -240,8 +264,12 @@
         </div>
 
 
-        <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409" async></script>
+        <!-- <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409" async></script>
         <div class="bokunWidget" data-src="https://widgets.bokun.io/online-sales/8439ce9c-a587-4955-91f8-b7423b94a409/product-list/19310"></div>
+        <noscript>Please enable javascript in your browser to book</noscript> -->
+
+        <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=3cc73682-bcaa-47be-b91e-44e4bc463d9c" async></script>
+        <div class="bokunWidget" data-src="https://widgets.bokun.io/online-sales/3cc73682-bcaa-47be-b91e-44e4bc463d9c/product-list/18981"></div>
         <noscript>Please enable javascript in your browser to book</noscript>
 
 
