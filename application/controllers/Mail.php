@@ -29,11 +29,11 @@ class Mail extends CI_Controller
 		$mail->Port     = 465;
 
 		$mail->setFrom($email, $name);
-		// $mail->addReplyTo('info@example.com', 'CodexWorld');
+		$mail->addReplyTo('dadamanga@me.com', 'Dadamanga Travel service');
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('michael.randrianarisona@outlook.com');
+		$mail->addAddress('abrahamrobbi@gmail.com');
 
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -183,11 +183,11 @@ class Mail extends CI_Controller
 		$mail->Port     = 465;
 
 		$mail->setFrom($email, $name);
-		// $mail->addReplyTo('info@example.com', 'CodexWorld');
+		$mail->addReplyTo($email, $name);
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('michael.randrianarisona@outlook.com');
+		$mail->addAddress('abrahamrobbi@gmail.com');
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -233,8 +233,8 @@ class Mail extends CI_Controller
 		$mail->SMTPSecure = 'ssl';
 		$mail->Port     = 465;
 
-		$mail->setFrom("mikerandria@gmail.com", "Dadamanga Travel Service");
-		// $mail->addReplyTo('info@example.com', 'CodexWorld');
+		$mail->setFrom("dadamanga@me.com", "Dadamanga Travel Service");
+		$mail->addReplyTo('dadamanga@me.com', 'Dadamanga Travel Service');
 
 		// Add a recipient
 		//a changer
@@ -281,11 +281,11 @@ class Mail extends CI_Controller
 		$mail->Port     = 465;
 
 		$mail->setFrom($data['email'], $data['name']);
-		// $mail->addReplyTo('info@example.com', 'CodexWorld');
+		$mail->addReplyTo($data['email'], $data['name']);
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('michael.randrianarisona@outlook.com');
+		$mail->addAddress('abrahamrobbi@gmail.com');
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
 
 
@@ -321,7 +321,7 @@ class Mail extends CI_Controller
 		$mail->Port     = 465;
 
 		$mail->setFrom("dadamanga@me.com", "Dadamanga Travel Service");
-		// $mail->addReplyTo('info@example.com', 'CodexWorld');
+		$mail->addReplyTo("dadamanga@me.com", "Dadamanga Travel Service");
 
 		// Add a recipient
 		//a changer
