@@ -234,7 +234,7 @@ class Mail extends CI_Controller
 		$mail->Port     = 465;
 
 		$mail->setFrom("dadamanga@me.com", "Dadamanga Travel Service");
-		$mail->addReplyTo('dadamanga@me.com', 'Dadamanga Travel Service');
+		$mail->addReplyTo('abrahamrobbi@gmail.com', 'Dadamanga Travel Service');
 
 		// Add a recipient
 		//a changer
@@ -321,7 +321,7 @@ class Mail extends CI_Controller
 		$mail->Port     = 465;
 
 		$mail->setFrom("dadamanga@me.com", "Dadamanga Travel Service");
-		$mail->addReplyTo("dadamanga@me.com", "Dadamanga Travel Service");
+		$mail->addReplyTo("abrahamrobbi@gmail.com", "Dadamanga Travel Service");
 
 		// Add a recipient
 		//a changer
