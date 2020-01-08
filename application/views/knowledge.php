@@ -144,15 +144,15 @@
 								<div class="knowledge col-lg-12">
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Baobab Avenue MORONDAVA</span>
+											<span class="knowledge-pic-title">Bemaraha NP MORONDAVA</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Reniala Reserve IFATY</span>
+											<span class="knowledge-pic-title">Red Tsingy DIEGO</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">DIEGO</span>
+											<span class="knowledge-pic-title">Ankarana NP DIEGO</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 									</div>
@@ -172,15 +172,23 @@
 								<div class="knowledge col-lg-12">
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Baobab Avenue MORONDAVA</span>
+											<span class="knowledge-pic-title">Ifaty & Mangily TOLIARA</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Reniala Reserve IFATY</span>
+											<span class="knowledge-pic-title">Ile aux Nattes SAINTE MARIE</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">DIEGO</span>
+											<span class="knowledge-pic-title">NosyTanikelu NOSY BE</span>
+											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+										</div>
+										<div class="knowledge-pic col-lg-4 col-6">
+											<span class="knowledge-pic-title">Emerald Sea DIEGO</span>
+											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+										</div>
+										<div class="knowledge-pic col-lg-4 col-6">
+											<span class="knowledge-pic-title">Nosy Iranja NOSY BE</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 									</div>
@@ -200,15 +208,19 @@
 								<div class="knowledge col-lg-12">
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Baobab Avenue MORONDAVA</span>
+											<span class="knowledge-pic-title">LEMURS</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Reniala Reserve IFATY</span>
+											<span class="knowledge-pic-title">BIRDS</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">DIEGO</span>
+											<span class="knowledge-pic-title">FOSA</span>
+											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+										</div>
+										<div class="knowledge-pic col-lg-4 col-6">
+											<span class="knowledge-pic-title">WHALES AND SHARKS</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 									</div>
@@ -228,15 +240,15 @@
 								<div class="knowledge col-lg-12">
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Baobab Avenue MORONDAVA</span>
+											<span class="knowledge-pic-title">THE LANGUAGE</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Reniala Reserve IFATY</span>
+											<span class="knowledge-pic-title">THE PEOPLE</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">DIEGO</span>
+											<span class="knowledge-pic-title">FAMADIHANA</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 									</div>
@@ -256,15 +268,23 @@
 								<div class="knowledge col-lg-12">
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Baobab Avenue MORONDAVA</span>
+											<span class="knowledge-pic-title">TREKKING</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">Reniala Reserve IFATY</span>
+											<span class="knowledge-pic-title">SURFING</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">DIEGO</span>
+											<span class="knowledge-pic-title">DIVING</span>
+											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+										</div>
+										<div class="knowledge-pic col-lg-4 col-6">
+											<span class="knowledge-pic-title">KITE SURFING</span>
+											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+										</div>
+										<div class="knowledge-pic col-lg-4 col-6">
+											<span class="knowledge-pic-title">SPA & WELLNESS</span>
 											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
 										</div>
 									</div>
