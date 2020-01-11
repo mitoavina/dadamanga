@@ -541,7 +541,9 @@ body .body-index {
 
 #taylor-images {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    margin-bottom: 0;
+	padding-bottom: 64px;
 }
 
 #taylor-images>div>div>div {
@@ -565,10 +567,6 @@ body .body-index {
     display: flex;
     justify-content: center;
     align-items: center
-}
-
-#taylor-images {
-    margin-bottom: 13vh
 }
 
 .on-background-text {

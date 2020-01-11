@@ -118,15 +118,15 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Baobab Avenue MORONDAVA</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/avenue.jpg" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Reniala Reserve IFATY</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/diego.jpg" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">DIEGO</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/reniala.jpg" alt="" width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -146,15 +146,15 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Bemaraha NP MORONDAVA</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/bemaraha.jpg" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Red Tsingy DIEGO</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/redTsingy.jpg" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Ankarana NP DIEGO</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/ankarana.jpg" alt="" width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -174,23 +174,23 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Ifaty & Mangily TOLIARA</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/ifaty.jpg" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Ile aux Nattes SAINTE MARIE</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/ileAuxNattes.jpg" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">NosyTanikelu NOSY BE</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<span class="knowledge-pic-title">Nosy Tanikely NOSY BE</span>
+											<img src="<?= base_url("assets/img/knowledge/beaches/nosyTanikely.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Emerald Sea DIEGO</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/emerald.jpg" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Nosy Iranja NOSY BE</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/nosyBe.jpg" alt="" width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -210,19 +210,19 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">LEMURS</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/wildlife/lemurs.jpg" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">BIRDS</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/wildlife/bird.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">FOSA</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/wildlife/fosa.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
-											<span class="knowledge-pic-title">WHALES AND SHARKS</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<span class="knowledge-pic-title">WHALES</span>
+											<img src="<?= base_url() ?>/assets/img/knowledge/wildlife/whale.jpg" alt="" width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -270,7 +270,7 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">TREKKING</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/sports/trekking.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">SURFING</span>
@@ -278,11 +278,11 @@
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">DIVING</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/sports/diving&scubaDiving.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">KITE SURFING</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/sports/kiteSurfing.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">SPA & WELLNESS</span>

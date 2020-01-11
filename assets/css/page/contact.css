@@ -20,14 +20,13 @@
         color: #151515;
         z-index: 999;
         background-color: white;
-        /* height: 700px; */
     }
     
     @media screen and (min-width:768px) {
         .page-centrale {
             margin-top: -17vh;
             margin-bottom: 10vh;
-            padding: 50px 70px 50px 70px !important;
+            padding: 50px 70px 64px 70px !important;
         }
     }
     

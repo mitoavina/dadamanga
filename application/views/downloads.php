@@ -1,6 +1,6 @@
-<div class="position-relative downloads div3 up-footer text-white text-center container-fluid pt-5">
+<div style="height:390px" class="position-relative downloads div3 up-footer text-white text-center container-fluid">
     <div style="left:0;top:0;width: 100%;height:100%;position:absolute;background:rgba(183, 152, 109, .44)"></div>
-    <h5 class="mb-5 pb-5 pt-5 position-relative">DOWNLOADS</h5>
+    <h5 class="pb-5 pt-5 position-relative">DOWNLOADS</h5>
     <div class="row d-flex justify-content-center">
         <div style="border: solid 1px white; border-radius: 10px;width:90%" class="pb-5 pt-5 row justify-content-center">
             <div class="col-lg-2">

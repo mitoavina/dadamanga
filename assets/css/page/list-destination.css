@@ -30,7 +30,7 @@
 #off_the_shelf_image {
     display: flex;
     justify-content: center;
-    padding-bottom: 10vh;
+    padding-bottom: 64px;
 }
 
 #off_the_shelf_image>div {

@@ -613,7 +613,7 @@
                 </div>
                 <div class="col-md-2"></div>
             </div>
-            <div class=" container pb-5">
+            <div style="padding-bottom: 64px" class="container">
                 <div class="row text-white text-center">
                     <div class="col-md-1"></div>
                     <div class="mr-md-3 col-md-5 plane-mother plane mt-2 overlay-marron-container">
