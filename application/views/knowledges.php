@@ -100,43 +100,43 @@
                 <div class="knowledges col-lg-10 col-10 offset-lg-1 offset-1">
                     <div class="row">
                         <div class="knowledge col-lg-4 col-6">
-                            <span class="pic-title"><a href="<?= base_url("knowledge/madagascar#knowledge-container") ?>">Madagascar</a></span>
+                            <span class="pic-title"><a href="<?= base_url("knowledge/madagascar#content") ?>">Madagascar</a></span>
                             <div class="pic-container">
                                 <img src="<?= base_url("assets/img/knowledges/MADAGASCAR.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
-                            <span class="pic-title"><a href="<?= base_url("knowledge/baobab#knowledge-container") ?>">Baobab</a></span>
+                            <span class="pic-title"><a href="<?= base_url("knowledge/baobab#content") ?>">Baobab</a></span>
                             <div class="pic-container">
                                 <img src="<?= base_url("assets/img/knowledges/BAOBAB.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
-                            <span class="pic-title"><a href="<?= base_url("knowledge/tsingy#knowledge-container") ?>">Tsingy</a></span>
+                            <span class="pic-title"><a href="<?= base_url("knowledge/tsingy#content") ?>">Tsingy</a></span>
                             <div class="pic-container">
                                 <img src="<?= base_url("assets/img/knowledges/Tsingy.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
-                            <span class="pic-title"><a href="<?= base_url("knowledge/beaches#knowledge-container") ?>">Beaches</a></span>
+                            <span class="pic-title"><a href="<?= base_url("knowledge/beaches#test") ?>">Beaches</a></span>
                             <div class="pic-container">
                                 <img src="<?= base_url("assets/img/knowledges/BEACHES.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
-                            <span class="pic-title"><a href="<?= base_url("knowledge/wildlife#knowledge-container") ?>">Wildlife</a></span>
+                            <span class="pic-title"><a href="<?= base_url("knowledge/wildlife#content") ?>">Wildlife</a></span>
                             <div class="pic-container">
                                 <img src="<?= base_url("assets/img/knowledges/WILDLIFE.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
-                            <span class="pic-title"><a href="<?= base_url("knowledge/culture#knowledge-container") ?>">Culture</a></span>
+                            <span class="pic-title"><a href="<?= base_url("knowledge/culture#content") ?>">Culture</a></span>
                             <div class="pic-container">
                                 <img src="<?= base_url("assets/img/knowledges/Culture.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
-                            <span class="pic-title"><a href="<?= base_url("knowledge/sport#knowledge-container") ?>">Sports</a></span>
+                            <span class="pic-title"><a href="<?= base_url("knowledge/sport#content") ?>">Sports</a></span>
                             <div class="pic-container">
                                 <img src="<?= base_url("assets/img/knowledges/SPORTS.jpg") ?>" alt="" width="100%" height="100%">
                             </div>

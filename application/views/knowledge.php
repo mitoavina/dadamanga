@@ -60,6 +60,7 @@
 				</div>
 			</div>
 		</div>
+		<div style="position: relative; bottom:50px" id="content"></div>
 		<div id="knowledge-container" class="container-fluid">
 			<div class="knowledge-sub-container">
 				<div class="knowledge-list container-fluid">
