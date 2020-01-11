@@ -60,8 +60,10 @@
                 </div>
             </div>
 
-            <div class="row flex-center mb-5">
-                <div class="col-md-8 img-placeholder rectangle-large"></div>
+            <div class="row flex-center mb-5 no-gutters">
+                <div class="col-md-8 img-placeholder rectangle-large">
+                    <img class="w-100" src="<?= base_url("assets/img/knowledges/Banner.jpg") ?>" alt="" srcset="">
+                </div>
             </div>
 
             <div class="row pt-5">
@@ -100,43 +102,43 @@
                         <div class="knowledge col-lg-4 col-6">
                             <span class="pic-title"><a href="<?= base_url() ?>knowledge/madagascar">Madagascar</a></span>
                             <div class="pic-container">
-                                <img src="<?= base_url() ?>/assets/img/blank2.png" alt="" width="100%" height="100%">
+                                <img src="<?= base_url("assets/img/knowledges/MADAGASCAR.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
                             <span class="pic-title"><a href="<?= base_url() ?>knowledge/baobab">Baobab</a></span>
                             <div class="pic-container">
-                                <img src="<?= base_url() ?>/assets/img/blank2.png" alt="" width="100%" height="100%">
+                                <img src="<?= base_url("assets/img/knowledges/BAOBAB.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
                             <span class="pic-title"><a href="<?= base_url() ?>knowledge/tsingy">Tsingy</a></span>
                             <div class="pic-container">
-                                <img src="<?= base_url() ?>/assets/img/blank2.png" alt="" width="100%" height="100%">
+                                <img src="<?= base_url("assets/img/knowledges/Tsingy.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
                             <span class="pic-title"><a href="<?= base_url() ?>knowledge/beaches">Beaches</a></span>
                             <div class="pic-container">
-                                <img src="<?= base_url() ?>/assets/img/blank2.png" alt="" width="100%" height="100%">
+                                <img src="<?= base_url("assets/img/knowledges/BEACHES.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
                             <span class="pic-title"><a href="<?= base_url() ?>knowledge/wildlife">Wildlife</a></span>
                             <div class="pic-container">
-                                <img src="<?= base_url() ?>/assets/img/blank2.png" alt="" width="100%" height="100%">
+                                <img src="<?= base_url("assets/img/knowledges/WILDLIFE.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
                             <span class="pic-title"><a href="<?= base_url() ?>knowledge/culture">Culture</a></span>
                             <div class="pic-container">
-                                <img src="<?= base_url() ?>/assets/img/blank2.png" alt="" width="100%" height="100%">
+                                <img src="<?= base_url("assets/img/knowledges/Culture.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="knowledge col-lg-4 col-6">
                             <span class="pic-title"><a href="<?= base_url() ?>knowledge/sport">Sports</a></span>
                             <div class="pic-container">
-                                <img src="<?= base_url() ?>/assets/img/blank2.png" alt="" width="100%" height="100%">
+                                <img src="<?= base_url("assets/img/knowledges/SPORTS.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
                     </div>

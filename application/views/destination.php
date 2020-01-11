@@ -70,7 +70,23 @@
 
             <div class="div2" id="galleria">
                 <?php for($i = 0; $i < count($regions); $i++) { ?>
-                    <img src="<?= base_url($regions[$i]->IMAGE) ?>" data-title="My title" data-description="Something about Tana">
+                    <img src="<?= base_url($regions[$i]->IMAGE) ?>" data-title="My title" data-description="Something about Tana"/>
+                <?php } ?>
+                <?php if($destination->NAME == "FortDauphin") { ?>
+                    <img src="<?= base_url("assets/img/destination/FortDauphin/regions/gallerie/1.jpg") ?>" data-title="My title" data-description="Something about Tana">
+                    <img src="<?= base_url("assets/img/destination/FortDauphin/regions/gallerie/2.jpg") ?>" data-title="My title" data-description="Something about Tana">
+                    <img src="<?= base_url("assets/img/destination/FortDauphin/regions/gallerie/3.jpg") ?>" data-title="My title" data-description="Something about Tana">
+                <?php } ?>
+                <?php if($destination->NAME == "Toamasina") { ?>
+                    <img src="<?= base_url("assets/img/destination/Toamasina/regions/gallerie/1.jpeg") ?>" data-title="My title" data-description="Something about Tana">
+                <?php } ?>
+                <?php if($destination->NAME == "Diego") { ?>
+                    <img src="<?= base_url("assets/img/destination/Diego/regions/gallerie/1.jpg") ?>" data-title="My title" data-description="Something about Tana">
+                    <img src="<?= base_url("assets/img/destination/Diego/regions/gallerie/2.jpg") ?>" data-title="My title" data-description="Something about Tana">
+                    <img src="<?= base_url("assets/img/destination/Diego/regions/gallerie/3.jpg") ?>" data-title="My title" data-description="Something about Tana">
+                <?php } ?>
+                <?php if($destination->NAME == "Morondava") { ?>
+                    <img src="<?= base_url("assets/img/destination/Morondava/regions/gallerie/1.jpg") ?>" data-title="My title" data-description="Something about Tana">
                 <?php } ?>
             </div>
 

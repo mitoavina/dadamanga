@@ -351,15 +351,13 @@
             <div class="div2 row mt-4">
                 <div class="col-md-12 p-0">
                     <div id="galleria">
-                        <img src="<?= base_url("assets/img/luxury/carrousel-luxury.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                        <img src="<?= base_url("assets/img/luxury/luxury-header.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                        <img src="<?= base_url("assets/img/luxury/miavana-bg.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                        <img src="<?= img_destinations_url("Antananarivo") ?>" data-title="My title" data-description="Something about Tana">
-                        <img src="<?= img_destinations_url("Toamasina") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
-                        <img src="<?= img_destinations_url("FortDauphin") ?>" data-title="Another title" data-description="Somethig about Fort Dauphin">
-                        <img src="<?= img_destinations_url("Diego") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
-                        <img src="<?= img_destinations_url("Morondava") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
-                        <img src="<?= img_destinations_url("Toliara") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
+                        <img style="border-radius:0;" src="./assets/img/luxury/miavana-bg.jpg" class="card-img-top" alt="...">
+                        <img style="border-radius:0;" src="./assets/img/luxury/Tsarabanjina.jpg" class="card-img-top" alt="...">
+                        <img style="border-radius:0;" src="./assets/img/luxury/Luxury_1.jpg" class="card-img-top" alt="...">
+                        <img style="border-radius:0;" src="./assets/img/luxury/Luxury_2.jpg" class="card-img-top" alt="...">
+                        <img style="border-radius:0;" src="./assets/img/luxury/1.jpg" class="card-img-top" alt="...">
+                        <img style="border-radius:0;" src="./assets/img/luxury/2.jpg" class="card-img-top" alt="...">
+                        <img style="border-radius:0;" src="./assets/img/luxury/3.jpg" class="card-img-top" alt="...">
                     </div>
                 </div>
             </div>
@@ -530,7 +528,7 @@
                     </div>
 
                     <div data-index="1" class="d-none card luxury-card dadamanga-special-card">
-                        <img style="border-radius:0;" src="./assets/img/luxury/miavana-bg.jpg" class="card-img-top" alt="...">
+                        <img style="border-radius:0;" src="./assets/img/luxury/Tsarabanjina.jpg" class="card-img-top" alt="...">
                         <div class="">
                             <p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Tsarabanjina</p>
                             <p class="text_secondaire">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt</p>
