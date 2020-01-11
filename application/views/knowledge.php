@@ -242,15 +242,15 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">THE LANGUAGE</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/culture/language.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">THE PEOPLE</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/culture/people.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">FAMADIHANA</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/culture/famadihana.jpg") ?>" alt="" width="100%" height="100%">
 										</div>
 									</div>
 								</div>
