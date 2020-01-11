@@ -69,12 +69,9 @@
             </div>
 
             <div class="div2" id="galleria">
-                <img src="<?= img_destinations_url("Antananarivo") ?>" data-title="My title" data-description="Something about Tana">
-                <img src="<?= img_destinations_url("Toamasina") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
-                <img src="<?= img_destinations_url("FortDauphin") ?>" data-title="Another title" data-description="Somethig about Fort Dauphin">
-                <img src="<?= img_destinations_url("Diego") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
-                <img src="<?= img_destinations_url("Morondava") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
-                <img src="<?= img_destinations_url("Toliara") ?>" data-title="Another title" data-description="My <em>HTML</em> description">
+                <?php for($i = 0; $i < count($regions); $i++) { ?>
+                    <img src="<?= base_url($regions[$i]->IMAGE) ?>" data-title="My title" data-description="Something about Tana">
+                <?php } ?>
             </div>
 
 
