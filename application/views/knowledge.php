@@ -60,7 +60,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="knowledge-container container-fluid">
+		<div id="knowledge-container" class="container-fluid">
 			<div class="knowledge-sub-container">
 				<div class="knowledge-list container-fluid">
 					<div class="itinerary-menu-mobile text-center">
