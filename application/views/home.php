@@ -34,6 +34,17 @@
             overflow: hidden;
         }
 
+        #video-container > div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+        
+        #video-container > div > h1 {
+            font-size: 4.5em;
+        }
+
         video {
             height: 100%;
             position: absolute;
@@ -60,6 +71,9 @@
                     <video autoplay muted loop>
                         <source src="<?= base_url("assets/img/home/home.mp4") ?>" type="video/mp4">
                     </video>
+                    <div>
+                        <h1 class="white-text">WELCOME TO <span class="font-weight-bold">DADAMANGA</span></h1>
+                    </div>
                 </div>
             </li>
             <li style="background-image:url( <?= base_url($image[0]->path) ?>)" class=" jumbotron home-text">
@@ -272,9 +286,9 @@
         });
     });
 
-    $(document).ready(function(){
-        $('video').bind('contextmenu',function() { return false; });
-    });
+    // $(document).ready(function(){
+    //     $('video').bind('contextmenu',function() { return false; });
+    // });
 
     $(".black-marron-btn").hover((e) => {
         $(e.currentTarget).siblings().removeClass("black-marron-btn-hover");
