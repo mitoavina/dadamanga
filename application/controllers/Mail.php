@@ -33,7 +33,7 @@ class Mail extends CI_Controller
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('abrahamrobbi@gmail.com');
+		$mail->addAddress('dadamanga@me.com');
 
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -187,7 +187,7 @@ class Mail extends CI_Controller
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('abrahamrobbi@gmail.com');
+		$mail->addAddress('dadamanga@me.com');
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -234,7 +234,7 @@ class Mail extends CI_Controller
 		$mail->Port     = 465;
 
 		$mail->setFrom("dadamanga@me.com", "Dadamanga Travel Service");
-		$mail->addReplyTo('abrahamrobbi@gmail.com', 'Dadamanga Travel Service');
+		$mail->addReplyTo('dadamanga@me.com', 'Dadamanga Travel Service');
 
 		// Add a recipient
 		//a changer
@@ -285,7 +285,7 @@ class Mail extends CI_Controller
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('abrahamrobbi@gmail.com');
+		$mail->addAddress('dadamanga@me.com');
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
 
 
@@ -321,7 +321,7 @@ class Mail extends CI_Controller
 		$mail->Port     = 465;
 
 		$mail->setFrom("dadamanga@me.com", "Dadamanga Travel Service");
-		$mail->addReplyTo("abrahamrobbi@gmail.com", "Dadamanga Travel Service");
+		$mail->addReplyTo("dadamanga@me.com", "Dadamanga Travel Service");
 
 		// Add a recipient
 		//a changer
