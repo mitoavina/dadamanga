@@ -1,7 +1,7 @@
 <div class="row mb-5">
     <div id="select-below" class="col-md-12">LEARN MORE ABOUT DESTINATIONS</div>
 </div>
-<div class="container">
+<div style="padding-bottom: 64px"lass="container">
     <div id="select-below-images-container" class="row">
         <?php foreach ($destinationModel as $item) { ?>
             <div class="col-md-4 col-6 overlay-marron-container">
