@@ -41,7 +41,7 @@
     </div>
     <div class="body-index">
         <nav id="animated-nav" class=" text-center navbar">
-            <p><a class="lien1">OVERVIEW</a> | <a class="lien2">GALLERY</a> | <a class="lien3">WHEN TO TRAVEL</a> | <a class="lien4">REGIONS</a></p>
+            <p><a class="lien1">OVERVIEW</a> | <a class="lien2">GALLERY</a> | <a class="lien3">REGIONS</a></p>
             <a class="navbar-brand" href="<?= base_url() . "home" ?>">
                 <img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
             </a>
@@ -69,8 +69,8 @@
             </div>
 
             <div class="div2" id="galleria">
-                <?php for($i = 0; $i < count($regions); $i++) { ?>
-                    <img src="<?= base_url($regions[$i]->IMAGE) ?>" data-title="My title" data-description="Something about Tana"/>
+                <?php foreach($regions as $region) { ?>
+                    <img src="<?= base_url($region->IMAGE) ?>" data-title="My title" data-description="Something about Tana"/>
                 <?php } ?>
                 <?php if($destination->NAME == "FortDauphin") { ?>
                     <img src="<?= base_url("assets/img/destination/FortDauphin/regions/gallerie/1.jpg") ?>" data-title="My title" data-description="Something about Tana">
@@ -90,81 +90,10 @@
                 <?php } ?>
             </div>
 
-
             <div class="container">
-                <!-- DIV3 -->
-                <div class=" div3 row">
-                    <div class="col-md-12">
-                        <h1 class="title_text">WHEN TO TRAVEL</h1>
-                    </div>
-                </div>
-
-                <div class="row d-flex justify-content-center text1 pt-3">
-                    <div class="text-center col-md-8 text_header pt-5 mb-5">
-                        <?= $information->travel->title ?>
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <?php foreach ($information->travel->paragraph as $paragraph) { ?>
-                        <div class="col-md-6 mb-4 text-left"><?= $paragraph ?></div>
-                    <?php } ?>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="dadamanga-special-card card mb-3">
-                            <div class="row no-gutters">
-                                <div class="col-lg-6 my-auto col-md-12">
-                                    <?php
-                                    $i = 0;
-                                    foreach ($information->slides as $slide) { ?>
-                                        <img src="<?= base_url($slide->image) ?>" style="border-radius:0;" class="<?= $i == 0 ? 'active  wow animated fadeInLeft' : 'd-none' ?> img-fluid card-img" alt="...">
-
-                                    <?php
-                                        ++$i;
-                                    } ?>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="wow animated fadeInRight card-body text-left">
-                                        <div class="row title_text ">
-                                            <div class="col-md-12">
-                                                <p class="pb-2">SELECT THE MONTH YOU PLAN TO TRAVEL</p>
-                                            </div>
-                                        </div>
-                                        <div class="row title_text" style="margin-top:0;color:#151515;font-size:18px;">
-                                            <div class="month-containers col-md-12 ">
-                                                <?php
-                                                $i = 0;
-                                                foreach ($information->slides as $slide) { ?>
-                                                    <p class="pb-2 <?= $i == 0 ? 'active' :  'd-none' ?>"><?= $slide->period ?></p>
-                                                <?php
-                                                    ++$i;
-                                                } ?>
-                                            </div>
-                                        </div>
-                                        <div class="description-container mb-3">
-                                            <?php
-                                            $i = 0;
-                                            foreach ($information->slides as $slide) {
-                                            ?>
-                                                <p class="text_secondaire <?= $i == 0 ? 'active' :  'd-none' ?>"><?= $slide->description ?></p>
-                                            <?php
-                                                ++$i;
-                                            }
-                                            ?>
-                                        </div>
-                                        <button onclick="prevCard()" type="button" style=" bottom:0;" class=" position-absolute noShadow btn-marron btn btn-sm "><i class="fas fa-angle-left"></i></button>
-                                        <button onclick="nextCard()" type="button" style=" bottom:0;left:90px;" class=" position-absolute noShadow btn-marron btn btn-sm "><i class="fas fa-angle-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                                            
                 <!-- DIV4 -->
-                <div class="row div4">
+                <div class="row div3">
                     <div class="col-md-12">
                         <h1 class="title_text">REGION FOCUS</h1>
                     </div>
