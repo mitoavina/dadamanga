@@ -44,6 +44,9 @@
             <div class="col-sm-6 col-md-2 text-center mb-4 mr-4">
                 <img style="max-width:100%;width: 84px;position:relative;top: 1px;" alt="" src="<?= base_url() ?>assets/img/footer/footer_logo_4.png">
             </div>
+            <div class="col-sm-6 col-md-2 text-center mb-4 mr-4">
+                <img style="max-width:100%;" alt="" src="<?= base_url() ?>assets/img/footer/footer_logo_6.png">
+            </div>
         </div>
 
         <div class="row d-flex justify-content-center text-center">
