@@ -359,9 +359,7 @@ jQuery(document).ready(function($) {
         }
 
         gallariaSelf.init(galleria_height);
-
         Galleria.ready(function(options) {
-
             // this = the gallery instance
             // options = the gallery options
 
@@ -381,16 +379,16 @@ jQuery(document).ready(function($) {
                     $('.galleria-thumbnails').addClass('one-third');
                 }
 
-                $('.galleria-image').each(function(index, el) {
-                    var _this_el = $(el);
-                    var img_src = _this_el.find('img').attr('src');
-                    _this_el.css({
-                        'background-image': 'url(' + img_src + ')',
-                        'background-size': 'cover',
-                        'background-position': '50% 50%'
-                    });
-                    _this_el.find('img').hide();
-                });
+                // $('.galleria-image').each(function(index, el) {
+                //     var _this_el = $(el);
+                //     var img_src = _this_el.find('img').attr('src');
+                //     _this_el.css({
+                //         'background-image': 'url(' + img_src + ')',
+                //         'background-size': 'cover',
+                //         'background-position': '50% 50%'
+                //     });
+                //     _this_el.find('img').hide();
+                // });
 
             });
 
