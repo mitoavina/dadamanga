@@ -56,7 +56,7 @@
         <div class=" container-fluid content-template text-center">
             <div class="row">
                 <div class="offset-md-2 col-md-8 pt-5 pb-5 text_header">
-                    " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea
+                    An island national often called the eighth continent; with multiple micro-climates; and multiple ethnic groups each with their own dialect, style, music, architecture and way of life; any journey across Madagascar is fascinating and eye-opening.
                 </div>
 
             </div>
@@ -108,7 +108,7 @@
                             <div class="overlay-with-padding">
                                 <a href="<?= base_url('adventure') ?>" class="d-none overlay-marron white-text">
                                     <div>
-                                        <div class="mb-3"><?= $information->text[0]->value ?></div>
+                                        <div class="mb-3">Here you can tell us the places and attractions that you want to see to make your safari around Madagascar perfect.  The more information you can give us here, the closer we will get to your ideal tour, first time around.</div>
                                         <div>FIND OUT MORE <i class="fas fa-long-arrow-alt-right"></i></div>
                                     </div>
                                 </a>
@@ -127,7 +127,7 @@
                     <div class="overlay-with-padding">
                         <a href="<?= base_url("shelf") ?>" class="d-none overlay-marron white-text">
                             <div class="">
-                                <div class="mb-3"><?= $information->text[0]->value ?></div>
+                                <div class="mb-3">This section of our website is for those of you who want quick access to tours that do not include domestic air travel.  These itineraries may be purchased instantly, or, you can ask us to tweak them, or combine them, to suit you perfectly.</div>
                                 <div>FIND OUT MORE <i class="fas fa-long-arrow-alt-right"></i></div>
                             </div>
                         </a>
