@@ -381,17 +381,29 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2 pt-5 pb-5 text_header">
                     <p class="text-center">
-                        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea
+                    Design your own custom itinerary by simply selecting the specific part of Madagascar or park you would like to visit, the wildlife you are interested in, and the adventure you would like to experience. 
+                    <br>
+                    When you are done, click on the 'Create my Adventure' button, fill in your details then we can tailor an itinerary to suit your needs. Or contact us directly to discuss our destinations.
                     </p>
                 </div>
             </div>
             <div class="container pb-4 mt-3">
                 <div class="row">
                     <div class="col-md-6 text_secondaire">
-                        <p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
+                        <p>
+                        We like to collect as much information possible to assist in making your Madagascar safari the best experience possible.
+                        </p>
+                        <p>
+                        Some points to consider whilst planning your trip:
+                        </p>
                     </div>
                     <div class="col-md-6 text_secondaire">
-                        <p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
+                    <p>
+                    It is useful for us to understand the style and level of trip you would prefer, because we will always aim for a comfortable mid-range as our standard, but, if you want non-stop luxury, or a few days or spoiling, please let us know.
+                    </p>
+                    <p>
+                    We realize budget and time play a big factor in planning your adventure so, the more specific the information you give us, the more accurate we can be, first time.
+                    </p>
                     </div>
                 </div>
             </div>
