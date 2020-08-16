@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="offset-md-2 col-md-8 pt-5 pb-5 text_header">
                     <p class="text-center">
-                        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea
+                    This section of our website is for those of you who want quick access to tours that do not include domestic air travel.  These itineraries may be purchased instantly, or, you can ask us to tweak them, or combine them, to suit you perfectly.
                     </p>
                 </div>
             </div>
