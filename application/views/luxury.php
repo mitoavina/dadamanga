@@ -333,7 +333,7 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8 pt-5 pb-5 text_header">
                     <p class="text-center">
-                        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea
+                        Madagascar now offers many luxury experiences comparable to anywhere in the world.  Usually remote, and usually requiring an adventurous journey to reach your destination, Dadamanga can manage your visit to any of these world class destinations.  Ask us.
                     </p>
                 </div>
                 <div class="col-md-2"></div>
@@ -341,10 +341,10 @@
             <div class="container pb-4 mt-3">
                 <div class="row">
                     <div class="col-md-6 text_secondaire">
-                        <p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
+                    <p>From pristine tropical islands accessed only by helicopter, to coastal resorts with huge private nature reserves, to the wild jungles of the Masoala Peninsular, Madagascar offers many experiences suitable for the most discerning voyager.</p>
                     </div>
                     <div class="col-md-6 text_secondaire">
-                        <p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
+                    <p>We offer a small selection of the best destinations in Madagascar here as suggestions, and we can incorporate these into any itinerary.  It is sure that to see more of Madagascar, you will need to have an adventure, for example, hiking or visiting rainforests, with some days pampering yourself at a luxury hotel as a fitting end to your more strenuous activities.</p>
                     </div>
                 </div>
             </div>
@@ -395,6 +395,7 @@
                                 <img src="./assets/img/luxury/gidro.jpg" style="border-radius:0;" class="img-fluid card-img d-none" alt="...">
                                 <img src="./assets/img/luxury/baobab.jpg" style="border-radius:0;" class="img-fluid card-img d-none" alt="...">
                                 <img src="./assets/img/luxury/miavana.jpg" style="border-radius:0;" class="img-fluid card-img d-none" alt="...">
+                                <img src="./assets/img/luxury/miavana.jpg" style="border-radius:0;" class="img-fluid card-img d-none" alt="...">
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="card-body py-0 wow animated fadeInRight">
@@ -404,6 +405,7 @@
                                             <p class="pb-2 d-none">TSARABANJINA</p>
                                             <p class="pb-2 d-none">ANJAVAVY LE LODGE</p>
                                             <p class="pb-2 d-none">MADAGASCAR CLASSIC COLLECTION</p>
+                                            <p class="pb-2 d-none">MASOALA FOREST LODGE</p>
                                         </div>
                                     </div>
                                     <div class="row title_text " style="margin-top:0;color:#151515;font-size:18px;">
@@ -412,55 +414,28 @@
                                             <p class="pb-2 d-none">NOV - JAN</p>
                                             <p class="pb-2 d-none">FEB - MAR</p>
                                             <p class="pb-2 d-none">APR - MAY</p>
+                                            <p class="pb-2 d-none">APR - MAY</p>
                                         </div>
                                     </div>
                                     <div class="description-container">
-                                        <p class="text_secondaire active">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
-                                        <p class="text_secondaire d-none">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
-                                        <p class="text_secondaire d-none">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
-                                        <p class="text_secondaire d-none">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
+                                        <p class="text_secondaire active">
+                                            Madagascar's first 5 star eco luxury accommodation - NOSY ANKAO - Sink your feet into the pearly sands of a remote island sanctuary where you'll taste sweet jasmine on the breeze while gazing at a thousand sparkling shades of turquoise.
+                                        </p>
+                                        <p class="text_secondaire d-none">
+                                            Azure blue water, powder soft beaches, private bungalows fenced by tropical plants, choose from one of the 25 beach villas. Laid back atmosphere, barefoot chic, an intimate retreat, eco-friendly, an unspoiled Island surrounded by azure water; the resort offers a chic Robinson Crusoe experience.
+                                        </p>
+                                        <p class="text_secondaire d-none">
+                                            ANJAJAVY - On an isolated peninsular on the northwest coast of Madagascar, Anjajavy le Lodge awaits your discovery.  Set along sandy beaches, azure waters and encircled by a fabulous forest reserve, Anjajavy reflects the rich diversity and untouched beauty of Madagascar and the natural warm hospitality of her people.
+                                        </p>
+                                        <p class="text_secondaire d-none">
+                                            MCC - two exclusive properties, a tented camp with seven fully-outfitted rooms in the heart of southern Madagascar’s spiny forest, and Manafiafy Beach & Rainforest Lodge, a barefoot luxury lodge with five rooms tucked into a secluded and serene bay on the southeastern shores of Madagascar.
+                                        </p>
+                                        <p class="text_secondaire d-none">
+                                        MASOALA FOREST LODGE - An Untouched Rainforest Peninsula - The spectacular rainforest covered peninsula on Madagascar’s northeast coast forms the backdrop for Masoala Forest Lodge – a luxurious outpost lost in time and nature… A place to relax explore and connect with the natural world in all its primordial splendor.
+                                        </p>
                                     </div>
                                     <button onclick="prevCard(true)" style="bottom: 0;" class="position-absolute noShadow btn-marron btn btn-sm"><i class="fas fa-angle-left"></i></button>
                                     <button onclick="nextCard(true)" style="bottom: 0; left:90px" class="position-absolute noShadow btn-marron btn btn-sm"><i class="fas fa-angle-right"></i></button>
-                                </div>
-                                <div class="d-none" class="card-body">
-                                    <div class="row title_text ">
-                                        <div class="col-md-12">
-                                            <p class="pb-2">MIAVANA</p>
-                                        </div>
-                                    </div>
-                                    <div class="row title_text " style="margin-top:0;color:#151515;font-size:18px;">
-                                        <div class="col-md-12 ">
-                                            <p class="pb-2">DEC - MAR</p>
-                                        </div>
-                                    </div>
-                                    <p class="text_secondaire">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
-                                </div>
-                                <div class="d-none" class="card-body">
-                                    <div class="row title_text ">
-                                        <div class="col-md-12">
-                                            <p class="pb-2">MIAVANA</p>
-                                        </div>
-                                    </div>
-                                    <div class="row title_text " style="margin-top:0;color:#151515;font-size:18px;">
-                                        <div class="col-md-12 ">
-                                            <p class="pb-2">DEC - MAR</p>
-                                        </div>
-                                    </div>
-                                    <p class="text_secondaire">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
-                                </div>
-                                <div class="d-none" class="card-body">
-                                    <div class="row title_text ">
-                                        <div class="col-md-12">
-                                            <p class="pb-2">MIAVANA</p>
-                                        </div>
-                                    </div>
-                                    <div class="row title_text " style="margin-top:0;color:#151515;font-size:18px;">
-                                        <div class="col-md-12 ">
-                                            <p class="pb-2">DEC - MAR</p>
-                                        </div>
-                                    </div>
-                                    <p class="text_secondaire">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
                                 </div>
                             </div>
                         </div>
@@ -496,8 +471,10 @@
                 <h5>WHAT INTERESTS YOU?</h5>
                 <ul class="list-inline">
                     <li class="list-inline-item side-menu-style-active" data-index="0"><a>Miavana</a></li>
-                    <li class="list-inline-item" data-index="1"><a>Tsarabanjina</li</a> </li> <li class="list-inline-item" data-index="2"><a>Anjajavy Le Lodge</a></li>
+                    <li class="list-inline-item" data-index="1"><a>Tsarabanjina</a></li> 
+                    <li class="list-inline-item" data-index="2"><a>Anjajavy Le Lodge</a></li>
                     <li class="list-inline-item" data-index="3"><a>Madagascar Classic Collection</a></li>
+                    <li class="list-inline-item" data-index="4"><a>Masoala Forest Lodge</a></li>
                 </ul>
             </div>
             <div class="itineraries-details position-relative row pt-4 mt-4 bg-white px-md-5">
@@ -508,6 +485,7 @@
                         <li class="side-menu-style list-group-item" data-index="1"><a>Tsarabanjina</a></li>
                         <li class="side-menu-style list-group-item" data-index="2"><a>Anjajavy Le Lodge</a></li>
                         <li class="side-menu-style list-group-item" data-index="3"><a>Madagascar Classic Collection</a></li>
+                        <li class="side-menu-style list-group-item" data-index="4"><a>Masoala Forest Lodge</a></li>
                     </ul>
                 </div>
                 <div class="dadamanga-special-card-container col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -515,7 +493,9 @@
                         <img style="border-radius:0;" src="./assets/img/luxury/miavana-bg.jpg" class="card-img-top" alt="...">
                         <div class="">
                             <p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Miavana</p>
-                            <p class="text_secondaire">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt</p>
+                            <p class="text_secondaire">
+                            Madagascar's first 5 star eco luxury accommodation - NOSY ANKAO - Sink your feet into the pearly sands of a remote island sanctuary where you'll taste sweet jasmine on the breeze while gazing at a thousand sparkling shades of turquoise.
+                            </p>
                             <div class="text-right" style="font-family:'Geometria';">
                                 <style>
                                     .kl {
@@ -531,7 +511,9 @@
                         <img style="border-radius:0;" src="./assets/img/luxury/Tsarabanjina.jpg" class="card-img-top" alt="...">
                         <div class="">
                             <p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Tsarabanjina</p>
-                            <p class="text_secondaire">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt</p>
+                            <p class="text_secondaire">
+                            Azure blue water, powder soft beaches, private bungalows fenced by tropical plants, choose from one of the 25 beach villas. Laid back atmosphere, barefoot chic, an intimate retreat, eco-friendly, an unspoiled Island surrounded by azure water; the resort offers a chic Robinson Crusoe experience.
+                            </p>
                             <div class="text-right" style="font-family:'Geometria';">
                                 <style>
                                     .kl {
@@ -547,7 +529,9 @@
                         <img style="border-radius:0;" src="./assets/img/luxury/Luxury_1.jpg" class="card-img-top" alt="...">
                         <div>
                             <p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Anjavavy Le Lodge</p>
-                            <p class="text_secondaire">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt</p>
+                            <p class="text_secondaire">
+                            On an isolated peninsular on the northwest coast of Madagascar, Anjajavy le Lodge awaits your discovery.  Set along sandy beaches, azure waters and encircled by a fabulous forest reserve, Anjajavy reflects the rich diversity and untouched beauty of Madagascar and the natural warm hospitality of her people.
+                            </p>
                             <div class="text-right" style="font-family:'Geometria';">
                                 <style>
                                     .kl {
@@ -563,29 +547,50 @@
                         <img style="border-radius:0;" src="./assets/img/luxury/Luxury_2.jpg" class="card-img-top" alt="...">
                         <div class="">
                             <p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Madagascar Classic Collection</p>
-                            <p class="text_secondaire">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt</p>
+                            <p class="text_secondaire">
+                            Two exclusive properties, a tented camp with seven fully-outfitted rooms in the heart of southern Madagascar’s spiny forest, and Manafiafy Beach & Rainforest Lodge, a barefoot luxury lodge with five rooms tucked into a secluded and serene bay on the southeastern shores of Madagascar. 
+                            </p>
                             <div style="font-family:'Geometria';">
-                                <style>
-                                    .kl {
-                                        box-shadow: none;
-                                    }
-                                </style>
                                 <div class="font-brandon-grotesque-light mb-4 for-more-info font-italic">Click on attraction below for more info</div>
 
                                 <div class=" font-geometria-light click-below mb-2">
                                     <a class="font-color-brown noHover" data-toggle="collapse" href="#collapse0">+ Mandrare River Camp</a>
                                 </div>
                                 <div class="collapse" id="collapse0">
-                                    <p class="pl-2 ml-2 description">Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt</p>
+                                    <p class="pl-2 ml-2 description">
+                                    The camp's off the beaten path location, in the remote south of Madagascar, provides exclusive access to one of world’s most unique ecosystems. Experience this rare and important environment up close and immerse yourself in the biological and cultural diversity of Madagascar. The charming tents combine authentic bush flair with the comfort of high-end accommodation. 
+                                    </p>
                                 </div>
 
                                 <div class=" font-geometria-light click-below mb-2">
                                     <a class="font-color-brown noHover" data-toggle="collapse" href="#collapse1">+ Manafiafy Beach & Rainforest Lodge</a>
                                 </div>
                                 <div class="collapse" id="collapse1">
-                                    <p class="pl-2 ml-2 description">Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt etdolore magna aliqua.. Utenim ad minimeiusmod tempor incididunt</p>
+                                    <p class="pl-2 ml-2 description">
+                                    With sparkling blue seas, verdant rainforests, and abundant wildlife, this intimate lodge offers you your choice of serenity or adventure. The Lodge sits nestled into a forest-fringed cove on a tranquil stretch of white sand beaches rarely seen by anyone other than the local fishermen that have lived here for generations.  Only five luxury thatched bungalows offering a private terrace just inches from the sea.
+                                    </p>
                                 </div>
 
+                                <div class="text-right" style="font-family:'Geometria';">
+                                    <style>
+                                        .kl {
+                                            box-shadow: none;
+                                        }
+                                    </style>
+                                    <button type="button" data-toggle="modal" data-target="#modal" class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-index="4" class="d-none card luxury-card dadamanga-special-card">
+                        <img style="border-radius:0;" src="./assets/img/luxury/Luxury_2.jpg" class="card-img-top" alt="...">
+                        <div class="">
+                            <p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Masoala Forest Lodge</p>
+                            <p class="text_secondaire">
+                            An Untouched Rainforest Peninsula - The spectacular rainforest covered peninsula on Madagascar’s northeast coast forms the backdrop for Masoala Forest Lodge – a luxurious outpost lost in time and nature… A place to relax explore and connect with the natural world in all its primordial splendor.
+                            </p>
+                            <div style="font-family:'Geometria';">
                                 <div class="text-right" style="font-family:'Geometria';">
                                     <style>
                                         .kl {
@@ -608,7 +613,7 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8 pt-5 pb-5 text_header">
                     <p class="text-center">
-                        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea
+                    Some of the most exclusive destinations can only be reached by private aircraft, normally included as part of the package.  For those of our clients who want to make their journey more private and exclusive, we can arrange private aircraft to many destinations in Madagascar.  Imagine a private flight over the Tsingy de Bemaraha, descending to hike the Tsingy, then to Morondava to wander on the iconic Avenue of Baobabs, and finally south to witness the spectacles of the Isalo National Park.  We can arrange exclusive private charters for from one to around twelve people, or more, in multiple aircraft, with ground services included to the standard you request at each stop.  Please ask us.
                     </p>
                 </div>
                 <div class="col-md-2"></div>
