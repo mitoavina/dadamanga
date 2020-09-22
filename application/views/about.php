@@ -205,12 +205,12 @@
 					<div class="elfsight-app-719f865f-1ded-4062-b5e7-f423b8127562"></div>
 				</div>
 			</div>
-			<script src="https://apps.elfsight.com/p/platform.js" defer></script>
 		</div>
 	</div>
 	<?php include("followus.php") ?>
 	<?php include("footer.php"); ?>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 
 </html>
