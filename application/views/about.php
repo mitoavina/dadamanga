@@ -210,7 +210,7 @@
 	<!-- MDB core JavaScript -->
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
-	<script src="https://apps.elfsight.com/p/platform.js"></script>
+	<script src="https://apps.elfsight.com/p/platform.js" async></script>
 </body>
 
 </html>
