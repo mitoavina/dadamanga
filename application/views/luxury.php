@@ -697,7 +697,7 @@
 					</div>
 
 					<div data-index="4" class="d-none card luxury-card dadamanga-special-card">
-						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_2.jpg" class="card-img-top"
+						<img style="border-radius:0;" src="./assets/img/luxury/masoala.jpg" class="card-img-top"
 							alt="...">
 						<div class="">
 							<p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Masoala Forest Lodge</p>
