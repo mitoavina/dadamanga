@@ -20,7 +20,7 @@
             <div class="col-lg-4 text-lg-left text-center mb-2 mb-md-4">+261 34 20 258 62</div>
         </div>
         <div class="row">
-            <div class="col-lg-3 text-lg-left text-center mb-4">dadamanga@me.com</div>
+            <div class="col-lg-3 text-lg-left text-center mb-4">contact@dadamanga.mg</div>
             <div class="offset-lg-1 col-lg-7 text-lg-left text-center mb-4">
                 Dadamanga is a licensed Tour Operator N°<br />
                 068-MINTOUR/SG/DGDT/DAIT/SAT-EDBM.17
