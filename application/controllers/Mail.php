@@ -33,7 +33,7 @@ class Mail extends CI_Controller
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('dadamanga@me.com');
+		$mail->addAddress('contact@dadamanga.mg');
 
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -187,7 +187,7 @@ class Mail extends CI_Controller
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('dadamanga@me.com');
+		$mail->addAddress('contact@dadamanga.mg');
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -233,8 +233,8 @@ class Mail extends CI_Controller
 		$mail->SMTPSecure = 'ssl';
 		$mail->Port     = 465;
 
-		$mail->setFrom("dadamanga@me.com", "Dadamanga Travel Service");
-		$mail->addReplyTo('dadamanga@me.com', 'Dadamanga Travel Service');
+		$mail->setFrom("contact@dadamanga.mg", "Dadamanga Travel Service");
+		$mail->addReplyTo('contact@dadamanga.mg', 'Dadamanga Travel Service');
 
 		// Add a recipient
 		//a changer
@@ -285,7 +285,7 @@ class Mail extends CI_Controller
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('dadamanga@me.com');
+		$mail->addAddress('contact@dadamanga.mg');
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
 
 
@@ -320,8 +320,8 @@ class Mail extends CI_Controller
 		$mail->SMTPSecure = 'ssl';
 		$mail->Port     = 465;
 
-		$mail->setFrom("dadamanga@me.com", "Dadamanga Travel Service");
-		$mail->addReplyTo("dadamanga@me.com", "Dadamanga Travel Service");
+		$mail->setFrom("contact@dadamanga.mg", "Dadamanga Travel Service");
+		$mail->addReplyTo("contact@dadamanga.mg", "Dadamanga Travel Service");
 
 		// Add a recipient
 		//a changer
