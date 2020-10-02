@@ -40,11 +40,12 @@
 				<div class="row part1">
 					<div class="col-md-4 ">
 						<p class="contact-label">ADDRESS</p>
-						<p>Villa Massoud <br>Lot IVBL020 Rue Circulaire <br>Faux Cap, Tolagnaro 614</p>
+						<p style="line-height:20px">Villa Massoud <br>Lot IVBL020 Rue Circulaire <br>Faux Cap, Tolagnaro
+							614</p>
 					</div>
 					<div class="col-md-4">
 						<p class="contact-label">PHONE & WHATSAPP</p>
-						<p>0342025862<p>
+						<p>+261342025862<p>
 					</div>
 					<div class="col-md-4">
 						<p class="contact-label">EMAIL</p>
