@@ -57,7 +57,7 @@
 		</div>
 
 		<div class="row d-flex justify-content-center text-center">
-			<div class="mr-4"><small class="">&copy; Dadamanga 2019</small></div>
+			<div class="mr-4"><small class="">&copy; Dadamanga 2020</small></div>
 			<!-- <div class="mr-4"><small>Terms & Conditions</small></div>
             <div class=""><small>Privacy Policy</small></div> -->
 		</div>
