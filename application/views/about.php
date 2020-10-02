@@ -42,7 +42,7 @@
 			<div class=" div1 row">
 				<div class="col-md-2"></div>
 				<div class="col-md-8 pt-5 pb-5">
-					<p class="text-center">
+					<p class="text-center text-form-2">
 						MADAGASCAR inspires a sense of imminent adventure. It creeps under your skin with a magical
 						fascination of untouched wildlife and the nervous excitement of the unknown. Experience the
 						heart and soul of this magnificent land with Dadamanga.
@@ -56,7 +56,7 @@
 						<img class="img-fluid" alt="" src="<?= base_url() ?>assets/img/about/img_1-about.jpg">
 					</div>
 					<div class="col-md-6">
-						<p>
+						<p class="text-form-1">
 							Dadamanga was founded in 2010, but with over 25 years experience in Madagascar, specializing
 							in some of the most inspiring and fascination destinations across this island continent. Our
 							knowledge, expertise and personal experiences are reflected in the tailor made itineraries
@@ -73,8 +73,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6">
-						<p>
+					<div class="col-md-12">
+						<p class="text-form-1">
 							Conservation is high on our agenda, the projects that we support are based on our knowledge
 							of the land and our love of wildlife and sustainability. Our mission is to offer you a LIVE
 							THE ADVENTURE journey, and by stepping onto this fascinating island continent for the first
@@ -88,7 +88,9 @@
 						</p>
 					</div>
 				</div>
-				<p class="pt-3 px-auto">Connect with us and explore our social media. Here you can engage with us, see
+				<p class="pt-3 px-auto text-form-3 text-center">Connect with us and explore our social media. Here you
+					can engage
+					with us, see
 					our history with your own eyes, and after your trip, contribute your own experiences to our story.
 				</p>
 				<div class="row mt-5 text-center">
@@ -119,7 +121,7 @@
 			<div class="row mt-3">
 				<div class="col-md-2"></div>
 				<div class="col-md-8 pt-5 pb-5">
-					<p class="text-center">
+					<p class="text-center text-form-1">
 						Our team have a strong sense of solidarity, like a big loving family. We are spread across the
 						country, connected by fibre-optic internet and our heart-strings. Our head office is in
 						Tolagnaro, the planning & design office is in Antsirabe, we have a team of around thirty drivers
@@ -142,7 +144,7 @@
 			<div class="row">
 				<div class="col-md-2"></div>
 				<div class="col-md-8 pt-5 pb-5">
-					<p class="text-center">
+					<p class="text-center text-form-2">
 						<?= $text[0]->value ?>
 					</p>
 				</div>
