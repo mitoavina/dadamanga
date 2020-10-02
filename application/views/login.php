@@ -10,7 +10,7 @@
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/bootstrap.min.css">
-	<link href="<?= base_url() ?>assets/css/global.css?v=1" rel="stylesheet">
+	<link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
 	<!--===============================================================================================-->
 	<link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
 	<!--===============================================================================================-->
