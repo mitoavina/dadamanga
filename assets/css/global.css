@@ -657,8 +657,9 @@ sidenav:blur {
 }
 
 .description {
-	font-family: "Brandon Grotesque Regular Italic";
-	font-size: 20px;
+	font-family: "Brandon Grotesque Light";
+	font-size: 17px;
+	font-style: italic;
 }
 
 .noHover:hover {
