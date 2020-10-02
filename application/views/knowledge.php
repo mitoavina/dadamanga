@@ -28,34 +28,43 @@
 <?php include("sidenav.php"); ?>
 
 <body>
-	<div style="background-image:url( <?= base_url() . 'assets/img/knowledges/jumbotron.jpg' ?>)" id="jumbotron" class="jumbotron-knowledge jumbotron flex-column flex-center">
+	<div style="background-image:url( <?= base_url() . 'assets/img/knowledges/jumbotron.jpg' ?>)" id="jumbotron"
+		class="jumbotron-knowledge jumbotron flex-column flex-center">
 		<div class="text text-white">
 			<h1 class="text-center"><span>KNOWLEDGE OF THE PLACE<span></h1>
 		</div>
 	</div>
 	<div class="body-index">
 		<nav id="animated-nav" class=" text-center navbar">
-			<p><a class="lien1">MADAGASCAR</a> | <a class="lien2">INTERESTING FACTS</a> | <a class="lien3">DOWNLOADS</a></p>
+			<p><a class="lien1">MADAGASCAR</a> | <a class="lien2">INTERESTING FACTS</a> | <a class="lien3">DOWNLOADS</a>
+			</p>
 			<a class="navbar-brand" href="<?= base_url() . "home" ?>">
 				<img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
 			</a>
-			<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+			<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span
+					class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
 		</nav>
 		<div class=" div1 container-fluid content-knowledge">
 			<div class="row">
 				<div class="col-md-8 offset-md-2 pt-5 pb-5 text_header">
 					<p class="text-center">
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut
+						labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi
+						ut aliquip ex ea
 					</p>
 				</div>
 			</div>
 			<div class="container pb-4 mt-3">
 				<div class="row">
 					<div class="col-md-6 text_secondaire">
-						<p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
+						<p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut
+							labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore
+							magna aliqua.. Ut enim ad minim</p>
 					</div>
 					<div class="col-md-6 text_secondaire">
-						<p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</p>
+						<p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut
+							labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore
+							magna aliqua.. Ut enim ad minim</p>
 					</div>
 				</div>
 			</div>
@@ -83,7 +92,8 @@
 						<div class="itinerary-menu col-lg-3 col-sm-4 pr-5">
 							<h5>WHAT INTERESTS YOU?</h5>
 							<ul class="list-group knowledge-menu">
-								<li class="list-group-item side-menu-style" data-index="madagascar"><a>Madagascar</a></li>
+								<li class="list-group-item side-menu-style" data-index="madagascar"><a>Madagascar</a>
+								</li>
 								<li class="list-group-item side-menu-style" data-index="baobab"><a>Baobab</a></li>
 								<li class="list-group-item side-menu-style" data-index="tsingy"><a>Tsingy</a></li>
 								<li class="list-group-item side-menu-style" data-index="beaches"><a>Beaches</a></li>
@@ -95,22 +105,33 @@
 						<div class="dadamanga-special-card-container knowledge-details col-lg-8 col-sm-8 col-xs-12">
 							<div data-index="madagascar" class="row d-none">
 								<div class="knowledge col-lg-6 col-sm-12">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor
+										incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor
+										incididunt ut labore etdolore ma</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor
+										incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor
+										incididunt ut labore etdolore ma</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor
+										incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor
+										incididunt ut labore etdolore ma</p>
 								</div>
 								<div class="knowledge col-lg-6 col-sm-12">
-									<img src="<?= base_url() ?>/assets/img/knowledge/madagascar.png" alt="" width="100%" style="max-height:100%;">
+									<img src="<?= base_url() ?>/assets/img/knowledge/madagascar.png" alt="" width="100%"
+										style="max-height:100%;">
 								</div>
 							</div>
 							<div data-index="baobab" class="row d-none">
 								<div class="knowledge col-lg-12">
 									<div class="row">
-										<div class="col-lg-5">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
-										<div class="col-lg-5 offset-lg-2">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
 									</div>
 								</div>
@@ -118,15 +139,18 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Baobab Avenue MORONDAVA</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/avenue.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/avenue.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Reniala Reserve IFATY</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/diego.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/diego.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">DIEGO</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/reniala.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/baobab/reniala.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -134,11 +158,15 @@
 							<div data-index="tsingy" class="row d-none">
 								<div class="knowledge col-lg-12">
 									<div class="row">
-										<div class="col-lg-5">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
-										<div class="col-lg-5 offset-lg-2">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
 									</div>
 								</div>
@@ -146,15 +174,18 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Bemaraha NP MORONDAVA</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/bemaraha.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/bemaraha.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Red Tsingy DIEGO</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/redTsingy.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/redTsingy.jpg"
+												alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Ankarana NP DIEGO</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/ankarana.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/tsingy/ankarana.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -162,11 +193,15 @@
 							<div data-index="beaches" class="row d-none">
 								<div class="knowledge col-lg-12">
 									<div class="row">
-										<div class="col-lg-5">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
-										<div class="col-lg-5 offset-lg-2">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
 									</div>
 								</div>
@@ -174,23 +209,28 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Ifaty & Mangily TOLIARA</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/ifaty.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/ifaty.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Ile aux Nattes SAINTE MARIE</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/ileAuxNattes.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/ileAuxNattes.jpg"
+												alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Nosy Tanikely NOSY BE</span>
-											<img src="<?= base_url("assets/img/knowledge/beaches/nosyTanikely.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/beaches/nosyTanikely.jpg") ?>"
+												alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Emerald Sea DIEGO</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/emerald.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/emerald.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">Nosy Iranja NOSY BE</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/nosyBe.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/beaches/nosyBe.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -198,11 +238,15 @@
 							<div data-index="wildlife" class="row d-none">
 								<div class="knowledge col-lg-12">
 									<div class="row">
-										<div class="col-lg-5">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
-										<div class="col-lg-5 offset-lg-2">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
 									</div>
 								</div>
@@ -210,19 +254,23 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">LEMURS</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/wildlife/lemurs.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/wildlife/lemurs.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">BIRDS</span>
-											<img src="<?= base_url("assets/img/knowledge/wildlife/bird.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/wildlife/bird.jpg") ?>" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">FOSA</span>
-											<img src="<?= base_url("assets/img/knowledge/wildlife/fosa.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/wildlife/fosa.jpg") ?>" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">WHALES</span>
-											<img src="<?= base_url() ?>/assets/img/knowledge/wildlife/whale.jpg" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/knowledge/wildlife/whale.jpg" alt=""
+												width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -230,11 +278,15 @@
 							<div data-index="culture" class="row d-none">
 								<div class="knowledge col-lg-12">
 									<div class="row">
-										<div class="col-lg-5">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
-										<div class="col-lg-5 offset-lg-2">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
 									</div>
 								</div>
@@ -242,15 +294,18 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">THE LANGUAGE</span>
-											<img src="<?= base_url("assets/img/knowledge/culture/language.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/culture/language.jpg") ?>"
+												alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">THE PEOPLE</span>
-											<img src="<?= base_url("assets/img/knowledge/culture/people.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/culture/people.jpg") ?>" alt=""
+												width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">FAMADIHANA</span>
-											<img src="<?= base_url("assets/img/knowledge/culture/famadihana.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/culture/famadihana.jpg") ?>"
+												alt="" width="100%" height="100%">
 										</div>
 									</div>
 								</div>
@@ -258,11 +313,15 @@
 							<div data-index="sports" class="row d-none">
 								<div class="knowledge col-lg-12">
 									<div class="row">
-										<div class="col-lg-5">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
-										<div class="col-lg-5 offset-lg-2">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore ma</p>
+										<div class="col-lg-6">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod
+												tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad
+												minimeiusmod tempor incididunt ut labore etdolore ma</p>
 										</div>
 									</div>
 								</div>
@@ -270,23 +329,28 @@
 									<div class="row">
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">TREKKING</span>
-											<img src="<?= base_url("assets/img/knowledge/sports/trekking.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/sports/trekking.jpg") ?>"
+												alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">SURFING</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%"
+												height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">DIVING</span>
-											<img src="<?= base_url("assets/img/knowledge/sports/diving&scubaDiving.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/sports/diving&scubaDiving.jpg") ?>"
+												alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">KITE SURFING</span>
-											<img src="<?= base_url("assets/img/knowledge/sports/kiteSurfing.jpg") ?>" alt="" width="100%" height="100%">
+											<img src="<?= base_url("assets/img/knowledge/sports/kiteSurfing.jpg") ?>"
+												alt="" width="100%" height="100%">
 										</div>
 										<div class="knowledge-pic col-lg-4 col-6">
 											<span class="knowledge-pic-title">SPA & WELLNESS</span>
-											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+											<img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%"
+												height="100%">
 										</div>
 									</div>
 								</div>
@@ -301,10 +365,14 @@
 					<div id="carouselControls" class="carousel slide carousel-container" data-ride="carousel">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea</p>
+								<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor
+									incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamo laboris nisi ut aliquip ex ea</p>
 							</div>
 							<div class="carousel-item">
-								<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea</p>
+								<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor
+									incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamo laboris nisi ut aliquip ex ea</p>
 							</div>
 						</div>
 					</div>
@@ -324,6 +392,7 @@
 		<?php include("footer.php"); ?>
 		<script type="text/javascript">
 			var knowledge = '<?php echo $knowledge; ?>';
+
 		</script>
 		<script type="text/javascript" src="<?= base_url() ?>assets/js/page/knowledge.js"></script>
 		<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>

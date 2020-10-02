@@ -1,168 +1,190 @@
 .jumbotron.jumbotron-knowledge {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .jumbotron .text h1 {
-    font-weight: 500 !important;
-    padding: unset;
+	font-weight: 500 !important;
+	padding: unset;
 }
 
 .content-knowledge {
-    background-color: #F7F4F0;
-    color: #151515;
+	background-color: #f7f4f0;
+	color: #151515;
 }
 
 .knowledge-carousel {
-    margin-top: 16vh;
-    margin-bottom: 16vh;
-    padding-bottom: 5%;
-    background-image: linear-gradient(to bottom, rgba(21, 21, 21, 0.44), rgba(21, 21, 21, 0.44)), url(../../img/contact/jumbotron-contact.jpg);
-    background-image: -moz-linear-gradient(top, rgba(21, 21, 21, 0.44), rgba(21, 21, 21, 0.44)), url(../../img/contact/jumbotron-contact.jpg);
-    background-image: -o-linear-gradient(top, rgba(21, 21, 21, 0.44), rgba(21, 21, 21, 0.44)), url(../../img/contact/jumbotron-contact.jpg);
-    background-image: -ms-linear-gradient(top, rgba(21, 21, 21, 0.44), rgba(21, 21, 21, 0.44)), url(../../img/contact/jumbotron-contact.jpg);
-    background-image: -webkit-linear-gradient(top, rgba(21, 21, 21, 0.44), rgba(21, 21, 21, 0.44)), url(../../img/contact/jumbotron-contact.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: white;
+	margin-top: 16vh;
+	margin-bottom: 16vh;
+	padding-bottom: 5%;
+	background-image: linear-gradient(
+			to bottom,
+			rgba(21, 21, 21, 0.44),
+			rgba(21, 21, 21, 0.44)
+		),
+		url(../../img/contact/jumbotron-contact.jpg);
+	background-image: -moz-linear-gradient(
+			top,
+			rgba(21, 21, 21, 0.44),
+			rgba(21, 21, 21, 0.44)
+		),
+		url(../../img/contact/jumbotron-contact.jpg);
+	background-image: -o-linear-gradient(
+			top,
+			rgba(21, 21, 21, 0.44),
+			rgba(21, 21, 21, 0.44)
+		),
+		url(../../img/contact/jumbotron-contact.jpg);
+	background-image: -ms-linear-gradient(
+			top,
+			rgba(21, 21, 21, 0.44),
+			rgba(21, 21, 21, 0.44)
+		),
+		url(../../img/contact/jumbotron-contact.jpg);
+	background-image: -webkit-linear-gradient(
+			top,
+			rgba(21, 21, 21, 0.44),
+			rgba(21, 21, 21, 0.44)
+		),
+		url(../../img/contact/jumbotron-contact.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
 }
 
 .knowledge-carousel-content {
-    padding-top: 2%;
+	padding-top: 2%;
 }
 
 .carousel-title {
-    font-family: 'Geometria';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.8em;
+	font-family: "Geometria";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.8em;
 }
 
 .carousel-container {
-    padding-top: 8%;
-    padding-bottom: 6%;
-    font-style: normal;
-    font-weight: 330;
-    line-height: 40px;
-    font-size: 1.6em;
+	padding-top: 8%;
+	padding-bottom: 6%;
+	font-style: normal;
+	font-weight: 330;
+	line-height: 40px;
+	font-size: 1.6em;
 }
 
 .carousel-btn button {
-    border: none;
-    background-color: #B7986D;
-    padding: 0 20px 0 20px;
-    margin: 0 20px 0 20px;
-    font-size: 2em;
+	border: none;
+	background-color: #b7986d;
+	padding: 0 20px 0 20px;
+	margin: 0 20px 0 20px;
+	font-size: 2em;
 }
 
 .up-footer {
-    background-image: url(../../img/followus/cacao.jpg) !important;
-    filter: rgba(183, 152, 109, .44);
+	background-image: url(../../img/followus/cacao.jpg) !important;
+	filter: rgba(183, 152, 109, 0.44);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-bottom: 5%;
 }
 
-
 /**/
 
 .knowledges .title {
-    font-size: 1.6em;
-    padding-top: 5%;
+	font-size: 1.6em;
+	padding-top: 5%;
 }
 
 .knowledge {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
-@media screen and (max-width:768px) {
-    .knowledge {
-        padding: 0 7.5px 0 7.5px;
-        margin-bottom: 10px;
-    }
-    .knowledge .pic-title {
-        white-space: normal;
-        font-size: .8em;
-    }
+@media screen and (max-width: 768px) {
+	.knowledge {
+		padding: 0 7.5px 0 7.5px;
+		margin-bottom: 10px;
+	}
+	.knowledge .pic-title {
+		white-space: normal;
+		font-size: 0.8em;
+	}
 }
 
 .pic-title a:link,
 .pic-title a:visited,
 .pic-title a:hover,
 .pic-title a:active {
-    color: white;
+	color: white;
 }
 
 .learn-more-destinations {
-    padding-bottom: 10%;
+	padding-bottom: 10%;
 }
 
 .up-footer h2 {
-    padding-top: 5%;
-    padding-bottom: 5%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
-
 
 /*				KNOWLEDGE			*/
 
 #knowledge-container {
-    background-color: white;
-    padding-top: 50px;
+	background-color: white;
+	padding-top: 50px;
 }
 
 .knowledge-title {
-    font: Geometria;
-    font-size: 1.8em;
-    text-transform: uppercase;
-    color: #B7986D;
+	font: Geometria;
+	font-size: 1.8em;
+	text-transform: uppercase;
+	color: #b7986d;
 }
 
 .knowledge p {
-    padding-top: 10%;
-    text-align: justify;
-    font-size: 1.2em;
+	padding-top: 10%;
+	font-size: 1.2em;
 }
 
 .knowledge-pic {
-    margin-bottom: 5%;
+	margin-bottom: 5%;
 }
 
 .knowledge-pic-title {
-    position: absolute;
-    font-family: 'Gemotica';
-    font-size: 1.4em;
-    font-weight: 500;
-    line-height: 23px;
-    color: white;
-    text-align: center;
-    bottom: 8%;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
+	position: absolute;
+	font-family: "Gemotica";
+	font-size: 1.4em;
+	font-weight: 500;
+	line-height: 23px;
+	color: white;
+	text-align: center;
+	bottom: 8%;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	transform: translate(-50%);
 }
 
-@media screen and (max-width:768px) {
-    .knowledge-pic-title {
-        font-size: .9em;
-    }
+@media screen and (max-width: 768px) {
+	.knowledge-pic-title {
+		font-size: 0.9em;
+	}
 }
 
-#select-below-images-container>div {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px;
+#select-below-images-container > div {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2px;
 }
 
-#select-below-images-container>div>div {
-    height: 300px;
-    background-size: cover;
-    color: white;
-    font-size: 1.4em;
-    font-family: 'Montserrat';
+#select-below-images-container > div > div {
+	height: 300px;
+	background-size: cover;
+	color: white;
+	font-size: 1.4em;
+	font-family: "Montserrat";
 }
