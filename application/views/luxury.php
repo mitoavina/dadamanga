@@ -729,9 +729,9 @@
 				</div>
 			</div>
 			<div class="container mb-5">
-				<div class="row">
-					<div class="col-md-6 pb-5">
-						<p class="text_secondaire">
+				<div class="row d-flex align-items-center">
+					<div class="col-md-6">
+						<div class="text_secondaire">
 							Some of the most exclusive destinations can only be reached by private aircraft, normally
 							included as part of the package. For those of our clients who want to make their journey
 							more
@@ -743,7 +743,7 @@
 							twelve people, or more, in multiple aircraft, with ground services included to the standard
 							you
 							request at each stop. Please ask us.
-						</p>
+						</div>
 					</div>
 					<div class="mr-md-6 col-md-6 plane-mother plane mt-2">
 					</div>
