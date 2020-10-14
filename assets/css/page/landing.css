@@ -1,0 +1,45 @@
+#img-container {
+	position: relative;
+	height: 100vh;
+}
+#img-container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+#text-container {
+	padding-left: 3%;
+	display: flex;
+	align-items: center;
+	background-color: white;
+}
+#getting-rdy {
+	font-family: Open Sans;
+	font-size: 70px;
+	font-weight: 500;
+	line-height: 85px;
+}
+#reason {
+	font-family: Open Sans;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 35px;
+	letter-spacing: 0em;
+	text-align: left;
+	padding-right: 20%;
+}
+#contact-btn {
+	background-color: black;
+	border-radius: 15px;
+	color: white;
+	font-weight: bold;
+	padding: 20px 25px;
+	font-size: 25px;
+}
+
+#logo {
+	position: absolute;
+	z-index: 1;
+}
