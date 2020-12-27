@@ -120,6 +120,16 @@ class MainController extends CI_Controller
 
 		$this->load->view('contact', $data);
 	}
+
+	public function cart()
+	{
+		$this->load->helper('url');
+		$this->load->helper('assets');
+		$data['footerImg'] = "omby.jpg";
+
+		$this->load->view('cart', $data);
+	}
+
 	public function destination($destinationName)
 	{
 		$this->load->helper('url');

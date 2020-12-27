@@ -30,6 +30,9 @@
                 <li class="nav-item mx-auto">
                     <a class=" nav-link" href="<?= base_url()."contact" ?>">Contact</a>
                 </li>
+                <li class="nav-item mx-auto">
+                    <a id="nav-link-cart" class=" nav-link" href="<?= base_url()."cart" ?>">Cart<i class="fas fa-shopping-cart"></i> <span id="cart-number">10</span></a>
+                </li>
             </ul>
         </div>
     </nav>
