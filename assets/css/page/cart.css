@@ -49,4 +49,16 @@
     clear: both;
     float: right;
     padding-top: 30px;
-} 
+}
+
+.remove-trip-btn {
+    border: none;
+    color: #C49A6C;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#trip-empty {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+}

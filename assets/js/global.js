@@ -1,3 +1,7 @@
+var listAdventure = { 'destination': [], 'park': [], 'experience': [], 'wildlife': [] };
+var keys = Object.keys(listAdventure);
+
+
 new WOW().init();
 
 function setCartNumber() {
