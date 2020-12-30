@@ -18,8 +18,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | Cart</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view('components/navbar'); ?>
+<?php $this->load->view("components/sidenav"); ?>
 
 <body>
 	<div id="jumbotron " class="jumbotron jumbotron-contact flex-column flex-center">
@@ -55,9 +55,9 @@
 			<!-- <div class="col-md-1 bg-primary">a</div> -->
 		</div>
 	</div>
-	<?php include("followus.php") ?>
-	<?php include("footer.php"); ?>
-	<?php include("common-scripts.php") ?>
+	<?php $this->load->view("components/followus.php"); ?>
+	<?php $this->load->view("components/footer.php"); ?>
+	<?php $this->load->view("components/common-scripts.php");?>
 	<script src="<?= js_url("page/cart") ?>"></script>
 </body>
 

@@ -101,7 +101,7 @@ class MainController extends CI_Controller
 
 		$this->load->helper('url');
 		$this->load->helper('assets');
-		$this->load->view('adventure', $data);
+		$this->load->view('pages/adventure', $data);
 	}
 
 	public function luxury()
@@ -118,7 +118,7 @@ class MainController extends CI_Controller
 		$this->load->helper('assets');
 		$data['footerImg'] = "omby.jpg";
 
-		$this->load->view('contact', $data);
+		$this->load->view('pages/contact', $data);
 	}
 
 	public function cart()
@@ -127,7 +127,7 @@ class MainController extends CI_Controller
 		$this->load->helper('assets');
 		$data['footerImg'] = "omby.jpg";
 
-		$this->load->view('cart', $data);
+		$this->load->view('pages/cart', $data);
 	}
 
 	public function destination($destinationName)
