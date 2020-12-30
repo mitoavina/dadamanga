@@ -547,7 +547,7 @@
                     </div>
                 </div>
                 <div class="div3 w-100">
-                    <?php include("about_destinations.php") ?>
+                    <?php $this->load->view("components/about_destinations"); ?>
                 </div>
             </div>
         </div>
