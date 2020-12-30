@@ -1,8 +1,8 @@
 <div class="container-fluid view">
     <div class="row">
         <div class="col-md-12 followus-background" style="height: 390px; background: url(<?= base_url() ?>assets/img/followus/<?= $footerImg ?>)">
+        <?php var_dump($footerImg);?>
     </div>
-    <!-- <img src="<?= base_url() ?>assets/img/followus/<?= $footerImg ?>" class="follow-us" alt="zebu of madagascar picture"> -->
     <div style="flex-direction:column" id="followUs" class="mask flex-center">
         <div class="row mb-md-5">
             <div class="col-md-12 text-center">

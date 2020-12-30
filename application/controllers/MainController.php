@@ -33,7 +33,7 @@ class MainController extends CI_Controller
 		
 		$this->load->helper('url');
 		$this->load->helper('assets');
-		$this->load->view('home', $data);
+		$this->load->view('pages/home', $data);
 	}
 
 	public function destinations()

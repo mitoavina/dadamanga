@@ -53,8 +53,8 @@
 	</style>
 	<title>Dadamanga | Home</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view('components/navbar'); ?>
+<?php $this->load->view("components/sidenav"); ?>
 
 <body>
 	<div id="jumbotron" class="m-0 flexslider jumbotron homeJumbotron flex-column flex-center">
@@ -124,7 +124,6 @@
 		</div>
 	</div>
 
-	<!-- //BUTTONS -->
 	<nav id="animated-nav" class=" text-center navbar">
 		<p>ABOUT | THE TEAM | SOCIAL RESPONSABILITY | REVIEWS</p>
 		<a class="navbar-brand bleu" href="<?= base_url() . "home" ?>">
@@ -250,10 +249,10 @@
 			<p>CALL: +61 459308888</p>
 		</div>
 	</div>
-	<?php include("followus.php") ?>
-	<?php include("footer.php"); ?>
-	<?php include("common-scripts.php") ?>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.flexslider.js"></script>
+	<?php $this->load->view("components/followus.php", Array("footerImg" => $footerImg)); ?>
+	<?php $this->load->view("components/footer.php"); ?>
+	<?php $this->load->view("common-scripts.php");?>
+	<script type="text/javascript" src="<?= base_url()?>assets/js/jquery.flexslider.js"></script>
 	<script>
 		$('.flexslider').flexslider({
 			directionNav: false,
