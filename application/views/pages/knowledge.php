@@ -17,8 +17,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | Knowledge</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view("components/navbar.php"); ?>
+<?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
 	<div style="background-image:url( <?= base_url() . 'assets/img/knowledges/jumbotron.jpg' ?>)" id="jumbotron"
@@ -418,15 +418,15 @@ martial art of the country</p>
 					</div>
 				</div>
 			</div>
-			<?php include("about_destinations.php") ?>
+			<?php $this->load->view("components/about_destinations.php") ?>
 		</div>
-		<?php include("downloads.php"); ?>
-		<?php include("footer.php"); ?>
+		<?php $this->load->view("components/downloads.php"); ?>
+		<?php $this->load->view("components/footer.php"); ?>
 		<script type="text/javascript">
 			var knowledge = '<?php echo $knowledge; ?>';
 
 		</script>
-		<?php include("common-scripts.php") ?>
+		<?php $this->load->view("components/common-scripts.php") ?>
 		<script type="text/javascript" src="<?= base_url() ?>assets/js/page/knowledge.js"></script>
 	</div>
 </body>
