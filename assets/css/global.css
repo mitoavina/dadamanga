@@ -777,7 +777,7 @@ button {
 	height: 25px;
 	background-color: #b7986d;
 	color: white;
-	display: inline-flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
