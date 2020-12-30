@@ -244,21 +244,6 @@
 			</div>
 		</div>
 
-
-
-		<!-- <div class="bokunWidget"
-			data-src="https://widgets.bokun.io/online-sales/8439ce9c-a587-4955-91f8-b7423b94a409/product-list/19310">
-		</div>
-		<noscript>Please enable javascript in your browser to book</noscript> -->
-
-
-		<div class="bokunWidget"
-			data-src="https://widgets.bokun.io/online-sales/3cc73682-bcaa-47be-b91e-44e4bc463d9c/product-list/18981">
-		</div>
-		<noscript>Please enable javascript in your browser to book</noscript>
-
-
-
 		<div style="padding-bottom:40px;">
 			<p>CLICK ON <a href="<?= base_url("contact") ?>">THIS LINK</a> TO CONTACT US AND EXPLORE YOUR NEXT AFRICAN
 				ADVENTURE.</p>
@@ -267,15 +252,8 @@
 	</div>
 	<?php include("followus.php") ?>
 	<?php include("footer.php"); ?>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.js"></script>
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
+	<?php include("common-scripts.php") ?>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.flexslider.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/global.min.js"></script>
 	<script>
 		$('.flexslider').flexslider({
 			directionNav: false,
@@ -346,11 +324,4 @@
 	</script>
 
 </body>
-<!-- <script type="text/javascript"
-	src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409">
-</script> -->
-<script type="text/javascript"
-	src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=3cc73682-bcaa-47be-b91e-44e4bc463d9c">
-</script>
-
 </html>

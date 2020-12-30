@@ -204,14 +204,7 @@
 	</div>
 	<?php include("followus.php") ?>
 	<?php include("footer.php"); ?>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+	<?php include("common-scripts.php") ?>
 	<script src="https://apps.elfsight.com/p/platform.js" async></script>
 </body>
 

@@ -16,18 +16,6 @@
 
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
-    <!-- <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script> -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-ui.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.cookie.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Dadamanga | Create Your Adventure</title>
 </head>
@@ -565,6 +553,12 @@
         </div>
         <?php include("followus.php") ?>
         <?php include("footer.php"); ?>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.min.js"></script>
+        <?php $jquery_already_included = true; ?>
+        <?php include("common-scripts.php") ?>
         <script type="text/javascript">
             var destinations = JSON.parse('<?= json_encode($destinationModel); ?>');
             var parks = JSON.parse('<?= json_encode($parkModel); ?>');
@@ -574,7 +568,6 @@
         </script>
         <script src="https://www.google.com/recaptcha/api.js?render=6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/page/adventure.js"></script>
-        <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
     </div>
 </body>
 

@@ -14,13 +14,6 @@
     <link href="<?= base_url() ?>assets/css/page/knowledge.css?v=0.0.1" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Dadamanga | Knowledge of the place</title>
 </head>
@@ -179,7 +172,7 @@ luxury stay in the best seaside resorts in the country, our team is at your enti
         </div>
         <?php include("downloads.php"); ?>
         <?php include("footer.php"); ?>
-        <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+        <?php include("common-scripts.php") ?>
     </div>
 </body>
 
