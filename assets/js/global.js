@@ -19,6 +19,8 @@ function setCartNumber() {
 		if(itemTotal !== 0) {
 			$("#cart-number").css("display", "inline-flex");
 			$("#cart-number").html(itemTotal);
+		} else {
+			$("#cart-number").css("display", "none");
 		}
 	}
 }
