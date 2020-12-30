@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Dadamanga | Knowledge of the place</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view("components/navbar.php"); ?>
+<?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
     <div style="background-image:url( <?= base_url() . 'assets/img/knowledges/jumbotron.jpg' ?>)" id="jumbotron " class="jumbotron-knowledge jumbotron flex-column flex-center">
@@ -168,11 +168,11 @@ luxury stay in the best seaside resorts in the country, our team is at your enti
                     </div>
                 </div>
             </div>
-            <?php include("about_destinations.php") ?>
+            <?php $this->load->view("components/about_destinations.php"); ?>
         </div>
-        <?php include("downloads.php"); ?>
-        <?php include("footer.php"); ?>
-        <?php include("common-scripts.php") ?>
+        <?php $this->load->view("components/downloads.php"); ?>
+        <?php $this->load->view("components/footer.php"); ?>
+        <?php $this->load->view("components/common-scripts.php"); ?>
     </div>
 </body>
 

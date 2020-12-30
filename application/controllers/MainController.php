@@ -44,7 +44,7 @@ class MainController extends CI_Controller
 		$data['footerImg'] = "omby.jpg";
 		$this->load->helper('url');
 		$this->load->helper('assets');
-		$this->load->view('destinations', $data);
+		$this->load->view('pages/destinations', $data);
 	}
 	public function about()
 	{
@@ -55,7 +55,7 @@ class MainController extends CI_Controller
 		$data['footerImg'] = "omby.jpg";
 		$this->load->helper('url');
 		$this->load->helper('assets');
-		$this->load->view('about', $data);
+		$this->load->view('pages/about', $data);
 	}
 
 	public function adventure()
@@ -110,7 +110,7 @@ class MainController extends CI_Controller
 		$this->load->helper('assets');
 		$data['footerImg'] = "cacao.jpg";
 
-		$this->load->view('luxury', $data);
+		$this->load->view('pages/luxury', $data);
 	}
 	public function contact()
 	{
@@ -147,7 +147,7 @@ class MainController extends CI_Controller
 		$data['others'] = $destinationModel->selectOther($destinationName);
 		$data['footerImg'] = "omby.jpg";
 
-		$this->load->view('destination', $data);
+		$this->load->view('pages/destination', $data);
 	}
 	public function knowledges()
 	{
@@ -157,7 +157,7 @@ class MainController extends CI_Controller
 		$data['destinationModel'] = $destinations;
 		$this->load->helper('url');
 		$this->load->helper('assets');
-		$this->load->view('knowledges', $data);
+		$this->load->view('pages/knowledges', $data);
 	}
 	public function knowledge($knwldge)
 	{
@@ -169,7 +169,7 @@ class MainController extends CI_Controller
 		$this->load->helper('url');
 		$this->load->helper('assets');
 		$data['knowledge'] = $knwldge;
-		$this->load->view('knowledge', $data);
+		$this->load->view('pages/knowledge', $data);
 	}
 	public function shelf()
 	{
@@ -177,7 +177,7 @@ class MainController extends CI_Controller
 		$this->load->helper('assets');
 		$data['footerImg'] = "cacao.jpg";
 
-		$this->load->view('off-the-shelf', $data);
+		$this->load->view('pages/off-the-shelf', $data);
 	}
 	// public function mailing()
 	// {

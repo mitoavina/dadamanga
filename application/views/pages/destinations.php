@@ -17,8 +17,8 @@
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
     <title>Dadamanga | Destinations</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view("components/navbar.php"); ?>
+<?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
     <div style="background-image:url( <?= base_url() . 'assets/img/destinations/jumbotron.jpg' ?>)" id="destinationJumbotron" class="jumbotron flex-column flex-center">
@@ -132,9 +132,9 @@
     </div>
     </div>
 
-    <?php include("followus.php") ?>
-    <?php include("footer.php"); ?>
-    <?php include("common-scripts.php") ?>
+    <?php $this->load->view("components/followus.php") ?>
+    <?php $this->load->view("components/footer.php"); ?>
+    <?php $this->load->view("components/common-scripts.php") ?>
 </body>
 
 </html>
