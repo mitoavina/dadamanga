@@ -1,28 +1,28 @@
-console.log("cartjs loaded");
-var cookie = JSON.parse($.cookie("adventure"));
-console.log(cookie);
-
-
 var numeric_array = new Array();
-for (var items in cookie){
-    numeric_array.push( cookie[items] );
-}
-console.log(numeric_array);
-for(var i = 0; i < numeric_array.length; i++) {
-    for(var j = 0; j < numeric_array[i].length; j++) {
-        $("#items").append(`
-        <tr class="item" data-index="${keys[i]}${numeric_array[i][j]["id"]}">
-            <td><img src="${numeric_array[i][j]["IMAGE"]}"/></td>
-            <td class="trip">${numeric_array[i][j]["TITLE"]}</td>
-            <td class="date">20 Jan 2020 - 20 Feb 2020</td>
-            <td class="price">10.00$</td>
-            <td class="remove"><button class="remove-trip-btn" value="${keys[i]}${numeric_array[i][j]["id"]}" ><i class="fas fa-times"></i></button></td>
-        </tr>
-        `);
+if($.cookie("adventure") != undefined && $.cookie("adventure") != null && $.cookie("adventure") != "") {
+    var cookie = JSON.parse($.cookie("adventure"));
+    
+    
+    for (var items in cookie){
+        numeric_array.push( cookie[items] );
     }
+    console.log(numeric_array);
+    for(var i = 0; i < numeric_array.length; i++) {
+        for(var j = 0; j < numeric_array[i].length; j++) {
+            $("#items").append(`
+            <tr class="item" data-index="${keys[i]}${numeric_array[i][j]["id"]}">
+                <td><img src="${numeric_array[i][j]["IMAGE"]}"/></td>
+                <td class="trip">${numeric_array[i][j]["TITLE"]}</td>
+                <td class="date">20 Jan 2020 - 20 Feb 2020</td>
+                <td class="price">10.00$</td>
+                <td class="remove"><button class="remove-trip-btn" value="${keys[i]}${numeric_array[i][j]["id"]}" ><i class="fas fa-times"></i></button></td>
+            </tr>
+            `);
+        }
+    }
+    removeTrip();
 }
 checkEmptyTrip();
-removeTrip();
 
 function removeTrip() {
 	$('.remove-trip-btn').each(function () {
