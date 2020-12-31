@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> -->
     <link href="<?= base_url() ?>assets/font/montserrat/montserrat.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
@@ -16,17 +15,10 @@
     <link href="<?= base_url() ?>assets/css/page/list-destination.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
     <title>Dadamanga | Destinations</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view("components/navbar.php"); ?>
+<?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
     <div style="background-image:url( <?= base_url() . 'assets/img/destinations/jumbotron.jpg' ?>)" id="destinationJumbotron" class="jumbotron flex-column flex-center">
@@ -77,7 +69,8 @@
                     <?php if(strcmp($destination->TITLE, "DIEGO & NORTH")==0) {?>
                         
                         <script>
-                            $(".div<?= $p ?>").css('backgroundPosition','0% 60%');
+                            var div = document.getElementsByClassName("div<?= $p ?>")[0];
+                            div.style.backgroundPosition = '0% 60%';
                         </script>
                     <?php } ?>
                         <h1 class="to-hide white-text"><a href="<?= destination_url($destination->NAME) ?>" class="white-link"><?= $destination->TITLE ?></a></h1>
@@ -139,9 +132,9 @@
     </div>
     </div>
 
-    <?php include("followus.php") ?>
-    <?php include("footer.php"); ?>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+    <?php $this->load->view("components/followus.php") ?>
+    <?php $this->load->view("components/footer.php"); ?>
+    <?php $this->load->view("components/common-scripts.php") ?>
 </body>
 
 </html>

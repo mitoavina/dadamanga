@@ -84,7 +84,8 @@
 }
 
 .add-itinerary-btn span {
-    font-size: 1.3em;
+    font-size: 1em;
+    margin-left: 5px;
 }
 
 .adventure-bottom {

@@ -17,8 +17,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | About</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view("components/navbar.php"); ?>
+<?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
 
@@ -154,9 +154,9 @@
 			<div class="dadamanga-special-card card">
 				<div class="row no-gutters mb-5">
 					<div class="col-lg-6 my-auto px-2 col-md-12">
-						<img src="./assets/img/about/maki-1.jpg" style="border-radius:0;"
+						<img src="<?= base_url() ?>/assets/img/about/maki-1.jpg" style="border-radius:0;"
 							class="img-fluid card-img wow animated fadeInLeft active" alt="...">
-						<img src="./assets/img/about/cameleon.jpg" style="border-radius:0;"
+						<img src="<?= base_url() ?>/assets/img/about/cameleon.jpg" style="border-radius:0;"
 							class="img-fluid card-img d-none" alt="...">
 					</div>
 					<div class="col-lg-6 col-md-12">
@@ -202,16 +202,9 @@
 			</div>
 		</div>
 	</div>
-	<?php include("followus.php") ?>
-	<?php include("footer.php"); ?>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+	<?php $this->load->view("components/followus.php") ?>
+	<?php $this->load->view("components/footer.php"); ?>
+	<?php $this->load->view("components/common-scripts.php") ?>
 	<script src="https://apps.elfsight.com/p/platform.js" async></script>
 </body>
 

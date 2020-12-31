@@ -13,18 +13,11 @@
 	<link href="<?= base_url() ?>assets/css/page/off-the-shelf.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | OFF THE SHELF</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view("components/navbar.php"); ?>
+<?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
 	<div style="background-image:url( <?= base_url() . 'assets/img/off_the_shelf/off_the_shelf.jpg' ?>)" id="jumbotron"
@@ -52,20 +45,6 @@
 					</p>
 				</div>
 			</div>
-
-			<script type="text/javascript"
-				src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=3cc73682-bcaa-47be-b91e-44e4bc463d9c"
-				async></script>
-			<div class="bokunWidget"
-				data-src="https://widgets.bokun.io/online-sales/3cc73682-bcaa-47be-b91e-44e4bc463d9c/product-list/18981">
-			</div>
-			<noscript>Please enable javascript in your browser to book</noscript>
-
-			<!-- <script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=8439ce9c-a587-4955-91f8-b7423b94a409" async></script>
-            <div class="bokunWidget" data-src="https://widgets.bokun.io/online-sales/8439ce9c-a587-4955-91f8-b7423b94a409/product-list/19173"></div>
-            <noscript>Please enable javascript in your browser to book</noscript> -->
-
-
 
 			<div class="row div1 taylor-title text-center ">
 				<div class="col-md-12">
@@ -97,9 +76,9 @@
 				</div>
 			</div>
 		</div>
-		<?php include("followus.php") ?>
-		<?php include("footer.php"); ?>
-		<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+		<?php $this->load->view("components/followus.php") ?>
+		<?php $this->load->view("components/footer.php"); ?>
+		<?php $this->load->view("components/common-scripts.php") ?>
 	</div>
 </body>
 

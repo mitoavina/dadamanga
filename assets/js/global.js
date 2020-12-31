@@ -1,4 +1,36 @@
+var listAdventure = { 'destination': [], 'park': [], 'experience': [], 'wildlife': [] };
+var keys = Object.keys(listAdventure);
+
+
 new WOW().init();
+
+function setCartNumber() {
+	if ($.cookie("adventure") !== undefined && $.cookie("adventure") !== null && $.cookie("adventure") !== "") {
+		var cookie = JSON.parse($.cookie("adventure"));
+		console.log(cookie);
+		
+		
+		var numeric_array = new Array();
+		for (var items in cookie) {
+			numeric_array.push(cookie[items]);
+		}
+		
+		var itemTotal = 0;
+		for(var i = 0; i < numeric_array.length; i++) {
+			itemTotal += numeric_array[i].length;
+		}
+		
+		if(itemTotal !== 0) {
+			$("#cart-number").css("display", "inline-flex");
+			$("#cart-number").html(itemTotal);
+		} else {
+			$("#cart-number").css("display", "none");
+		}
+	}
+}
+
+
+setCartNumber();
 
 $(document).ready(function () {
 	$(".list-group-item > a").on("click", function (e) {
@@ -261,7 +293,11 @@ function closeNav() {
 	$("#filtre-trans").css("background", "transparent");
 }
 // var original_length = $(".jumbotron").outerHeight();
-var nav_length = document.getElementById("animated-nav").offsetHeight;
+var animatedNav = document.getElementById("animated-nav"); 
+var nav_length = 0;
+if(animatedNav !== null) {
+	nav_length = animatedNav.offsetHeight;
+}
 // $("jumbotron").css('minHeight', (original_length - nav_length) + "px");
 
 // FOR SCROLLING
@@ -469,9 +505,9 @@ jQuery(document).ready(function ($) {
 				__toggle_active_classes(_target_btn);
 
 				/*var newHeight = $('.galleria-image').find('img').height() * 2;
-                console.log(newHeight);
-                Galleria.get(0).destroy();
-                gallariaSelf.init(newHeight);*/
+				console.log(newHeight);
+				Galleria.get(0).destroy();
+				gallariaSelf.init(newHeight);*/
 
 				Galleria.get(0).$("thumblink").click();
 			};

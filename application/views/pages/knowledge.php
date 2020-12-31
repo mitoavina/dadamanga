@@ -14,18 +14,11 @@
 	<link href="<?= base_url() ?>assets/css/page/knowledge.css?v=0.0.1" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | Knowledge</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view("components/navbar.php"); ?>
+<?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
 	<div style="background-image:url( <?= base_url() . 'assets/img/knowledges/jumbotron.jpg' ?>)" id="jumbotron"
@@ -425,16 +418,16 @@ martial art of the country</p>
 					</div>
 				</div>
 			</div>
-			<?php include("about_destinations.php") ?>
+			<?php $this->load->view("components/about_destinations.php") ?>
 		</div>
-		<?php include("downloads.php"); ?>
-		<?php include("footer.php"); ?>
+		<?php $this->load->view("components/downloads.php"); ?>
+		<?php $this->load->view("components/footer.php"); ?>
 		<script type="text/javascript">
 			var knowledge = '<?php echo $knowledge; ?>';
 
 		</script>
+		<?php $this->load->view("components/common-scripts.php") ?>
 		<script type="text/javascript" src="<?= base_url() ?>assets/js/page/knowledge.js"></script>
-		<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
 	</div>
 </body>
 

@@ -16,23 +16,11 @@
 
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
-    <!-- <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script> -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-ui.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.cookie.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Dadamanga | Create Your Adventure</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view('components/navbar'); ?>
+<?php $this->load->view("components/sidenav"); ?>
 
 <body>
     <div style="background-image:url( <?= base_url() . 'assets/img/adventure/jumbotron.jpg' ?>)" class="jumbotron flex-column flex-center">
@@ -472,7 +460,7 @@
                                             <div class="itinerary-title"><?= $item->TITLE ?></div>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="button" class="add-itinerary-btn" value="<?= 'destination' . $item->IDDESTINATION; ?>" data-toggle="collapse" data-target="#adventure-collapse" aria-expanded="false" aria-controls="adventure-collapse">ADD TO ITINERARY <span>+</span></button>
+                                            <button type="button" class="add-itinerary-btn" value="<?= 'destination' . $item->IDDESTINATION; ?>" data-toggle="collapse" data-target="#adventure-collapse" aria-expanded="false" aria-controls="adventure-collapse">ADD TO ITINERARY <span><i class="fas fa-plus"></i></span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -491,7 +479,7 @@
 											<div class="itinerary-title"><?= $item->TITLE ?></div>
 										</div>
 										<div class="card-footer">
-											<button type="button" class="add-itinerary-btn" value="<?= 'park' . $item->IDPARK; ?>">ADD TO ITINERARY <span>+</span></button>
+											<button type="button" class="add-itinerary-btn" value="<?= 'park' . $item->IDPARK; ?>">ADD TO ITINERARY <span><i class="fas fa-plus"></i></span></button>
 										</div>
 									</div>
 								</div>
@@ -510,7 +498,7 @@
                                             <div class="itinerary-title"><?= $item->TITLE ?></div>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="button" class="add-itinerary-btn" value="<?= 'experience' . $item->IDEXPERIENCE; ?>">ADD TO ITINERARY <span>+</span></button>
+                                            <button type="button" class="add-itinerary-btn" value="<?= 'experience' . $item->IDEXPERIENCE; ?>">ADD TO ITINERARY <span><i class="fas fa-plus"></i></span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -529,7 +517,7 @@
                                             <div class="itinerary-title"><?= $item->TITLE ?></div>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="button" class="add-itinerary-btn" value="<?= 'wildlife' . $item->IDWILDLIFE; ?>">ADD TO ITINERARY <span>+</span></button>
+                                            <button type="button" class="add-itinerary-btn" value="<?= 'wildlife' . $item->IDWILDLIFE; ?>">ADD TO ITINERARY <span><i class="fas fa-plus"></i></span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -559,12 +547,17 @@
                     </div>
                 </div>
                 <div class="div3 w-100">
-                    <?php include("about_destinations.php") ?>
+                    <?php $this->load->view("components/about_destinations"); ?>
                 </div>
             </div>
         </div>
-        <?php include("followus.php") ?>
-        <?php include("footer.php"); ?>
+        <?php $this->load->view("components/followus.php"); ?>
+	    <?php $this->load->view("components/footer.php"); ?>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/isotope.pkgd.min.js"></script>
+        <?php $this->load->view("components/common-scripts.php", Array('jquery_already_included'=>true)); ?>
         <script type="text/javascript">
             var destinations = JSON.parse('<?= json_encode($destinationModel); ?>');
             var parks = JSON.parse('<?= json_encode($parkModel); ?>');
@@ -573,8 +566,8 @@
 			var baseUrl = '<?= base_url() ?>';
         </script>
         <script src="https://www.google.com/recaptcha/api.js?render=6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB"></script>
-        <script type="text/javascript" src="<?= base_url() ?>assets/js/page/adventure.js"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/page/adventure.js"></script>
     </div>
 </body>
 

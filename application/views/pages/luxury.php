@@ -16,21 +16,11 @@
 	<link href="<?= base_url() ?>assets/css/page/luxury.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-ui.js"></script>
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/galleria-1.4.2.min.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/galleria-themes/galleria.reis.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | Explore Luxury</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view("components/navbar.php"); ?>
+<?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
 	<!-- MODAL -->
@@ -750,16 +740,20 @@
 				</div>
 			</div>
 		</div>
-		<?php include("followus.php"); ?>
-		<?php include("footer.php"); ?>
+		<?php $this->load->view("components/followus.php"); ?>
+		<?php $this->load->view("components/footer.php"); ?>
 	</div>
 	<script type="text/javascript">
 		var baseUrl = '<?= base_url() ?>';
-
 	</script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.1.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/galleria-1.4.2.min.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/galleria-themes/galleria.reis.min.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js?render=6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/page/luxury.js"></script>
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+	<?php $jquery_already_included = true; ?>
+	<?php $this->load->view("components/common-scripts.php") ?>
 </body>
 
 

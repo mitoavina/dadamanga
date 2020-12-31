@@ -14,18 +14,11 @@
 	<link href="<?= base_url() ?>assets/css/page/contact.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/popper.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="<?= base_url() ?>assets/js/mdb.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | Contact</title>
 </head>
-<?php include("navbar.php"); ?>
-<?php include("sidenav.php"); ?>
+<?php $this->load->view('components/navbar'); ?>
+<?php $this->load->view("components/sidenav"); ?>
 
 <body>
 	<div id="jumbotron " class="jumbotron jumbotron-contact flex-column flex-center">
@@ -80,9 +73,9 @@
 			<!-- <div class="col-md-1 bg-primary">a</div> -->
 		</div>
 	</div>
-	<?php include("followus.php") ?>
-	<?php include("footer.php"); ?>
-	<script src="<?= js_url("global") ?>"></script>
+	<?php $this->load->view("components/followus.php"); ?>
+	<?php $this->load->view("components/footer.php"); ?>
+	<?php $this->load->view("components/common-scripts.php");?>
 </body>
 
 </html>
