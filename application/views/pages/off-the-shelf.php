@@ -20,8 +20,7 @@
 <?php $this->load->view("components/sidenav.php"); ?>
 
 <body>
-	<div style="background-image:url( <?= base_url() . 'assets/img/off_the_shelf/off_the_shelf.jpg' ?>)" id="jumbotron"
-		class="jumbotron-off text-white jumbotron flex-column flex-center">
+	<div style="background-image:url( <?= base_url() . 'assets/img/off_the_shelf/off_the_shelf.jpg' ?>)" id="jumbotron" class="jumbotron-off text-white jumbotron flex-column flex-center">
 		<div class="text">
 			<h1 class="text-center"><span>OFF THE SHELF<span></h1>
 		</div>
@@ -31,8 +30,7 @@
 			<a class="navbar-brand" href="<?= base_url() . "home" ?>">
 				<img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
 			</a>
-			<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span
-					class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+			<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
 		</nav>
 
 		<div class="container-fluid content-template">
@@ -46,7 +44,25 @@
 				</div>
 			</div>
 
-			<div data-travefy-itinerary-id="6yw9rqtspafsqz2a9cvbfcjm2hlyhea" class="travefy-itinerary"></div>
+			<div class="row">
+				<div class="col-md-4">
+					<div data-travefy-itinerary-id="6yw9rqtsja7sqz2anvam3gdcemr8h8a" class="travefy-itinerary"></div>
+				</div>
+				<div class="col-md-4">
+					<div data-travefy-itinerary-id="6yw9rqtsjg8wqz2at7eqy6mawfdfmta" class="travefy-itinerary"></div>
+				</div>
+				<div class="col-md-4">
+					<div data-travefy-itinerary-id="6yw9rqqsn7dsqz2as67s68ff465832a" class="travefy-itinerary"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div data-travefy-itinerary-id="6yw9rqtsndywqz2a4ms3qly42kbtsgq" class="travefy-itinerary"></div>
+				</div>
+				<div class="col-md-4">
+					<div data-travefy-itinerary-id="6yw9rqtat27wqz2asa4dq58ry7f9btq" class="travefy-itinerary"></div>
+				</div>
+			</div>
 
 			<div class="row div1 taylor-title text-center ">
 				<div class="col-md-12">
@@ -58,8 +74,7 @@
 					<div class="row overlay-marron-container">
 						<div class="taylor-image col-md-4"></div>
 						<div class="taylor-image col-md-4">
-							<h1 class="to-hide on-background-text"><a href="<?= base_url() . 'adventure' ?>"
-									class="white-link">CREATE YOUR ADVENTURE</a></h1>
+							<h1 class="to-hide on-background-text"><a href="<?= base_url() . 'adventure' ?>" class="white-link">CREATE YOUR ADVENTURE</a></h1>
 						</div>
 						<div class="taylor-image col-md-4"></div>
 						<div class="overlay-with-padding text-center">
@@ -82,7 +97,23 @@
 		<?php $this->load->view("components/footer.php"); ?>
 		<?php $this->load->view("components/common-scripts.php") ?>
 
-		<script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript"> (function () { function l() { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//travefy.com/embed/itinerary.1.0.js'; var e = document.getElementById('travefy-itinerary-embedder'); e.parentNode.insertBefore(s, e); } if (window.attachEvent) { window.attachEvent('onload', l); } else { window.addEventListener('load', l, false); } })(); </script>
+		<script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript">
+			(function() {
+				function l() {
+					var s = document.createElement('script');
+					s.type = 'text/javascript';
+					s.async = true;
+					s.src = '//travefy.com/embed/itinerary.1.0.js';
+					var e = document.getElementById('travefy-itinerary-embedder');
+					e.parentNode.insertBefore(s, e);
+				}
+				if (window.attachEvent) {
+					window.attachEvent('onload', l);
+				} else {
+					window.addEventListener('load', l, false);
+				}
+			})();
+		</script>
 	</div>
 </body>
 
