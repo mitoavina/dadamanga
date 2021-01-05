@@ -1,5 +1,3 @@
-var listAdventure = { 'destination': [], 'park': [], 'experience': [], 'wildlife': [] };
-var keys = Object.keys(listAdventure);
 var adventuresId = ['IDDESTINATION', 'IDPARK', 'IDEXPERIENCE', 'IDWILDLIFE'];
 var adventures = [destinations, parks, experiences, wildlifes];
 
@@ -171,7 +169,7 @@ function removeAdventure() {
 function changeToAddButton(removed) {
 	$('.add-itinerary-btn').each(function () {
 		if ($(this).val() == removed) {
-			$(this).html("ADD TO ITINERARY <span>+</span>");
+			$(this).html('ADD TO ITINERARY <span><i class="fas fa-plus"></i></span>');
 			$(this).prop('disabled', false);
 			$(this).css({ 'background': '#444443' });
 		}
@@ -181,7 +179,7 @@ function changeToAddButton(removed) {
 function changeToAddedButton(added) {
 	$('.add-itinerary-btn').each(function () {
 		if ($(this).val() == added) {
-			$(this).html("ADDED TO ITINERARY <span>+</span>");
+			$(this).html('ADDED TO ITINERARY <i class="fas fa-plus"></i>');
 			$(this).prop('disabled', true);
 			$(this).css({ 'background': '#827E7B' });
 		}

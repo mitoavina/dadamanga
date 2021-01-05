@@ -460,7 +460,7 @@
                                             <div class="itinerary-title"><?= $item->TITLE ?></div>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="button" class="add-itinerary-btn" value="<?= 'destination' . $item->IDDESTINATION; ?>" data-toggle="collapse" data-target="#adventure-collapse" aria-expanded="false" aria-controls="adventure-collapse">ADD TO ITINERARY <span>+</span></button>
+                                            <button type="button" class="add-itinerary-btn" value="<?= 'destination' . $item->IDDESTINATION; ?>" data-toggle="collapse" data-target="#adventure-collapse" aria-expanded="false" aria-controls="adventure-collapse">ADD TO ITINERARY <span><i class="fas fa-plus"></i></span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -479,7 +479,7 @@
 											<div class="itinerary-title"><?= $item->TITLE ?></div>
 										</div>
 										<div class="card-footer">
-											<button type="button" class="add-itinerary-btn" value="<?= 'park' . $item->IDPARK; ?>">ADD TO ITINERARY <span>+</span></button>
+											<button type="button" class="add-itinerary-btn" value="<?= 'park' . $item->IDPARK; ?>">ADD TO ITINERARY <span><i class="fas fa-plus"></i></span></button>
 										</div>
 									</div>
 								</div>
@@ -498,7 +498,7 @@
                                             <div class="itinerary-title"><?= $item->TITLE ?></div>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="button" class="add-itinerary-btn" value="<?= 'experience' . $item->IDEXPERIENCE; ?>">ADD TO ITINERARY <span>+</span></button>
+                                            <button type="button" class="add-itinerary-btn" value="<?= 'experience' . $item->IDEXPERIENCE; ?>">ADD TO ITINERARY <span><i class="fas fa-plus"></i></span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -517,7 +517,7 @@
                                             <div class="itinerary-title"><?= $item->TITLE ?></div>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="button" class="add-itinerary-btn" value="<?= 'wildlife' . $item->IDWILDLIFE; ?>">ADD TO ITINERARY <span>+</span></button>
+                                            <button type="button" class="add-itinerary-btn" value="<?= 'wildlife' . $item->IDWILDLIFE; ?>">ADD TO ITINERARY <span><i class="fas fa-plus"></i></span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -566,6 +566,7 @@
 			var baseUrl = '<?= base_url() ?>';
         </script>
         <script src="https://www.google.com/recaptcha/api.js?render=6LcS0soUAAAAADENjhERzn54gxfmOHPi4jepIVmB"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/page/adventure.js"></script>
     </div>
 </body>
