@@ -45,21 +45,19 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div data-travefy-itinerary-id="6yw9rqtsja7sqz2anvam3gdcemr8h8a" class="travefy-itinerary"></div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div data-travefy-itinerary-id="6yw9rqtsjg8wqz2at7eqy6mawfdfmta" class="travefy-itinerary"></div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div data-travefy-itinerary-id="6yw9rqqsn7dsqz2as67s68ff465832a" class="travefy-itinerary"></div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div data-travefy-itinerary-id="6yw9rqtsndywqz2a4ms3qly42kbtsgq" class="travefy-itinerary"></div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div data-travefy-itinerary-id="6yw9rqtat27wqz2asa4dq58ry7f9btq" class="travefy-itinerary"></div>
 				</div>
 			</div>
