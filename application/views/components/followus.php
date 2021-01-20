@@ -1,15 +1,14 @@
 <div class="container-fluid view">
     <div class="row">
         <div class="col-md-12 followus-background" style="height: 390px; background: url(<?= base_url() ?>assets/img/followus/<?= $footerImg ?>)">
-        <?php var_dump($footerImg);?>
-    </div>
-    <div style="flex-direction:column" id="followUs" class="mask flex-center">
-        <div class="row mb-md-5">
-            <div class="col-md-12 text-center">
-                <h4 class="socialMessage white-text font-weight-bold">FOLLOW US ON SOCIAL MEDIA</h4>
-            </div>
         </div>
-        <div class="row">
+        <div style="flex-direction:column" id="followUs" class="mask flex-center">
+            <div class="row mb-md-5">
+                <div class="col-md-12 text-center">
+                    <h4 class="socialMessage white-text font-weight-bold">FOLLOW US ON SOCIAL MEDIA</h4>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-12">
                     <a target="_blank" href="https://www.facebook.com/Dadamanga/"><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/followus/facebook.png"></a>
                     <a target="_blank" href="https://www.instagram.com/dadamangamadagascar/"><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/followus/instagram.png"></a>

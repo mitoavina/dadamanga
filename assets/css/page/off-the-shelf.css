@@ -1,3 +1,41 @@
+.btn.trip-card-book-btn {
+	font-size: 20px;
+}
+
+.card-img-top.trip-card-img {
+	min-height: 220px;
+}
+
+.trip-card-price .price {
+	margin-left: 10px;
+	font-size: 30px;
+	font-family: 'Montserrat';
+}
+
+.trip-card-price .currency {
+	font-size: 25px;
+}
+
+.trip-card-price {
+	clear: right;
+	margin-bottom: 15px;
+}
+
+.trip-card-price-from,
+.trip-card-price {
+	float: right;
+}
+
+.trip-card-title {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.btn.trip-card-book-btn {
+	margin: 0;
+}
+
 .jumbotron.jumbotron-off {
 	background-position: center;
 	background-size: cover;

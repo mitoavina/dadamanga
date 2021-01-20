@@ -30,7 +30,7 @@ class MainController extends CI_Controller
 		$this->load->model('DestinationModel', 'DestinationModel');
 		$destinationModel = new DestinationModel();
 		$data['destinations'] = $destinationModel->select();
-		
+
 		$this->load->helper('url');
 		$this->load->helper('assets');
 		$this->load->view('pages/home', $data);
@@ -176,6 +176,13 @@ class MainController extends CI_Controller
 		$this->load->helper('url');
 		$this->load->helper('assets');
 		$data['footerImg'] = "cacao.jpg";
+
+		$url = 'https://trips.dadamanga.mg/itinerary-rest-api/itineraryPages/6yw9rqtsja7sqz2anvam3gdcemr8h8a';
+		$json = file_get_contents($url);
+		$json = json_decode($json);
+
+		$data['src'] = $json->itineraryPage->trip->mediaImages[0]->url;
+		$data['name'] = $json->itineraryPage->trip->name;
 
 		$this->load->view('pages/off-the-shelf', $data);
 	}

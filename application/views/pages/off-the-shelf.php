@@ -46,9 +46,18 @@
 
 			<div class="row">
 				<div class="col-md-3">
-					<div data-travefy-itinerary-id="6yw9rqtsja7sqz2anvam3gdcemr8h8a" class="travefy-itinerary"></div>
+					<div class="card">
+						<img src="<?= $src ?>" class="card-img-top trip-card-img" alt="..." />
+						<div class="card-body">
+							<div class="trip-card-title"><?= $name ?></div>
+							<div class="trip-card-price-from">Price From</div>
+							<div class="trip-card-price"><span class="currency">USD</span><span class="price">5,000</span></div>
+						</div>
+						<a href="#!" class="btn btn-primary trip-card-book-btn">BOOK NOW</a>
+					</div>
 				</div>
-				<div class="col-md-3">
+
+				<!-- <div class="col-md-3">
 					<div data-travefy-itinerary-id="6yw9rqtsjg8wqz2at7eqy6mawfdfmta" class="travefy-itinerary"></div>
 				</div>
 				<div class="col-md-3">
@@ -59,7 +68,7 @@
 				</div>
 				<div class="col-md-3">
 					<div data-travefy-itinerary-id="6yw9rqtat27wqz2asa4dq58ry7f9btq" class="travefy-itinerary"></div>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="row div1 taylor-title text-center ">
@@ -95,7 +104,7 @@
 		<?php $this->load->view("components/footer.php"); ?>
 		<?php $this->load->view("components/common-scripts.php") ?>
 
-		<script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript">
+		<!-- <script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript">
 			(function() {
 				function l() {
 					var s = document.createElement('script');
@@ -111,7 +120,7 @@
 					window.addEventListener('load', l, false);
 				}
 			})();
-		</script>
+		</script> -->
 	</div>
 </body>
 
