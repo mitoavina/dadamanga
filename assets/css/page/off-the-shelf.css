@@ -3,7 +3,8 @@
 }
 
 .card-img-top.trip-card-img {
-	min-height: 220px;
+	height: 220px;
+	width: auto;
 }
 
 .trip-card-price .price {
@@ -29,7 +30,7 @@
 .trip-card-title {
 	font-weight: bold;
 	font-size: 20px;
-	margin-bottom: 20px;
+	min-height: 160px;
 }
 
 .btn.trip-card-book-btn {

@@ -45,17 +45,26 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-3">
-					<div class="card">
-						<img src="<?= $src ?>" class="card-img-top trip-card-img" alt="..." />
-						<div class="card-body">
-							<div class="trip-card-title"><?= $name ?></div>
-							<div class="trip-card-price-from">Price From</div>
-							<div class="trip-card-price"><span class="currency">USD</span><span class="price">5,000</span></div>
+				<?php foreach ($trips as $trip) { ?>
+					<div class="col-md-3">
+						<div class="card mb-5">
+							<!-- Card image -->
+							<div class="view overlay">
+								<img src="<?= $trip->getImg() ?>" class="card-img-top trip-card-img" alt="..." />
+								<!-- <img class="card-img-top trip-card-img" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"> -->
+								<a href="#!">
+									<div class="mask rgba-white-slight"></div>
+								</a>
+							</div>
+							<div class="card-body">
+								<div class="trip-card-title"><?= $trip->getName() ?></div>
+								<div class="trip-card-price-from">Price From</div>
+								<div class="trip-card-price"><span class="currency"><?= $trip->getCurrency() ?></span><span class="price"><?= $trip->getPrice() ?></span></div>
+							</div>
+							<a href="#!" class="btn btn-primary trip-card-book-btn">BOOK NOW</a>
 						</div>
-						<a href="#!" class="btn btn-primary trip-card-book-btn">BOOK NOW</a>
 					</div>
-				</div>
+				<?php } ?>
 
 				<!-- <div class="col-md-3">
 					<div data-travefy-itinerary-id="6yw9rqtsjg8wqz2at7eqy6mawfdfmta" class="travefy-itinerary"></div>
