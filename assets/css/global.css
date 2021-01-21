@@ -33,8 +33,7 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local("Brandon Grotesque Black"),
-		url(../font/brandon-grotesque/brandon-grotesque-black-58a8a3e824392.woff)
-			format("woff");
+		url(../font/brandon-grotesque/brandon-grotesque-black-58a8a3e824392.woff) format("woff");
 }
 
 @font-face {
@@ -42,8 +41,7 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local("Brandon Grotesque Regular Italic"),
-		url(../font/brandon-grotesque/brandon-grotesque-regular-italic-58a8a456c4724.woff)
-			format("woff");
+		url(../font/brandon-grotesque/brandon-grotesque-regular-italic-58a8a456c4724.woff) format("woff");
 }
 
 body,
@@ -90,11 +88,13 @@ body {
 	font-size: 18px;
 	line-height: 26px;
 }
+
 .text-form-2 {
 	font-family: Montserrat;
 	line-height: 39px;
 	font-size: 3vh;
 }
+
 .text-form-1 {
 	font-size: 130%;
 	line-height: 35px;
@@ -105,6 +105,7 @@ body {
 		width: 50px;
 		height: 50px;
 	}
+
 	.socialMessage {
 		font-size: 20px;
 	}
@@ -221,11 +222,13 @@ body {
 	background-color: rgba(183, 152, 109, 0.44);
 }
 
+
 @media (max-width: 991px) {
 	.container {
 		width: 100% !important;
 		max-width: none;
 	}
+
 	.navbar {
 		top: 0;
 		right: 0;
@@ -234,25 +237,26 @@ body {
 	}
 }
 
-.second-navbar > .row > .link {
+.second-navbar>.row>.link {
 	color: #b7986d;
 	padding: 0 5px;
 	font-size: 15px;
 }
 
-.second-navbar > .row > .link:first-child::before {
+.second-navbar>.row>.link:first-child::before {
 	content: "";
 }
 
-.second-navbar > .row > .link::before {
+.second-navbar>.row>.link::before {
 	content: " | ";
 	position: relative;
 	bottom: 2px;
 }
 
-.second-navbar .link > a {
+.second-navbar .link>a {
 	color: inherit;
 }
+
 
 body .body-index {
 	z-index: 0;
@@ -277,6 +281,7 @@ body .body-index {
 	height: 50px;
 }
 
+/*******/
 @media screen and (min-width: 768px) {
 	#animated-nav .navbar-toggler {
 		position: absolute;
@@ -286,15 +291,18 @@ body .body-index {
 		padding: 10px 10px;
 		color: #b7986d;
 	}
+
 	#animated-nav .navbar-brand {
 		position: absolute;
 		top: -5px;
 		left: 5px;
 	}
+
 	#animated-nav {
 		display: block;
 		text-align: center;
 	}
+
 	#animated-nav p {
 		margin-bottom: 0;
 		padding-top: 7px;
@@ -306,6 +314,7 @@ body .body-index {
 	#animated-nav p {
 		display: none;
 	}
+
 	#animated-nav {
 		padding: 0 !important;
 		min-height: 50px;
@@ -313,6 +322,7 @@ body .body-index {
 		color: #fff;
 		background-color: #b7986d;
 	}
+
 	#animated-nav button {
 		display: block !important;
 		color: #fff !important;
@@ -391,7 +401,7 @@ body .body-index {
 	font-size: 80%;
 }
 
-.itinerary-menu-mobile ul > li {
+.itinerary-menu-mobile ul>li {
 	font-size: 1em;
 	color: #b7986d;
 }
@@ -412,12 +422,13 @@ body .body-index {
 		padding-top: 20%;
 		padding-bottom: 10%;
 	}
+
 	.itinerary-menu {
 		display: none;
 	}
 }
 
-.itinerary-menu > ul {
+.itinerary-menu>ul {
 	list-style: none;
 	font-size: 1.6em;
 	padding-top: 2%;
@@ -507,6 +518,7 @@ body .body-index {
 	.pic-title {
 		font-size: 0.8em;
 	}
+
 	.place .pic-title {
 		white-space: normal;
 		font-size: 0.8em;
@@ -564,20 +576,20 @@ body .body-index {
 	padding-bottom: 64px;
 }
 
-#taylor-images > div > div > div {
+#taylor-images>div>div>div {
 	height: 300px;
 	background-size: cover;
 }
 
-#taylor-images > div > div > div:nth-child(1) {
+#taylor-images>div>div>div:nth-child(1) {
 	background-image: url(../img/list_destination_page/cover-about.jpg);
 }
 
-#taylor-images > div > div > div:nth-child(2) {
+#taylor-images>div>div>div:nth-child(2) {
 	background-image: url(../img/list_destination_page/adventure.jpg);
 }
 
-#taylor-images > div > div > div:nth-child(3) {
+#taylor-images>div>div>div:nth-child(3) {
 	background-image: url(../img/list_destination_page/lac.jpg);
 }
 
@@ -720,7 +732,7 @@ sidenav:blur {
 	text-align: center;
 }
 
-#select-below-images-container > div {
+#select-below-images-container>div {
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -728,7 +740,7 @@ sidenav:blur {
 	padding: 2px;
 }
 
-#select-below-images-container > div > div {
+#select-below-images-container>div>div {
 	height: 300px;
 	background-size: cover;
 	color: #fff;

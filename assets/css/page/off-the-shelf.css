@@ -12,7 +12,6 @@
 .trip-card-price .price {
 	margin-left: 10px;
 	font-size: 30px;
-	font-family: 'Montserrat';
 }
 
 .trip-card-price .currency {
@@ -31,7 +30,7 @@
 
 .trip-card-title {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 18px;
 	min-height: 160px;
 }
 

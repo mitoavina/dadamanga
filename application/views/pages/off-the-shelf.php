@@ -25,7 +25,7 @@
             <h1 class="text-center"><span>OFF THE SHELF<span></h1>
         </div>
     </div>
-    <div class="body-index">
+    <div>
         <nav id="animated-nav" class=" text-center navbar">
             <a class="navbar-brand" href="<?= base_url() . "home" ?>">
                 <img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
@@ -109,6 +109,7 @@
                 </div>
             </div>
         </div>
+
         <?php $this->load->view("components/followus.php") ?>
         <?php $this->load->view("components/footer.php"); ?>
         <?php $this->load->view("components/common-scripts.php") ?>
