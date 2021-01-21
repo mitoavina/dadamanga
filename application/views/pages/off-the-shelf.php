@@ -52,7 +52,7 @@
                             <div class="view overlay">
                                 <img src="<?= $trip->getImg() ?>" class="card-img-top trip-card-img" alt="..." />
                                 <!-- <img class="card-img-top trip-card-img" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"> -->
-                                <a href="#!">
+                                <a href="#!" data-toggle="modal" data-target="#trip<?= $trip->getId() ?>">
                                     <div class="mask rgba-white-slight"></div>
                                 </a>
                             </div>
@@ -62,6 +62,32 @@
                                 <div class="trip-card-price"><span class="currency"><?= $trip->getCurrency() ?></span><span class="price"><?= $trip->getPrice() ?></span></div>
                             </div>
                             <a href="#!" class="btn trip-card-book-btn">BOOK NOW</a>
+
+                            <!-- Button trigger modal -->
+                            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+                                Launch demo modal
+                            </button> -->
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="trip<?= $trip->getId() ?>" tabindex="-1" role="dialog" aria-hidden="false">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"><?= $trip->getName() ?></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div data-travefy-itinerary-id="<?= $trip->getId() ?>" class=" travefy-itinerary"></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Add To Cart</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
@@ -110,27 +136,28 @@
             </div>
         </div>
 
+
         <?php $this->load->view("components/followus.php") ?>
         <?php $this->load->view("components/footer.php"); ?>
         <?php $this->load->view("components/common-scripts.php") ?>
 
-        <!-- <script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript">
-			(function() {
-				function l() {
-					var s = document.createElement('script');
-					s.type = 'text/javascript';
-					s.async = true;
-					s.src = '//travefy.com/embed/itinerary.1.0.js';
-					var e = document.getElementById('travefy-itinerary-embedder');
-					e.parentNode.insertBefore(s, e);
-				}
-				if (window.attachEvent) {
-					window.attachEvent('onload', l);
-				} else {
-					window.addEventListener('load', l, false);
-				}
-			})();
-		</script> -->
+        <script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript">
+            (function() {
+                function l() {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = '//travefy.com/embed/itinerary.1.0.js';
+                    var e = document.getElementById('travefy-itinerary-embedder');
+                    e.parentNode.insertBefore(s, e);
+                }
+                if (window.attachEvent) {
+                    window.attachEvent('onload', l);
+                } else {
+                    window.addEventListener('load', l, false);
+                }
+            })();
+        </script>
     </div>
 </body>
 
