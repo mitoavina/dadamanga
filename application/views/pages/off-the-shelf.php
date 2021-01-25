@@ -144,6 +144,23 @@
         <?php $this->load->view("components/common-scripts.php") ?>
 
         <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+        <script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript">
+            (function() {
+                function l() {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = '//travefy.com/embed/itinerary.1.0.js';
+                    var e = document.getElementById('travefy-itinerary-embedder');
+                    e.parentNode.insertBefore(s, e);
+                }
+                if (window.attachEvent) {
+                    window.attachEvent('onload', l);
+                } else {
+                    window.addEventListener('load', l, false);
+                }
+            })();
+        </script>
         <script type="text/javascript">
             function bookTrip(tripId) {
                 /* Init trips if not exist in cookie */
