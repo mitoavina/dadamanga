@@ -60,7 +60,6 @@ $(document).ready(function () {
 						listAdventure[keys[i]].push(adventures[i][j]);
 						createCookie();
 						numberOfAdventure(keys[i], listAdventure[keys[i]].length);
-						setCartNumber();
 						if (show)
 							$(`.show-adventure-container .show-adventure-btn`).fadeOut("normal", function () { $(this).remove(); });
 						return;
@@ -156,7 +155,6 @@ function removeAdventure() {
 							listAdventure[keys[i]].splice(j, 1);
 							numberOfAdventure(keys[i], listAdventure[keys[i]].length);
 							createCookie();
-							setCartNumber();
 							changeToAddButton(tmp);
 						}
 					}

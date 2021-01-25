@@ -45,6 +45,7 @@
             </div>
 
             <div class="row">
+                <?php $i = 0; ?>
                 <?php foreach ($trips as $trip) { ?>
                     <div class="col-md-3">
                         <div class="card mb-5">
@@ -61,7 +62,7 @@
                                 <div class="trip-card-price-from">Price From</div>
                                 <div class="trip-card-price"><span class="currency"><?= $trip->getCurrency() ?></span><span class="price"><?= $trip->getPrice() ?></span></div>
                             </div>
-                            <a href="#!" class="btn trip-card-book-btn">BOOK NOW</a>
+                            <a href="#!" class="btn trip-card-book-btn" id="trip-btn-<?= $trip->getId(); ?>" onclick="bookTrip('<?= $trip->getId(); ?>');return false;">BOOK NOW</a>
 
                             <!-- Button trigger modal -->
                             <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
@@ -90,6 +91,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php $i++; ?>
                 <?php } ?>
 
                 <!-- <div class="col-md-3">
@@ -141,22 +143,20 @@
         <?php $this->load->view("components/footer.php"); ?>
         <?php $this->load->view("components/common-scripts.php") ?>
 
-        <script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript">
-            (function() {
-                function l() {
-                    var s = document.createElement('script');
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = '//travefy.com/embed/itinerary.1.0.js';
-                    var e = document.getElementById('travefy-itinerary-embedder');
-                    e.parentNode.insertBefore(s, e);
-                }
-                if (window.attachEvent) {
-                    window.attachEvent('onload', l);
-                } else {
-                    window.addEventListener('load', l, false);
-                }
-            })();
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
+        <script type="text/javascript">
+            function bookTrip(tripId) {
+                /* Init trips if not exist in cookie */
+                let trips = getCookie('trips');
+                if (trips == null)
+                    trips = new Array();
+                /* check if trip already in cart */
+                if (trips.includes(tripId))
+                    return;
+                trips.push(tripId);
+                createCookie('trips', trips);
+                setCartNumber();
+            }
         </script>
     </div>
 </body>

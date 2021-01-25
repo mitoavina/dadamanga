@@ -4,29 +4,38 @@ var keys = Object.keys(listAdventure);
 
 new WOW().init();
 
+function createCookie(key, obj) {
+    if ($.cookie(key) != undefined || $.cookie(key) != null || $.cookie(key) != "")
+        $.removeCookie(key);
+    var date = new Date();
+    hour = 1;
+    date.setTime(date.getTime() + (hour * 3600 * 1000));
+    $.cookie(key, JSON.stringify(obj), {
+        expires: date
+    });
+}
+
+function getCookie(key) {
+    let obj;
+    if ($.cookie(key) != undefined && $.cookie(key) != null && $.cookie(key) != "") {
+        return JSON.parse($.cookie(key));
+    }
+    return null;
+}
+
 function setCartNumber() {
-	if ($.cookie("adventure") !== undefined && $.cookie("adventure") !== null && $.cookie("adventure") !== "") {
-		var cookie = JSON.parse($.cookie("adventure"));
-		console.log(cookie);
-		
-		
-		var numeric_array = new Array();
-		for (var items in cookie) {
-			numeric_array.push(cookie[items]);
-		}
-		
-		var itemTotal = 0;
-		for(var i = 0; i < numeric_array.length; i++) {
-			itemTotal += numeric_array[i].length;
-		}
-		
-		if(itemTotal !== 0) {
-			$("#cart-number").css("display", "inline-flex");
-			$("#cart-number").html(itemTotal);
-		} else {
-			$("#cart-number").css("display", "none");
-		}
-	}
+    let cookie = getCookie('trips');
+    if(cookie != null) {
+        console.log(cookie);
+        let itemTotal = cookie.length;
+        if(itemTotal !== 0) {
+            $("#cart-number").css("display", "inline-flex");
+            $("#cart-number").html(itemTotal);
+        } else {
+            $("#cart-number").css("display", "none");
+        }
+
+    }
 }
 
 
