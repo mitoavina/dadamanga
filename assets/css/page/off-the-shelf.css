@@ -1,6 +1,16 @@
+.modal-dialog {
+	min-width: 65vw !important;
+}
+
+.modal.fade.show {
+	backdrop-filter: blur(6px);
+}
+
 .modal-body {
 	height: 70vh;
 	overflow-y: scroll;
+	display: flex;
+	justify-content: center;
 }
 
 .modal-body::-webkit-scrollbar {
