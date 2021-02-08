@@ -62,7 +62,8 @@
                                 <div class="trip-card-price-from">Price From</div>
                                 <div class="trip-card-price"><span class="currency"><?= $trip->getCurrency() ?></span><span class="price"><?= $trip->getPrice() ?></span></div>
                             </div>
-                            <a href="#!" class="btn trip-card-book-btn" id="trip-btn-<?= $trip->getId(); ?>" onclick="bookTrip('<?= $trip->getId(); ?>');return false;">BOOK NOW</a>
+
+                            <a href="#!" class="btn trip-card-book-btn" id="trip-btn-<?= $trip->getId(); ?>" onclick="bookTrip('<?= $i; ?>')">BOOK NOW</a>
 
                             <!-- Button trigger modal -->
                             <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
@@ -162,15 +163,16 @@
             })();
         </script>
         <script type="text/javascript">
-            function bookTrip(tripId) {
-                /* Init trips if not exist in cookie */
+            function bookTrip(index) {
                 let trips = getCookie('trips');
                 if (trips == null)
                     trips = new Array();
-                /* check if trip already in cart */
-                if (trips.includes(tripId))
+                let trip = (<?= json_encode($trips); ?>)[index];
+                if (trips.filter(function(t) {
+                        return t._id == trip._id
+                    }).length > 0)
                     return;
-                trips.push(tripId);
+                trips.push(trip);
                 createCookie('trips', trips);
                 setCartNumber();
             }

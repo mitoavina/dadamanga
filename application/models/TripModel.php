@@ -1,11 +1,11 @@
 <?php
 class TripModel extends CI_Model
 {
-    private $_id;
-    private $_name;
-    private $_price;
-    private $_currency;
-    private $_img;
+    public $_id;
+    public $_name;
+    public $_price;
+    public $_currency;
+    public $_img;
 
     public function __construct()
     {

@@ -182,18 +182,21 @@ class MainController extends CI_Controller
         $trips = array();
         foreach ($tripsId as $id) {
             $url = 'https://trips.dadamanga.mg/itinerary-rest-api/itineraryPages/' . $id;
-            $json = file_get_contents($url);
-            $json = json_decode($json);
+            try {
+                $json = file_get_contents($url);
+                $json = json_decode($json);
 
-            preg_match_all("#(([0-9]{1,3},?)+) (MGA|USD|EUR)#U", $json->itineraryPage->trip->estimatedCost, $match, PREG_PATTERN_ORDER);
+                preg_match_all("#(([0-9]{1,3},?)+) (MGA|USD|EUR)#U", $json->itineraryPage->trip->estimatedCost, $match, PREG_PATTERN_ORDER);
 
-            $trip = new TripModel();
-            $trip->setId($id);
-            $trip->setName($json->itineraryPage->trip->name);
-            $trip->setPrice($match[1][0]);
-            $trip->setCurrency($match[3][0]);
-            $trip->setImg($json->itineraryPage->trip->mediaImages[0]->url);
-            array_push($trips, $trip);
+                $trip = new TripModel();
+                $trip->setId($id);
+                $trip->setName($json->itineraryPage->trip->name);
+                $trip->setPrice($match[1][0]);
+                $trip->setCurrency($match[3][0]);
+                $trip->setImg($json->itineraryPage->trip->mediaImages[0]->url);
+                array_push($trips, $trip);
+            } catch (Exception $e) {
+            }
         }
         $data['trips'] = $trips;
         $this->load->view('pages/off-the-shelf', $data);

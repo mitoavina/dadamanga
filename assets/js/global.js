@@ -16,7 +16,6 @@ function createCookie(key, obj) {
 }
 
 function getCookie(key) {
-    let obj;
     if ($.cookie(key) != undefined && $.cookie(key) != null && $.cookie(key) != "") {
         return JSON.parse($.cookie(key));
     }
@@ -26,7 +25,6 @@ function getCookie(key) {
 function setCartNumber() {
     let cookie = getCookie('trips');
     if(cookie != null) {
-        console.log(cookie);
         let itemTotal = cookie.length;
         if(itemTotal !== 0) {
             $("#cart-number").css("display", "inline-flex");
