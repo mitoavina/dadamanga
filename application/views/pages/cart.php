@@ -58,8 +58,12 @@
     <?php $this->load->view("components/followus.php"); ?>
     <?php $this->load->view("components/footer.php"); ?>
     <?php $this->load->view("components/common-scripts.php"); ?>
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
     <script src="<?= js_url("page/cart") ?>"></script>
+    <?php $this->load->view("components/modal_msg.php"); ?>
 </body>
 
 </html>

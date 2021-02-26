@@ -34,13 +34,11 @@ function removeTrip() {
                 for(let i = 0; i < trips.length; i++) {
                         let tmp = trips[i]._id;
 						if (tmp == $(this).val()) {
-                            console.log($(`.item[data-index="${$(this).val()}"]`));;
 							$(`.item[data-index="${$(this).val()}"]`).fadeOut("normal", function () {
-                                console.log($(this));
                                 $(this).remove();
                             });
                             trips.splice(i, 1);
-                            createCookie();
+                            createCookie('trips', trips);
                             setCartNumber();
                             calcTotal();
                             checkEmptyTrip();
@@ -49,15 +47,6 @@ function removeTrip() {
 			});
 		}
 	});
-}
-
-function createCookie() {
-	if (getCookie('trips'))
-		$.removeCookie("trips");
-	var date = new Date();
-	hour = 1;
-	date.setTime(date.getTime() + (hour * 3600 * 1000));
-	$.cookie("trips", JSON.stringify(trips), { expires: date });
 }
 
 function checkEmptyTrip() {

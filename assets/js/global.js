@@ -5,6 +5,7 @@ var keys = Object.keys(listAdventure);
 new WOW().init();
 
 function createCookie(key, obj) {
+    console.log('hello');
     if ($.cookie(key) != undefined || $.cookie(key) != null || $.cookie(key) != "")
         $.removeCookie(key);
     var date = new Date();
