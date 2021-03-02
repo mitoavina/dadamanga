@@ -104,7 +104,7 @@
 			<a href="<?= base_url() . "adventure" ?>" id="adventureButton" class="col-md-3 btn mr-1 btn black-marron-btn">
 				<span>Create an Adventure</span>
 			</a>
-			<a href="<?= base_url() . "knowledge" ?>" id="placeButton" class="col-md-3 btn mr-1 btn black-marron-btn">
+			<a href="<?= base_url() . "knowledges" ?>" id="placeButton" class="col-md-3 btn mr-1 btn black-marron-btn">
 				<span>Knowledge of the Place</span>
 			</a>
 		</div>
