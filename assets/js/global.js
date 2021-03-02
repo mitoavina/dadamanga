@@ -5,35 +5,35 @@ var keys = Object.keys(listAdventure);
 new WOW().init();
 
 function createCookie(key, obj) {
-    if ($.cookie(key) != undefined || $.cookie(key) != null || $.cookie(key) != "")
-        $.removeCookie(key);
-    var date = new Date();
-    hour = 1;
-    date.setTime(date.getTime() + (hour * 3600 * 1000));
-    $.cookie(key, JSON.stringify(obj), {
-        expires: date
-    });
+	if ($.cookie(key) != undefined || $.cookie(key) != null || $.cookie(key) != "")
+		$.removeCookie(key);
+	var date = new Date();
+	hour = 1;
+	date.setTime(date.getTime() + (hour * 3600 * 1000));
+	$.cookie(key, JSON.stringify(obj), {
+		expires: date
+	});
 }
 
 function getCookie(key) {
-    if ($.cookie(key) != undefined && $.cookie(key) != null && $.cookie(key) != "") {
-        return JSON.parse($.cookie(key));
-    }
-    return null;
+	if ($.cookie(key) != undefined && $.cookie(key) != null && $.cookie(key) != "") {
+		return JSON.parse($.cookie(key));
+	}
+	return null;
 }
 
 function setCartNumber() {
-    let cookie = getCookie('trips');
-    if(cookie != null) {
-        let itemTotal = cookie.length;
-        if(itemTotal !== 0) {
-            $("#cart-number").css("display", "inline-flex");
-            $("#cart-number").html(itemTotal);
-        } else {
-            $("#cart-number").css("display", "none");
-        }
+	let cookie = getCookie('trips');
+	if (cookie != null) {
+		let itemTotal = cookie.length;
+		if (itemTotal !== 0) {
+			$("#cart-number").css("display", "inline-flex");
+			$("#cart-number").html(itemTotal);
+		} else {
+			$("#cart-number").css("display", "none");
+		}
 
-    }
+	}
 }
 
 
@@ -300,9 +300,9 @@ function closeNav() {
 	$("#filtre-trans").css("background", "transparent");
 }
 // var original_length = $(".jumbotron").outerHeight();
-var animatedNav = document.getElementById("animated-nav"); 
+var animatedNav = document.getElementById("animated-nav");
 var nav_length = 0;
-if(animatedNav !== null) {
+if (animatedNav !== null) {
 	nav_length = animatedNav.offsetHeight;
 }
 // $("jumbotron").css('minHeight', (original_length - nav_length) + "px");

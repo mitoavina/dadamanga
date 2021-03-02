@@ -49,7 +49,6 @@
 				height: auto;
 			}
 		}
-
 	</style>
 	<title>Dadamanga | Home</title>
 </head>
@@ -72,50 +71,37 @@
 			<li style="background-image:url( <?= base_url("assets/img/home/adventure.jpg") ?>)" class=" jumbotron home-text">
 				<h1 class="white-text"> <?= $text[0]->value ?></h1>
 				<svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z"
-						fill="white" />
+					<path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
 				</svg>
 				<div>
-					<span id="find_out" class="white-text"><a class="white-link"
-							href="<?= base_url("destinations") ?>">find out more</a></span>
+					<span id="find_out" class="white-text"><a class="white-link" href="<?= base_url("destinations") ?>">find out more</a></span>
 				</div>
 			</li>
-			<li class="home-text jumbotron"
-				style='background-image:url( <?= base_url("assets/img/home/adventure.jpg") ?>)'>
+			<li class="home-text jumbotron" style='background-image:url( <?= base_url("assets/img/home/adventure.jpg") ?>)'>
 				<h1 class="white-text"> <?= $text[1]->value ?></h1>
 				<svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z"
-						fill="white" />
+					<path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
 				</svg>
 				<div>
-					<span id="find_out" class="white-text"><a class="white-link"
-							href="<?= base_url("adventure") ?>">find out more</a></span>
+					<span id="find_out" class="white-text"><a class="white-link" href="<?= base_url("adventure") ?>">find out more</a></span>
 				</div>
 			</li>
-			<li class="home-text jumbotron"
-				style='background-image:url( <?= base_url("assets/img/home/knowledge.jpg") ?>)'>
+			<li class="home-text jumbotron" style='background-image:url( <?= base_url("assets/img/home/knowledge.jpg") ?>)'>
 				<h1 class="white-text"> <?= $text[2]->value ?></h1>
 				<svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z"
-						fill="white" />
+					<path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="white" />
 				</svg>
 				<div>
-					<span id="find_out" class="white-text"><a class="white-link"
-							href="<?= base_url("knowledges") ?>">find out more</a></span>
+					<span id="find_out" class="white-text"><a class="white-link" href="<?= base_url("knowledges") ?>">find out more</a></span>
 				</div>
 			</li>
 		</ul>
 		<div id="homeButtons" class="d-none d-md-flex w-100 row position-absolute justify-content-center">
 			<a href=""></a>
-			<a href="<?= base_url() . "destinations" ?>" id="destinationButton"
-				class="col-md-3 btn mr-1 btn black-marron-btn">
+			<a href="<?= base_url() . "destinations" ?>" id="destinationButton" class="col-md-3 btn mr-1 btn black-marron-btn">
 				<span>Destinations</span>
 			</a>
-			<a href="<?= base_url() . "adventure" ?>" id="adventureButton"
-				class="col-md-3 btn mr-1 btn black-marron-btn">
+			<a href="<?= base_url() . "adventure" ?>" id="adventureButton" class="col-md-3 btn mr-1 btn black-marron-btn">
 				<span>Create an Adventure</span>
 			</a>
 			<a href="<?= base_url() . "knowledge" ?>" id="placeButton" class="col-md-3 btn mr-1 btn black-marron-btn">
@@ -129,8 +115,7 @@
 		<a class="navbar-brand bleu" href="<?= base_url() . "home" ?>">
 			<img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
 		</a>
-		<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span
-				class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+		<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
 	</nav>
 	<div class="position-relative container-fluid" style="z-index: 10">
 		<div class="row we_organise justify-content-center">
@@ -146,9 +131,7 @@
 							perfect tour.
 						</p>
 						<svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z"
-								fill="#B7986D" />
+							<path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="#B7986D" />
 						</svg>
 						<p id="intro-btn" class="montserrat-bold"><a href="<?= base_url() . "destinations" ?>">FIND A
 								DESTINATION</a></p>
@@ -206,19 +189,18 @@
 			<div id="multi-item-carousel" class="carousel slide">
 				<div class="carousel-inner">
 					<?php for ($i = 0; $i < count($destinations); $i++) { ?>
-					<div class='carousel-item <?= $i == 0 ? "active" : "" ?>'>
-						<div class="destination-item">
-							<img src="<?= img_destinations_url($destinations[$i]->NAME) ?>" alt="First slide">
-							<div class="justify-content-center carousel-caption d-none d-md-block">
-								<div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
-								<div class="destination-text-container">
-									<div class="destination-text"><a class="white-link"
-											href="<?= destination_url($destinations[$i]->NAME) ?>"><?= $destinations[$i]->TITLE ?></a>
+						<div class='carousel-item <?= $i == 0 ? "active" : "" ?>'>
+							<div class="destination-item">
+								<img src="<?= img_destinations_url($destinations[$i]->NAME) ?>" alt="First slide">
+								<div class="justify-content-center carousel-caption d-none d-md-block">
+									<div class="compass-container"><i class="far fa-compass fa-2x"></i></div>
+									<div class="destination-text-container">
+										<div class="destination-text"><a class="white-link" href="<?= destination_url($destinations[$i]->NAME) ?>"><?= $destinations[$i]->TITLE ?></a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 					<?php } ?>
 				</div>
 				<div id="prevContainer" class="d-flex justify-content-center">
@@ -251,8 +233,8 @@
 	</div>
 	<?php $this->load->view("components/followus.php"); ?>
 	<?php $this->load->view("components/footer.php"); ?>
-	<?php $this->load->view("components/common-scripts.php");?>
-	<script type="text/javascript" src="<?= base_url()?>assets/js/jquery.flexslider.js"></script>
+	<?php $this->load->view("components/common-scripts.php"); ?>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.flexslider.js"></script>
 	<script>
 		$('.flexslider').flexslider({
 			directionNav: false,
@@ -267,7 +249,7 @@
 				interval: true
 			});
 
-			$(".carousel-item").each(function () {
+			$(".carousel-item").each(function() {
 				var width = 50;
 
 				var first = $(this).find(".destination-item:nth-child(1)");
@@ -307,26 +289,26 @@
 		});
 
 		$('.black-marron-btn > span').bind('click', function(event, ...args) {
-			if(args.length === 0) {
+			if (args.length === 0) {
 				$(event.currentTarget).parent().get(0).click();
 			}
-		}); 
+		});
 
-		$('#multi-item-carousel .carousel-item').each(function () {
+		$('#multi-item-carousel .carousel-item').each(function() {
 			var next = $(this).next();
 			if (!next.length) next = $(this).siblings(':first');
 			next.children(':first-child').clone().appendTo($(this));
 		});
 
-		$('#multi-item-carousel .carousel-item').each(function () {
+		$('#multi-item-carousel .carousel-item').each(function() {
 			var prev = $(this).prev();
 			if (!prev.length) prev = $(this).siblings(':last');
 			prev.children(':nth-last-child(2)').clone().prependTo($(this));
 		});
 		var distance = $('#animated-nav').offset().top,
 			$window = $(window);
-
 	</script>
 
 </body>
+
 </html>
