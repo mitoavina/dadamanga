@@ -38,31 +38,30 @@
 					</div>
 					<div class="col-md-4">
 						<p class="contact-label">PHONE & WHATSAPP</p>
-						<p>+261342025862<p>
+						<p>
+							+26134 20 990 99
+						<p>
 					</div>
 					<div class="col-md-4">
 						<p class="contact-label">EMAIL</p>
-						<p>contact@dadamanga.mg<p>
+						<p>contact@dadamanga.mg
+						<p>
 					</div>
 				</div>
 				<form class="text-left" method="post" action="<?= base_url('contact_mail') ?>">
 					<div class="row">
 						<div class="col-md-5 ">
 							<label class="contact-label" for="name">NAME*</label>
-							<input id="name" name="name" required="required" class="form-control custom-bg-input mb-4"
-								type="text" placeholder="Your Name">
+							<input id="name" name="name" required="required" class="form-control custom-bg-input mb-4" type="text" placeholder="Your Name">
 							<label class="contact-label " for="number">PHONE*</label>
-							<input id="number" name="number" required="required"
-								class="custom-bg-input form-control mb-4" type="text" placeholder="Your Number">
+							<input id="number" name="number" required="required" class="custom-bg-input form-control mb-4" type="text" placeholder="Your Number">
 							<label class="contact-label" for="email">EMAIL*</label>
-							<input id="email" name="email" required="required" class="custom-bg-input form-control mb-4"
-								type="email" placeholder="Your Email">
+							<input id="email" name="email" required="required" class="custom-bg-input form-control mb-4" type="email" placeholder="Your Email">
 							<p class="text-muted font-italic">*mandatory fields</p>
 						</div>
 						<div class="col-md-7 test justify-content-right">
 							<label for="message" class="contact-label">MESSAGE</label>
-							<textarea required="required" name="message" class="custom-bg-textarea form-control "
-								id="message" cols="1000" rows="10" placeholder="Your Message"></textarea>
+							<textarea required="required" name="message" class="custom-bg-textarea form-control " id="message" cols="1000" rows="10" placeholder="Your Message"></textarea>
 							<div class="text-right">
 								<button class="cc btn btn-sm text-white brown-color">SEND</button>
 							</div>
@@ -75,7 +74,7 @@
 	</div>
 	<?php $this->load->view("components/followus.php"); ?>
 	<?php $this->load->view("components/footer.php"); ?>
-	<?php $this->load->view("components/common-scripts.php");?>
+	<?php $this->load->view("components/common-scripts.php"); ?>
 </body>
 
 </html>
