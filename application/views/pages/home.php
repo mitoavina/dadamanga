@@ -69,7 +69,7 @@
 					</div>
 				</div>
 			</li>
-			<li style="background-image:url( <?= base_url($image[0]->path) ?>)" class=" jumbotron home-text">
+			<li style="background-image:url( <?= base_url("assets/img/home/adventure.jpg") ?>)" class=" jumbotron home-text">
 				<h1 class="white-text"> <?= $text[0]->value ?></h1>
 				<svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -82,7 +82,7 @@
 				</div>
 			</li>
 			<li class="home-text jumbotron"
-				style='background-image:url( <?= base_url("assets/img/home/adventure-jumbotron.jpg") ?>)'>
+				style='background-image:url( <?= base_url("assets/img/home/adventure.jpg") ?>)'>
 				<h1 class="white-text"> <?= $text[1]->value ?></h1>
 				<svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -112,14 +112,14 @@
 			<a href=""></a>
 			<a href="<?= base_url() . "destinations" ?>" id="destinationButton"
 				class="col-md-3 btn mr-1 btn black-marron-btn">
-				Destinations
+				<span>Destinations</span>
 			</a>
 			<a href="<?= base_url() . "adventure" ?>" id="adventureButton"
 				class="col-md-3 btn mr-1 btn black-marron-btn">
-				Create an Adventure
+				<span>Create an Adventure</span>
 			</a>
 			<a href="<?= base_url() . "knowledge" ?>" id="placeButton" class="col-md-3 btn mr-1 btn black-marron-btn">
-				Knowledge of the Place
+				<span>Knowledge of the Place</span>
 			</a>
 		</div>
 	</div>
@@ -256,7 +256,7 @@
 	<script>
 		$('.flexslider').flexslider({
 			directionNav: false,
-			manualControls: "#homeButtons > a",
+			manualControls: "#homeButtons > a > span",
 			slideshow: false
 		});
 
@@ -301,10 +301,16 @@
 			$(e.currentTarget).siblings().removeClass("black-marron-btn-hover");
 			$(e.currentTarget).addClass("black-marron-btn-hover");
 			$(e.currentTarget).removeClass("black-marron-btn");
-			$(e.currentTarget).click();
+			$(e.currentTarget).find("span").trigger('click', 'fromHover');
 		}, (e) => {
 			$(e.currentTarget).addClass("black-marron-btn");
-		})
+		});
+
+		$('.black-marron-btn > span').bind('click', function(event, ...args) {
+			if(args.length === 0) {
+				$(event.currentTarget).parent().get(0).click();
+			}
+		}); 
 
 		$('#multi-item-carousel .carousel-item').each(function () {
 			var next = $(this).next();

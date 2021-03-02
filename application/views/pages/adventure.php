@@ -384,11 +384,11 @@
                         <p>
                         Some points to consider whilst planning your trip:
                         </p>
+                        <p>
+                        It is useful for us to understand the style and level of trip you would prefer, because we will always aim for a comfortable mid-range as our standard, but, if you want non-stop luxury, or a few days or spoiling, please let us know.
+                        </p>
                     </div>
                     <div class="col-md-6 text_secondaire">
-                    <p>
-                    It is useful for us to understand the style and level of trip you would prefer, because we will always aim for a comfortable mid-range as our standard, but, if you want non-stop luxury, or a few days or spoiling, please let us know.
-                    </p>
                     <p>
                     We realize budget and time play a big factor in planning your adventure so, the more specific the information you give us, the more accurate we can be, first time.
                     </p>

@@ -91,38 +91,6 @@
 				<?php } ?>
 			</div>
 
-			<div class="container">
-
-				<!-- DIV4 -->
-				<div class="row div3">
-					<div class="col-md-12">
-						<h1 class="title_text">REGION FOCUS</h1>
-					</div>
-				</div>
-
-				<div class="row d-flex justify-content-center text1 pt-3">
-					<div class="text-center col-md-8 text_header pt-5 mb-5">
-						<?= $information->focus[0]->value ?>
-					</div>
-				</div>
-				<?php
-                for ($i = 1; $i < count($information->focus); $i++) {
-                ?>
-				<div class="row">
-					<div class="col-md-6 mb-4 text-left text_secondaire"><?= $information->focus[$i]->value ?></div>
-					<?php
-                        if ($i < count($information->focus) - 1) {
-                        ?>
-					<div class="col-md-6 text-left text_secondaire"><?= $information->focus[++$i]->value ?></div>
-					<?php
-                            $i++;
-                        }
-                        ?>
-				</div>
-				<?php
-                }
-                ?>
-			</div>
 			<div class="itineraries-details row pt-4 mt-4 bg-white mb-5 px-md-5">
 				<div class="itinerary-menu text-left col-md-3">
 					<h6>SELECT A REGION</h6>

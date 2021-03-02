@@ -772,6 +772,10 @@ button {
 
 .img-placeholder.rectangle-large {
 	height: 300px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .footer-link {

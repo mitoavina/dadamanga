@@ -28,7 +28,7 @@
     </div>
     <div class="body-index">
         <nav id="animated-nav" class=" text-center navbar">
-            <p><a class="lien1">MADAGASCAR</a> | <a class="lien2">INTERESTING FACTS</a> | <a class="lien3">DOWNLOADS</a></p>
+            <p><a class="lien1">MADAGASCAR</a> | <a class="lien3">DOWNLOADS</a></p>
             <a class="navbar-brand" href="<?= base_url() . "home" ?>">
                 <img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
             </a>
@@ -142,29 +142,6 @@ luxury stay in the best seaside resorts in the country, our team is at your enti
                                 <img src="<?= base_url("assets/img/knowledges/SPORTS.jpg") ?>" alt="" width="100%" height="100%">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" div2 knowledge-carousel row flex-center">
-                <div class="knowledge-carousel-content col-xl-7 col-lg-7">
-                    <div class="carousel-title text-center">INTERESTING FACTS</div>
-                    <div id="carouselControls" class="carousel slide carousel-container" data-ride="carousel">
-                        <div class="carousel-inner font-brandon-grotesque-light text-center">
-                            <div class="carousel-item active">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea</p>
-                            </div>
-                            <div class="carousel-item">
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi ut aliquip ex ea</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-btn text-center">
-                        <button href="#carouselControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button href="#carouselControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
                     </div>
                 </div>
             </div>

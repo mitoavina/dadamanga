@@ -13,7 +13,7 @@
 					href="<?= base_url() . "adventure" ?>">Create an Adventure</a></div>
 			<div class="footer-link col-md-2 p-0 text-center"><a href="<?= base_url() . "luxury" ?>">Explore Luxury</a>
 			</div>
-			<div class="footer-link col-md-2 p-0 text-center"><a href="<?= base_url() . "knowledge" ?>">Knowledge of the
+			<div class="footer-link col-md-2 p-0 text-center"><a href="<?= base_url() . "knowledges" ?>">Knowledge of the
 					Place</a></div>
 		</div>
 
