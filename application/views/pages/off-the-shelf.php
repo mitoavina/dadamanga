@@ -35,7 +35,7 @@
 
         <div class="container-fluid content-template">
             <div class="row">
-                <div class="offset-md-2 col-md-8 pt-5 pb-5 text_header">
+                <div class="offset-md-3 col-md-6 pt-5 pb-5 text_header">
                     <p class="text-center">
                         This section of our website is for those of you who want quick access to tours that do not
                         include domestic air travel. These itineraries may be purchased instantly, or, you can ask us to
@@ -44,9 +44,9 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row offset-xl-2 col-xl-8 offset-lg-1 col-lg-10 offset-md-2 col-md-8">
                 <?php $i = 0; ?>
-                <?php foreach ($trips as $trip) { ?>
+                <?php /*foreach ($trips as $trip) { ?>
                     <div class="col-md-3">
                         <div class="card mb-5">
                             <!-- Card image -->
@@ -64,11 +64,6 @@
                             </div>
 
                             <a href="#!" class="btn trip-card-book-btn" id="trip-btn-<?= $trip->getId(); ?>" onclick="bookTrip('<?= $i; ?>')">BOOK NOW</a>
-
-                            <!-- Button trigger modal -->
-                            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
-                                Launch demo modal
-                            </button> -->
                         </div>
 
                         <!-- Modal -->
@@ -93,49 +88,35 @@
                         </div>
                     </div>
                     <?php $i++; ?>
-                <?php } ?>
-
-                <!-- <div class="col-md-3">
-					<div data-travefy-itinerary-id="6yw9rqtsjg8wqz2at7eqy6mawfdfmta" class="travefy-itinerary"></div>
-				</div>
-				<div class="col-md-3">
-					<div data-travefy-itinerary-id="6yw9rqqsn7dsqz2as67s68ff465832a" class="travefy-itinerary"></div>
-				</div>
-				<div class="col-md-3">
-					<div data-travefy-itinerary-id="6yw9rqtsndywqz2a4ms3qly42kbtsgq" class="travefy-itinerary"></div>
-				</div>
-				<div class="col-md-3">
-					<div data-travefy-itinerary-id="6yw9rqtat27wqz2asa4dq58ry7f9btq" class="travefy-itinerary"></div>
-				</div> -->
-            </div>
-
-            <div class="row div1 taylor-title text-center ">
-                <div class="col-md-12">
-                    <h1 class="geometria-title">TAYLOR YOUR OWN UNIQUE EXPERIENCE</h1>
-                </div>
-            </div>
-            <div id="taylor-images" class="row">
-                <div class="col-md-10">
-                    <div class="row overlay-marron-container">
-                        <div class="taylor-image col-md-4"></div>
-                        <div class="taylor-image col-md-4">
-                            <h1 class="to-hide on-background-text"><a href="<?= base_url() . 'adventure' ?>" class="white-link">CREATE YOUR ADVENTURE</a></h1>
-                        </div>
-                        <div class="taylor-image col-md-4"></div>
-                        <div class="overlay-with-padding text-center">
-                            <a href="<?= base_url('adventure') ?>" class="d-none overlay-marron white-text">
-                                <div>
-                                    <div class="mb-3">
-                                        Here you can tell us the places and attractions that you want to see to make
-                                        your safari around Madagascar perfect. The more information you can give us
-                                        here, the closer we will get to your ideal tour, first time around
-                                    </div>
-                                    <div>FIND OUT MORE <i class="fas fa-long-arrow-alt-right"></i></div>
-                                </div>
-                            </a>
+                <?php } */ ?>
+                <?php foreach ($trips as $trip) { ?>
+                    <div class="col-xl-4 col-lg-6 col-md-12 mb-5">
+                        <div class="card trip-card">
+                            <img src="<?= $trip->getImg() ?>" class="card-img-top trip-card-img" alt="<?= $trip->getName() ?>" />
+                            <div class="card-body">
+                                <h5 class="card-title trip-card-title"><?= $trip->getName() ?></h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-clock"></i></span> <span>1 day excursion</span></li>
+                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-times-circle"></i></span> <span>free cancellation</span></li>
+                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-comment-alt"></i></span> <span>english</span></li>
+                                </ul>
+                                <p class="card-text trip-card-price-container mt-4 mb-2">
+                                    <span class="trip-card-price-from">from</span> <span class="trip-card-price"><?= $trip->getPrice() ?> <?= $trip->getCurrency() ?></span>
+                                </p>
+                                <!-- <div class="card-footer bg-transparent"></div> -->
+                            </div>
                         </div>
                     </div>
+                <?php } ?>
+            </div>
+            <div class="row justify-content-center trip-pagination">
+                <div class="trip-pagination-chevron"><i class="fas fa-chevron-left"></i></div>
+                <div class="trip-pagination-number">
+                    <span class="trip-pagination-active">1</span>
+                    <span>2</span>
+                    <span>3</span>
                 </div>
+                <div class="trip-pagination-chevron"><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
 
