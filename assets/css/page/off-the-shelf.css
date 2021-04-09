@@ -23,7 +23,7 @@
 
 .trip-card {
 	border-radius: 15px;
-	/* min-height: 562px; */
+	min-height: 572px;
 }
 
 .trip-card-title {
@@ -59,44 +59,6 @@
 .trip-card-price {
 	font-weight: bold;
 	font-size: 18px;
-}
-
-.trip-pagination {
-	color: rgb(183, 152, 109, .6);
-	font-size: 20px;
-	padding-top: 40px;
-	padding-bottom: 60px;
-}
-
-.trip-pagination-chevron {
-	width: 40px;
-	height: 40px;
-	font-size: 1.5em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.trip-pagination-number {
-	display: flex;
-}
-
-.trip-pagination-number>span {
-	border-radius: 10px;
-	color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40px;
-	height: 40px;
-	margin-left: 5px;
-	margin-right: 5px;
-	border: 2px solid rgb(183, 152, 109, .6);
-}
-
-.trip-pagination-active {
-	border-color: transparent !important;
-	background-color: rgb(183, 152, 109, .6);
 }
 
 .jumbotron.jumbotron-off {

@@ -12,6 +12,7 @@
     <!-- Custom CSS -->
     <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/page/covid-updates.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/global.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -109,6 +110,17 @@
                 </div>
             </div>
         </div>
+
+        <div class="row justify-content-center pagination">
+            <div class="pagination-chevron"><i class="fas fa-chevron-left"></i></div>
+            <div class="pagination-number">
+                <span class="pagination-active">1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+            <div class="pagination-chevron"><i class="fas fa-chevron-right"></i></div>
+        </div>
+
         <div class="container-fluid faq-container">
             <div class="row justify-content-center">
                 <h2 class="faq-subtitle">frequently asked questions</h2>

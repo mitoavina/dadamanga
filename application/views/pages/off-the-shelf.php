@@ -9,8 +9,9 @@
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
+    <!-- <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet"> -->
     <link href="<?= base_url() ?>assets/css/page/off-the-shelf.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/global.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -100,23 +101,22 @@
                                     <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-times-circle"></i></span> <span>free cancellation</span></li>
                                     <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-comment-alt"></i></span> <span>english</span></li>
                                 </ul>
-                                <p class="card-text trip-card-price-container mt-4 mb-2">
-                                    <span class="trip-card-price-from">from</span> <span class="trip-card-price"><?= $trip->getPrice() ?> <?= $trip->getCurrency() ?></span>
-                                </p>
-                                <!-- <div class="card-footer bg-transparent"></div> -->
+                            </div>
+                            <div class="card-footer bg-transparent trip-card-price-container">
+                                <span class="trip-card-price-from">from</span> <span class="trip-card-price"><?= $trip->getPrice() ?> <?= $trip->getCurrency() ?></span>
                             </div>
                         </div>
                     </div>
                 <?php } ?>
             </div>
-            <div class="row justify-content-center trip-pagination">
-                <div class="trip-pagination-chevron"><i class="fas fa-chevron-left"></i></div>
-                <div class="trip-pagination-number">
-                    <span class="trip-pagination-active">1</span>
+            <div class="row justify-content-center pagination">
+                <div class="pagination-chevron"><i class="fas fa-chevron-left"></i></div>
+                <div class="pagination-number">
+                    <span class="pagination-active">1</span>
                     <span>2</span>
                     <span>3</span>
                 </div>
-                <div class="trip-pagination-chevron"><i class="fas fa-chevron-right"></i></div>
+                <div class="pagination-chevron"><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
 
