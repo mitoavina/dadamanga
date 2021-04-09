@@ -117,6 +117,14 @@ class MainController extends CI_Controller
         $this->load->helper('url');
         $this->load->helper('assets');
         $data['footerImg'] = "omby.jpg";
+        $this->load->view('pages/contact', $data);
+    }
+
+    public function covid()
+    {
+        $this->load->helper('url');
+        $this->load->helper('assets');
+        $data['footerImg'] = "omby.jpg";
         $data['faqList'] = [
             1 => (object)[
                 'titre' => 'Where can I find the latest news related to travel and COVID-19 in Madagascar?',
@@ -155,7 +163,7 @@ class MainController extends CI_Controller
                 'contenu' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             ],
         ];
-        $this->load->view('pages/contact', $data);
+        $this->load->view('pages/covid-updates', $data);
     }
 
     public function cart()

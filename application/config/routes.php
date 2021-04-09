@@ -95,3 +95,6 @@ $route['knowledge/sport'] = 'MainController/knowledge/sport';
 $route['adventure/mail'] = 'Mail/adventure_service_mail';
 $route['luxury/mail'] = 'Mail/luxury_service_mail';
 $route['postman'] = 'Mail/Postman';
+
+//covid
+$route['covid'] = 'MainController/covid';

@@ -28,6 +28,9 @@
                     <a class="nav-link" href="<?= base_url() . "knowledges" ?>">Knowledge of the Place</a>
                 </li>
                 <li class="nav-item mx-auto">
+                    <a class=" nav-link" href="<?= base_url() . "covid" ?>">Covid Updates</a>
+                </li>
+                <li class="nav-item mx-auto">
                     <a class=" nav-link" href="<?= base_url() . "contact" ?>">Contact</a>
                 </li>
             </ul>
