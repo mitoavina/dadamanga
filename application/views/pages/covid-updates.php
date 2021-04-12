@@ -29,7 +29,7 @@
     </div>
     <div class="container-fluid covid-body">
         <div class="row justify-content-center">
-            <div class="card text-center col-md-8 card-top">
+            <div class="covid-presentation card text-center col-md-8 card-top">
                 <div class="card-body">
                     <h5 class="card-title">Navigating through Covid-19</h5>
                     <p class="card-text">
