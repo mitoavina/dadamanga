@@ -5,17 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-	<link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> -->
-	<link href="<?= base_url() ?>assets/font/montserrat/montserrat.css" rel="stylesheet">
-	<!-- Bootstrap core CSS -->
-	<link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
+	<?php $this->load->view("components/common-css.php"); ?>
 	<link href="<?= base_url() ?>assets/css/page/home.css" rel="stylesheet">
-	<!-- Material Design Bootstrap -->
-	<link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/css/flexslider.css" rel="stylesheet">
 	<style>
 		#video-container {

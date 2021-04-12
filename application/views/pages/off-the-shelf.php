@@ -5,16 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <!-- <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet"> -->
-    <link href="<?= base_url() ?>assets/css/page/off-the-shelf.css" rel="stylesheet">
-    <link href="<?= base_url() ?>assets/css/global.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <?php $this->load->view("components/common-css.php"); ?>
+    <link href="<?= base_url() ?>assets/css/page/off-the-shelf.css?v=0.0.1" rel="stylesheet">
     <title>Dadamanga | OFF THE SHELF</title>
 </head>
 <?php $this->load->view("components/navbar.php"); ?>

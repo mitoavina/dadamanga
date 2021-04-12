@@ -5,16 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-	<link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-	<!-- Bootstrap core CSS -->
-	<link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
+	<?php $this->load->view("components/common-css.php"); ?>
 	<link href="<?= base_url() ?>assets/css/page/about.css?v=0.0.1" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
-	<link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | About</title>
 </head>
 <?php $this->load->view("components/navbar.php"); ?>
@@ -22,8 +15,7 @@
 
 <body>
 
-	<div id="jumbotron" class="jumbotron-about jumbotron flex-column flex-center"
-		style="background-image: url(<?= base_url($image[0]->path) ?>) !important;">
+	<div id="jumbotron" class="jumbotron-about jumbotron flex-column flex-center" style="background-image: url(<?= base_url($image[0]->path) ?>) !important;">
 		<div class="text">
 			<h1 class="text-white text-center"><span class="montserrat-bold">Dadamanga</span>Travel Service</h1>
 		</div>
@@ -31,12 +23,12 @@
 	<div class="body-index">
 		<nav id="animated-nav" class=" text-center navbar">
 			<p><a class="lien1">ABOUT</a> | <a class="lien2">THE TEAM</a> | <a class="lien3">SOCIAL RESPONSABILITY</a> |
-				<a class="lien4">REVIEWS</a></p>
+				<a class="lien4">REVIEWS</a>
+			</p>
 			<a class="navbar-brand" href="<?= base_url() . "home" ?>">
 				<img style="height:50px; " src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
 			</a>
-			<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span
-					class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+			<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
 		</nav>
 		<div class=" container-fluid content-about">
 			<div class=" div1 row">
@@ -95,26 +87,16 @@
 				</p>
 				<div class="row mt-5 text-center">
 					<div class="col-md-12 ">
-						<a target="_blank" href="https://www.facebook.com/Dadamanga/"><img
-								class=" contrast socialIcon mx-2 d-inline-block"
-								src="<?= base_url() ?>assets/img/about/facebook-black.png"></a>
-						<a target="_blank" href="https://www.instagram.com/dadamangamadagascar/"><img
-								class="socialIcon mx-2 d-inline-block"
-								src="<?= base_url() ?>assets/img/about/instagram-black.png"></a>
-						<a target="_blank" href="https://twitter.com/dadamanga"><img
-								class="socialIcon mx-2 d-inline-block"
-								src="<?= base_url() ?>assets/img/about/twitter-black.png"></a>
-						<a target="_blank"
-							href="https://www.tripadvisor.com/Attraction_Review-g293809-d13188459-Reviews-Dadamanga_Travel_Service-Antananarivo_Antananarivo_Province.html"><img
-								class="socialIcon mx-2 d-inline-block"
-								src="<?= base_url() ?>assets/img/about/tripadvisor-black.png"></a>
+						<a target="_blank" href="https://www.facebook.com/Dadamanga/"><img class=" contrast socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/facebook-black.png"></a>
+						<a target="_blank" href="https://www.instagram.com/dadamangamadagascar/"><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/instagram-black.png"></a>
+						<a target="_blank" href="https://twitter.com/dadamanga"><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/twitter-black.png"></a>
+						<a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g293809-d13188459-Reviews-Dadamanga_Travel_Service-Antananarivo_Antananarivo_Province.html"><img class="socialIcon mx-2 d-inline-block" src="<?= base_url() ?>assets/img/about/tripadvisor-black.png"></a>
 					</div>
 				</div>
 				<div class=" div2 row team text-center">
 					<div class=" col-md-12">
 						<p class="pb-4">THE TEAM</p>
-						<img class="img-fluid" alt="picture of the team"
-							src="<?= base_url() ?>assets/img/about/team-img.jpg">
+						<img class="img-fluid" alt="picture of the team" src="<?= base_url() ?>assets/img/about/team-img.jpg">
 					</div>
 				</div>
 			</div>
@@ -154,10 +136,8 @@
 			<div class="dadamanga-special-card card">
 				<div class="row no-gutters mb-5">
 					<div class="col-lg-6 my-auto px-2 col-md-12">
-						<img src="<?= base_url() ?>/assets/img/about/maki-1.jpg" style="border-radius:0;"
-							class="img-fluid card-img wow animated fadeInLeft active" alt="...">
-						<img src="<?= base_url() ?>/assets/img/about/cameleon.jpg" style="border-radius:0;"
-							class="img-fluid card-img d-none" alt="...">
+						<img src="<?= base_url() ?>/assets/img/about/maki-1.jpg" style="border-radius:0;" class="img-fluid card-img wow animated fadeInLeft active" alt="...">
+						<img src="<?= base_url() ?>/assets/img/about/cameleon.jpg" style="border-radius:0;" class="img-fluid card-img d-none" alt="...">
 					</div>
 					<div class="col-lg-6 col-md-12">
 						<div class="wow animated fadeInRight card-body">
@@ -182,12 +162,8 @@
 									Luce Reserve and her thousands of species of wild flora and fauna since 2010.
 								</p>
 							</div>
-							<button onclick="prevCard()" type="button"
-								class="brown-color text-white btn btn-sm dadamanga-special-card"><i
-									class="fas fa-angle-left"></i></button>
-							<button onclick="nextCard()" type="button"
-								class=" text-white brown-color btn btn-sm dadamanga-special-card"><i
-									class="fas fa-angle-right"></i></button>
+							<button onclick="prevCard()" type="button" class="brown-color text-white btn btn-sm dadamanga-special-card"><i class="fas fa-angle-left"></i></button>
+							<button onclick="nextCard()" type="button" class=" text-white brown-color btn btn-sm dadamanga-special-card"><i class="fas fa-angle-right"></i></button>
 						</div>
 					</div>
 				</div>

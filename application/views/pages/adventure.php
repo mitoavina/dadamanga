@@ -5,18 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
+    <?php $this->load->view("components/common-css.php"); ?>
     <link href="<?= base_url() ?>assets/css/page/adventure.css" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/jquery-ui.css" rel="stylesheet">
-
-    <!-- Material Design Bootstrap -->
-    <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Dadamanga | Create Your Adventure</title>
 </head>
 <?php $this->load->view('components/navbar'); ?>
@@ -385,13 +376,13 @@
                             Some points to consider whilst planning your trip:
                         </p>
                         <p>
-                        It is useful for us to understand the style and level of trip you would prefer, because we will always aim for a comfortable mid-range as our standard, but, if you want non-stop luxury, or a few days or spoiling, please let us know.
+                            It is useful for us to understand the style and level of trip you would prefer, because we will always aim for a comfortable mid-range as our standard, but, if you want non-stop luxury, or a few days or spoiling, please let us know.
                         </p>
                     </div>
                     <div class="col-md-6 text_secondaire">
-                    <p>
-                    We realize budget and time play a big factor in planning your adventure so, the more specific the information you give us, the more accurate we can be, first time.
-                    </p>
+                        <p>
+                            We realize budget and time play a big factor in planning your adventure so, the more specific the information you give us, the more accurate we can be, first time.
+                        </p>
                     </div>
                 </div>
             </div>

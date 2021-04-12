@@ -5,17 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
+    <?php $this->load->view("components/common-css.php"); ?>
     <link href="<?= base_url() ?>assets/css/page/contact.css" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/page/cart.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Dadamanga | Cart</title>
 </head>
 <?php $this->load->view('components/navbar'); ?>
