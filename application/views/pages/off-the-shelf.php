@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php $this->load->view("components/common-css.php"); ?>
-    <link href="<?= base_url() ?>assets/css/page/off-the-shelf.css?v=0.0.2" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/page/off-the-shelf.css?v=0.0.3" rel="stylesheet">
     <title>Dadamanga | OFF THE SHELF</title>
 </head>
 <?php $this->load->view("components/navbar.php"); ?>
