@@ -24,7 +24,7 @@
 .trip-card.card {
 	border-radius: 15px;
 	min-height: 572px;
-	box-shadow: 2px 2px 6px rgb(0 0 0 / 20%);
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 .trip-card.card .card-body {
