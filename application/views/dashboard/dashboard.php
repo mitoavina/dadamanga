@@ -19,7 +19,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>dashboard-wildlife</title>
+    <title>dashboard-home</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="icon" href="<?= base_url() ?>icon.ico" />
@@ -34,60 +34,7 @@
 
 <body>
     <div class="wrapper">
-
-        <div class="sidebar">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <a href="#" class="simple-text">
-                        pages
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="dashboard">
-                            <i class="nc-icon nc-align-center"></i>
-                            <p>home</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="dash_about">
-                            <i class="nc-icon nc-circle"></i>
-                            <p>about</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="dash_park">
-                            <i class="nc-icon nc-settings-tool-66"></i>
-                            <p>park</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link " href="dash_experience">
-                            <i class="nc-icon nc-globe-2"></i>
-                            <p>experience</p>
-                        </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link " href="dash_wildlife">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>wildlife</p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="upgrade.html">
-                            <i class="nc-icon nc-alien-33"></i>
-                            <p>Upgrade to PRO</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <?php $this->load->view("dashboard/components/navbar.php"); ?>
         <div class="main-panel">
             <div class="content">
                 <div class="container-fluid">
@@ -95,10 +42,15 @@
                         <div class="offset-2 col-md-8">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Create</h4>
+                                    <h4 class="card-title">Edition mode</h4>
                                 </div>
                                 <div class="card-body">
-                                    <form action="<?= base_url('dash_wildlife?insert=true') ?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?= base_url() ?>homeUpdate" method="post" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <img src="<?= base_url($image[0]->path); ?>" alt="" class="img-thumbnail">
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="custom-file">
@@ -110,45 +62,14 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label>Title</label>
-                                                    <textarea rows="4" cols="80" class="form-control" name="text">current text</textarea>
+                                                    <label>home text</label>
+                                                    <textarea rows="4" cols="80" class="form-control" name="text"><?= $text[0]->value; ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-info btn-fill pull-right">Create</button>
+                                        <button type="submit" class="btn btn-info btn-fill pull-right">Update page</button>
                                         <div class="clearfix"></div>
                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="offset-2 col-md-8">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Delete</h4>
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Image path</th>
-                                                <th scope="col">Title</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($data as $item) { ?>
-                                                <tr>
-                                                    <th scope="row"><?= $item->IDWILDLIFE ?></th>
-                                                    <td><img src="<?= base_url($item->IMAGE) ?>" style="width:auto;height:100px;"></td>
-                                                    <td><?= $item->TITLE ?></td>
-                                                    <td><a type="submit" href="<?= base_url('dash_wildlife?delete=' . $item->IDWILDLIFE) ?>" class="btn btn-danger btn-fill ">Delete</a></td>
-                                                </tr>
-                                            <?php } ?>
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
                         </div>

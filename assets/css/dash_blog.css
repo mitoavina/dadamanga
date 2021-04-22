@@ -1,0 +1,40 @@
+.Article {
+	display: flex;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	width: 800px;
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+
+.Article .image-container,
+.Article .text-container {
+	width: 450px;
+	height: 253px;
+}
+
+.Article .text-container {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.Article .text-container .last-update {
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 0.8rem;
+	margin-bottom: 10px;
+}
+
+.Article .text-container .title {
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.Article .text-container .chapo {
+	font-size: 0.9rem;
+}
+
+.Article .image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

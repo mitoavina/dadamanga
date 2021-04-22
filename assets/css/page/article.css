@@ -1,0 +1,65 @@
+#article .grid {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: 20% 65% 15%;
+	width: 100%;
+}
+
+#article .grid .share .share-block {
+	height: 360px;
+	background: rgba(183, 152, 109, 60%);
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#article .grid .share .share-block .title {
+	font-family: Montserrat-ExtraBold;
+	font-size: 0.8rem;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#article .grid .share .share-block .sn {
+	margin-bottom: 40px;
+}
+
+#article .grid .content .date {
+	font-size: 0.7rem;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+#article .grid .content .title {
+	font-family: Montserrat-Bold;
+	font-size: 2.2rem;
+	margin-bottom: 60px;
+}
+
+#article .grid .content .details .paragraph {
+	font-size: 0.9rem;
+	line-height: 2rem;
+	font-family: Montserrat-Medium;
+}
+
+#article .grid .content .details .detail {
+	margin-bottom: 50px;
+}
+
+#article .grid .content .details .detail:last-of-type {
+	margin-bottom: 0;
+}
+
+#article .other-updates {
+	text-align: center;
+	font-family: Montserrat-Bold;
+	text-decoration: underline;
+	margin-top: 100px;
+	margin-bottom: 75px;
+	font-size: 1.1rem;
+}
+
+#article .other-updates>a {
+	color: black;
+}

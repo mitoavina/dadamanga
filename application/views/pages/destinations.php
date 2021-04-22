@@ -15,7 +15,7 @@
 <body>
     <div style="background-image:url( <?= base_url() . 'assets/img/destinations/jumbotron.jpg' ?>)" id="destinationJumbotron" class="jumbotron flex-column flex-center">
         <div class="home-text">
-            <h1 class="text-white text-center"><span class="montserrat-bold">MADAGASCAR </span><br>TRAVEL DESTINATIONS<br></h1>
+            <h1 class="text-white text-center"><span class="montserrat-semibold">MADAGASCAR </span><br>TRAVEL DESTINATIONS<br></h1>
         </div>
     </div>
     <div class="body-index">

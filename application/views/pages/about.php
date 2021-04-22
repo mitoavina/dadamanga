@@ -17,7 +17,7 @@
 
 	<div id="jumbotron" class="jumbotron-about jumbotron flex-column flex-center" style="background-image: url(<?= base_url($image[0]->path) ?>) !important;">
 		<div class="text">
-			<h1 class="text-white text-center"><span class="montserrat-bold">Dadamanga</span>Travel Service</h1>
+			<h1 class="text-white text-center"><span class="montserrat-semibold">Dadamanga</span>Travel Service</h1>
 		</div>
 	</div>
 	<div class="body-index">

@@ -54,7 +54,7 @@
                                     Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
                                     Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
                                 </p>
-                                <a href="#" class="btn vlog-btn">read more</a>
+                                <a href="<?= base_url() . "article" ?>" class="btn vlog-btn">read more</a>
                             </div>
                         </div>
                     </div>

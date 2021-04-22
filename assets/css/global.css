@@ -1,6 +1,26 @@
 @font-face {
-	font-family: Montserrat-bold;
+	font-family: Montserrat-SemiBold;
 	src: url(../font/montserrat/Montserrat-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Montserrat-Bold;
+	src: url(../font/montserrat/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Montserrat-Regular;
+	src: url(../font/montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Montserrat-Medium;
+	src: url(../font/montserrat/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Montserrat-ExtraBold;
+	src: url(../font/montserrat/Montserrat-ExtraBold.ttf) format("truetype");
 }
 
 @font-face {
@@ -161,8 +181,8 @@ body {
 	line-height: 88px;
 }
 
-.montserrat-bold {
-	font-family: Montserrat-bold;
+.montserrat-semibold {
+	font-family: Montserrat-SemiBold;
 }
 
 .montserrat-light {
@@ -208,7 +228,7 @@ body {
 .content_index .cards div {
 	font-weight: 500;
 	font-size: 14px;
-	font-family: Montserrat-bold;
+	font-family: Montserrat-SemiBold;
 }
 
 .follow {
@@ -858,4 +878,9 @@ button {
 
 #off-the-shelf .content-template {
 	background-color: white;
+}
+
+.content-centered {
+	display: flex;
+	justify-content: center;
 }
