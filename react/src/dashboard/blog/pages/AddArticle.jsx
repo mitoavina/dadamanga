@@ -57,7 +57,7 @@ const AddArticle = (props) => {
             }
         }
 
-        fetch('http://localhost/dadamanga/WebServices/insertArticle', {
+        fetch(`${SERVER_URL}/WebServices/insertArticle`, {
             method: 'POST',
             body: fd
         }).then(res => {

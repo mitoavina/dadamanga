@@ -9,7 +9,7 @@ const ArticleList = (props) => {
     const { page, articles } = state;
 
     React.useEffect(() => {
-        fetch('http://localhost/dadamanga/WebServices/getAllArticle', {
+        fetch(`${SERVER_URL}/WebServices/getAllArticle`, {
             method: 'GET',
         }).then(res => {
             if (!res.ok) {

@@ -1,4 +1,4 @@
-const SERVER_URL = 'http://localhost/dadamanga';
+const SERVER_URL = 'https://dadamanga.mg';
 
 const App = () => {
     const [page, setPage] = React.useState('ArticleList');
