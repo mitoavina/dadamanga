@@ -40,76 +40,43 @@
             <span>stay updated</span>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-10 mb-5">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-6 vlog-img-container">
-                            <img src="<?= base_url() ?>assets/img/covid/vlog-1.png" alt="vlog-1" class="vlog-img" />
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <p class="card-text">Last updated 3 mins ago</p>
-                                <h5 class="card-title vlog-title">General Hygiene Rules at the Office</h5>
-                                <p class="card-text">
-                                    Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                                    Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                                </p>
-                                <a href="<?= base_url() . "article" ?>" class="btn vlog-btn">read more</a>
+            <?php foreach ($articles as $article) { ?>
+                <div class="col-md-10 mb-5">
+                    <div class="card mb-3">
+                        <div class="row">
+                            <div class="col-md-6 vlog-img-container">
+                                <img src="<?= article_url($article->{'id'}, $article->{'presentation_image'}) ?>" alt="vlog-1" class="vlog-img" />
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <p class="card-text">Last updated <?= time_elapsed_string($article->{'update_date'});  ?></p>
+                                    <h5 class="card-title vlog-title"><?= $article->{'title'} ?></h5>
+                                    <p class="card-text">
+                                        <?= $article->{'chapo'} ?>
+                                    </p>
+                                    <a href="<?= base_url() . "covid/articles/" . $article->{'id'} ?>" class="btn vlog-btn">read more</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-10 mb-5">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-6 vlog-img-container">
-                            <img src="<?= base_url() ?>assets/img/covid/vlog-2.png" alt="vlog-2" class="vlog-img" />
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <p class="card-text">Last updated 3 mins ago</p>
-                                <h5 class="card-title vlog-title">Malagasy Government Announcement on Joining COVAX</h5>
-                                <p class="card-text">
-                                    Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                                    Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                                </p>
-                                <a href="#" class="btn vlog-btn">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-10 mb-5">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-6 vlog-img-container">
-                            <img src="<?= base_url() ?>assets/img/covid/vlog-3.png" alt="vlog-3" class="vlog-img" />
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <p class="card-text">Last updated 3 mins ago</p>
-                                <h5 class="card-title vlog-title">Dadamanga Staff are Participating in Miatrika COVID Training Programme</h5>
-                                <p class="card-text">
-                                    Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                                    Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                                </p>
-                                <a href="#" class="btn vlog-btn">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
 
         <div class="row justify-content-center pagination">
-            <div class="pagination-chevron"><i class="fas fa-chevron-left"></i></div>
+            <div class="pagination-chevron"><a href="?page=<?= $page - 1 ?>"><i class="fas fa-chevron-left"></i></a></div>
             <div class="pagination-number">
-                <span class="pagination-active">1</span>
-                <span>2</span>
-                <span>3</span>
+                <?php if ($page == 1) { ?>
+                    <a href="?page=1" class="<?= $page == 1 ? 'pagination-active' : '' ?>">1</a>
+                    <a href="?page=2">2</a>
+                    <a href="?page=3">3</a>
+                <?php } else { ?>
+                    <a href="?page=<?= $page - 1 ?>"><?= $page - 1 ?></a>
+                    <a href="?page=<?= $page ?>" class="pagination-active"><?= $page ?></a>
+                    <a href="?page=<?= $page + 1 ?>"><?= $page + 1 ?></a>
+                <?php } ?>
             </div>
-            <div class="pagination-chevron"><i class="fas fa-chevron-right"></i></div>
+            <div class="pagination-chevron"><a href="?page=<?= $page + 1 ?>"><i class="fas fa-chevron-right"></i></a></div>
         </div>
 
         <div class="container-fluid faq-container">

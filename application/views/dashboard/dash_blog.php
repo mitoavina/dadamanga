@@ -45,11 +45,11 @@
 </body>
 
 <script src="<?= base_url() ?>assets/js/momentjs/moment.min.js"></script>
-<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
 <script src="<?= base_url() ?>react/dist/dashboard/blog/components/Article.js" type="text/javascript"></script>
 <script src="<?= base_url() ?>react/dist/dashboard/blog/components/ArticleField.js" type="text/javascript"></script>
-<script src="<?= base_url() ?>react/dist/dashboard/blog/pages/AddArticle.js" type="text/javascript"></script>
+<script src="<?= base_url() ?>react/dist/dashboard/blog/pages/ArticleDetailed.js" type="text/javascript"></script>
 <script src="<?= base_url() ?>react/dist/dashboard/blog/pages/ArticleList.js" type="text/javascript"></script>
 <script src="<?= base_url() ?>react/dist/dashboard/blog/App.js" type="text/javascript"></script>
 <script src="<?= base_url() ?>react/dist/dashboard/blog/index.js" type="text/javascript"></script>

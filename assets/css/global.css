@@ -838,10 +838,14 @@ button {
 }
 
 .pagination {
-	color: rgb(183, 152, 109, .6);
+	color: rgb(183, 152, 109, .6) !important;
 	font-size: 20px;
 	padding-top: 40px;
 	padding-bottom: 60px;
+}
+
+.pagination-chevron>a {
+	color: rgb(183, 152, 109, .6) !important;
 }
 
 .pagination-chevron {
@@ -857,9 +861,9 @@ button {
 	display: flex;
 }
 
-.pagination-number>span {
+.pagination-number>a {
 	border-radius: 10px;
-	color: black;
+	color: black !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -31,33 +31,21 @@
 
             </div>
             <div class="content">
-                <div class="date">POSTED ON March 31, 2021</div>
-                <div class="title">Dadamanga Staff are Participating in Miatrika COVID Training Programme</div>
+                <div class="date">POSTED ON <?= $article->{'creation_date'} ?></div>
+                <div class="title"><?= $article->{'title'} ?></div>
+                <?php $fields = json_decode($article->{'fields'}); ?>
                 <div class="details">
-                    <div class="detail paragraph">
-                        Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                        Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                        Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                        Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                    </div>
-
-                    <div class="detail paragraph">
-                        Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                        Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                        Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                        Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                    </div>
-
-                    <div class="detail">
-                        <div><img src="<?= base_url() ?>assets/img/articles/1/1.png"></div>
-                    </div>
-
-                    <div class="detail paragraph">
-                        Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                        Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                        Dadamanga is committed to caring for the health and well-being of our employees, service providers, partners and beloved clients.
-                        Below, you will find detailed information about the latest decisions being made by the local authorities and actions being taken in preparation for reopening the borders.
-                    </div>
+                    <?php foreach ($fields as $field) { ?>
+                        <?php if ($field->{'type'} == 1) { ?>
+                            <div class="detail paragraph">
+                                <?= $field->{'paragraph'} ?>
+                            </div>
+                        <?php } else { ?>
+                            <div class="detail">
+                                <div><img src="<?= article_url($article->{'id'}, $field->{'image'}->{'filename'}) ?>"></div>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
 
             </div>

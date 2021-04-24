@@ -56,7 +56,7 @@ const ArticleField = (props) => {
                             }}
 
                         />
-                        <img src={image.file !== null ? URL.createObjectURL(image.file) : image.src} alt="Some image" />
+                        <img src={(image.file !== null && !isEmpty(image.file)) ? URL.createObjectURL(image.file) : props.articleId ? `${SERVER_URL}/uploads/images/articles/${props.articleId}/${image.filename}` : ''} alt="Some image" />
                     </div>
                 )
 

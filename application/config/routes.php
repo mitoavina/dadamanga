@@ -103,4 +103,4 @@ $route['postman'] = 'Mail/Postman';
 $route['covid'] = 'MainController/covid';
 
 //article
-$route['article'] = 'MainController/article';
+$route['covid/articles/(:num)'] = 'MainController/article/$1';

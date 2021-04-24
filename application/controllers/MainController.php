@@ -117,17 +117,42 @@ class MainController extends CI_Controller
         $this->load->view('pages/contact', $data);
     }
 
-    public function article()
+    public function article($id)
     {
         $this->load->helper('url');
+        $this->load->helper('assets');
         $data['footerImg'] = "omby.jpg";
+
+        $this->load->model('ArticleModel', 'ArticleModel');
+        $articleModel = new ArticleModel();
+        $article = $articleModel->selectWhere($id);
+
+        $data['article'] = $article;
         $this->load->view('pages/article', $data);
     }
 
     public function covid()
     {
         $this->load->helper('url');
+        $this->load->helper('assets');
+        $this->load->helper('time');
         $data['footerImg'] = "omby.jpg";
+        $this->load->model('ArticleModel', 'ArticleModel');
+        $articleModel = new ArticleModel();
+        $page = 1;
+        if (isset($_GET['page'])) {
+            try {
+                $page = intval($_GET['page']);
+                if ($page <= 0) {
+                    $page = 1;
+                }
+            } catch (Exception $e) {
+                $page = 1;
+            }
+        }
+        $articles = $articleModel->getAllArticle($page);
+        $data['page'] = $page;
+        $data['articles'] = $articles;
         $data['faqList'] = [
             1 => (object)[
                 'titre' => 'Where can I find the latest news related to travel and COVID-19 in Madagascar?',

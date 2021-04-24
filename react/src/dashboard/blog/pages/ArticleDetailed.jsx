@@ -1,15 +1,16 @@
 const PARAGRAPH_TYPE = '1';
 const IMAGE_TYPE = '2';
 
-const AddArticle = (props) => {
+const ArticleDetailed = (props) => {
     const [state, setState] = React.useState({
-        title: '',
-        chapo: '',
+        id: props.article ? props.article.id : '',
+        title: props.article ? props.article.title : '',
+        chapo: props.article ? props.article.chapo : '',
         presentationImg: {
-            src: '',
+            src: props.article ? props.article.presentation_image : '',
             file: null
         },
-        fields: [
+        fields: props.article ? JSON.parse(props.article.fields) : [
             {
                 type: PARAGRAPH_TYPE,
                 paragraph: '',
@@ -39,7 +40,7 @@ const AddArticle = (props) => {
         });
     }
 
-    const confirmChanges = () => {
+    const confirmCreation = () => {
         let fd = new FormData();
 
         let json = JSON.stringify(state);
@@ -48,11 +49,7 @@ const AddArticle = (props) => {
             fd.append('files[]', presentationImg.file, presentationImg.src);
         }
         for (let i = 0; i < fields.length; i++) {
-            console.log("field", fields[i]);
-            console.log("typeof field.type", typeof fields[i].type);
-            console.log("typeof IMAGE_TYPE", typeof IMAGE_TYPE);
             if (fields[i].type === IMAGE_TYPE && fields[i].image.file !== null) {
-                console.log("makato am" + fields[i].image.filename);
                 fd.append('files[]', fields[i].image.file, fields[i].image.filename);
             }
         }
@@ -70,9 +67,36 @@ const AddArticle = (props) => {
         });
     }
 
+    const confirmUpdates = () => {
+        let fd = new FormData();
 
-    console.log(state);
+        let json = JSON.stringify(state);
+        fd.append('json', json);
+        if (presentationImg.file !== null) {
+            fd.append('files[]', presentationImg.file, presentationImg.src);
+        }
+        for (let i = 0; i < fields.length; i++) {
+            if (fields[i].type === IMAGE_TYPE && fields[i].image.file !== null && !isEmpty(fields[i].image.file)) {
+                fd.append('files[]', fields[i].image.file, fields[i].image.filename);
+            }
+        }
 
+        fetch(`${SERVER_URL}/WebServices/updateArticle`, {
+            method: 'POST',
+            body: fd
+        }).then(res => {
+            if (!res.ok) {
+                res.text().then(text => { throw Error(text) });
+            }
+            console.log("resp", res);
+            return res.json();
+        }).then(json => { console.log(json) }).catch(err => {
+            console.log('caught it!', err);
+        });
+    }
+
+
+    console.log("ArticleDetailed state", state);
     return (
         <div>
             <div>Ajouter nouveau article</div>
@@ -97,7 +121,7 @@ const AddArticle = (props) => {
                     }}
 
                 />
-                <img src={presentationImg.file !== null ? URL.createObjectURL(presentationImg.file) : null} alt="Some image" />
+                <img src={presentationImg.file !== null ? URL.createObjectURL(presentationImg.file) : props.article ? `${SERVER_URL}/uploads/images/articles/${props.article.id}/${presentationImg.src}` : ''} alt="Some image" />
             </div>
             <div>
                 {fields.map((field, index) => {
@@ -122,7 +146,7 @@ const AddArticle = (props) => {
                                 })
                             }}>Ajouter avant</button>
                             </div>
-                            <ArticleField updateField={updateField} index={index} type={field.type} paragraph={field.paragraph} image={field.image} />
+                            <ArticleField articleId={props.article ? props.article.id : undefined} updateField={updateField} index={index} type={field.type} paragraph={field.paragraph} image={field.image} />
                             <div><button onClick={() => {
                                 setState({
                                     ...state,
@@ -147,7 +171,11 @@ const AddArticle = (props) => {
                     )
                 })}
             </div>
-            <div><button onClick={() => { props.setPage('ArticleList') }}>Retour</button><button onClick={confirmChanges}>Confirmer changements</button></div>
+            <div>
+                <button onClick={() => { props.setPage('ArticleList') }}>Retour</button>
+                {props.article ? <button onClick={confirmUpdates}>Confirm updates</button> : <button onClick={confirmCreation}>Create Article</button>}
+                {props.article ? <button onClick={() => { props.removeArticle(props.article.id) }}>Remove Article</button> : null}
+            </div>
         </div>
     )
 }

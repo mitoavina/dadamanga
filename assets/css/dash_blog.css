@@ -5,6 +5,7 @@
 	width: 800px;
 	margin-left: 50px;
 	margin-bottom: 20px;
+	overflow: hidden;
 }
 
 .Article .image-container,
@@ -16,6 +17,7 @@
 .Article .text-container {
 	padding-left: 10px;
 	padding-top: 10px;
+	position: relative;
 }
 
 .Article .text-container .last-update {
@@ -33,8 +35,25 @@
 	font-size: 0.9rem;
 }
 
+.Article .text-container .btn-container {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
 .Article .image {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.Article .no-image {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #b7986d;
+	color: white;
+	font-size: 2rem;
 }
