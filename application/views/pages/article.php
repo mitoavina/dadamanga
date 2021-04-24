@@ -31,7 +31,10 @@
 
             </div>
             <div class="content">
-                <div class="date">POSTED ON <?= $article->{'creation_date'} ?></div>
+                <?php
+                $creationDate = new DateTime($article->{'creation_date'}, new DateTimeZone('Africa/Nairobi'));
+                ?>
+                <div class="date">POSTED ON <?= date("F jS, Y", $creationDate->getTimestamp()) ?></div>
                 <div class="title"><?= $article->{'title'} ?></div>
                 <?php $fields = json_decode($article->{'fields'}); ?>
                 <div class="details">
