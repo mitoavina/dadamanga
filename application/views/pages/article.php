@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php $this->load->view("components/common-css.php"); ?>
     <link href="<?= base_url() ?>assets/css/page/contact.css" rel="stylesheet">
-    <link href="<?= base_url() ?>assets/css/page/article.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/page/article.css?v=0.0.1" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
                             </div>
                         <?php } else { ?>
                             <div class="detail">
-                                <div><img src="<?= article_url($article->{'id'}, $field->{'image'}->{'filename'}) ?>"></div>
+                                <span class="image"><img src="<?= article_url($article->{'id'}, $field->{'image'}->{'filename'}) ?>"></span>
                             </div>
                         <?php } ?>
                     <?php } ?>

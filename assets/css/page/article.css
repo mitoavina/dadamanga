@@ -37,13 +37,11 @@
 	margin-bottom: 60px;
 }
 
-#article .grid .content .details .paragraph {
-	font-size: 0.9rem;
-	line-height: 2rem;
-	font-family: Montserrat-Medium;
+#article .grid .content .details .image {
+	width: 800;
 }
 
-#article .grid .content .details .detail {
+#article .grid .content .details .paragraph #article .grid .content .details .detail {
 	margin-bottom: 50px;
 }
 
