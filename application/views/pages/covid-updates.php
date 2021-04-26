@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php $this->load->view("components/common-css.php"); ?>
-    <link href="<?= base_url() ?>assets/css/page/covid-updates.css?v=0.0.1" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/page/covid-updates.css?v=0.0.2" rel="stylesheet">
     <title>Dadamanga | Covid Updates</title>
 </head>
 <?php $this->load->view('components/navbar'); ?>
