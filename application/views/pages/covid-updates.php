@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php $this->load->view("components/common-css.php"); ?>
-    <link href="<?= base_url() ?>assets/css/page/covid-updates.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/page/covid-updates.css?v=0.0.1" rel="stylesheet">
     <title>Dadamanga | Covid Updates</title>
 </head>
 <?php $this->load->view('components/navbar'); ?>
@@ -43,7 +43,7 @@
             <?php foreach ($articles as $article) { ?>
                 <div class="col-md-10 mb-5">
                     <div class="card mb-3">
-                        <div class="row">
+                        <div class="row vlog">
                             <div class="col-md-6 vlog-img-container">
                                 <img src="<?= article_url($article->{'id'}, $article->{'presentation_image'}) ?>" alt="vlog-1" class="vlog-img" />
                             </div>

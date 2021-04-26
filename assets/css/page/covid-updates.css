@@ -110,3 +110,8 @@
 .faq-item-show {
 	display: block !important;
 }
+
+.row.vlog {
+	height: 370px;
+	overflow: hidden;
+}
