@@ -50,7 +50,6 @@
     <?php $this->load->view("components/followus.php"); ?>
     <?php $this->load->view("components/footer.php"); ?>
     <?php $this->load->view("components/common-scripts.php"); ?>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
     <script src="<?= js_url("page/cart") ?>"></script>
 </body>
 

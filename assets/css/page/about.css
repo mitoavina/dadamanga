@@ -1,22 +1,28 @@
 .content-about {
 	background-color: #f7f4f0;
 }
-.content-about .container .team p,
-.sr p,
+
 .trip p {
 	margin-top: 6%;
 	color: #b7986d;
 	font-family: Montserrat;
 	font-size: 20px;
 }
+
+.section-title.bold {
+	font-family: Montserrat-Bold;
+}
+
 .tripadvisor {
 	background-color: #f7f4f0;
 }
+
 .tripadvisor .card-text {
 	font-weight: 330;
 	font-size: 13px;
 	line-height: 19px;
 }
+
 @media screen and (max-width: 767px) {
 	.text-form-1 {
 		font-size: 20px;

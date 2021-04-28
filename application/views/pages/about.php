@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<?php $this->load->view("components/common-css.php"); ?>
-	<link href="<?= base_url() ?>assets/css/page/about.css?v=0.0.1" rel="stylesheet">
+	<link href="<?= base_url() ?>assets/css/page/about.css?v=0.0.2" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<title>Dadamanga | About</title>
 </head>
@@ -80,7 +80,7 @@
 						</p>
 					</div>
 				</div>
-				<p class="pt-3 px-auto text-form-3 text-center">Connect with us and explore our social media. Here you
+				<p class="pt-5 px-auto text-form-1 text-center">Connect with us and explore our social media. Here you
 					can engage
 					with us, see
 					our history with your own eyes, and after your trip, contribute your own experiences to our story.
@@ -95,15 +95,15 @@
 				</div>
 				<div class=" div2 row team text-center">
 					<div class=" col-md-12">
-						<p class="pb-4">THE TEAM</p>
+						<p class="section-title bold mt-5 pb-4">THE TEAM</p>
 						<img class="img-fluid" alt="picture of the team" src="<?= base_url() ?>assets/img/about/team-img.jpg">
 					</div>
 				</div>
 			</div>
 			<div class="row mt-3">
 				<div class="col-md-2"></div>
-				<div class="col-md-8 pt-5 pb-5">
-					<p class="text-center text-form-1">
+				<div class="col-md-8 pt-4 pb-4 d-flex justify-content-center">
+					<p class="text-left text-form-1">
 						Our team have a strong sense of solidarity, like a big loving family. We are spread across the
 						country, connected by fibre-optic internet and our heart-strings. Our head office is in
 						Tolagnaro, the planning & design office is in Antsirabe, we have a team of around thirty drivers
@@ -118,14 +118,12 @@
 			</div>
 		</div>
 		<div style="background-color:white;" class=" div3 content-about-white container">
-			<div class="row sr text-center">
-				<div class="col-md-12">
-					<p class="pb-2">SOCIAL RESPONSABILITY</p>
-				</div>
+			<div class="row section-title text-center">
+				<div class="col-md-12">SOCIAL RESPONSABILITY</div>
 			</div>
 			<div class="row">
 				<div class="col-md-2"></div>
-				<div class="col-md-8 pt-5 pb-5">
+				<div class="col-md-8 pt-2 pb-2">
 					<p class="text-center text-form-2">
 						<?= $text[0]->value ?>
 					</p>
@@ -168,9 +166,9 @@
 					</div>
 				</div>
 			</div>
-			<div class=" div4 row sr">
-				<div class="col-md-12 mb-5 pt-5">
-					<p class="text-center">OUR REVIEWS ON TRIPADVISOR</p>
+			<div class=" div4">
+				<div class="col-md-12 text-center section-title">
+					OUR REVIEWS ON TRIPADVISOR
 				</div>
 				<div class="col-md-12" style="overflow:hidden;">
 					<div class="elfsight-app-719f865f-1ded-4062-b5e7-f423b8127562"></div>

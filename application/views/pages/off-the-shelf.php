@@ -117,7 +117,6 @@
         <?php $this->load->view("components/footer.php"); ?>
         <?php $this->load->view("components/common-scripts.php") ?>
 
-        <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
         <script data-version="v0" id="travefy-itinerary-embedder" type="text/javascript">
             (function() {
                 function l() {

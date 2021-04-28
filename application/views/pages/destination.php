@@ -13,7 +13,7 @@
 <?php $this->load->view("components/navbar.php"); ?>
 <?php $this->load->view("components/sidenav.php"); ?>
 
-<body>
+<body id="destination">
 
     <div id="jumbotron" class="jumbotron flex-column flex-center" style="background-image: url(<?= base_url($destination->IMAGE) ?>);">
 
@@ -34,77 +34,33 @@
             <!-- DIV1 -->
             <div class=" div1 container mb-5 ">
                 <div class="row d-flex justify-content-center">
-                    <div class="text-center col-md-10 pt-5 mb-5 text_header">
+                    <div class="text-center col-md-11 pt-5 mb-5 text_header">
                         <?= $information->text[0]->value ?>
                     </div>
                 </div>
-                <?php for ($i = 1; $i < count($information->text); $i++) { ?>
-                    <div class="row">
-                        <div class="col-md-6 mb-4 text-left text_secondaire"><?= $information->text[$i]->value ?></div>
-                        <?php
-                        if ($i < count($information->text) - 1) {
-                        ?>
-                            <div class="col-md-6 mb-4 text-left text_secondaire"><?= $information->text[++$i]->value ?></div>
-                        <?php } ?>
+                <div class="d-flex justify-content-center">
+                    <div class="paragraphs-grid">
+                        <div class="col1">
+                            <?php for ($i = 1; $i <= 3; $i++) { ?>
+                                <p class="text-left text_secondaire"><?= $information->text[$i]->value ?></p>
+                            <?php } ?>
+                        </div>
+                        <div class="col2">
+                            <?php for ($i = 4; $i < count($information->text); $i++) { ?>
+                                <p class="text-left text_secondaire"><?= $information->text[$i]->value ?></p>
+                            <?php } ?>
+                        </div>
                     </div>
-                <?php } ?>
+                </div>
             </div>
 
             <div class="div2" id="galleria">
                 <?php foreach ($regions as $region) { ?>
                     <img src="<?= base_url($region->IMAGE) ?>" data-title="My title" data-description="Something about Tana" />
                 <?php } ?>
-                <?php if ($destination->NAME == "FortDauphin") { ?>
-                    <img src="<?= base_url("assets/img/destination/FortDauphin/regions/gallerie/1.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                    <img src="<?= base_url("assets/img/destination/FortDauphin/regions/gallerie/2.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                    <img src="<?= base_url("assets/img/destination/FortDauphin/regions/gallerie/3.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                <?php } ?>
-                <?php if ($destination->NAME == "Toamasina") { ?>
-                    <img src="<?= base_url("assets/img/destination/Toamasina/regions/gallerie/1.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                <?php } ?>
-                <?php if ($destination->NAME == "Diego") { ?>
-                    <img src="<?= base_url("assets/img/destination/Diego/regions/gallerie/1.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                    <img src="<?= base_url("assets/img/destination/Diego/regions/gallerie/2.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                    <img src="<?= base_url("assets/img/destination/Diego/regions/gallerie/3.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                <?php } ?>
-                <?php if ($destination->NAME == "Morondava") { ?>
-                    <img src="<?= base_url("assets/img/destination/Morondava/regions/gallerie/1.jpg") ?>" data-title="My title" data-description="Something about Tana">
-                <?php } ?>
             </div>
 
-            <div class="container">
-
-                <!-- DIV4 -->
-                <div class="row div3">
-                    <div class="col-md-12">
-                        <h1 class="title_text">REGION FOCUS</h1>
-                    </div>
-                </div>
-
-                <div class="row d-flex justify-content-center text1 pt-3">
-                    <div class="text-center col-md-8 text_header pt-5 mb-5">
-                        <?= $information->focus[0]->value ?>
-                    </div>
-                </div>
-                <?php
-                for ($i = 1; $i < count($information->focus); $i++) {
-                ?>
-                    <div class="row">
-                        <div class="col-md-6 mb-4 text-left text_secondaire"><?= $information->focus[$i]->value ?></div>
-                        <?php
-                        if ($i < count($information->focus) - 1) {
-                        ?>
-                            <div class="col-md-6 text-left text_secondaire"><?= $information->focus[++$i]->value ?></div>
-                        <?php
-                            $i++;
-                        }
-                        ?>
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
-            <div class="itineraries-details row pt-4 mt-4 bg-white mb-5 px-md-5">
+            <div class="itineraries-details row pt-4 mt-4 bg-white px-md-5">
                 <div class="itinerary-menu text-left col-md-3">
                     <h6>SELECT A REGION</h6>
                     <ul class="list-group">
@@ -218,10 +174,6 @@
     <script type="text/javascript" src="<?= base_url() ?>assets/js/galleria-themes/galleria.reis.min.js"></script>
     <?php $jquery_already_included = true; ?>
     <?php $this->load->view("components/common-scripts.php") ?>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.cookie.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/global.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-    <?php $this->load->view("components/modal_msg.php"); ?>
 </body>
 
 </html>

@@ -87,6 +87,12 @@ footer {
 	padding-bottom: 20px !important;
 }
 
+.section-title {
+	color: #b7986d;
+	font-family: Montserrat;
+	font-size: 20px;
+}
+
 body {
 	position: relative;
 }
@@ -397,6 +403,10 @@ body .body-index {
 
 .itineraries-details {
 	justify-content: center;
+}
+
+#destination .itineraries-details {
+	margin-bottom: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -887,4 +897,11 @@ button {
 .content-centered {
 	display: flex;
 	justify-content: center;
+}
+
+.paragraphs-grid {
+	display: grid;
+	width: 1000px;
+	grid-template-columns: 450px 450px;
+	grid-column-gap: 50px;
 }
