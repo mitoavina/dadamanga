@@ -118,7 +118,7 @@
 			</div>
 		</div>
 		<div style="background-color:white;" class=" div3 content-about-white container">
-			<div class="row section-title text-center">
+			<div class="row section-title pt-4 text-center">
 				<div class="col-md-12">SOCIAL RESPONSABILITY</div>
 			</div>
 			<div class="row">
