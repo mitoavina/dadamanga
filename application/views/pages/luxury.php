@@ -47,7 +47,7 @@
 									<input required="required" name="email" type="email" class="form-control custom-bg-input" id="email" placeholder="Exemple@exemple.com">
 								</div>
 							</div>
-							<div class=" myMargin form-row justify-content-center">
+							<div class=" myMargin form-row">
 								<div class="col-lg-10">
 									<div class="row">
 										<div class="form-group col-lg-6">
@@ -265,7 +265,7 @@
 									</div>
 								</div>
 							</div>
-							<div class=" myMargin form-row justify-content-center">
+							<div class=" myMargin form-row">
 								<div class="col-lg-10">
 									<div class="row">
 										<div class="form-group col-lg-6">
@@ -281,7 +281,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="myMargin form-row justify-content-center">
+							<div class="myMargin form-row">
 								<div class="col-lg-11">
 									<div class="form-group">
 										<label class="modal-label" for="else">ANYTHING ELSE YOU WANT TO TELL US?</label>

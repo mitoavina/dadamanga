@@ -30,12 +30,6 @@
 
             <?php $this->load->view("components/knowledge-intro.php"); ?>
 
-            <div class="row flex-center mb-5 no-gutters">
-                <div class="col-md-8 img-placeholder rectangle-large">
-                    <img class="w-100" src="<?= base_url("assets/img/knowledges/Banner.jpg") ?>" alt="" srcset="">
-                </div>
-            </div>
-
 
             <div class="row">
                 <div class="knowledges col-lg-10 col-10 offset-lg-1 offset-1">
