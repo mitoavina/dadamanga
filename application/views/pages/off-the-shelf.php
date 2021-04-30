@@ -85,7 +85,12 @@
                 <?php foreach ($trips as $trip) { ?>
                     <div class="col-xl-4 col-lg-6 col-md-12 mb-5">
                         <div class="card trip-card">
-                            <img src="<?= $trip->getImg() ?>" class="card-img-top trip-card-img" alt="<?= $trip->getName() ?>" />
+                            <div class="view overlay">
+                                <img src="<?= $trip->getImg() ?>" class="card-img-top trip-card-img" alt="<?= $trip->getName() ?>" />
+                                <a href="#!" data-toggle="modal" data-target="#trip<?= $trip->getId() ?>">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title trip-card-title"><?= $trip->getName() ?></h5>
                                 <ul class="list-group list-group-flush">
@@ -99,14 +104,35 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="trip<?= $trip->getId() ?>" tabindex="-1" role="dialog" aria-hidden="false">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"><?= $trip->getName() ?></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div data-travefy-itinerary-id="<?= $trip->getId() ?>" class=" travefy-itinerary"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Add To Cart <i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <?php } ?>
             </div>
             <div class="row justify-content-center pagination">
                 <div class="pagination-chevron"><i class="fas fa-chevron-left"></i></div>
                 <div class="pagination-number">
-                    <span class="pagination-active">1</span>
-                    <span>2</span>
-                    <span>3</span>
+                    <a class="pagination-active">1</a>
+                    <a>2</a>
+                    <a>3</a>
                 </div>
                 <div class="pagination-chevron"><i class="fas fa-chevron-right"></i></div>
             </div>
