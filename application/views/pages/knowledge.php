@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php $this->load->view("components/common-css.php"); ?>
-    <link href="<?= base_url() ?>assets/css/page/knowledge.css?v=0.0.1" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/page/knowledge.css?v=0.0.2" rel="stylesheet">
     <title>Dadamanga | Knowledge</title>
 </head>
 <?php $this->load->view("components/navbar.php"); ?>
@@ -311,7 +311,7 @@
                                         </div>
                                         <div class="knowledge-pic col-lg-4 col-6">
                                             <span class="knowledge-pic-title">SURFING</span>
-                                            <img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+                                            <img src="<?= base_url() ?>assets/img/knowledge/sports/Surf.jpg" alt="" width="100%" height="100%">
                                         </div>
                                         <div class="knowledge-pic col-lg-4 col-6">
                                             <span class="knowledge-pic-title">DIVING</span>
@@ -323,7 +323,7 @@
                                         </div>
                                         <div class="knowledge-pic col-lg-4 col-6">
                                             <span class="knowledge-pic-title">SPA & WELLNESS</span>
-                                            <img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+                                            <img src="<?= base_url() ?>assets/img/knowledge/sports/Spa.jpg" alt="" width="100%" height="100%">
                                         </div>
                                     </div>
                                 </div>
