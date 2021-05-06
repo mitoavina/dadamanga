@@ -219,7 +219,7 @@
 		<div style="padding-bottom:40px;">
 			<p>CLICK ON <a href="<?= base_url("contact") ?>">THIS LINK</a> TO CONTACT US AND EXPLORE YOUR NEXT AFRICAN
 				ADVENTURE.</p>
-			<p>CALL: +61 459308888</p>
+			<p>CALL: +261 34 20 990 99</p>
 		</div>
 	</div>
 	<?php $this->load->view("components/followus.php"); ?>

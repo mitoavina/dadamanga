@@ -34,7 +34,7 @@
                     <div class="col-md-4">
                         <p class="contact-label">PHONE & WHATSAPP</p>
                         <p>
-                            +26134 20 990 99
+                            +261 34 20 990 99
                         <p>
                     </div>
                     <div class="col-md-4">
