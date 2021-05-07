@@ -23,7 +23,7 @@
 .trip-card {
 	/* border-radius: 15px; */
 	min-height: 572px;
-	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.03);
+	box-shadow: 2px 2px 10px rgb(0 0 0 / 8%);
 }
 
 .trip-card.card .card-body {
@@ -116,7 +116,8 @@
 	align-items: center;
 }
 
-.book-btn {
+.book-btn,
+.close-trip-modal {
 	background-color: #444443;
 	font: Geometria;
 	font-size: 16px;
@@ -124,6 +125,12 @@
 	padding: 5px 40px;
 	border: none;
 	text-transform: uppercase;
+}
+
+.close-trip-modal {
+	background-color: #fff;
+	border: 1px solid #444443;
+	color: #B7986D;
 }
 
 /* .taylor-title {
@@ -138,10 +145,6 @@
 
 	.card-footer {
 		font-size: 10px
-	}
-
-	.card-footer {
-		flex-direction: column;
 	}
 }
 

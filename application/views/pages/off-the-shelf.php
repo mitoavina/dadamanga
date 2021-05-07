@@ -61,7 +61,7 @@
                                 <div class="trip-price">
                                     <span class="trip-card-price-from">from</span> <span class="trip-card-price"><?= $trip->getPrice() ?> <?= $trip->getCurrency() ?></span>
                                 </div>
-                                <button type="button" class="book-btn" data-toggle="modal" onclick="openFormular(<?= $i ?>)">book</button>
+                                <!-- <button type="button" class="book-btn" data-toggle="modal">book</button> -->
                             </div>
                         </div>
                     </div>
@@ -81,8 +81,8 @@
                                     <div data-travefy-itinerary-id="<?= $trip->getId() ?>" class=" travefy-itinerary"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Add To Cart <i class="fas fa-shopping-cart"></i></button>
+                                    <button type="button" class="close-trip-modal" data-dismiss="modal">Close</button>
+                                    <button type="button" class="book-btn" data-dismiss="modal" onclick="openFormular(<?= $i ?>)">book</button>
                                 </div>
                             </div>
                         </div>
