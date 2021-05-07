@@ -5,16 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
-    <link href="<?= base_url() ?>assets/css/page/knowledge.css?v=0.0.1" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <?php $this->load->view("components/common-css.php"); ?>
+    <link href="<?= base_url() ?>assets/css/page/knowledge.css?v=0.0.2" rel="stylesheet">
     <title>Dadamanga | Knowledge</title>
 </head>
 <?php $this->load->view("components/navbar.php"); ?>
@@ -36,29 +28,7 @@
             <button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
         </nav>
         <div class=" div1 container-fluid content-knowledge">
-            <div class="row">
-                <div class="col-md-8 offset-md-2 pt-5 pb-5 text_header">
-                    <p class="text-center">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut
-                        labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi
-                        ut aliquip ex ea
-                    </p>
-                </div>
-            </div>
-            <div class="container pb-4 mt-3">
-                <div class="row">
-                    <div class="col-md-6 text_secondaire">
-                        <p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut
-                            labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore
-                            magna aliqua.. Ut enim ad minim</p>
-                    </div>
-                    <div class="col-md-6 text_secondaire">
-                        <p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut
-                            labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore
-                            magna aliqua.. Ut enim ad minim</p>
-                    </div>
-                </div>
-            </div>
+            <?php $this->load->view("components/knowledge-intro.php"); ?>
         </div>
         <div style="position: relative; bottom:50px" id="content"></div>
         <div id="knowledge-container" class="container-fluid">
@@ -76,9 +46,6 @@
                             <li><a href="">Sports</a></li>
                         </ul>
                     </div>
-                    <div class="knowledge-title d-flex justify-content-center">
-                        <p><?= $knowledge ?></p>
-                    </div>
                     <div class="itineraries-details row px-md-5">
                         <div class="itinerary-menu col-lg-3 col-sm-4 pr-5">
                             <h5>WHAT INTERESTS YOU?</h5>
@@ -94,6 +61,9 @@
                             </ul>
                         </div>
                         <div class="dadamanga-special-card-container knowledge-details col-lg-8 col-sm-8 col-xs-12">
+                            <div class="knowledge-title d-flex justify-content-center">
+                                <p><?= $knowledge ?></p>
+                            </div>
                             <div data-index="madagascar" class="row d-none">
                                 <div class="knowledge col-lg-6 col-sm-12">
                                     <p>Madagascar is the largest island in the Indian Ocean, and it is famous for its unique wildlife and
@@ -118,20 +88,17 @@
                             </div>
                             <div data-index="baobab" class="row d-none">
                                 <div class="knowledge col-lg-12">
+
                                     <div class="row">
-                                        <div class="col-lg-6">
-                                            <p>The baobab is an iconic emblem of the Malagasy flora. This majestic tree is one of Madagascar's
-                                                greatest treasures, as six of the eight species of baobab that exist in the world are endemic to the
-                                                Red Island. Also called Reniala (mother of the forest), baobabs are not just beautiful to admire,
-                                                they also produce fruit, and are important in the ecosystems to which they belong.</p>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <p>While baobabs can be seen from north to south Madagascar, some stand out more than others.
-                                                The most famous are undoubtedly those of the alley of the baobabs in Morondava. Emblematic
-                                                landscape of the country, it is one of Madagascar's best-known tourist showcases. We can also
-                                                mention the baobabs of the spiny forest south of Fort Dauphin, from Ifaty, Zombitse,
-                                                Ankarafantsika and Kirindy nature reserves.</p>
-                                        </div>
+                                        <p class="col-lg-6">The baobab is an iconic emblem of the Malagasy flora. This majestic tree is one of Madagascar's
+                                            greatest treasures, as six of the eight species of baobab that exist in the world are endemic to the
+                                            Red Island. Also called Reniala (mother of the forest), baobabs are not just beautiful to admire,
+                                            they also produce fruit, and are important in the ecosystems to which they belong.</p>
+                                        <p class="col-lg-6">While baobabs can be seen from north to south Madagascar, some stand out more than others.
+                                            The most famous are undoubtedly those of the alley of the baobabs in Morondava. Emblematic
+                                            landscape of the country, it is one of Madagascar's best-known tourist showcases. We can also
+                                            mention the baobabs of the spiny forest south of Fort Dauphin, from Ifaty, Zombitse,
+                                            Ankarafantsika and Kirindy nature reserves.</p>
                                     </div>
                                 </div>
                                 <div class="knowledge col-lg-12">
@@ -141,11 +108,11 @@
                                             <img src="<?= base_url() ?>/assets/img/knowledge/baobab/avenue.jpg" alt="" width="100%" height="100%">
                                         </div>
                                         <div class="knowledge-pic col-lg-4 col-6">
-                                            <span class="knowledge-pic-title">Reniala Reserve IFATY</span>
+                                            <span class="knowledge-pic-title">DIEGO</span>
                                             <img src="<?= base_url() ?>/assets/img/knowledge/baobab/diego.jpg" alt="" width="100%" height="100%">
                                         </div>
                                         <div class="knowledge-pic col-lg-4 col-6">
-                                            <span class="knowledge-pic-title">DIEGO</span>
+                                            <span class="knowledge-pic-title">Reniala Reserve IFATY</span>
                                             <img src="<?= base_url() ?>/assets/img/knowledge/baobab/reniala.jpg" alt="" width="100%" height="100%">
                                         </div>
                                     </div>
@@ -344,7 +311,7 @@
                                         </div>
                                         <div class="knowledge-pic col-lg-4 col-6">
                                             <span class="knowledge-pic-title">SURFING</span>
-                                            <img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+                                            <img src="<?= base_url() ?>assets/img/knowledge/sports/Surf.jpg" alt="" width="100%" height="100%">
                                         </div>
                                         <div class="knowledge-pic col-lg-4 col-6">
                                             <span class="knowledge-pic-title">DIVING</span>
@@ -356,7 +323,7 @@
                                         </div>
                                         <div class="knowledge-pic col-lg-4 col-6">
                                             <span class="knowledge-pic-title">SPA & WELLNESS</span>
-                                            <img src="<?= base_url() ?>/assets/img/blank3.png" alt="" width="100%" height="100%">
+                                            <img src="<?= base_url() ?>assets/img/knowledge/sports/Spa.jpg" alt="" width="100%" height="100%">
                                         </div>
                                     </div>
                                 </div>

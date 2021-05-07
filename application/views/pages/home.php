@@ -5,17 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-	<link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> -->
-	<link href="<?= base_url() ?>assets/font/montserrat/montserrat.css" rel="stylesheet">
-	<!-- Bootstrap core CSS -->
-	<link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
+	<?php $this->load->view("components/common-css.php"); ?>
 	<link href="<?= base_url() ?>assets/css/page/home.css" rel="stylesheet">
-	<!-- Material Design Bootstrap -->
-	<link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/css/flexslider.css" rel="stylesheet">
 	<style>
 		#video-container {
@@ -123,7 +114,7 @@
 				<div class="row">
 					<div class="col-lg-5 px-5">
 						<p class="pb-2">We organise your
-							<span class="montserrat-bold">trip</span>
+							<span class="montserrat-semibold">trip</span>
 						</p>
 						<p id="intro">
 							You can study key destinations and create a tour or, choose something “off the shelf”. Have
@@ -133,7 +124,7 @@
 						<svg width="48" height="16" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M47.7071 8.70711C48.0976 8.31658 48.0976 7.68342 47.7071 7.29289L41.3431 0.928932C40.9526 0.538408 40.3195 0.538408 39.9289 0.928932C39.5384 1.31946 39.5384 1.95262 39.9289 2.34315L45.5858 8L39.9289 13.6569C39.5384 14.0474 39.5384 14.6805 39.9289 15.0711C40.3195 15.4616 40.9526 15.4616 41.3431 15.0711L47.7071 8.70711ZM0 9L47 9V7L0 7L0 9Z" fill="#B7986D" />
 						</svg>
-						<p id="intro-btn" class="montserrat-bold"><a href="<?= base_url() . "destinations" ?>">FIND A
+						<p id="intro-btn" class="montserrat-semibold"><a href="<?= base_url() . "destinations" ?>">FIND A
 								DESTINATION</a></p>
 					</div>
 					<div id="intro_icons" class="col-lg-7 text-center">
@@ -212,7 +203,7 @@
 			</div>
 		</div>
 		<div class="mt-5 pt-5 mb-5 pb-5">
-			<p class="pb-5" id="madagascar_destination_specialist">MADAGASCAR <span class="montserrat-bold">Destination
+			<p class="pb-5" id="madagascar_destination_specialist">MADAGASCAR <span class="montserrat-semibold">Destination
 					Specialist</span></p>
 			<div class="big-text mx-1">
 				<p>
@@ -228,7 +219,7 @@
 		<div style="padding-bottom:40px;">
 			<p>CLICK ON <a href="<?= base_url("contact") ?>">THIS LINK</a> TO CONTACT US AND EXPLORE YOUR NEXT AFRICAN
 				ADVENTURE.</p>
-			<p>CALL: +61 459308888</p>
+			<p>CALL: +261 34 20 990 99</p>
 		</div>
 	</div>
 	<?php $this->load->view("components/followus.php"); ?>

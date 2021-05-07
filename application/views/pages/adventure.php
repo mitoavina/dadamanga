@@ -5,18 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
-    <link href="<?= base_url() ?>assets/css/page/adventure.css" rel="stylesheet">
+    <?php $this->load->view("components/common-css.php"); ?>
+    <link href="<?= base_url() ?>assets/css/page/adventure.css?v=0.0.1" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/jquery-ui.css" rel="stylesheet">
-
-    <!-- Material Design Bootstrap -->
-    <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Dadamanga | Create Your Adventure</title>
 </head>
 <?php $this->load->view('components/navbar'); ?>
@@ -531,19 +522,11 @@
             <div class="row adventure-bottom-content">
                 <div style="margin-bottom: 100px;" class="adventure-current col-lg-10 col-10 offset-lg-1 offset-1">
                     <div class="title text-center">OUR CURRENT ADVENTURES</div>
-                    <div class="adventure-current-container overlay-marron-container">
+                    <div class="adventure-current-container">
                         <div class="view-adventure-current col-lg-12">
                             <img src="<?= base_url() ?>/assets/img/adventure/current-adventure.jpg" alt="" width="100%" height="100%">
                         </div>
-                        <div class="to-hide pic-title">VIEW OUR CURRENT ADVENTURE</div>
-                        <div class="overlay-with-padding text-center">
-                            <a href="<?= base_url('shelf') ?>" class="d-none overlay-marron white-text">
-                                <div>
-                                    <div class="mb-3">« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore magna aliqua.. Ut enim ad minim</div>
-                                    <div>FIND OUT MORE <i class="fas fa-long-arrow-alt-right"></i></div>
-                                </div>
-                            </a>
-                        </div>
+                        <div class="to-hide pic-title"><a class="white-text" href="<?= base_url('shelf') ?>">VIEW OUR CURRENT ADVENTURE</a></div>
                     </div>
                 </div>
                 <div class="div3 w-100">

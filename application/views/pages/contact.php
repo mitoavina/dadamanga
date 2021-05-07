@@ -5,12 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
+    <?php $this->load->view("components/common-css.php"); ?>
     <link href="<?= base_url() ?>assets/css/page/contact.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
@@ -39,7 +34,7 @@
                     <div class="col-md-4">
                         <p class="contact-label">PHONE & WHATSAPP</p>
                         <p>
-                            +26134 20 990 99
+                            +261 34 20 990 99
                         <p>
                     </div>
                     <div class="col-md-4">

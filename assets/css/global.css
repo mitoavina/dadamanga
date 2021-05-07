@@ -1,6 +1,26 @@
 @font-face {
-	font-family: Montserrat-bold;
+	font-family: Montserrat-SemiBold;
 	src: url(../font/montserrat/Montserrat-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Montserrat-Bold;
+	src: url(../font/montserrat/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Montserrat-Regular;
+	src: url(../font/montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Montserrat-Medium;
+	src: url(../font/montserrat/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Montserrat-ExtraBold;
+	src: url(../font/montserrat/Montserrat-ExtraBold.ttf) format("truetype");
 }
 
 @font-face {
@@ -65,6 +85,12 @@ footer {
 	font-weight: 400;
 	line-height: 20px;
 	padding-bottom: 20px !important;
+}
+
+.section-title {
+	color: #b7986d;
+	font-family: Montserrat;
+	font-size: 20px;
 }
 
 body {
@@ -161,8 +187,8 @@ body {
 	line-height: 88px;
 }
 
-.montserrat-bold {
-	font-family: Montserrat-bold;
+.montserrat-semibold {
+	font-family: Montserrat-SemiBold;
 }
 
 .montserrat-light {
@@ -208,7 +234,7 @@ body {
 .content_index .cards div {
 	font-weight: 500;
 	font-size: 14px;
-	font-family: Montserrat-bold;
+	font-family: Montserrat-SemiBold;
 }
 
 .follow {
@@ -377,6 +403,10 @@ body .body-index {
 
 .itineraries-details {
 	justify-content: center;
+}
+
+#destination .itineraries-details {
+	margin-bottom: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -778,14 +808,25 @@ button {
 	justify-content: center;
 }
 
-.footer-link {
-	white-space: wrap;
+.footer-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 80px;
 }
 
-@media screen and(min-width: 992px) {
-	.footer-link {
-		white-space: nowrap;
-	}
+.footer-link {
+	margin-right: 40px;
+	text-align: center;
+}
+
+.footer-link:last-of-type {
+	margin-right: 0px;
+}
+
+.covid-presentation.card {
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 #cart-number {
@@ -807,10 +848,14 @@ button {
 }
 
 .pagination {
-	color: rgb(183, 152, 109, .6);
+	color: rgb(183, 152, 109, .6) !important;
 	font-size: 20px;
 	padding-top: 40px;
 	padding-bottom: 60px;
+}
+
+.pagination-chevron>a {
+	color: rgb(183, 152, 109, .6) !important;
 }
 
 .pagination-chevron {
@@ -826,9 +871,9 @@ button {
 	display: flex;
 }
 
-.pagination-number>span {
+.pagination-number>a {
 	border-radius: 10px;
-	color: black;
+	color: black !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -842,4 +887,21 @@ button {
 .pagination-active {
 	border-color: transparent !important;
 	background-color: rgb(183, 152, 109, .6);
+}
+
+
+#off-the-shelf .content-template {
+	background-color: white;
+}
+
+.content-centered {
+	display: flex;
+	justify-content: center;
+}
+
+.paragraphs-grid {
+	display: grid;
+	width: 1000px;
+	grid-template-columns: 450px 450px;
+	grid-column-gap: 50px;
 }

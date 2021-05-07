@@ -54,7 +54,6 @@ class MainController extends CI_Controller
         $data['text'] = $pageModel->addInformation(2)->text;
         $data['footerImg'] = "omby.jpg";
         $this->load->helper('url');
-        $this->load->helper('assets');
         $this->load->view('pages/about', $data);
     }
 
@@ -107,7 +106,6 @@ class MainController extends CI_Controller
     public function luxury()
     {
         $this->load->helper('url');
-        $this->load->helper('assets');
         $data['footerImg'] = "cacao.jpg";
 
         $this->load->view('pages/luxury', $data);
@@ -115,16 +113,46 @@ class MainController extends CI_Controller
     public function contact()
     {
         $this->load->helper('url');
-        $this->load->helper('assets');
         $data['footerImg'] = "omby.jpg";
         $this->load->view('pages/contact', $data);
+    }
+
+    public function article($id)
+    {
+        $this->load->helper('url');
+        $this->load->helper('assets');
+        $data['footerImg'] = "omby.jpg";
+
+        $this->load->model('ArticleModel', 'ArticleModel');
+        $articleModel = new ArticleModel();
+        $article = $articleModel->selectWhere($id);
+
+        $data['article'] = $article;
+        $this->load->view('pages/article', $data);
     }
 
     public function covid()
     {
         $this->load->helper('url');
         $this->load->helper('assets');
+        $this->load->helper('time');
         $data['footerImg'] = "omby.jpg";
+        $this->load->model('ArticleModel', 'ArticleModel');
+        $articleModel = new ArticleModel();
+        $page = 1;
+        if (isset($_GET['page'])) {
+            try {
+                $page = intval($_GET['page']);
+                if ($page <= 0) {
+                    $page = 1;
+                }
+            } catch (Exception $e) {
+                $page = 1;
+            }
+        }
+        $articles = $articleModel->getAllArticle($page);
+        $data['page'] = $page;
+        $data['articles'] = $articles;
         $data['faqList'] = [
             1 => (object)[
                 'titre' => 'Where can I find the latest news related to travel and COVID-19 in Madagascar?',
@@ -219,7 +247,6 @@ class MainController extends CI_Controller
     public function shelf()
     {
         $this->load->helper('url');
-        $this->load->helper('assets');
         $this->load->model('TripModel', 'TripModel');
         $data['footerImg'] = "cacao.jpg";
 
@@ -280,8 +307,9 @@ class MainController extends CI_Controller
         $pageModel = new PageModel();
         $data['image'] = $pageModel->addInformation(1)->image;
         $data['text'] = $pageModel->addInformation(1)->text;
+        $data['active'] = 'home';
 
-        $this->load->view('dashboard', $data);
+        $this->load->view('dashboard/dashboard', $data);
     }
 
     public function dash_about()
@@ -295,18 +323,21 @@ class MainController extends CI_Controller
         $pageModel = new PageModel();
         $data['image'] = $pageModel->addInformation(2)->image;
         $data['text'] = $pageModel->addInformation(2)->text;
-        $this->load->view('dash_about', $data);
+        $data['active'] = 'about';
+        $this->load->view('dashboard/dash_about', $data);
     }
 
-    public function dash_destination()
+    public function dash_blog()
     {
         $this->load->helper('url');
         session_start();
         if (!isset($_SESSION['authentication'])) {
             redirect('/login', 'refresh');
         }
-        $this->load->view('dash_destination');
+        $data['active'] = 'blog';
+        $this->load->view('dashboard/dash_blog', $data);
     }
+
     public function dash_park()
     {
         $this->load->helper('url');
@@ -328,8 +359,10 @@ class MainController extends CI_Controller
             redirect('/dash_park', 'refresh');
         }
         $data['data'] = $parkModel->select();
-        $this->load->view('dash_park', $data);
+        $data['active'] = 'park';
+        $this->load->view('dashboard/dash_park', $data);
     }
+
     public function dash_experience()
     {
         $this->load->helper('url');
@@ -351,8 +384,11 @@ class MainController extends CI_Controller
             redirect('/dash_experience', 'refresh');
         }
         $data['data'] = $experienceModel->select();
-        $this->load->view('dash_experience', $data);
+        $data['active'] = 'experience';
+        $this->load->view('dashboard/dash_experience', $data);
     }
+
+
     public function dash_wildlife()
     {
         $this->load->helper('url');
@@ -374,12 +410,13 @@ class MainController extends CI_Controller
             redirect('/dash_wildlife', 'refresh');
         }
         $data['data'] = $wildlifeModel->select();
-        $this->load->view('dash_wildlife', $data);
+        $data['active'] = 'wildlife';
+        $this->load->view('dashboard/dash_wildlife', $data);
     }
     public function login()
     {
         $this->load->helper('url');
-        $this->load->view('login');
+        $this->load->view('dashboard/login');
     }
     public function homeUpdate()
     {

@@ -18,35 +18,25 @@
 	margin-top: 16vh;
 	margin-bottom: 16vh;
 	padding-bottom: 5%;
-	background-image: linear-gradient(
-			to bottom,
+	background-image: linear-gradient(to bottom,
 			rgba(21, 21, 21, 0.44),
-			rgba(21, 21, 21, 0.44)
-		),
+			rgba(21, 21, 21, 0.44)),
 		url(../../img/contact/jumbotron-contact.jpg);
-	background-image: -moz-linear-gradient(
-			top,
+	background-image: -moz-linear-gradient(top,
 			rgba(21, 21, 21, 0.44),
-			rgba(21, 21, 21, 0.44)
-		),
+			rgba(21, 21, 21, 0.44)),
 		url(../../img/contact/jumbotron-contact.jpg);
-	background-image: -o-linear-gradient(
-			top,
+	background-image: -o-linear-gradient(top,
 			rgba(21, 21, 21, 0.44),
-			rgba(21, 21, 21, 0.44)
-		),
+			rgba(21, 21, 21, 0.44)),
 		url(../../img/contact/jumbotron-contact.jpg);
-	background-image: -ms-linear-gradient(
-			top,
+	background-image: -ms-linear-gradient(top,
 			rgba(21, 21, 21, 0.44),
-			rgba(21, 21, 21, 0.44)
-		),
+			rgba(21, 21, 21, 0.44)),
 		url(../../img/contact/jumbotron-contact.jpg);
-	background-image: -webkit-linear-gradient(
-			top,
+	background-image: -webkit-linear-gradient(top,
 			rgba(21, 21, 21, 0.44),
-			rgba(21, 21, 21, 0.44)
-		),
+			rgba(21, 21, 21, 0.44)),
 		url(../../img/contact/jumbotron-contact.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -107,6 +97,7 @@
 		padding: 0 7.5px 0 7.5px;
 		margin-bottom: 10px;
 	}
+
 	.knowledge .pic-title {
 		white-space: normal;
 		font-size: 0.8em;
@@ -152,6 +143,12 @@
 	margin-bottom: 5%;
 }
 
+.knowledge-pic>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .knowledge-pic-title {
 	position: absolute;
 	font-family: "Gemotica";
@@ -173,7 +170,7 @@
 	}
 }
 
-#select-below-images-container > div {
+#select-below-images-container>div {
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -181,7 +178,7 @@
 	padding: 2px;
 }
 
-#select-below-images-container > div > div {
+#select-below-images-container>div>div {
 	height: 300px;
 	background-size: cover;
 	color: white;

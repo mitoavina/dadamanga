@@ -64,6 +64,8 @@ $route['knowledges'] = 'MainController/knowledges';
 $route['shelf'] = 'MainController/shelf';
 $route['cart'] = 'MainController/cart';
 $route['contact_mail'] = 'Mail/contact_mail';
+
+//dashboard
 $route['login'] = 'MainController/login';
 $route['dashboard'] = 'MainController/dashboard';
 $route['dash_about'] = 'MainController/dash_about';
@@ -74,6 +76,7 @@ $route['dash_experience'] = 'MainController/dash_experience';
 $route['dash_wildlife'] = 'MainController/dash_wildlife';
 $route['homeUpdate'] = 'MainController/homeUpdate';
 $route['authentication'] = 'MainController/authentication';
+$route['dash_blog'] = 'MainController/dash_blog';
 
 $route['destinations/Antananarivo'] = 'MainController/destination/Antananarivo';
 $route['destinations/Toamasina'] = 'MainController/destination/Toamasina';
@@ -98,3 +101,6 @@ $route['postman'] = 'Mail/Postman';
 
 //covid
 $route['covid'] = 'MainController/covid';
+
+//article
+$route['covid/articles/(:num)'] = 'MainController/article/$1';

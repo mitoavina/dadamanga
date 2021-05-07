@@ -19,7 +19,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>dashboard-experience</title>
+    <title>dashboard-parks</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="icon" href="<?= base_url() ?>icon.ico" />
@@ -35,59 +35,7 @@
 <body>
     <div class="wrapper">
 
-        <div class="sidebar">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <a href="#" class="simple-text">
-                        pages
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="dashboard">
-                            <i class="nc-icon nc-align-center"></i>
-                            <p>home</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="dash_about">
-                            <i class="nc-icon nc-circle"></i>
-                            <p>about</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="dash_park">
-                            <i class="nc-icon nc-settings-tool-66"></i>
-                            <p>park</p>
-                        </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link " href="dash_experience">
-                            <i class="nc-icon nc-globe-2"></i>
-                            <p>experience</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="dash_wildlife">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>wildlife</p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="upgrade.html">
-                            <i class="nc-icon nc-alien-33"></i>
-                            <p>Upgrade to PRO</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <?php $this->load->view("dashboard/components/navbar.php"); ?>
         <div class="main-panel">
             <div class="content">
                 <div class="container-fluid">
@@ -98,7 +46,7 @@
                                     <h4 class="card-title">Create</h4>
                                 </div>
                                 <div class="card-body">
-                                    <form action="<?= base_url('dash_experience?insert=true') ?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?= base_url('dash_park?insert=true') ?>" method="post" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="custom-file">
@@ -141,10 +89,10 @@
                                         <tbody>
                                             <?php foreach ($data as $item) { ?>
                                                 <tr>
-                                                    <th scope="row"><?= $item->IDEXPERIENCE ?></th>
+                                                    <th scope="row"><?= $item->IDPARK ?></th>
                                                     <td><img src="<?= base_url($item->IMAGE) ?>" style="width:auto;height:100px;"></td>
                                                     <td><?= $item->TITLE ?></td>
-                                                    <td><a type="submit" href="<?= base_url('dash_experience?delete=' . $item->IDEXPERIENCE) ?>" class="btn btn-danger btn-fill ">Delete</a></td>
+                                                    <td><a class="btn btn-danger btn-fill " href="<?= base_url('dash_park?delete=' . $item->IDPARK) ?>">Delete</a></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>

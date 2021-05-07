@@ -1,13 +1,13 @@
-.modal-content {
+.modal-content.dadamanga {
 	background-color: #F7F4F0;
 }
 
-.modal-header {
+.modal-header.dadamanga {
 	border: none;
 	padding-bottom: .5rem;
 }
 
-.modal-body {
+.modal-body.dadamanga {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -16,11 +16,11 @@
 	font-size: 1.1em;
 }
 
-.modal-body>p {
+.modal-body.dadamanga>p {
 	text-align: center;
 	margin-bottom: 30px;
 }
 
-.close {
+.close.dadamanga {
 	font-size: 1em;
 }

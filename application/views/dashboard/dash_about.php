@@ -19,7 +19,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>dashboard-home</title>
+    <title>dashboard-about</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="icon" href="<?= base_url() ?>icon.ico" />
@@ -34,59 +34,8 @@
 
 <body>
     <div class="wrapper">
-        <div class="sidebar" data-color="blue">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
-        Tip 2: you can also add an image using data-image tag
-    -->
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <a href="#" class="simple-text">
-                        pages
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li class="nav-item active">
-                        <a class="nav-link " href="dashboard">
-                            <i class="nc-icon nc-align-center"></i>
-                            <p>home</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="dash_about">
-                            <i class="nc-icon nc-circle"></i>
-                            <p>about</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="dash_park">
-                            <i class="nc-icon nc-settings-tool-66"></i>
-                            <p>park</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="dash_experience">
-                            <i class="nc-icon nc-globe-2"></i>
-                            <p>experience</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="dash_wildlife">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>wildlife</p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="upgrade.html">
-                            <i class="nc-icon nc-alien-33"></i>
-                            <p>Upgrade to PRO</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <?php $this->load->view("dashboard/components/navbar.php"); ?>
         <div class="main-panel">
             <div class="content">
                 <div class="container-fluid">
@@ -97,7 +46,7 @@
                                     <h4 class="card-title">Edition mode</h4>
                                 </div>
                                 <div class="card-body">
-                                    <form action="<?= base_url() ?>homeUpdate" method="post" enctype="multipart/form-data">
+                                    <form action="<?= base_url('dash_aboutUpdate') ?>" method="post" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <img src="<?= base_url($image[0]->path); ?>" alt="" class="img-thumbnail">
@@ -106,19 +55,41 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="custom-file">
-                                                    <input type="file" name="avatar" class="custom-file-input" id="customFile">
-                                                    <label class="custom-file-label" for="customFile">Change image 1</label>
+                                                    <input type="file" name="avatar" class="custom-file-input" value="<?= $image[0]->path ?>" id="customFile">
+                                                    <label class="custom-file-label" for="customFile">Change image </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label>home text</label>
-                                                    <textarea rows="4" cols="80" class="form-control" name="text"><?= $text[0]->value; ?></textarea>
+                                                    <label>social responsability text</label>
+                                                    <textarea rows="4" cols="80" class="form-control" name="text"><?= $text[0]->value ?></textarea>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>slide 1</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" name="avatar1" class="custom-file-input" id="customFile">
+                                                        <label class="custom-file-label" for="customFile">Change image slide 1</label>
+                                                    </div>
+                                                    <textarea rows="4" cols="80" class="form-control" name="text"><?= $text[1]->value ?></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>slide 2</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" name="avatar2" class="custom-file-input" id="customFile">
+                                                        <label class="custom-file-label" for="customFile">Change image slide 2</label>
+                                                    </div>
+                                                    <textarea rows="4" cols="80" class="form-control" name="text">current slide text</textarea>
+                                                </div>
+                                            </div>
+                                        </div> -->
                                         <button type="submit" class="btn btn-info btn-fill pull-right">Update page</button>
                                         <div class="clearfix"></div>
                                     </form>

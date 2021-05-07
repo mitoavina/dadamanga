@@ -34,3 +34,6 @@ application/config/database.php
 assets/img
 
 TODO
+node_modules
+react/dist
+uploads

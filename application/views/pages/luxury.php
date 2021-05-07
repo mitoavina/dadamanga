@@ -5,18 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="icon" href="<?= base_url() ?>icon.ico" />
-	<link href="<?= base_url() ?>assets/css/all.css" rel="stylesheet">
-	<!-- Bootstrap core CSS -->
-	<link href="<?= base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link href="<?= base_url() ?>assets/css/global.css?v=0.0.1" rel="stylesheet">
+	<?php $this->load->view("components/common-css.php"); ?>
 	<link href="<?= base_url() ?>assets/css/galleria-themes/galleria.reis.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/css/jquery-ui.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/css/page/luxury.css" rel="stylesheet">
-	<!-- Material Design Bootstrap -->
-	<link href="<?= base_url() ?>assets/css/mdb.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<title>Dadamanga | Explore Luxury</title>
 </head>
 <?php $this->load->view("components/navbar.php"); ?>
@@ -24,14 +16,12 @@
 
 <body>
 	<!-- MODAL -->
-	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-		aria-hidden="true">
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered modal-xl " role="document">
 			<form id="luxury-form">
 				<div class="modal-content">
 					<div class="modal-header text-center">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-								aria-hidden="true">&times;</span></button>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					</div>
 					<div class="modal-body">
 						<div class="container-fluid ">
@@ -46,31 +36,25 @@
 							<div class="form-row">
 								<div class="form-group col-lg-4">
 									<label class="modal-label" for="name">FULL NAME*</label>
-									<input required="required" type="text" class="form-control custom-bg-input"
-										name="name" id="name" placeholder="full Name">
+									<input required="required" type="text" class="form-control custom-bg-input" name="name" id="name" placeholder="full Name">
 								</div>
 								<div class="form-group col-lg-4">
 									<label class="modal-label" for="phone">Phone*</label>
-									<input required="required" name="phone" type="number"
-										class="form-control custom-bg-input" id="phone" placeholder="Phone">
+									<input required="required" name="phone" type="number" class="form-control custom-bg-input" id="phone" placeholder="Phone">
 								</div>
 								<div class="form-group col-lg-4">
 									<label class="modal-label" for="email">Email</label>
-									<input required="required" name="email" type="email"
-										class="form-control custom-bg-input" id="email"
-										placeholder="Exemple@exemple.com">
+									<input required="required" name="email" type="email" class="form-control custom-bg-input" id="email" placeholder="Exemple@exemple.com">
 								</div>
 							</div>
-							<div class=" myMargin form-row justify-content-center">
+							<div class=" myMargin form-row">
 								<div class="col-lg-10">
 									<div class="row">
 										<div class="form-group col-lg-6">
 											<label class="modal-label" for="nationality">NATIONALITY /CONTRY OF
 												RESIDENCE</label>
 											<!-- <input type="text" class="form-control custom-bg-input" id="email" placeholder="Exemple@exemple.com"> -->
-											<select required="required"
-												class=" custom-bg-input browser-default custom-select"
-												name="nationality">
+											<select required="required" class=" custom-bg-input browser-default custom-select" name="nationality">
 												<option value="" disabled selected>Select your nationality</option>
 												<option value="afghan">Afghan</option>
 												<option value="albanian">Albanian</option>
@@ -271,42 +255,37 @@
 											<label class="modal-label" for="email">APPROXIMATE DATES OF TRAVEL</label>
 											<div class="row">
 												<div class="col-lg-6">
-													<input placeholder="Beginning" id="begin" name="begin" type="text"
-														class="form-control custom-bg-input">
+													<input placeholder="Beginning" id="begin" name="begin" type="text" class="form-control custom-bg-input">
 												</div>
 												<div class="col-lg-6">
-													<input placeholder="End" id="end" name="end" type="text"
-														class="form-control  custom-bg-input">
+													<input placeholder="End" id="end" name="end" type="text" class="form-control  custom-bg-input">
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class=" myMargin form-row justify-content-center">
+							<div class=" myMargin form-row">
 								<div class="col-lg-10">
 									<div class="row">
 										<div class="form-group col-lg-6">
 											<label class="modal-label" for="disability">ANY DISABILITY / ACCESSIBILITY
 												REQUIREMENT?</label>
-											<input name="disability" type="text" class="form-control custom-bg-input"
-												id="disability" placeholder="YES/NO/COMMENT">
+											<input name="disability" type="text" class="form-control custom-bg-input" id="disability" placeholder="YES/NO/COMMENT">
 
 										</div>
 										<div class="form-group col-lg-6">
 											<label class="modal-label" for="food">ANY SPECIAL FOOD REQUIREMENTS</label>
-											<input name="food" type="text" class="form-control custom-bg-input"
-												placeholder="Write">
+											<input name="food" type="text" class="form-control custom-bg-input" placeholder="Write">
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="myMargin form-row justify-content-center">
+							<div class="myMargin form-row">
 								<div class="col-lg-11">
 									<div class="form-group">
 										<label class="modal-label" for="else">ANYTHING ELSE YOU WANT TO TELL US?</label>
-										<textarea name="else" class="custom-bg-textarea form-control " id="else"
-											rows="5" placeholder="Your Message"></textarea>
+										<textarea name="else" class="custom-bg-textarea form-control " id="else" rows="5" placeholder="Your Message"></textarea>
 									</div>
 								</div>
 							</div>
@@ -340,8 +319,7 @@
 			<a class="navbar-brand" href="<?= base_url() . "home" ?>">
 				<img src="<?= base_url() ?>assets/img/png/Logo_mini.png" alt="logo">
 			</a>
-			<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span
-					class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+			<button onclick="openNav()" style="font-size:32px;" class="navbar-toggler" type="button"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
 		</nav>
 		<div class=" div1 container-fluid content-template">
 			<div class="row">
@@ -373,165 +351,19 @@
 			<div class="div2 row mt-4">
 				<div class="col-md-12 p-0">
 					<div id="galleria">
-						<img style="border-radius:0;" src="./assets/img/luxury/miavana-bg.jpg" class="card-img-top"
-							alt="...">
-						<img style="border-radius:0;" src="./assets/img/luxury/Tsarabanjina.jpg" class="card-img-top"
-							alt="...">
-						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_1.jpg" class="card-img-top"
-							alt="...">
-						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_2.jpg" class="card-img-top"
-							alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/miavana-bg.jpg" class="card-img-top" alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/Tsarabanjina.jpg" class="card-img-top" alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_1.jpg" class="card-img-top" alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_2.jpg" class="card-img-top" alt="...">
 						<img style="border-radius:0;" src="./assets/img/luxury/1.jpg" class="card-img-top" alt="...">
 						<img style="border-radius:0;" src="./assets/img/luxury/2.jpg" class="card-img-top" alt="...">
 						<img style="border-radius:0;" src="./assets/img/luxury/3.jpg" class="card-img-top" alt="...">
 					</div>
 				</div>
 			</div>
-			<!-- <div class=" div3 row title_text text-center">
-				<div class="col-md-12">
-					<p class="pb-2">WHEN TO TRAVEL</p>
-				</div>
-			</div> -->
-			<!-- <div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-8 pt-5 pb-5 text_header">
-					<p class="text-center">
-						" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut
-						labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi
-						ut aliquip ex ea
-					</p>
-				</div>
-				<div class="col-md-2"></div>
-			</div> -->
-			<!-- <div class="container pb-4 mt-3">
-				<div class="row">
-					<div class="col-md-6 text_secondaire">
-						<p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut
-							labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore
-							magna aliqua.. Ut enim ad minim</p>
-					</div>
-					<div class="col-md-6 text_secondaire">
-						<p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut
-							labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore
-							magna aliqua.. Ut enim ad minim</p>
-					</div>
-				</div>
-			</div> -->
-			<!-- <div class="row mt-4">
-				<div class="col-md-1"></div>
-				<div class="col-md-10">
-					<div class="luxury-card dadamanga-special-card card mb-3">
-						<div class="row no-gutters">
-							<div class="col-lg-6 col-md-12">
-								<img src="./assets/img/luxury/miavana.jpg" style="border-radius:0;"
-									class="img-fluid card-img active wow animated fadeInLeft" alt="...">
-								<img src="./assets/img/luxury/gidro.jpg" style="border-radius:0;"
-									class="img-fluid card-img d-none" alt="...">
-								<img src="./assets/img/luxury/baobab.jpg" style="border-radius:0;"
-									class="img-fluid card-img d-none" alt="...">
-								<img src="./assets/img/luxury/miavana.jpg" style="border-radius:0;"
-									class="img-fluid card-img d-none" alt="...">
-								<img src="./assets/img/luxury/miavana.jpg" style="border-radius:0;"
-									class="img-fluid card-img d-none" alt="...">
-							</div>
-							<div class="col-lg-6 col-md-12">
-								<div class="card-body py-0 wow animated fadeInRight">
-									<div class="row title_text">
-										<div class="dadamanga-special-card-brown-title col-md-12">
-											<p class="pb-2 active">MIAVANA</p>
-											<p class="pb-2 d-none">TSARABANJINA</p>
-											<p class="pb-2 d-none">ANJAVAVY LE LODGE</p>
-											<p class="pb-2 d-none">MADAGASCAR CLASSIC COLLECTION</p>
-											<p class="pb-2 d-none">MASOALA FOREST LODGE</p>
-										</div>
-									</div>
-									<div class="row title_text " style="margin-top:0;color:#151515;font-size:18px;">
-										<div class="month-containers col-md-12 ">
-											<p class="pb-2 active">DEC - MAR</p>
-											<p class="pb-2 d-none">NOV - JAN</p>
-											<p class="pb-2 d-none">FEB - MAR</p>
-											<p class="pb-2 d-none">APR - MAY</p>
-											<p class="pb-2 d-none">APR - MAY</p>
-										</div>
-									</div>
-									<div class="description-container">
-										<p class="text_secondaire active">
-											Madagascar's first 5 star eco luxury accommodation - NOSY ANKAO - Sink your
-											feet into the pearly sands of a remote island sanctuary where you'll taste
-											sweet jasmine on the breeze while gazing at a thousand sparkling shades of
-											turquoise.
-										</p>
-										<p class="text_secondaire d-none">
-											Azure blue water, powder soft beaches, private bungalows fenced by tropical
-											plants, choose from one of the 25 beach villas. Laid back atmosphere,
-											barefoot chic, an intimate retreat, eco-friendly, an unspoiled Island
-											surrounded by azure water; the resort offers a chic Robinson Crusoe
-											experience.
-										</p>
-										<p class="text_secondaire d-none">
-											ANJAJAVY - On an isolated peninsular on the northwest coast of Madagascar,
-											Anjajavy le Lodge awaits your discovery. Set along sandy beaches, azure
-											waters and encircled by a fabulous forest reserve, Anjajavy reflects the
-											rich diversity and untouched beauty of Madagascar and the natural warm
-											hospitality of her people.
-										</p>
-										<p class="text_secondaire d-none">
-											MCC - two exclusive properties, a tented camp with seven fully-outfitted
-											rooms in the heart of southern Madagascar’s spiny forest, and Manafiafy
-											Beach & Rainforest Lodge, a barefoot luxury lodge with five rooms tucked
-											into a secluded and serene bay on the southeastern shores of Madagascar.
-										</p>
-										<p class="text_secondaire d-none">
-											MASOALA FOREST LODGE - An Untouched Rainforest Peninsula - The spectacular
-											rainforest covered peninsula on Madagascar’s northeast coast forms the
-											backdrop for Masoala Forest Lodge – a luxurious outpost lost in time and
-											nature… A place to relax explore and connect with the natural world in all
-											its primordial splendor.
-										</p>
-									</div>
-									<button onclick="prevCard(true)" style="bottom: 0;"
-										class="position-absolute noShadow btn-marron btn btn-sm"><i
-											class="fas fa-angle-left"></i></button>
-									<button onclick="nextCard(true)" style="bottom: 0; left:90px"
-										class="position-absolute noShadow btn-marron btn btn-sm"><i
-											class="fas fa-angle-right"></i></button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-1"></div>
-			</div> -->
-			<div class=" div4 row title_text text-center">
-				<div class="col-md-12">
-					<p class="pb-2">PROPERTY FOCUS</p>
-				</div>
+			<div class="bg-white pt-4 div4 row text-center">
+				<div class="col-md-12 section-title">PROPERTY FOCUS</div>
 			</div>
-			<!-- <div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-8 pt-5 pb-5 text_header">
-					<p class="text-center">
-						" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do euismod tempor incididunt ut
-						labore et dolore aliqua.. Ut enim ad minim veniam, quis nostrud exercitation ullamo laboris nisi
-						ut aliquip ex ea
-					</p>
-				</div>
-				<div class="col-md-2"></div>
-			</div> -->
-			<!-- <div class="container pb-4 mt-3">
-				<div class="row">
-					<div class="col-md-6 text_secondaire">
-						<p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut
-							labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore
-							magna aliqua.. Ut enim ad minim</p>
-					</div>
-					<div class="col-md-6 text_secondaire">
-						<p>« Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do eiusmod tempor incididunt ut
-							labore etdolore magna aliqua.. Ut enim ad minimeiusmod tempor incididunt ut labore etdolore
-							magna aliqua.. Ut enim ad minim</p>
-					</div>
-				</div>
-			</div> -->
 			<div class="itinerary-menu-mobile text-center">
 				<h5>WHAT INTERESTS YOU?</h5>
 				<ul class="list-inline">
@@ -542,7 +374,7 @@
 					<li class="list-inline-item" data-index="4"><a>Masoala Forest Lodge</a></li>
 				</ul>
 			</div>
-			<div class="itineraries-details position-relative row pt-4 mt-4 bg-white px-md-5">
+			<div class="itineraries-details position-relative row pt-4 bg-white px-md-5">
 				<div class="itinerary-menu col-lg-3 col-sm-4 pr-5 " id="jj">
 					<h5>WHAT INTERESTS YOU?</h5>
 					<ul class="list-group">
@@ -557,8 +389,7 @@
 				</div>
 				<div class="dadamanga-special-card-container col-lg-8 col-md-8 col-sm-8 col-xs-12">
 					<div data-index="0" class="card luxury-card active dadamanga-special-card">
-						<img style="border-radius:0;" src="./assets/img/luxury/miavana-bg.jpg" class="card-img-top"
-							alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/miavana-bg.jpg" class="card-img-top" alt="...">
 						<div class="">
 							<p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Miavana</p>
 							<p class="text_secondaire">
@@ -571,17 +402,14 @@
 									.kl {
 										box-shadow: none;
 									}
-
 								</style>
-								<button type="button" data-toggle="modal" data-target="#modal"
-									class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
+								<button type="button" data-toggle="modal" data-target="#modal" class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
 							</div>
 						</div>
 					</div>
 
 					<div data-index="1" class="d-none card luxury-card dadamanga-special-card">
-						<img style="border-radius:0;" src="./assets/img/luxury/Tsarabanjina.jpg" class="card-img-top"
-							alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/Tsarabanjina.jpg" class="card-img-top" alt="...">
 						<div class="">
 							<p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Tsarabanjina</p>
 							<p class="text_secondaire">
@@ -595,17 +423,14 @@
 									.kl {
 										box-shadow: none;
 									}
-
 								</style>
-								<button type="button" data-toggle="modal" data-target="#modal"
-									class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
+								<button type="button" data-toggle="modal" data-target="#modal" class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
 							</div>
 						</div>
 					</div>
 
 					<div data-index="2" class="d-none card luxury-card dadamanga-special-card">
-						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_1.jpg" class="card-img-top"
-							alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_1.jpg" class="card-img-top" alt="...">
 						<div>
 							<p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Anjavavy Le Lodge</p>
 							<p class="text_secondaire">
@@ -619,17 +444,14 @@
 									.kl {
 										box-shadow: none;
 									}
-
 								</style>
-								<button type="button" data-toggle="modal" data-target="#modal"
-									class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
+								<button type="button" data-toggle="modal" data-target="#modal" class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
 							</div>
 						</div>
 					</div>
 
 					<div data-index="3" class="d-none card luxury-card dadamanga-special-card">
-						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_2.jpg" class="card-img-top"
-							alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/Luxury_2.jpg" class="card-img-top" alt="...">
 						<div class="">
 							<p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Madagascar Classic
 								Collection</p>
@@ -677,18 +499,15 @@
 										.kl {
 											box-shadow: none;
 										}
-
 									</style>
-									<button type="button" data-toggle="modal" data-target="#modal"
-										class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
+									<button type="button" data-toggle="modal" data-target="#modal" class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<div data-index="4" class="d-none card luxury-card dadamanga-special-card">
-						<img style="border-radius:0;" src="./assets/img/luxury/masoala.jpg" class="card-img-top"
-							alt="...">
+						<img style="border-radius:0;" src="./assets/img/luxury/masoala.jpg" class="card-img-top" alt="...">
 						<div class="">
 							<p class="mt-4 mb-2 card-title luxury-card-title" style="margin:0;">Masoala Forest Lodge</p>
 							<p class="text_secondaire">
@@ -703,10 +522,8 @@
 										.kl {
 											box-shadow: none;
 										}
-
 									</style>
-									<button type="button" data-toggle="modal" data-target="#modal"
-										class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
+									<button type="button" data-toggle="modal" data-target="#modal" class="noShadow brown-color kl text-white btn-rounded btn btn-sm">BOOK</i></button>
 								</div>
 							</div>
 						</div>
@@ -718,7 +535,7 @@
 					<p class="pb-2">PRIVATE PLANE & HELICOPTER TRAVEL</p>
 				</div>
 			</div>
-			<div class="container mb-5">
+			<div class="container pb-5">
 				<div class="row d-flex align-items-center">
 					<div class="col-md-6">
 						<div class="text_secondaire">
