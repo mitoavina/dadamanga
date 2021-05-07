@@ -36,10 +36,10 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="adventure-modal-title">THE ADVENTURE BEGINS..</h5>
                         <div class="dot-content">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlideAdv(1)"></span>
+                            <span class="dot" onclick="currentSlideAdv(2)"></span>
+                            <span class="dot" onclick="currentSlideAdv(3)"></span>
+                            <span class="dot" onclick="currentSlideAdv(4)"></span>
                         </div>
                     </div>
                     <div class="modal-body">
@@ -344,8 +344,8 @@
                             <button class="btn adventure-btn-change" data-dismiss="modal">Change my adventure</button>
                         </div>
                         <div class="adventure-btn-right col">
-                            <button class="btn adventure-btn-previous" onclick="slideTo(-1)">Previous</button>
-                            <button class="btn adventure-btn-next" onclick="slideTo(1)">Next</button>
+                            <button class="btn adventure-btn-previous" onclick="slideAdvTo(-1)">Previous</button>
+                            <button class="btn adventure-btn-next" onclick="slideAdvTo(1)">Next</button>
                             <button type="submit" form="adventure-form" id="adventure-btn-send" class="btn adventure-btn-send">Send</button>
                         </div>
                         <div id="mailSpinner" class="d-none spinner-border text-light spinner-border-sm" role="status">
@@ -385,13 +385,13 @@
                             Some points to consider whilst planning your trip:
                         </p>
                         <p>
-                        It is useful for us to understand the style and level of trip you would prefer, because we will always aim for a comfortable mid-range as our standard, but, if you want non-stop luxury, or a few days or spoiling, please let us know.
+                            It is useful for us to understand the style and level of trip you would prefer, because we will always aim for a comfortable mid-range as our standard, but, if you want non-stop luxury, or a few days or spoiling, please let us know.
                         </p>
                     </div>
                     <div class="col-md-6 text_secondaire">
-                    <p>
-                    We realize budget and time play a big factor in planning your adventure so, the more specific the information you give us, the more accurate we can be, first time.
-                    </p>
+                        <p>
+                            We realize budget and time play a big factor in planning your adventure so, the more specific the information you give us, the more accurate we can be, first time.
+                        </p>
                     </div>
                 </div>
             </div>
