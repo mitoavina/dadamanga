@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php $this->load->view("components/common-css.php"); ?>
-    <link href="<?= base_url() ?>assets/css/page/adventure.css?v=0.0.1" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/page/adventure.css?v=0.0.2" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/jquery-ui.css" rel="stylesheet">
     <title>Dadamanga | Create Your Adventure</title>
 </head>
