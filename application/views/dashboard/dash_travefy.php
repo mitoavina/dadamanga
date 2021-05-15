@@ -19,7 +19,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>dashboard-blog</title>
+    <title>dashboard-travefy</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="icon" href="<?= base_url() ?>icon.ico" />
@@ -30,7 +30,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="<?= base_url() ?>assets/css/demo.css" rel="stylesheet" />
     <link href="<?= base_url() ?>assets/css/page/dashboard.css" rel="stylesheet" />
-    <link href="<?= base_url() ?>assets/css/dash_blog.css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/dash_travefy.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -45,15 +45,11 @@
 </body>
 
 <script src="<?= base_url() ?>assets/js/momentjs/moment.min.js"></script>
-<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react@16/umd/react.production.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.js" crossorigin></script>
 <script src="<?= base_url() ?>react/dist/dashboard/serverUrl.js" type="text/javascript"></script>
-<script src="<?= base_url() ?>react/dist/dashboard/blog/components/Article.js" type="text/javascript"></script>
-<script src="<?= base_url() ?>react/dist/dashboard/blog/components/ArticleField.js" type="text/javascript"></script>
-<script src="<?= base_url() ?>react/dist/dashboard/blog/pages/ArticleDetailed.js" type="text/javascript"></script>
-<script src="<?= base_url() ?>react/dist/dashboard/blog/pages/ArticleList.js" type="text/javascript"></script>
-<script src="<?= base_url() ?>react/dist/dashboard/blog/App.js" type="text/javascript"></script>
-<script src="<?= base_url() ?>react/dist/dashboard/blog/index.js" type="text/javascript"></script>
+<script src="<?= base_url() ?>react/dist/dashboard/travefy/App.js" type="text/javascript"></script>
+<script src="<?= base_url() ?>react/dist/dashboard/travefy/index.js" type="text/javascript"></script>
 
 <!--   Core JS Files   -->
 

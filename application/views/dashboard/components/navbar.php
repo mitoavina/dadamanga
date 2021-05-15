@@ -47,6 +47,12 @@
                     <p>blog</p>
                 </a>
             </li>
+            <li class="nav-item<?= $active == 'travefy' ? ' active' : '' ?>">
+                <a class="nav-link" href="dash_travefy">
+                    <i class="nc-icon nc-planet"></i>
+                    <p>travefy</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

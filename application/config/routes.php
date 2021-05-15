@@ -77,6 +77,7 @@ $route['dash_wildlife'] = 'MainController/dash_wildlife';
 $route['homeUpdate'] = 'MainController/homeUpdate';
 $route['authentication'] = 'MainController/authentication';
 $route['dash_blog'] = 'MainController/dash_blog';
+$route['dash_travefy'] = 'MainController/dash_travefy';
 
 $route['destinations/Antananarivo'] = 'MainController/destination/Antananarivo';
 $route['destinations/Toamasina'] = 'MainController/destination/Toamasina';

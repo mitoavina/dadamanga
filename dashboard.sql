@@ -28,3 +28,8 @@ INSERT INTO dm_article (title, chapo, fields) VALUES
         ]
     }'
 );
+
+CREATE TABLE dm_travefy_trip (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    travefy_trip_id VARCHAR(31) NOT NULL UNIQUE
+);

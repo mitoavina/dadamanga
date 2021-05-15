@@ -9,6 +9,120 @@ class WebServices extends CI_Controller
         echo 'Rien à voir ici.';
     }
 
+    function removeTravefyTripId($id)
+    {
+        if ($this->input->method() != "delete")
+            return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(400)
+                ->set_output(json_encode(array(
+                    'status' => '400',
+                    'type' => 'error',
+                    'error' => 'Seul méthode DELETE autorisée'
+                )));
+
+
+        $this->db->where('id', $id);
+        $this->db->delete('dm_travefy_trip');
+
+        return $this->output
+            ->set_content_type('application/json')
+            ->set_status_header(200)
+            ->set_output(json_encode(array(
+                'status' => '200',
+                'type' => 'success'
+            )));
+    }
+
+    function updateTravefyTripId($id)
+    {
+        if ($this->input->method() != "patch")
+            return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(400)
+                ->set_output(json_encode(array(
+                    'status' => '400',
+                    'type' => 'error',
+                    'error' => 'Seul méthode PATCH autorisée'
+                )));
+
+        $stream_clean = $this->security->xss_clean($this->input->raw_input_stream);
+        $request = json_decode($stream_clean);
+
+
+        $tripId = $request->tripId;
+
+        $data = array(
+            'travefy_trip_id' => $tripId
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('dm_travefy_trip', $data);
+
+        return $this->output
+            ->set_content_type('application/json')
+            ->set_status_header(200)
+            ->set_output(json_encode(array(
+                'status' => '200',
+                'type' => 'success',
+                'id' => $id,
+                'message' => $request
+            )));
+    }
+
+    function getAllTravefyTrip()
+    {
+        $this->db->from('dm_travefy_trip');
+        return $this->output
+            ->set_content_type('application/json')
+            ->set_status_header(200)
+            ->set_output(json_encode(array(
+                'status' => '200',
+                'type' => 'success',
+                'data' => $this->db->get()->result()
+            )));
+    }
+
+    function insertTravefyTrip()
+    {
+        $tripId = $this->input->post("tripId");
+
+        $data = array(
+            'travefy_trip_id' => $tripId
+        );
+
+        if ($this->db->insert('dm_travefy_trip', $data)) {
+            $lastInsertId = $this->db->insert_id();
+            return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(200)
+                ->set_output(json_encode(array(
+                    'status' => '200',
+                    'type' => 'success',
+                    'insertedId' => $lastInsertId
+                )));
+        } else {
+            $error = $this->db->error();
+            if ($error['code'] == 1062) {
+                return $this->output
+                    ->set_content_type('application/json')
+                    ->set_status_header(400)
+                    ->set_output(json_encode(array(
+                        'status' => '400',
+                        'type' => 'duplicate entry'
+                    )));
+            } else {
+                return $this->output
+                    ->set_content_type('application/json')
+                    ->set_status_header(400)
+                    ->set_output(json_encode(array(
+                        'status' => '500',
+                        'type' => 'error from the server'
+                    )));
+            }
+        }
+    }
+
     function getAllArticle()
     {
         $this->db->from('dm_article');
@@ -24,10 +138,8 @@ class WebServices extends CI_Controller
             )));
     }
 
-    function removeArticle()
+    function removeArticle($id)
     {
-        $id = $this->input->post("id");
-
         $this->db->where('id', $id);
         $this->db->delete('dm_article');
 

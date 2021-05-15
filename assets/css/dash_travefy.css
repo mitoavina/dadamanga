@@ -1,0 +1,13 @@
+#dash-travefy-table {
+	border-collapse: collapse;
+}
+
+#dash-travefy-table,
+#dash-travefy-table th,
+#dash-travefy-table td {
+	border: 1px solid black;
+}
+
+#dash-travefy-table input {
+	width: 300px;
+}

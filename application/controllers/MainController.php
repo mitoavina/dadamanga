@@ -250,10 +250,11 @@ class MainController extends CI_Controller
         $this->load->model('TripModel', 'TripModel');
         $data['footerImg'] = "cacao.jpg";
 
-        $tripsId = ['6yw9rqtspafsqz2a9cvbfcjm2hlyhea', '6yw9rqtat27wqz2asa4dq58ry7f9btq', '6yw9rqtsjg8wqz2at7eqy6mawfdfmta', '6yw9rqtsndywqz2a4ms3qly42kbtsgq', '6yw9rqtsja7sqz2anvam3gdcemr8h8a'];
+        $this->db->from('dm_travefy_trip');
+        $travefyTrips = $this->db->get()->result();
         $trips = array();
-        foreach ($tripsId as $id) {
-            $url = 'https://trips.dadamanga.mg/itinerary-rest-api/itineraryPages/' . $id;
+        foreach ($travefyTrips as $travefyTrip) {
+            $url = 'https://trips.dadamanga.mg/itinerary-rest-api/itineraryPages/' . $travefyTrip->travefy_trip_id;
             try {
                 $json = file_get_contents($url);
                 $json = json_decode($json);
@@ -261,7 +262,7 @@ class MainController extends CI_Controller
                 preg_match_all("#(([0-9]{1,3},?)+) (MGA|USD|EUR)#U", $json->itineraryPage->trip->estimatedCost, $match, PREG_PATTERN_ORDER);
 
                 $trip = new TripModel();
-                $trip->setId($id);
+                $trip->setId($travefyTrip->travefy_trip_id);
                 $trip->setName($json->itineraryPage->trip->name);
                 $trip->setPrice($match[1][0]);
                 $trip->setCurrency($match[3][0]);
@@ -325,6 +326,17 @@ class MainController extends CI_Controller
         $data['text'] = $pageModel->addInformation(2)->text;
         $data['active'] = 'about';
         $this->load->view('dashboard/dash_about', $data);
+    }
+
+    public function dash_travefy()
+    {
+        $this->load->helper('url');
+        session_start();
+        if (!isset($_SESSION['authentication'])) {
+            redirect('/login', 'refresh');
+        }
+        $data['active'] = 'travefy';
+        $this->load->view('dashboard/dash_travefy', $data);
     }
 
     public function dash_blog()

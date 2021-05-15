@@ -1,5 +1,3 @@
-const SERVER_URL = 'https://dadamanga.mg';
-
 const isEmpty = (obj) => { // check if object is equal to "{}"
     return obj && Object.keys(obj).length === 0 && obj.constructor === Object;
 }
