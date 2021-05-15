@@ -45,8 +45,8 @@
 </body>
 
 <script src="<?= base_url() ?>assets/js/momentjs/moment.min.js"></script>
-<script src="https://unpkg.com/react@16/umd/react.production.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.js" crossorigin></script>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
 <script src="<?= base_url() ?>react/dist/dashboard/serverUrl.js" type="text/javascript"></script>
 <script src="<?= base_url() ?>react/dist/dashboard/travefy/App.js" type="text/javascript"></script>
 <script src="<?= base_url() ?>react/dist/dashboard/travefy/index.js" type="text/javascript"></script>
