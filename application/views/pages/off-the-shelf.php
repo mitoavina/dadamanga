@@ -52,9 +52,9 @@
                             <div class="card-body">
                                 <h5 class="card-title trip-card-title"><?= $trip->getName() ?></h5>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-clock"></i></span> <span>1 day excursion</span></li>
+                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-clock"></i></span> <span><?= $trip->getDays() ?> day excursion</span></li>
                                     <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-times-circle"></i></span> <span>free cancellation</span></li>
-                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-comment-alt"></i></span> <span>english</span></li>
+                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-comment-alt"></i></span> <span><?= $trip->getLanguage() ?></span></li>
                                 </ul>
                             </div>
                             <div class="card-footer bg-transparent trip-card-price-container">
