@@ -1,6 +1,11 @@
+Connexion Espace Client Simafri:
 Adresse email : dadamanga@me.com
 Mot de passe : Coworking@99
 https://manager.simafri.com/clientarea.php
+
+Connexion mysql à distance:
 mysql -u dadamang_xeption -p -h www.dadamanga.mg
-S7Y9crE!1E+d8k
-ssh -p 5544 dadamang@dadamanga.mg
+
+Connexion SSH:
+ssh dadamang@dadamanga.mg
+mp: S7Y9crE!1E+d8k
