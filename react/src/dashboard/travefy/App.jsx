@@ -17,7 +17,7 @@ const App = () => {
     const { travefyIds, newTravefyTripId, languages } = state;
 
     const updateAsyncImgAndTitleTravefy = (index, trip) => {
-        fetch(`https://frozen-falls-91201.herokuapp.com/https://trips.dadamanga.mg/itinerary-rest-api/itineraryPages/${trip.travefy_trip_id}`).then(response => {
+        fetch(`https://trips.dadamanga.mg/itinerary-rest-api/itineraryPages/${trip.travefy_trip_id}`).then(response => {
             if (response.ok) {
                 return response.json();
             } else {
