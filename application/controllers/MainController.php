@@ -250,7 +250,7 @@ class MainController extends CI_Controller
         $this->load->model('TripModel', 'TripModel');
         $data['footerImg'] = "cacao.jpg";
 
-        $this->db->from('dm_travefy_trip');
+        $this->db->from('dm_travefy_trip_complete');
         $travefyTrips = $this->db->get()->result();
         $trips = array();
         foreach ($travefyTrips as $travefyTrip) {
@@ -264,9 +264,15 @@ class MainController extends CI_Controller
                 $trip = new TripModel();
                 $trip->setId($travefyTrip->travefy_trip_id);
                 $trip->setName($json->itineraryPage->trip->name);
-                $trip->setPrice($match[1][0]);
+                if ($travefyTrip->dm_trip_price != null) {
+                    $trip->setPrice(number_format($travefyTrip->dm_trip_price, 0, null, ","));
+                } else {
+                    $trip->setPrice($match[1][0]);
+                }
+                $trip->setLanguage($travefyTrip->dm_language);
                 $trip->setCurrency($match[3][0]);
                 $trip->setImg($json->itineraryPage->trip->mediaImages[0]->url);
+                $trip->setDays(count($json->itineraryPage->trip->tripDayIds));
                 array_push($trips, $trip);
             } catch (Exception $e) {
             }
