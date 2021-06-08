@@ -30,7 +30,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="<?= base_url() ?>assets/css/demo.css" rel="stylesheet" />
     <link href="<?= base_url() ?>assets/css/page/dashboard.css" rel="stylesheet" />
-    <link href="<?= base_url() ?>assets/css/dash_travefy.css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/dash_travefy.css?v=0.0.1" rel="stylesheet" />
 </head>
 
 <body>
