@@ -4,8 +4,38 @@ define("RECAPTCHA_V3_SECRET_KEY", '6LcS0soUAAAAAPv-mQ4xdN4sBw9HT9n9lZnQ09pk');
 
 use Mpdf\Mpdf;
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 class Mail extends CI_Controller
 {
+	private $mailReceiver = "noreply@dadamanga.mg";
+	private $adminMail = "contact@dadamanga.mg";
+
+	public const SUBJECT_CREATE_ADVENTURE = 'Create an adventure';
+
+	private function setMailConfig($mail)
+	{
+		// SMTP configuration
+		// $mail->SMTPDebug = SMTP::DEBUG_LOWLEVEL;
+		$mail->SMTPDebug = SMTP::DEBUG_OFF;
+		$mail->isSMTP();
+		$mail->Host     = 'mail.dadamanga.mg';
+		$mail->SMTPAuth = true;
+		$mail->Username = 'noreply@dadamanga.mg';
+		$mail->Password = 'Coworking@99';
+		$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+		$mail->SMTPOptions = array(
+			'ssl' => array(
+				'verify_peer' => false,
+				'verify_peer_name' => false,
+				'allow_self_signed' => true
+			)
+		);
+		$mail->Port     = 465;
+	}
+
 	function contact_mail()
 	{
 		$this->load->helper('url');
@@ -33,7 +63,7 @@ class Mail extends CI_Controller
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('contact@dadamanga.mg');
+		$mail->addAddress($this->mailReceiver);
 
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -62,16 +92,16 @@ class Mail extends CI_Controller
 	function adventure_service_mail()
 	{
 		header('Content-Type: application/json');
-		if (!$this->checkCaptcha($_POST['action'])) {
-				echo json_encode(
-						array(
-								'error' => 'Sorry spamming is not allowed.',
-					'success' => false
-				)
-			);
-			exit;
-		}
-		
+		// if (!$this->checkCaptcha($_POST['action'])) {
+		// 	echo json_encode(
+		// 		array(
+		// 			'error' => 'Sorry spamming is not allowed.',
+		// 			'success' => false
+		// 		)
+		// 	);
+		// 	exit;
+		// }
+
 		$data = array(); //izay anaovan'la anaran'ty variable ty
 		$data['current'] = date("Y/m/d");
 		foreach ($_POST as $key => $value) {
@@ -79,11 +109,32 @@ class Mail extends CI_Controller
 		}
 		$admin_mail = $this->adventure_admin($data);
 		$client_mail = $this->adventure_client($data);
-		$admin = $admin_mail->send();
-		$client = $client_mail->send();
+
+		$admin = null;
+		$client = null;
+
+		try {
+			$admin = $admin_mail->send();
+		} catch (Exception $e) {
+			echo "Message could not be sent. Mailer Error: {$admin->ErrorInfo}";
+			die;
+		}
+		try {
+			$client = $client_mail->send();
+		} catch (Exception $e) {
+			echo "Message could not be sent. Mailer Error: {$client->ErrorInfo}";
+			die;
+		}
 		if ($client && $admin) {
 			echo json_encode(array('success' => true));
 		} else {
+			if (!$client) {
+				echo "client lele";
+				die;
+			} else {
+				echo "admin";
+				die;
+			}
 			echo json_encode(
 				array(
 					'error' => 'Message could not be sent.',
@@ -187,7 +238,7 @@ class Mail extends CI_Controller
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('contact@dadamanga.mg');
+		$mail->addAddress($this->mailReceiver);
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
 		// Add cc or bcc 
 		// $mail->addCC('cc@example.com');
@@ -233,8 +284,8 @@ class Mail extends CI_Controller
 		$mail->SMTPSecure = 'ssl';
 		$mail->Port     = 465;
 
-		$mail->setFrom("contact@dadamanga.mg", "Dadamanga Travel Service");
-		$mail->addReplyTo('contact@dadamanga.mg', 'Dadamanga Travel Service');
+		$mail->setFrom($this->mailReceiver, "Dadamanga Travel Service");
+		$mail->addReplyTo($this->mailReceiver, 'Dadamanga Travel Service');
 
 		// Add a recipient
 		//a changer
@@ -266,31 +317,25 @@ class Mail extends CI_Controller
 		// $pdf = $mpdf->Output();
 
 		// /mail
-		
+
 
 		// PHPMailer object
 		$mail = $this->phpmailer_lib->load();
 
 		// SMTP configuration
-		$mail->isSMTP();
-		$mail->Host     = 'smtp.gmail.com';
-		$mail->SMTPAuth = true;
-		$mail->Username = 'dadamanga.travel@gmail.com';
-		$mail->Password = 'dadamanga123$';
-		$mail->SMTPSecure = 'ssl';
-		$mail->Port     = 465;
+		$this->setMailConfig($mail);
 
 		$mail->setFrom($data['email'], $data['name']);
 		$mail->addReplyTo($data['email'], $data['name']);
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress('contact@dadamanga.mg');
+		$mail->addAddress($this->adminMail);
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
 
 
 		// Email subject
-		$mail->Subject = 'create an adventure';
+		$mail->Subject = Mail::SUBJECT_CREATE_ADVENTURE . " Admin";
 
 		// Set email format to HTML
 		$mail->isHTML(true);
@@ -312,16 +357,10 @@ class Mail extends CI_Controller
 		$mail = $this->phpmailer_lib->load();
 
 		// SMTP configuration
-		$mail->isSMTP();
-		$mail->Host     = 'smtp.gmail.com';
-		$mail->SMTPAuth = true;
-		$mail->Username = 'dadamanga.travel@gmail.com';
-		$mail->Password = 'dadamanga123$';
-		$mail->SMTPSecure = 'ssl';
-		$mail->Port     = 465;
+		$this->setMailConfig($mail);
 
-		$mail->setFrom("contact@dadamanga.mg", "Dadamanga Travel Service");
-		$mail->addReplyTo("contact@dadamanga.mg", "Dadamanga Travel Service");
+		$mail->setFrom($this->mailReceiver, "Dadamanga Travel Service");
+		$mail->addReplyTo($this->mailReceiver, "Dadamanga Travel Service");
 
 		// Add a recipient
 		//a changer
@@ -333,7 +372,7 @@ class Mail extends CI_Controller
 		// $mail->addBCC('bcc@example.com');
 
 		// Email subject
-		$mail->Subject = 'Create my adventure';
+		$mail->Subject = Mail::SUBJECT_CREATE_ADVENTURE;
 
 		// Set email format to HTML
 		$mail->isHTML(true);
