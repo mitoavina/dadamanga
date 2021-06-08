@@ -38,3 +38,4 @@ node_modules
 react/dist
 uploads
 composer.phar
+.htaccess
