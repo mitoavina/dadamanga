@@ -691,3 +691,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L] 
 SetEnv CI_ENV production
 ``
+
+
+Voir le fichier `application/config/config` pour les informations d'hébergement et autres
