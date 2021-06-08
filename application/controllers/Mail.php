@@ -68,7 +68,7 @@ class Mail extends CI_Controller
 		$this->setMailConfig($mail);
 
 		$mail->setFrom($this->mailSender, Mail::MAILER);
-		$mail->addReplyTo($this->adminMail, Mail::CONTACT_SUPPORT);
+		$mail->addReplyTo($data['email'], $data['email']);
 
 		// Add a recipient
 		//a changer
