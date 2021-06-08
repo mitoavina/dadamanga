@@ -48,7 +48,7 @@
 <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
 <script src="<?= base_url() ?>react/dist/dashboard/serverUrl.js" type="text/javascript"></script>
-<script src="<?= base_url() ?>react/dist/dashboard/travefy/App.js" type="text/javascript"></script>
+<script src="<?= base_url() ?>react/dist/dashboard/travefy/App.js?v=0.0.1" type="text/javascript"></script>
 <script src="<?= base_url() ?>react/dist/dashboard/travefy/index.js" type="text/javascript"></script>
 
 <!--   Core JS Files   -->
