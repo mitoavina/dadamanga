@@ -78,33 +78,6 @@
             </div>
             <div class="pagination-chevron"><a href="?page=<?= $page + 1 ?>"><i class="fas fa-chevron-right"></i></a></div>
         </div>
-
-        <div class="container-fluid faq-container">
-            <div class="row justify-content-center">
-                <h2 class="faq-subtitle">frequently asked questions</h2>
-            </div>
-            <div class="row justify-content-center faq-list-container">
-                <div class="col-md-10 faq-list">
-                    <div class="card">
-                        <?php $i = 0; ?>
-                        <?php foreach ($faqList as $faq) { ?>
-                            <div class="faq-item">
-                                <div class="card-header">
-                                    <h5><?= $faq->titre; ?></h5>
-                                    <span class="faq-chevron" onclick="displayFaq(this,<?= $i; ?>)"><i class="fas fa-chevron-down"></i></span>
-                                </div>
-                                <div data-index="<?= $i; ?>" class="card-body faq-content">
-                                    <p class="card-text">
-                                        <?= $faq->contenu; ?>
-                                    </p>
-                                </div>
-                            </div>
-                            <?php $i++; ?>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <script type="text/javascript">
         function displayFaq(elParent, index) {
