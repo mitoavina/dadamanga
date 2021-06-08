@@ -9,6 +9,19 @@ class WebServices extends CI_Controller
         echo 'Rien à voir ici.';
     }
 
+    function getAllLanguages()
+    {
+        $this->db->from('dm_language');
+        return $this->output
+            ->set_content_type('application/json')
+            ->set_status_header(200)
+            ->set_output(json_encode(array(
+                'status' => '200',
+                'type' => 'success',
+                'data' => $this->db->get()->result()
+            )));
+    }
+
     function removeTravefyTripId($id)
     {
         if ($this->input->method() != "delete")
@@ -51,9 +64,13 @@ class WebServices extends CI_Controller
 
 
         $tripId = $request->tripId;
+        $tripPrice = $request->tripPrice;
+        $languagueId = $request->languageId;
 
         $data = array(
-            'travefy_trip_id' => $tripId
+            'travefy_trip_id' => $tripId,
+            'dm_trip_price' => $tripPrice,
+            'dm_language_id' => $languagueId
         );
 
         $this->db->where('id', $id);
@@ -72,7 +89,7 @@ class WebServices extends CI_Controller
 
     function getAllTravefyTrip()
     {
-        $this->db->from('dm_travefy_trip');
+        $this->db->from('dm_travefy_trip_complete');
         return $this->output
             ->set_content_type('application/json')
             ->set_status_header(200)
