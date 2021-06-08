@@ -105,6 +105,7 @@
                         <div class="modal-body slide-body">
                             <form id="slide-form" class="slides col-12">
                                 <div class="form-row fade slide" id="slide-traveler-nb">
+                                    <input type="hidden" value="<?= $trip->getName() ?>" name="tripName" />
                                     <div class="form-group col-lg-4 col-md-6">
                                         <label>email*</label>
                                         <input type="email" class="form-control form-input" name="email" placeholder="Your Email">
@@ -325,10 +326,10 @@
                                         <label>APPROXIMATE DATES OF TRAVEL</label>
                                         <div class="form-row">
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control form-input" id="arrive" name="arrive" placeholder="Arrive">
+                                                <input type="text" class="form-control form-input" id="arrive" name="arrival" placeholder="Arrive">
                                             </div>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control form-input" id="depart" name="depart" placeholder="Depart">
+                                                <input type="text" class="form-control form-input" id="depart" name="departure" placeholder="Depart">
                                             </div>
                                         </div>
                                     </div>
@@ -419,6 +420,9 @@
             })();
         </script>
         <script type="text/javascript">
+            var baseUrl = '<?= base_url() ?>';
+        </script>
+        <script type="text/javascript">
             let tripList = (<?= json_encode($trips); ?>);
             bookTrip = (index) => {
                 let trips = getCookie('trips');
@@ -434,7 +438,7 @@
                 setCartNumber();
             }
         </script>
-        <script type="text/javascript" src="<?= base_url() ?>assets/js/page/shelf.js?v=0.0.1"></script>
+        <script type="text/javascript" src="<?= base_url() ?>assets/js/page/shelf.js?v=0.0.2"></script>
     </div>
 </body>
 

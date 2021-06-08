@@ -32,12 +32,12 @@
         margin-right: 100px;
         font-family: 'Arial'
     }
-    
+
     table {
         border-collapse: collapse;
         width: 100%;
     }
-    
+
     td {
         text-align: left;
         padding: 5px 5px;

@@ -63,7 +63,6 @@ $route['luxury'] = 'MainController/luxury';
 $route['knowledges'] = 'MainController/knowledges';
 $route['shelf'] = 'MainController/shelf';
 $route['cart'] = 'MainController/cart';
-$route['contact_mail'] = 'Mail/contact_mail';
 
 //dashboard
 $route['login'] = 'MainController/login';
@@ -96,8 +95,10 @@ $route['knowledge/culture'] = 'MainController/knowledge/culture';
 $route['knowledge/sport'] = 'MainController/knowledge/sport';
 
 //mail
-$route['adventure/mail'] = 'Mail/adventure_service_mail';
-$route['luxury/mail'] = 'Mail/luxury_service_mail';
+$route['adventure/mail'] = 'Mail/adventureServiceMail';
+$route['luxury/mail'] = 'Mail/luxuryServiceMail';
+$route['shelf/mail'] = 'Mail/shelfServiceMail';
+$route['contact_mail'] = 'Mail/contactServiceMail';
 $route['postman'] = 'Mail/Postman';
 
 //covid

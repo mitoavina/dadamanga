@@ -10,20 +10,31 @@ use PHPMailer\PHPMailer\Exception;
 
 class Mail extends CI_Controller
 {
-	private $mailReceiver = "noreply@dadamanga.mg";
+	private $mailSender = "noreply@dadamanga.mg";
 	private $adminMail = "contact@dadamanga.mg";
 
-	public const SUBJECT_CREATE_ADVENTURE = 'Create an adventure';
+	public const SUBJECT_YOUR_ADVENTURE_RECAP = 'Your adventure recap';
+	public const SUBJECT_YOUR_OFF_THE_SHELF_TRIP_RECAP = 'Your Off The Shelf trip recap';
+	public const SUBJECT_YOUR_LUXURY_TRIP_RECAP = 'Your Luxury trip recap';
+
+	public const MAILER = 'Dadamanga Travel Service';
+	public const CONTACT_SUPPORT = 'Dadamanga Support';
+
+	public const CUSTOMER_SHELF_TRIP = 'Customer Shelf Trip';
+	public const CUSTOMER_ADVENTURE_TRIP = 'Customer Adventure Trip';
+	public const CUSTOMER_LUXURY_TRIP = 'Customer Luxury Trip';
+	public const CUSTOMER_SUPPORT_CONTACT = 'Support Contact';
+
 
 	private function setMailConfig($mail)
 	{
 		// SMTP configuration
-		// $mail->SMTPDebug = SMTP::DEBUG_LOWLEVEL;
+		// $mail->SMTPDebug = SMTP::DEBUG_LOWLEVEL; // USE THIS VALUE WHEN DEBUGGING
 		$mail->SMTPDebug = SMTP::DEBUG_OFF;
 		$mail->isSMTP();
-		$mail->Host     = 'mail.dadamanga.mg';
+		$mail->Host = 'mail.dadamanga.mg';
 		$mail->SMTPAuth = true;
-		$mail->Username = 'noreply@dadamanga.mg';
+		$mail->Username = $this->mailSender;
 		$mail->Password = 'Coworking@99';
 		$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 		$mail->SMTPOptions = array(
@@ -33,10 +44,162 @@ class Mail extends CI_Controller
 				'allow_self_signed' => true
 			)
 		);
-		$mail->Port     = 465;
+		$mail->Port = 465;
 	}
 
-	function contact_mail()
+	function getShelfAdminMail($data)
+	{
+		$this->load->helper('url');
+		$this->load->library('phpmailer_lib');
+		//must get infos
+		$mpdf = new \Mpdf\Mpdf();
+		$html = $this->load->view('pdf/shelfPdf', $data, TRUE);
+		// $mpdf->Output(); // opens in browser
+		$mpdf->WriteHTML($html);
+
+		//must write infos on the pdf
+		$pdf = $mpdf->Output($data['email'] . '.pdf', 'S');
+		// $pdf = $mpdf->Output();
+
+		// PHPMailer object
+		$mail = $this->phpmailer_lib->load();
+
+		// SMTP configuration
+		$this->setMailConfig($mail);
+
+		$mail->setFrom($this->mailSender, Mail::MAILER);
+		$mail->addReplyTo($this->adminMail, Mail::CONTACT_SUPPORT);
+
+		// Add a recipient
+		//a changer
+		$mail->addAddress($this->adminMail);
+		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
+
+
+		// Email subject
+		$mail->Subject = Mail::SUBJECT_YOUR_OFF_THE_SHELF_TRIP_RECAP . " - " . $data['email'];
+
+		// Set email format to HTML
+		$mail->isHTML(true);
+
+		// Email body content
+		$mailContent = $this->getMailShelfClientView($data);
+		$mail->Body = $mailContent;
+		return $mail;
+	}
+
+	function getShelfClientMail($data)
+	{
+		$this->load->helper('url');
+		$this->load->library('phpmailer_lib');
+		//must get infos
+		$mpdf = new \Mpdf\Mpdf();
+		$html = $this->load->view('pdf/shelfPdf', $data, TRUE);
+		// $mpdf->Output(); // opens in browser
+		$mpdf->WriteHTML($html);
+
+		//must write infos on the pdf
+		$pdf = $mpdf->Output($data['email'] . '.pdf', 'S');
+		// $pdf = $mpdf->Output();
+
+		// PHPMailer object
+		$mail = $this->phpmailer_lib->load();
+
+		// SMTP configuration
+		$this->setMailConfig($mail);
+
+		$mail->setFrom($this->mailSender, Mail::MAILER);
+		$mail->addReplyTo($this->adminMail, Mail::CONTACT_SUPPORT);
+
+		// Add a recipient
+		//a changer
+		$mail->addAddress($data['email']);
+		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
+
+
+		// Email subject
+		$mail->Subject = Mail::CUSTOMER_SHELF_TRIP . " - " . $data['email'];
+
+		// Set email format to HTML
+		$mail->isHTML(true);
+
+		// Email body content
+		$mailContent = $this->getMailShelfClientView($data);
+		$mail->Body = $mailContent;
+		return $mail;
+	}
+
+	function shelfServiceMail()
+	{
+		header('Content-Type: application/json');
+		$this->load->model('TravelerModel', 'TravelerModel');
+
+		$data = array(); //izay anaovan'la anaran'ty variable ty
+		$data['current'] = date("Y/m/d");
+		foreach ($_POST as $key => $value) {
+			$data[$key] = $this->input->post($key);
+		}
+
+		$travelers = array_fill(0, $data['nbTraveler'], NULL);
+		$nbAdults = 0;
+		$nbChildren = 0;
+		for ($i = 0; $i < $data['nbTraveler']; $i++) {
+			$traveler = new TravelerModel();
+			$traveler->setFirstName($data['firstNames'][$i]);
+			$traveler->setLastName($data['lastNames'][$i]);
+			$traveler->setType($data['age' . $i]);
+			if ($traveler->getType() == "adult") {
+				$nbAdults++;
+			} else if ($traveler->getType() == "child") {
+				$nbChildren++;
+			}
+			$travelers[$i] = $traveler;
+		}
+
+		$data['nbAdults'] = $nbAdults;
+		$data['nbChildren'] = $nbChildren;
+		$data['travelers'] = $travelers;
+
+		$admin_mail = $this->getShelfAdminMail($data);
+		$client_mail = $this->getShelfClientMail($data);
+
+		$admin = null;
+		$client = null;
+
+		try {
+			$admin = $admin_mail->send();
+		} catch (Exception $e) {
+			echo "Message could not be sent. Mailer Error: {$admin->ErrorInfo}";
+			die;
+		}
+
+		try {
+			$client = $client_mail->send();
+		} catch (Exception $e) {
+			echo "Message could not be sent. Mailer Error: {$client->ErrorInfo}";
+			die;
+		}
+
+		if ($client && $admin) {
+			echo json_encode(array('success' => true));
+		} else {
+			if (!$client) {
+				echo "client lele";
+				die;
+			} else {
+				echo "admin";
+				die;
+			}
+			echo json_encode(
+				array(
+					'error' => 'Message could not be sent.',
+					'success' => false
+				)
+			);
+		}
+	}
+
+	function contactServiceMail()
 	{
 		$this->load->helper('url');
 		$name = $_POST['name'];
@@ -58,19 +221,15 @@ class Mail extends CI_Controller
 		$mail->SMTPSecure = 'ssl';
 		$mail->Port     = 465;
 
-		$mail->setFrom($email, $name);
+		$mail->setFrom($this->mailSender, Mail::MAILER);
 		$mail->addReplyTo($email, $name);
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress($this->mailReceiver);
-
-		// Add cc or bcc 
-		// $mail->addCC('cc@example.com');
-		// $mail->addBCC('bcc@example.com');
+		$mail->addAddress($this->adminMail);
 
 		// Email subject
-		$mail->Subject = 'commentaire';
+		$mail->Subject = Mail::CUSTOMER_SUPPORT_CONTACT . " - " . $name;
 
 		// Set email format to HTML
 		$mail->isHTML(true);
@@ -89,7 +248,8 @@ class Mail extends CI_Controller
 			redirect(base_url('contact'));
 		}
 	}
-	function adventure_service_mail()
+
+	function adventureServiceMail()
 	{
 		header('Content-Type: application/json');
 		// if (!$this->checkCaptcha($_POST['action'])) {
@@ -107,8 +267,8 @@ class Mail extends CI_Controller
 		foreach ($_POST as $key => $value) {
 			$data[$key] = $this->input->post($key);
 		}
-		$admin_mail = $this->adventure_admin($data);
-		$client_mail = $this->adventure_client($data);
+		$admin_mail = $this->getAdventureAdminMail($data);
+		$client_mail = $this->getAdventureClientMail($data);
 
 		$admin = null;
 		$client = null;
@@ -143,7 +303,8 @@ class Mail extends CI_Controller
 			);
 		}
 	}
-	public function luxury_service_mail()
+
+	public function luxuryServiceMail()
 	{
 		header('Content-Type: application/json');
 
@@ -157,12 +318,10 @@ class Mail extends CI_Controller
 			exit;
 		}
 
-		$mail_admin = $this->luxury_admin();
-		$mail_client = $this->luxury_client();
+		$mail_admin = $this->getLuxuryAdminMail();
+		$mail_client = $this->getLuxuryClientMail();
 		$admin = $mail_admin->send();
 		$client = $mail_client->send();
-		// $client = true;
-		// $admin = true;
 		if ($client && $admin) {
 			echo json_encode(array('success' => true));
 		} else {
@@ -174,7 +333,8 @@ class Mail extends CI_Controller
 			);
 		}
 	}
-	private function luxury_admin()
+
+	private function getLuxuryAdminMail()
 	{
 		// DATAS
 		$this->load->helper('url');
@@ -211,9 +371,8 @@ class Mail extends CI_Controller
 		$data['type'] = $type;
 		$data['current'] = date("Y/m/d");
 		$mpdf = new Mpdf();
-		$html = $this->load->view('luxury_doc', $data, TRUE);
+		$html = $this->load->view('pdf/luxuryPdf', $data, TRUE);
 		$mpdf->WriteHTML($html);
-		// $mpdf->Output(); // opens in browser
 		$pdf = $mpdf->Output($data['email'] . '.pdf', 'S'); // it downloads the file into the user system.
 
 
@@ -233,19 +392,16 @@ class Mail extends CI_Controller
 		$mail->SMTPSecure = 'ssl';
 		$mail->Port     = 465;
 
-		$mail->setFrom($email, $name);
+		$mail->setFrom($this->mailSender, Mail::MAILER);
 		$mail->addReplyTo($email, $name);
 
 		// Add a recipient
 		//a changer
-		$mail->addAddress($this->mailReceiver);
+		$mail->addAddress($this->adminMail);
 		$mail->addStringAttachment($pdf, $data['email'] . '.pdf');
-		// Add cc or bcc 
-		// $mail->addCC('cc@example.com');
-		// $mail->addBCC('bcc@example.com');
 
 		// Email subject
-		$mail->Subject = 'reserve luxury';
+		$mail->Subject = Mail::CUSTOMER_LUXURY_TRIP . " - " . $name;
 
 		// Set email format to HTML
 		$mail->isHTML(true);
@@ -262,7 +418,8 @@ class Mail extends CI_Controller
 		$mail->Body = $mailContent;
 		return $mail;
 	}
-	private function luxury_client()
+
+	private function getLuxuryClientMail()
 	{
 		$this->load->helper('url');
 		$name = $_POST['name'];
@@ -284,8 +441,8 @@ class Mail extends CI_Controller
 		$mail->SMTPSecure = 'ssl';
 		$mail->Port     = 465;
 
-		$mail->setFrom($this->mailReceiver, "Dadamanga Travel Service");
-		$mail->addReplyTo($this->mailReceiver, 'Dadamanga Travel Service');
+		$mail->setFrom($this->mailSender, Mail::MAILER);
+		$mail->addReplyTo($this->adminMail, Mail::CONTACT_SUPPORT);
 
 		// Add a recipient
 		//a changer
@@ -293,31 +450,28 @@ class Mail extends CI_Controller
 		$mail->addAddress($email);
 
 		// Email subject
-		$mail->Subject = 'Reserve Luxury';
+		$mail->Subject = Mail::SUBJECT_YOUR_LUXURY_TRIP_RECAP;
 
 		// Set email format to HTML
 		$mail->isHTML(true);
 
 		// Email body content
-		$mail->Body = $this->Mail_luxury_client($name, $type, $begin, $end);
+		$mail->Body = $this->getMailLuxuryClientView($name, $type, $begin, $end);
 		return $mail;
 	}
-	public function adventure_admin($data)
+
+	public function getAdventureAdminMail($data)
 	{
 		$this->load->helper('url');
 		$this->load->library('phpmailer_lib');
 		//must get infos
 		$mpdf = new \Mpdf\Mpdf();
-		$html = $this->load->view('adventure_doc', $data, TRUE);
+		$html = $this->load->view('pdf/adventurePdf', $data, TRUE);
 		// $mpdf->Output(); // opens in browser
 		$mpdf->WriteHTML($html);
 
 		//must write infos on the pdf
 		$pdf = $mpdf->Output($data['email'] . '.pdf', 'S');
-		// $pdf = $mpdf->Output();
-
-		// /mail
-
 
 		// PHPMailer object
 		$mail = $this->phpmailer_lib->load();
@@ -325,7 +479,7 @@ class Mail extends CI_Controller
 		// SMTP configuration
 		$this->setMailConfig($mail);
 
-		$mail->setFrom($data['email'], $data['name']);
+		$mail->setFrom($this->mailSender, Mail::MAILER);
 		$mail->addReplyTo($data['email'], $data['name']);
 
 		// Add a recipient
@@ -335,18 +489,19 @@ class Mail extends CI_Controller
 
 
 		// Email subject
-		$mail->Subject = Mail::SUBJECT_CREATE_ADVENTURE . " Admin";
+		$mail->Subject = Mail::CUSTOMER_ADVENTURE_TRIP . " - " . $data['name'];
 
 		// Set email format to HTML
 		$mail->isHTML(true);
 
 		// Email body content
-		$mailContent = $this->Mail_adventure_admin($data);
+		$mailContent = $this->getMailAdventureAdminView($data);
 		$mail->Body = $mailContent;
 		return $mail;
 		// 	// echo 'Mailer Error: ' . $mail->ErrorInfo;		
 	}
-	public function adventure_client($data)
+
+	public function getAdventureClientMail($data)
 	{
 		$this->load->helper('url');
 
@@ -359,8 +514,8 @@ class Mail extends CI_Controller
 		// SMTP configuration
 		$this->setMailConfig($mail);
 
-		$mail->setFrom($this->mailReceiver, "Dadamanga Travel Service");
-		$mail->addReplyTo($this->mailReceiver, "Dadamanga Travel Service");
+		$mail->setFrom($this->mailSender, Mail::MAILER);
+		$mail->addReplyTo($this->adminMail, Mail::CONTACT_SUPPORT);
 
 		// Add a recipient
 		//a changer
@@ -372,34 +527,43 @@ class Mail extends CI_Controller
 		// $mail->addBCC('bcc@example.com');
 
 		// Email subject
-		$mail->Subject = Mail::SUBJECT_CREATE_ADVENTURE;
+		$mail->Subject = Mail::SUBJECT_YOUR_ADVENTURE_RECAP;
 
 		// Set email format to HTML
 		$mail->isHTML(true);
 
 		// Email body content
-		$mail->Body = $this->Mail_Adventure_client($data);
+		$mail->Body = $this->getMailAdventureClientView($data);
 		return $mail;
 	}
-	//MAILS FORMS FOR CLIENTS
-	function Mail_luxury_client($name, $type, $begin, $end)
+
+	function getMailLuxuryClientView($name, $type, $begin, $end)
 	{
 		$data['name'] = $name;
 		$data['type'] = $type;
 		$data['begin'] = $begin;
 		$data['end'] = $end;
-		return $this->load->view('Mail_luxury_client', $data, TRUE);
+		return $this->load->view('mails/mailLuxuryClient', $data, TRUE);
 	}
-	function Mail_adventure_client($data)
+
+	// TODO Adjust this function
+	private function getMailShelfClientView($data)
 	{
-		return $this->load->view('Mail_adventure_client', $data, TRUE);
+		return $this->load->view('mails/mailShelfClient', $data, TRUE);
 	}
-	//MAILS FORMS FOR adv admin
-	function Mail_adventure_admin($data)
+
+
+	private function getMailAdventureClientView($data)
 	{
-		return $this->load->view('Mail_adventure_admin', $data, TRUE);
+		return $this->load->view('mails/mailAdventureClient', $data, TRUE);
 	}
-	function checkCaptcha($action)
+
+	private function getMailAdventureAdminView($data)
+	{
+		return $this->load->view('mails/mailAdventureAdmin', $data, TRUE);
+	}
+
+	private function checkCaptcha($action)
 	{
 		$token = $_POST['token'];
 		$action = $_POST['action'];
