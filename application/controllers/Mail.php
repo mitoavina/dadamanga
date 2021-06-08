@@ -77,7 +77,7 @@ class Mail extends CI_Controller
 
 
 		// Email subject
-		$mail->Subject = Mail::SUBJECT_YOUR_OFF_THE_SHELF_TRIP_RECAP . " - " . $data['email'];
+		$mail->Subject = Mail::CUSTOMER_SHELF_TRIP . " - " . $data['email'];
 
 		// Set email format to HTML
 		$mail->isHTML(true);
@@ -118,7 +118,7 @@ class Mail extends CI_Controller
 
 
 		// Email subject
-		$mail->Subject = Mail::CUSTOMER_SHELF_TRIP . " - " . $data['email'];
+		$mail->Subject = Mail::SUBJECT_YOUR_OFF_THE_SHELF_TRIP_RECAP;
 
 		// Set email format to HTML
 		$mail->isHTML(true);
