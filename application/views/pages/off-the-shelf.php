@@ -54,7 +54,13 @@
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-clock"></i></span> <span><?= $trip->getDays() ?> day excursion</span></li>
                                     <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-times-circle"></i></span> <span>free cancellation</span></li>
-                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-comment-alt"></i></span> <span><?= $trip->getLanguage() ?></span></li>
+                                    <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-comment-alt"></i></span>
+                                        <span>
+                                            <?php foreach ($trip->getLanguages() as $language) {  ?>
+                                                <?= $language ?>
+                                            <?php } ?>
+                                        </span>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="card-footer bg-transparent trip-card-price-container">

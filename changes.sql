@@ -39,3 +39,9 @@ CREATE TABLE dm_travefy_trip_language (
 );
 
 DROP VIEW dm_travefy_trip_complete;
+
+CREATE VIEW dm_travefy_trip_language_complete AS (
+SELECT
+    a.*, b.dm_language
+FROM dm_travefy_trip_language as a JOIN dm_language as b ON a.language_id=b.id
+);

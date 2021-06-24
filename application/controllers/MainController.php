@@ -269,7 +269,14 @@ class MainController extends CI_Controller
                 } else {
                     $trip->setPrice($match[1][0]);
                 }
-                $trip->setLanguage($travefyTrip->dm_language);
+                $this->db->from('dm_travefy_trip_language_complete');
+                $this->db->where(array('travefy_trip_id' => $travefyTrip->travefy_trip_id));
+                $result = $this->db->get()->result();
+                $languages = array();
+                for ($i = 0; $i < count($result); $i++) {
+                    $languages[] = $result->language_id;
+                }
+                $trip->setLanguages($languages);
                 $trip->setCurrency($match[3][0]);
                 $trip->setImg($json->itineraryPage->trip->mediaImages[0]->url);
                 $trip->setDays(count($json->itineraryPage->trip->tripDayIds));

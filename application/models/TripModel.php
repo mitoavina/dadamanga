@@ -7,21 +7,21 @@ class TripModel extends CI_Model
     private $_currency;
     private $_img;
     private $_days;
-    private $_language;
+    private $_languages;
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function setLanguage($language)
+    public function setLanguages($languages)
     {
-        $this->_language = $language;
+        $this->_languages = $languages;
     }
 
-    public function getLanguage()
+    public function getLanguages()
     {
-        return $this->_language;
+        return $this->_languages;
     }
 
 
