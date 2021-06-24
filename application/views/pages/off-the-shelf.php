@@ -56,8 +56,11 @@
                                     <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-times-circle"></i></span> <span>free cancellation</span></li>
                                     <li class="list-group-item trip-card-det"><span class="mr-2"><i class="far fa-comment-alt"></i></span>
                                         <span>
-                                            <?php foreach ($trip->getLanguages() as $language) {  ?>
-                                                <?= $language ?>
+                                            <?php for ($j = 0; $j <  count($trip->getLanguages()); $j++) {  ?>
+                                                <?= $trip->getLanguages()[$j]; ?>
+                                                <?php if ($j < count($trip->getLanguages()) - 1) { ?>
+                                                    <?= ', ' ?>
+                                                <?php } ?>
                                             <?php } ?>
                                         </span>
                                     </li>
