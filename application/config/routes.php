@@ -66,14 +66,10 @@ $route['cart'] = 'MainController/cart';
 
 //dashboard
 $route['login'] = 'MainController/login';
-$route['dashboard'] = 'MainController/dashboard';
-$route['dash_about'] = 'MainController/dash_about';
-$route['dash_aboutUpdate'] = 'MainController/dash_aboutUpdate';
 $route['dash_park'] = 'MainController/dash_park';
 $route['manage_destination'] = 'MainController/dash_destination';
 $route['dash_experience'] = 'MainController/dash_experience';
 $route['dash_wildlife'] = 'MainController/dash_wildlife';
-$route['homeUpdate'] = 'MainController/homeUpdate';
 $route['authentication'] = 'MainController/authentication';
 $route['dash_blog'] = 'MainController/dash_blog';
 $route['dash_travefy'] = 'MainController/dash_travefy';

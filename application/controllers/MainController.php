@@ -250,7 +250,7 @@ class MainController extends CI_Controller
         $this->load->model('TripModel', 'TripModel');
         $data['footerImg'] = "cacao.jpg";
 
-        $this->db->from('dm_travefy_trip_complete');
+        $this->db->from('dm_travefy_trip');
         $travefyTrips = $this->db->get()->result();
         $trips = array();
         foreach ($travefyTrips as $travefyTrip) {
@@ -301,38 +301,6 @@ class MainController extends CI_Controller
     // 		show_error($this->email->print_debugger());
     // 	}
     // }
-
-
-    public function dashboard()
-    {
-        $this->load->helper('url');
-        session_start();
-        if (!isset($_SESSION['authentication'])) {
-            redirect('/login', 'refresh');
-        }
-        $this->load->model('PageModel', 'PageModel');
-        $pageModel = new PageModel();
-        $data['image'] = $pageModel->addInformation(1)->image;
-        $data['text'] = $pageModel->addInformation(1)->text;
-        $data['active'] = 'home';
-
-        $this->load->view('dashboard/dashboard', $data);
-    }
-
-    public function dash_about()
-    {
-        $this->load->helper('url');
-        session_start();
-        if (!isset($_SESSION['authentication'])) {
-            redirect('/login', 'refresh');
-        }
-        $this->load->model('PageModel', 'PageModel');
-        $pageModel = new PageModel();
-        $data['image'] = $pageModel->addInformation(2)->image;
-        $data['text'] = $pageModel->addInformation(2)->text;
-        $data['active'] = 'about';
-        $this->load->view('dashboard/dash_about', $data);
-    }
 
     public function dash_travefy()
     {
@@ -431,57 +399,13 @@ class MainController extends CI_Controller
         $data['active'] = 'wildlife';
         $this->load->view('dashboard/dash_wildlife', $data);
     }
+
     public function login()
     {
         $this->load->helper('url');
         $this->load->view('dashboard/login');
     }
-    public function homeUpdate()
-    {
-        $this->load->helper('url');
-        $this->load->helper('assets');
 
-        $this->load->model('UtilsModel', 'UtilsModel');
-        $utilsModel = new UtilsModel();
-        $this->load->model('PageModel', 'PageModel');
-        $pageModel = new PageModel();
-        $data['image'] = $pageModel->addInformation(1)->image;
-        $data['text'] = $pageModel->addInformation(1)->text;
-        try {
-            $path = $utilsModel->upload('home');
-            $data['image'][0]->path = $path;
-        } catch (Exception $e) {
-        }
-        $data['text'][0] = array("value" => $_POST['text'], "type" => "title");
-        $info = json_encode($data);
-        $pageModel->update(1, 'home', $info);
-
-        redirect('/dashboard', 'refresh');
-    }
-    public function dash_aboutUpdate()
-    {
-        $this->load->helper('url');
-        $this->load->helper('assets');
-
-        $this->load->model('UtilsModel', 'UtilsModel');
-        $utilsModel = new UtilsModel();
-        $this->load->model('PageModel', 'PageModel');
-        $pageModel = new PageModel();
-        $data['image'] = $pageModel->addInformation(2)->image;
-        $data['text'] = $pageModel->addInformation(2)->text;
-        try {
-
-            $path = $utilsModel->upload('about');
-            $data['image'][0]->path = $path;
-        } catch (Exception $e) {
-        }
-        $data['text'][0] = array("value" => $_POST['text'], "type" => "title");
-
-        $info = json_encode($data);
-        $pageModel->update(2, 'about', $info);
-
-        redirect('/dash_about', 'refresh');
-    }
     public function authentication()
     {
         $this->load->helper('url');
@@ -491,7 +415,7 @@ class MainController extends CI_Controller
             $userModel->select($_POST['login'], $_POST['pass']);
             session_start();
             $_SESSION['authentication'] = true;
-            redirect('/dashboard', 'refresh');
+            redirect('/dash_park', 'refresh');
         } catch (Exception $e) {
             $data['error'] = $e->getMessage();
             $this->load->view('login', $data);

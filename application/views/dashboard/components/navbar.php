@@ -11,18 +11,6 @@
             </a>
         </div>
         <ul class="nav">
-            <li class="nav-item<?= $active == 'home' ? ' active' : '' ?>">
-                <a class="nav-link" href="dashboard">
-                    <i class="nc-icon nc-align-center"></i>
-                    <p>home</p>
-                </a>
-            </li>
-            <li class="nav-item<?= $active == 'about' ? ' active' : '' ?>">
-                <a class="nav-link" href="dash_about">
-                    <i class="nc-icon nc-circle"></i>
-                    <p>about</p>
-                </a>
-            </li>
             <li class="nav-item<?= $active == 'park' ? ' active' : '' ?>">
                 <a class="nav-link " href="dash_park">
                     <i class="nc-icon nc-settings-tool-66"></i>
