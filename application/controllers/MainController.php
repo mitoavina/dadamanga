@@ -270,7 +270,7 @@ class MainController extends CI_Controller
                     $trip->setPrice($match[1][0]);
                 }
                 $this->db->from('dm_travefy_trip_language_complete');
-                $this->db->where(array('travefy_trip_id' => $travefyTrip->travefy_trip_id));
+                $this->db->where(array('travefy_trip_id' => $travefyTrip->id));
                 $result = $this->db->get()->result();
                 $languages = array();
                 for ($i = 0; $i < count($result); $i++) {
