@@ -20,3 +20,27 @@ SELECT
     b.id as dm_language_id, b.dm_language
 FROM dm_travefy_trip as a JOIN dm_language as b ON a.dm_language_id = b.id
 )
+
+--24/06/2021
+ALTER TABLE dm_travefy_trip 
+    DROP FOREIGN KEY dm_travefy_trip_ibfk_1;
+ALTER TABLE dm_travefy_trip 
+	DROP INDEX  dm_language_id;
+ALTER TABLE dm_travefy_trip
+    DROP dm_language_id;
+
+CREATE TABLE dm_travefy_trip_language (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    travefy_trip_id INT UNSIGNED NOT NULL, 
+    language_id TINYINT UNSIGNED NOT NULL,
+    CONSTRAINT travefy_trip_fk FOREIGN KEY (travefy_trip_id) REFERENCES dm_travefy_trip(id),
+    CONSTRAINT language_fk FOREIGN KEY (language_id) REFERENCES dm_language(id),
+    CONSTRAINT unique_fk UNIQUE (travefy_trip_id, language_id)
+);
+
+INSERT INTO dm_travefy_trip_language (travefy_trip_id, language_id) VALUES (1,1);
+INSERT INTO dm_travefy_trip_language (travefy_trip_id, language_id) VALUES (1,2);
+INSERT INTO dm_travefy_trip_language (travefy_trip_id, language_id) VALUES (2,3);
+INSERT INTO dm_travefy_trip_language (travefy_trip_id, language_id) VALUES (3,1);
+
+DROP VIEW dm_travefy_trip_complete;

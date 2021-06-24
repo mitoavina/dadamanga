@@ -9,6 +9,20 @@ class WebServices extends CI_Controller
         echo 'Rien à voir ici.';
     }
 
+    function getTripLanguages($tripId)
+    {
+        $this->db->from('dm_travefy_trip_language');
+        $this->db->where('travefy_trip_id', $tripId);
+        return $this->output
+            ->set_content_type('application/json')
+            ->set_status_header(200)
+            ->set_output(json_encode(array(
+                'status' => '200',
+                'type' => 'success',
+                'data' => $this->db->get()->result()
+            )));
+    }
+
     function getAllLanguages()
     {
         $this->db->from('dm_language');
@@ -65,16 +79,43 @@ class WebServices extends CI_Controller
 
         $tripId = $request->tripId;
         $tripPrice = $request->tripPrice;
-        $languagueId = $request->languageId;
+        $languagesIds = $request->languagesIds;
 
         $data = array(
             'travefy_trip_id' => $tripId,
-            'dm_trip_price' => $tripPrice,
-            'dm_language_id' => $languagueId
+            'dm_trip_price' => $tripPrice
         );
+
+        $this->db->trans_start();
 
         $this->db->where('id', $id);
         $this->db->update('dm_travefy_trip', $data);
+
+        for ($i = 0; $i < count($languagesIds); $i++) {
+            $this->db->from('dm_travefy_trip_language');
+            $this->db->where(array('travefy_trip_id' => $id, 'language_id' => $languagesIds[$i]));
+            if (count($this->db->get()->result()) <= 0) {
+                $this->db->insert('dm_travefy_trip_language', array('travefy_trip_id' => $id, 'language_id' => $languagesIds[$i]));
+            } else {
+                $this->db->where(array('travefy_trip_id' => $id, 'language_id' => $languagesIds[$i]));
+                $this->db->update('dm_travefy_trip_language', array('language_id' => $languagesIds[$i]));
+            }
+        }
+
+
+        if (count($languagesIds) > 0) {
+            $query = 'DELETE FROM dm_travefy_trip_language where travefy_trip_id = ' . $id . ' AND (';
+            for ($i = 0; $i < count($languagesIds); $i++) {
+                $query .= ('language_id != ' . $languagesIds[$i]);
+                if ($i < count($languagesIds) - 1) {
+                    $query .= " AND ";
+                }
+            }
+            $query .= ')';
+            $this->db->query($query);
+        }
+
+        $this->db->trans_complete();
 
         return $this->output
             ->set_content_type('application/json')
@@ -89,7 +130,7 @@ class WebServices extends CI_Controller
 
     function getAllTravefyTrip()
     {
-        $this->db->from('dm_travefy_trip_complete');
+        $this->db->from('dm_travefy_trip');
         return $this->output
             ->set_content_type('application/json')
             ->set_status_header(200)

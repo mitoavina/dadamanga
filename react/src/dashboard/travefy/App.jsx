@@ -3,7 +3,7 @@ const convertTravefyForApi = (travefy) => {
     return {
         tripId: travefy.travefy_trip_id,
         tripPrice: Number.parseInt(travefy.dm_trip_price),
-        languageId: Number.parseInt(travefy.dm_language_id)
+        languagesIds: travefy.languagesIds.map(id => Number.parseInt(id))
     }
 }
 
@@ -15,6 +15,29 @@ const App = () => {
     })
 
     const { travefyIds, newTravefyTripId, languages } = state;
+
+    const updateLanguageTravefy = (index, trip) => {
+        fetch(`${SERVER_URL}/WebServices/getTripLanguages/${trip.id}`).then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("Something went wrong while fetching languages");
+            }
+        }).then(results => {
+            let languagesIds = [];
+            // console.log(results.data);
+            for (let i = 0; i < results.data.length; i++) {
+                languagesIds.push(results.data[i].language_id);
+            }
+
+            setState(prevState => {
+                return {
+                    ...prevState,
+                    travefyIds: [...prevState.travefyIds.slice(0, index), { ...prevState.travefyIds[index], languagesIds }, ...prevState.travefyIds.slice(index + 1),]
+                }
+            })
+        })
+    }
 
     const updateAsyncImgAndTitleTravefy = (index, trip) => {
         fetch(`https://frozen-falls-91201.herokuapp.com/https://trips.dadamanga.mg/itinerary-rest-api/itineraryPages/${trip.travefy_trip_id}`).then(response => {
@@ -81,7 +104,7 @@ const App = () => {
     const apiRequestAllTravefyTrip = () => {
         return apiRequest(`${SERVER_URL}/WebServices/getAllTravefyTrip`).then(results => {
             return results.data.map(trip => {
-                return trip
+                return { ...trip, languagesIds: [] }
             });
         });
     }
@@ -98,6 +121,7 @@ const App = () => {
             })
             for (let index = 0; index < values[1].length; index++) {
                 updateAsyncImgAndTitleTravefy(index, values[1][index]);
+                updateLanguageTravefy(index, values[1][index]);
             }
         }).catch(err => {
             console.log("Oops, smth went wrong", err);
@@ -224,16 +248,21 @@ const App = () => {
                                     }} /></div>
                                 </td>
                                 <td>
-                                    <select value={travefyId.dm_language_id} onChange={(e) => {
-                                        setState({
-                                            ...state,
-                                            travefyIds: [...travefyIds.slice(0, index), { ...travefyId, dm_language_id: e.currentTarget.value }, ...travefyIds.slice(index + 1)]
-                                        })
-                                    }}>
-                                        {languages.map(language => {
-                                            return (<option key={language.id} value={language.id} >{language.language}</option>)
-                                        })}
-                                    </select>
+                                    {languages.map(language => {
+                                        return (<div><input onChange={(e) => {
+                                            if (travefyId.languagesIds.includes(language.id)) {
+                                                setState({
+                                                    ...state,
+                                                    travefyIds: [...travefyIds.slice(0, index), { ...travefyId, languagesIds: travefyId.languagesIds.filter(id => id !== language.id) }, ...travefyIds.slice(index + 1)]
+                                                })
+                                            } else {
+                                                setState({
+                                                    ...state,
+                                                    travefyIds: [...travefyIds.slice(0, index), { ...travefyId, languagesIds: [...travefyId.languagesIds, language.id] }, ...travefyIds.slice(index + 1)]
+                                                })
+                                            }
+                                        }} type="checkbox" key={language.id} value={language.id} checked={travefyId.languagesIds.includes(language.id)} />{language.language}</div>)
+                                    })}
                                 </td>
                                 <td>
                                     {renderImgAndTitle(travefyId)}
