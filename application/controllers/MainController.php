@@ -274,7 +274,7 @@ class MainController extends CI_Controller
                 $result = $this->db->get()->result();
                 $languages = array();
                 for ($i = 0; $i < count($result); $i++) {
-                    $languages[] = $result->dm_language;
+                    $languages[] = $result[$i]->dm_language;
                 }
                 $trip->setLanguages($languages);
                 $trip->setCurrency($match[3][0]);
